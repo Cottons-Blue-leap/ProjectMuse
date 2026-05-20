@@ -1,0 +1,112 @@
+# ============================================================
+# Project Muse .gitignore
+# axis: workflow + doc + manifest 만 commit · 산출물·바이너리 제외
+# ============================================================
+
+# --- secrets ---
+.env
+.env.*
+!.env.example
+
+# --- node / build artifacts ---
+node_modules/
+.tools/
+dist/
+build/
+*.log
+
+# --- python ---
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- backup sidecars (local keep · [[feedback-backup-sidecar-preservation]]) ---
+*.bak
+*.bak.*
+*.tone_v0
+*~
+
+# ============================================================
+# 큰 binary 산출물 · 파일 확장자 양식 block
+# ============================================================
+
+# --- 음악 산출물 ---
+*.wav
+*.mp3
+*.aiff
+*.flac
+*.vpr
+*.musicxml
+*.mid
+*.midi
+
+# --- 영상 산출물 ---
+*.mp4
+*.mov
+*.mkv
+
+# --- PDF (planning master · work source copies) ---
+*.pdf
+
+# ============================================================
+# 이미지 — 기본 block · 채널 brand + 시리즈 reference만 allow
+# ============================================================
+
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.tiff
+
+# 시리즈 자산 (가벼움 · 워크플로우 양식 자료)
+!assets/**/*.png
+!assets/**/*.jpg
+!assets/**/*.jpeg
+
+# ============================================================
+# 작품 폴더 안 산출물 자리 (final 전·후 양식 자료)
+# ============================================================
+
+# Remotion build artifacts
+**/visualizer/out/
+**/visualizer/public/audio.wav
+**/visualizer/public/cover.png
+
+# 작품별 raw / scratch / iteration
+works/*/music/renders/
+works/*/music/masters/
+works/*/music/midi/render_ready_*/
+works/*/video/cover/iterations/
+works/*/video/exports/debug/
+
+# gymnopedie legacy 구 구조 (publish 통과 작품 · binary 자료 제외)
+works/gymnopedie_1_first_proof/music/analysis/
+works/gymnopedie_1_first_proof/music/arrangement/
+works/gymnopedie_1_first_proof/music/vocaloid/
+
+# ============================================================
+# 의제 자체엔 ignore X 자료 (자료 양식 명시 axis)
+# ============================================================
+# - workflows/        : 통째 commit
+# - planning/*.md     : 통째 commit
+# - planning/*.csv    : 통째 commit
+# - planning/*.py     : 통째 commit
+# - works/*/*.json    : project.json · status.json commit
+# - works/*/*.md      : README · video-brief · visualizer-spec · post_release_retrospective commit
+# - works/*/rights/   : 통째 commit
+# - works/*/notes/    : 통째 commit
+# - works/*/video/visualizer/src/  : Remotion source code commit
+# - works/*/video/visualizer/package.json + tsconfig.json + remotion.config.ts commit
+# - works/*/video/release/*.md *.txt : commit
+# - series_history.csv : commit

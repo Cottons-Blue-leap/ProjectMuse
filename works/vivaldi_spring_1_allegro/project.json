@@ -1,0 +1,16 @@
+{
+  "piece": "Spring (RV 269), Mvt. I Allegro",
+  "composer": "Antonio Vivaldi",
+  "section": "통째 (full movement, ~3:30)",
+  "vocal": "Hatsune Miku",
+  "music": {
+    "source_score_planning": "planning/candidates_opus/안토니오 비발디_사계_봄.pdf",
+    "dry_stems_dir": "music/renders/dry_stems",
+    "master_audio": "music/masters/master.wav"
+  },
+  "video": {
+    "brief": "video/video-brief.md",
+    "final_video": "video/exports/vivaldi_spring_1_allegro_final.mp4"
+  },
+  "rights_log": "rights/rights-log.md"
+}

@@ -1,0 +1,90 @@
+# -*- coding: utf-8 -*-
+"""candidate_master.csv popularity_tier 부분 반영 (cycle-agnostic · 재활용 양식).
+
+doctrine:
+- 매 곡 review 통과 시점에 CHANGES dict 안 항목 추가 + 본 script 호출 = csv 즉시 반영.
+- popularity_tier 컬럼만 update. row 재배치 + rank 컬럼 renumber는 cycle 끝에 batch path (s290 reconstruct + s295 base_rank 양식 정합).
+- idempotent: 이미 통과한 row는 no-op skip (재 호출 안전).
+- backup 폐기: s295 base_rank 도입 시점 자료 `bak20_s295_base_rank` keep + idempotent 안전 + s294 cleanup cycle 부담 axis 정합.
+
+cycle 운영:
+- cycle 진행 중 = CHANGES dict 누적 + 매 곡 변경 후 호출.
+- cycle 끝 = retro/markdown archive 박음 + dict 비움.
+
+cycle history (압축):
+- s292 partial: 파반 작품 50 A→B / 메이플 리프 래그 A→S / 피가로의 결혼 서곡 A→S
+- s296 (A tier review 종료): 라 캄파넬라 (리스트) A→S / 강아지 왈츠 (1분 왈츠) 작품 64-1 (쇼팽) A→S / 탄호이저 서곡 (바그너) A keep (no-op) / 마술피리 서곡 (모차르트) A→S→A (정정 = A keep) / 아베 베룸 코르푸스 K.618 (모차르트) A→B / 비창 소나타 1악장 (베토벤) A keep (no-op) / 자장가 D.498 (슈베르트) A keep (no-op) / 마왕 D.328 (슈베르트) A→S / 영웅 폴로네이즈 작품 53 (쇼팽) A→B / 빗방울 전주곡 작품 28-15 (쇼팽) A→B / 바이올린 협주곡 E단조 1악장 (멘델스존) A→B / 유모레스크 작품 101-7 (드보르자크) A→S / 폴로네이즈 A장조 작품 40-1 「군대」 (쇼팽) A→B / 혁명 에튀드 작품 10-12 (쇼팽) A→B / 겨울바람 에튀드 작품 25-11 (쇼팽) A keep (no-op) / 왈츠 작품 64-2 C샵 단조 (쇼팽) A keep (no-op) / 핀란디아 작품 26 (시벨리우스) A→B / 가야네 중 「칼춤」 (하차투리안) A→S / 피터와 늑대 작품 67 주제 (프로코피예프) A→S / 교향곡 5번 4악장 아다지에토 (말러) A→B / 박쥐 서곡 (요한 슈트라우스 2세) A→B / 경기병 서곡 (주페) A keep (no-op) / 메리 위도우 중 「입술은 침묵하나」 (레하르) A→C / 사계 「여름」 3악장 프레스토 (비발디) A→S / 아다지오 G단조 (알비노니/지아조토) A keep (no-op) / 불새 모음곡 「자장가와 피날레」 1919년판 (스트라빈스키) A keep (no-op) / 그린슬리브즈 (16세기 영국 전통) A keep (no-op) — s296 cycle 종료
+- s297 진행 중 (B tier review): 윌리엄 텔 서곡 「새벽」 도입부 (로시니) B→D / 수수께끼 변주곡 중 님로드 (엘가) B→C / 오 사랑하는 나의 아버지 (푸치니, 「잔니 스키키」) B→C→B (정정 = B keep) / 전람회의 그림 중 키예프의 대문 (무소르그스키) B→C / 호프만의 이야기 중 뱃노래 (오펜바흐) B keep (no-op) / 라크메 중 꽃의 이중창 (들리브) B→A / 라흐마니노프 피아노 협주곡 2번 테마 B keep (no-op · 길이 axis) / 1812년 서곡 피날레 (차이콥스키) B keep (no-op · 정치색 axis) / 로미오와 줄리엣 환상서곡 중 사랑의 테마 (차이콥스키) B keep (no-op) / 꿈 (드뷔시 - 레베리) B keep (no-op) / 페르귄트 중 솔베이그의 노래 (그리그) B keep (no-op) / 아마빛 머리의 소녀 (드뷔시) B keep (no-op) / 트로이메라이 (슈만 - 꿈) B keep (no-op) / 파반 작품 50 (포레) B keep (no-op) / 아베 베룸 코르푸스 K.618 (모차르트) B keep (no-op) / 영웅 폴로네이즈 작품 53 (쇼팽) B keep (no-op) / 빗방울 전주곡 작품 28-15 (쇼팽) B keep (no-op) / 바이올린 협주곡 E단조 1악장 (멘델스존) B keep (no-op) / 폴로네이즈 A장조 작품 40-1 군대 (쇼팽) B keep (no-op) / 혁명 에튀드 작품 10-12 (쇼팽) B keep (no-op) — s297 [20/87] 시점 세션 종료 · 다음 세션 이어가기
+- s299 (B tier review 이어가기 [21/87]~[87/87] = 67곡 통과 · s297 후속): 핀란디아 (시벨리우스) B keep / 교향곡 5번 4악장 아다지에토 (말러) B keep / 박쥐 서곡 (요한 슈트라우스 2세) B keep / 피가로의 결혼 중 「산들바람에」 (모차르트) B→A / 사계 중 봄 3악장 Allegro pastorale (비발디) B→A / 푸가 D단조 BWV 565 (바흐) B→A / 헝가리 광시곡 2번 Lassan (리스트) B→A / 헝가리 광시곡 2번 Friska (리스트) B→S / 호두까기 인형 중 러시아 춤 트레팍 (차이콥스키) B→S / 교향곡 40번 1악장 (모차르트) B→S / 리골레토 중 「여자의 마음」 (베르디) B→S / 호두까기 인형 중 행진곡 (차이콥스키) B→S / 카르멘 중 투우사의 노래 (비제) B→S / 파가니니 광시곡 18번 변주 (라흐마니노프) B keep / 잠자는 숲속의 미녀 중 왈츠 (차이콥스키) B keep / 차이콥스키 피아노 협주곡 1번 도입부 B→A / 현을 위한 아다지오 (바버) B keep / 종달새 비상 (본 윌리엄스) B keep / 기사들의 춤 (프로코피예프) B→A / 보칼리제 작품 34-14 (라흐마니노프) B keep / 그노시엔 1번 (사티) B→A / 동물의 사육제 중 수족관 (생상스) B→S / 빈 숲속의 이야기 (요한 슈트라우스 2세) B keep / 사계 중 겨울 라르고 (비발디) B→A / 골드베르크 변주곡 BWV 988 중 아리아 (바흐) B keep / 클라리넷 협주곡 K622 아다지오 (모차르트) B keep / 폴로비치안 무곡 중 「낯선 천국에서」 주제 (보로딘) B keep / 달에 부치는 노래 (드보르자크 - 「루살카」) B→A / 시간의 춤 — 아침의 시간들 (폰키엘리) B→A / 시간의 춤 — 밤의 시간들 (폰키엘리) B→A / 무언가 중 봄의 노래 (멘델스존) B→S / 피치카토 폴카 (요한 슈트라우스 2세) B→A / 트리스탄과 이졸데 중 「사랑의 죽음」 (바그너) B keep / 양들은 한가로이 풀을 뜯고 BWV 208 (바흐) B→C / 아스투리아스 (전설) (알베니스) B→A / 신세계 교향곡 1악장 (드보르자크) B keep / 카르멘 서곡 (비제) B→S / 교향곡 6번 「전원」 1악장 (베토벤) B keep / 열정 소나타 1악장 (베토벤) B keep / 영웅 교향곡 2악장 장송행진곡 (베토벤) B keep / 미완성 교향곡 1악장 (슈베르트) B keep / 환상 즉흥곡 작품 66 (쇼팽) B→A / 헤브리디스 서곡 「핑갈의 동굴」 작품 26 (멘델스존) B keep / 한여름 밤의 꿈 서곡 작품 21 (멘델스존) B keep / 대학축전 서곡 작품 80 (브람스) B keep / 슬라브 무곡 작품 46-1 (드보르자크) B→A / 라 트라비아타 1막 전주곡 (베르디) B keep / 아이다 중 「청아한 아이다」 (베르디) B keep / 토스카 중 「별은 빛나건만」 (푸치니) B→A / 라 보엠 중 「그대의 찬 손」 (푸치니) B keep / 사랑의 묘약 중 「남몰래 흘리는 눈물」 (도니체티) B keep / 행성 중 「목성」 작품 32 (홀스트) B→A / 성조기여 영원하라 (수자) B→C / 셰헤라자데 주제 작품 35 (림스키코르사코프) B→C / 레퀴엠 K.626 「진노의 날」 (모차르트) B keep / 송어 D.550 (슈베르트) B→S / 비창 교향곡 작품 74 1악장 (차이콥스키) B keep / 재즈 모음곡 중 왈츠 2번 (쇼스타코비치) B→S / 황제 왈츠 작품 437 (요한 슈트라우스 2세) B→A / 교향곡 3번 「오르간」 작품 78 피날레 (생상스) B→A / 아랑훼즈 협주곡 2악장 아다지오 (로드리고) B→A / 람메르무어의 루치아 광란의 장면 (도니체티) B→A / 찌고이너바이젠 작품 20 (사라사테) B→A / 피아노 협주곡 A단조 작품 16 1악장 (그리그) B→A / 교향곡 94번 「놀람」 2악장 (하이든) B→A — B tier review cycle 종료 · 자가 결함 누적 22건 (under 9 + over 13) · CHANGES dict 비움 path 진입
+- 누적 분류 (s299 종료 시점): S 69 / A 52 / B 45 / C 102 / D 56 = 324 (s297 종료 대비 S +11 / A +24 / B -38 / C +3 / D ±0) — s299 (2026-05-14) B tier cycle 종료
+- s303 진행 중 (C tier review [1/20]~[20/20] · 첫 분할 batch · 코튼 결단 흡수): 수수께끼 변주곡 중 님로드 (엘가) C→B / 사계 중 봄 2악장 Largo (비발디) C→B / 노래의 날개 위에 (멘델스존) C→B / 셰헤라자데 주제 작품 35 (림스키코르사코프) C→B / 「나는 거리의 만물박사」 (로시니 - 세비야의 이발사) C→A / 호프만의 이야기 중 인형의 노래 (오펜바흐) C→A / 나비부인 중 허밍 코러스 (푸치니) C→A / 돈 조반니 중 「자, 손을 잡읍시다」 (모차르트) C→B / 시간의 춤 — 오후의 시간들 (폰키엘리) C→B / C keep 11곡 (168 타이스 · 169 베토벤 7 알레그레토 · 170 엘비라 마디간 · 171 키예프 대문 · 172 어떤 갠 날 · 175 입술은 침묵하나 · 176 양들은 한가로이 · 177 성조기여 영원하라 · 180 가라 내 마음이여 · 183 옴브라 마이 푸 · 184 노래에 살고 사랑에 살고) — s303 [20/102] 시점 세션 종료 · 다음 세션 [21/102] 부터 이어가기 · 자가 결함 13건 누적 (over 8 + under 5) — MOKA 평가 미라이브레이션 family 누적 (s299 22건 합산 = 35건 누적)
+- 누적 분류 (s303 [20/102] 시점): S 69 / A 55 / B 51 / C 93 / D 56 = 324 (s299 종료 대비 S ±0 / A +3 / B +6 / C -9 / D ±0)
+- s304 첫 batch (C tier review [21/102]~[40/102] · rank 187~206 · 코튼 결단 흡수): 시간의 춤 — 저녁의 시간들 (폰키엘리) C→B / 라 보엠 중 「무제타의 왈츠」 (푸치니) C→B / 그대 내 곁에 있어주오 BWV 508 (바흐) C→B / 브란덴부르크 협주곡 3번 1악장 BWV 1048 (바흐) C→A / 안달루시아 (스페인 무곡 5번) (그라나도스) C→B / 교향곡 25번 G단조 1악장 (모차르트) C→A / 알레그리의 미제레레 C→B / 골리워그의 케이크워크 (드뷔시) C→B / 인터메초 작품 118-2 (브람스) C→B / 신세계 교향곡 3악장 스케르초 몰토 비바체 (드보르자크) C→B / 평균율 클라비어곡집 1권 2번 C단조 푸가 BWV 847 (바흐) C→A / 왈츠 1번 내림 마장조 작품 18 (쇼팽) C→S / 브란덴부르크 협주곡 2번 F장조 BWV 1047 1악장 (바흐) C→A / G장조 미뉴에트 BWV Anh. 114 (페촐트, 바흐 전집 수록) C→S / 잠 깨라는 소리 BWV 645 (바흐 - 슈블러 코랄 1번) C→A / 돈 조반니 서곡 (모차르트) C→B / 교향곡 41번 「주피터」 K.551 피날레 (모차르트) C→B / C keep 3곡 (195 탄호이저 순례자의 합창 · 197 베토벤 바이올린 로망스 2번 · 204 마태수난곡 「긍휼히 여기소서」) — 자가 결함 16건 누적 (under 14 강·mid + over 2 mid) — MOKA under-estimate family 매우 강 (*피아노 입문 anchor* 페촐트·쇼팽 왈츠 1번 + *바흐 협주곡/푸가/코랄* 일반 진입 자리 과소)
+- s304 두 번째 batch (C tier review [41/102]~[60/102] · rank 207~226 · 코튼 결단 흡수): 황제 협주곡 2악장 아다지오 (베토벤) C→B / 에그몬트 서곡 (베토벤) C→B / 즉흥곡 작품 90-3 (슈베르트) C→B / 송어 5중주 4악장 (슈베르트) C→S / 음악에 부쳐 D.547 (슈베르트) C→A / 군대 행진곡 D.733 1번 (슈베르트) C→S / 피아노 협주곡 A단조 1악장 (슈만) C→B / 발라드 1번 G단조 작품 23 (쇼팽) C→A / 자장가 작품 57 (쇼팽) C→A / 이탈리아 교향곡 1악장 작품 90 (멘델스존) C→B / 교향곡 1번 4악장 (브람스) C→B / 하이든 주제에 의한 변주곡 (성 안토니우스 코랄) 작품 56 (브람스) C→B / 탄식 (콘서트 에튀드 3번) S.144 (리스트) C→A / 로엔그린 1막 전주곡 (바그너) C→B / 뉘른베르크의 마이스터징거 서곡 (바그너) C→A / 사계 중 10월 「가을 노래」 (차이콥스키) C→B / 슬라브 무곡 작품 46-8 (드보르자크) C→B / 슬라브 무곡 작품 72-2 (드보르자크) C→B / C keep 2곡 (221 트리스탄과 이졸데 전주곡 · 223 안단테 칸타빌레 차이콥스키) — 자가 결함 10건 누적 (under 9 강·mid + over 1 mid · 223 안단테 칸타빌레 = 본 batch 유일 over) — *피아노 매니아 자리* under family 본 batch 핵심 (슈베르트 송어/군대/즉흥/음악에 부쳐 + 쇼팽 자장가 + 리스트 탄식 에튀드 + 브람스 하이든 변주 다 코튼이 위로 끌어올림) — popularity_tier miscalibration family 누적 = s299 22 + s303 13 + s304 26 = 61건
+- 누적 분류 (s304 [60/102] 시점): S 73 / A 65 / B 72 / C 58 / D 56 = 324 (s303 종료 대비 S +4 / A +10 / B +21 / C -35 / D ±0)
+- s317 (C tier review [61/102]~[102/102] · rank 227~268 잔여 미 review 42곡 · 코튼 한꺼번에 결단 흡수 · C tier review cycle 종료): 일 트로바토레 중 「대장간 합창」 (베르디) C→A / 베르디 레퀴엠 중 「진노의 날」 C→S / 레퀴엠 중 「피에 예수」 작품 48 (포레) C→B / 행성 중 「화성, 전쟁을 가져오는 자」 작품 32 (홀스트) C→B / 루슬란과 류드밀라 서곡 (글린카) C→B / 사랑은 마술사 중 「불의 의식의 춤」 (파야) C→B / 이탈리아 협주곡 BWV 971 1악장 (바흐) C→B / 브란덴부르크 협주곡 5번 BWV 1050 1악장 (바흐) C→A / 아이네 클라이네 나흐트무지크 K.525 2악장 로망스 (모차르트) C→B / 피아노 협주곡 23번 K.488 2악장 아다지오 (모차르트) C→B / 교향곡 9번 「합창」 작품 125 1악장 (베토벤) C→B / 교향곡 7번 작품 92 1악장 (베토벤) C→A / 바이올린 소나타 5번 「봄」 작품 24 1악장 (베토벤) C→B / 피아노 협주곡 4번 작품 58 1악장 (베토벤) C→B / 교향곡 9번 「그레이트」 D.944 1악장 (슈베르트) C→B / 전주곡 E단조 작품 28-4 (쇼팽) C→B / 헝가리 무곡 1번 G단조 (브람스) C→B / 메피스토 왈츠 1번 S.514 (리스트) C→B / 슬픈 왈츠 작품 44-1 (시벨리우스) C→B / 팔려간 신부 서곡 (스메타나) C→B / 현악 4중주 2번 3악장 야상곡 (보로딘) C→B / 트리치트라치 폴카 작품 214 (요한 슈트라우스 2세) C→A / 시인과 농부 서곡 (주페) C→B / 아를의 여인 모음곡 2번 「파랑돌」 (비제) C→B / 수상 음악 2번 알라 혼파이프 HWV 349 (헨델) C→A / 진노의 날 (그레고리오 성가) C→B / 교향곡 3번 「영웅」 작품 55 1악장 (베토벤) C→B / 봄의 제전 도입부 (스트라빈스키) C→B / 교향곡 5번 작품 67 4악장 (베토벤) C→B / 바이올린 협주곡 D장조 작품 35 1악장 (차이콥스키) C→B / 바이올린 협주곡 D단조 작품 47 1악장 (시벨리우스) C→B / 목신의 오후 전주곡 L.86 (드뷔시) C→A / C keep 10곡 (229 꿈을 꾼 후에 포레 · 245 브람스 교향곡 4번 · 247 차이콥스키 5번 안단테 칸타빌레 · 251 라흐 Op.3-2 · 256 정결한 여신이여 벨리니 · 259 브람스 바협 · 260 차이콥스키 비창 4악장 · 262 베토벤 바협 · 264 드보르자크 첼로 2악장 · 267 라흐 피협 3번) — 자가 결함 27건 (under 9 + over 18 · s304 under skew → s317 over skew 역전) · over family 5 sub-axis (베토벤 단 movement dominant transfer / Russian core / 4대 바협 / nickname trap / 매니아 자리 B default) · under family 4 sub-axis (한국 대중 노출 약 / 베르디 dominant / 슈트라우스 polka / 헨델 Water Music) · popularity_tier miscalibration family 누적 = s299 22 + s303 13 + s304 26 + s317 27 = 88건 — **C tier review cycle 종료** (102곡 review · 변경 누적 76 = C→S 5 + C→A 19 + C→B 52)
+- 누적 분류 (s317 종료 시점 · C tier review cycle 종료): S 74 / A 71 / B 97 / C 26 / D 56 = 324 (s304 [60/102] 시점 대비 S +1 / A +6 / B +25 / C -32 / D ±0) — tier boundaries S 1~74 / A 75~145 / B 146~242 / C 243~268 / D 269~324
+"""
+import csv
+import sys
+from pathlib import Path
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+p = Path(r'C:\Users\user\Desktop\myProject\Project_Muse\planning\candidate_master.csv')
+
+CHANGES = {
+    # s330 (2026-05-19) 코튼 12곡 axis (나) cycle · D tier 본질 doctrine 박힘 (미분류 buffer)
+    # · *변주된 송어 곡 = 5중주 4악장 D.667* axis 코튼 결단 D 강등 (s304 시점 C→S axis 자가 자가 axis = *피아노 매니아 자리* under family 박힌 자료 · 본 cycle 자가 자가 axis 자가 자가 axis = 미분류 buffer로 옮김)
+    '송어 5중주 4악장 (슈베르트)': ('S', 'D'),
+}
+
+with p.open(encoding='utf-8-sig', newline='') as f:
+    reader = csv.DictReader(f)
+    fieldnames = reader.fieldnames
+    rows = list(reader)
+
+changes = []
+skipped = []
+for r in rows:
+    pk = r['piece_ko'].strip()
+    if pk in CHANGES:
+        expected_old, new = CHANGES[pk]
+        actual_old = r['popularity_tier'].strip()
+        if actual_old == new:
+            skipped.append((int(r['rank']), pk, actual_old))
+            continue
+        if actual_old != expected_old:
+            raise ValueError(
+                f"tier mismatch for piece_ko='{pk}': "
+                f"expected old={expected_old} or new={new}, actual={actual_old}"
+            )
+        r['popularity_tier'] = new
+        changes.append((int(r['rank']), pk, actual_old, new))
+
+matched_pks = {c[1] for c in changes} | {s[1] for s in skipped}
+missing = set(CHANGES.keys()) - matched_pks
+if missing:
+    raise ValueError(f'piece_ko not found in csv: {missing}')
+
+with p.open('w', encoding='utf-8-sig', newline='') as f:
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
+    writer.writeheader()
+    writer.writerows(rows)
+
+print(f'changes applied ({len(changes)}):')
+for c in sorted(changes):
+    print(f'  rank {c[0]:>3}: {c[1]}  {c[2]} -> {c[3]}')
+if skipped:
+    print(f'\nskipped (already at target tier, {len(skipped)}):')
+    for s in sorted(skipped):
+        print(f'  rank {s[0]:>3}: {s[1]}  already={s[2]}')
+
+dist = {}
+for r in rows:
+    t = r['popularity_tier'].strip()
+    dist[t] = dist.get(t, 0) + 1
+print('\nnew distribution:')
+for t in ['S', 'A', 'B', 'C', 'D']:
+    print(f'  {t}: {dist.get(t, 0)}')
+print(f'  total: {sum(dist.values())}')

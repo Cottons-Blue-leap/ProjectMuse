@@ -1,0 +1,26 @@
+{
+  "name": "muse-joplin-the-entertainer-visualizer",
+  "version": "0.1.0",
+  "description": "Atelier Miku Acappella — Joplin The Entertainer visualizer",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts MuseJoplinTheEntertainer out/joplin_the_entertainer_final.mp4",
+    "render:v1": "remotion render src/index.ts MuseJoplinTheEntertainer out/prototype_v1.mp4",
+    "render:v2": "remotion render src/index.ts MuseJoplinTheEntertainer out/prototype_v2.mp4",
+    "render:v3": "remotion render src/index.ts MuseJoplinTheEntertainer out/prototype_v3.mp4",
+    "preview": "remotion preview src/index.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.446",
+    "@remotion/media-utils": "^4.0.460",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.446"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.6.0"
+  }
+}

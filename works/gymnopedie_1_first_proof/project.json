@@ -1,0 +1,22 @@
+{
+  "piece": "Gymnopédie No. 1",
+  "composer": "Erik Satie",
+  "section": "통째 (full piece · ~3:00)",
+  "vocal": "Hatsune Miku",
+  "music": {
+    "source_score_planning": "planning/candidates_opus/사티_짐노페디_1.pdf",
+    "dry_stems_dir": "music/midi/render_ready_v1",
+    "master_audio": "music/midi/render_ready_v1/Miku_Gymnopeddie_1.wav"
+  },
+  "video": {
+    "brief": "video/video-brief.md",
+    "final_video": "video/exports/final_v4.mp4"
+  },
+  "release": {
+    "channel": "Atelier Miku Acappella",
+    "url": "https://youtu.be/rRnl8RZ3EjY",
+    "released_at": "2026-05-14T20:01:29+09:00",
+    "playlist": "Miku in the Romantic Era"
+  },
+  "notes": "legacy structure (first proof · s275~s300) · naming_convention.md v1 (s332) 이전 박힘 양식 · publish 통과 doctrine 정합 retrofit X · 구 구조 (music/analysis/arrangement/midi/source_scores/vocaloid) keep"
+}

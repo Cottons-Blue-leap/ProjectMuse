@@ -1,0 +1,21 @@
+{
+  "current_phase": "publish_complete (s327 · 2026-05-18 재업로드 통과 · 새 URL `https://www.youtube.com/watch?v=0qXLYmZXAx0` · vid `0qXLYmZXAx0` · 이전 `Q6VNpdpAMZg` 폐기)",
+  "rights": "approved_composition_edition_coverart_eulenburg_1982",
+  "vocal_input_v6": "complete",
+  "dry_stems": "complete",
+  "master": "complete",
+  "listening_decision": "complete",
+  "video_release": "published_2026-05-18 (s327 재업로드 통과 · new URL `https://www.youtube.com/watch?v=0qXLYmZXAx0`)",
+  "channel": {
+    "name": "Atelier Miku Acappella",
+    "handle": "@AtelierMikuAcappella",
+    "url": "https://www.youtube.com/@AtelierMikuAcappella",
+    "playlist": "Miku in the Baroque Era"
+  },
+  "release_title": "Antonio Vivaldi - Spring, Mvt. I (feat. Hatsune Miku)",
+  "cover_art": "Botticelli, Primavera (c. 1482) · Public Domain · s301 lock",
+  "source_pdf": "Project_Muse/planning/candidates_opus/안토니오 비발디_사계_봄.pdf · 28 page · 1악장 = page 1~11 · Edition = Eulenburg (Robert Launchbury, 1982 · EE 6718)",
+  "master_file": "music/Miku_vivaldi_spring_1_allegro.wav",
+  "master_meta": "197.6s (3:17) · 44.1kHz · 24bit · 스테레오 PCM",
+  "last_decision": "s327 (2026-05-18): 재업로드 통과 — 코튼 즉시 publish 결단 (5/18 20:00 KST scheduled 자리 자체엔 코튼 자가 immediate publish path · 새 URL `https://www.youtube.com/watch?v=0qXLYmZXAx0` 박음). description 변경 통과 axis = Block 1 (Welcome anchor) 제거 + curator voice 행 신축 (*Chosen with a longing for the cool breeze of spring-* + 작품 헌사) · 코튼 자가 paste 양식 자료 keep (자가 verify path X · YouTube SPA · WebFetch 안 가져옴). post-release 6 step doctrine 발동 통과. 이전 s324 자료 = panning fix retrofit · 코튼 5/17 20:00 KST publish 통과 4h 후 청취 *패닝 안 되어 소리 꽉 차서 인지부하* 자성 → V6 패닝 수정 + 새 wav export → visualizer/public/audio.wav 교체 → Remotion render 통과 (21.5MB · 198.06s · 5940 frame) → 코튼 기존 YouTube `Q6VNpdpAMZg` 삭제 결단 → 재업로드 결단."
+}

@@ -1,0 +1,37 @@
+{
+  "current_phase": "published_2026-05-14",
+  "rights": "public_domain_satie_1888",
+  "score_ingestion": "pass",
+  "analysis": "pass_auto",
+  "arrangement": "pass_skip_text_verify_listen_only_gate",
+  "role_design": "drafted_s275",
+  "vocal_design": "auto_drafted_s275",
+  "vocal_plan": "auto_generated_s275",
+  "render_ready_midi": "v1_unedited_3roles_lead+mid+low",
+  "dry_stems": "not_started",
+  "master": "not_started",
+  "video_release": "production_pass_v4_release_assets_v1 + published_2026-05-14T20:01:29_KST",
+  "channel": {
+    "name": "Atelier Miku Acappella",
+    "handle": "@AtelierMikuAcappella",
+    "url": "https://www.youtube.com/@AtelierMikuAcappella",
+    "신축일": "2026-05-13",
+    "session": "s282",
+    "playlist_자리": "Miku in the Romantic Era",
+    "video_url": "https://youtu.be/rRnl8RZ3EjY"
+  },
+  "visualizer_prototype": {
+    "iterations": 11,
+    "final": "v11",
+    "path": "video/visualizer/out/prototype_v11.mp4",
+    "audio_source": "music/midi/render_ready_v1/Miku_Gymnopeddie_1_faded_v2.wav (최종 자료 · s294 cleanup 시 옛 prototype 시점 polished_v1.wav 삭제 — prototype_v11.mp4 자체는 keep)",
+    "spec": "1920x1080 H.264 + 48kHz AAC stereo · 30s @ 30fps · 3.2 MB",
+    "layout": "cover 720 center + 좌하단 frame text stack + 좌·우 vertical bars (시리즈 공통 양식)",
+    "sound_visualization": "32 bars per side · 9시=0Hz 시계방향 · width 3px · opacity 0.6 · max 220 · subtle 고급 양식",
+    "props_axis": "letterboxColors / composerName / pieceTitle / pieceSubtitle / audioPath / coverPath (곡별 가변)",
+    "future_props_axis": "maxAmplitudeHeight (곡별 dynamic 정합) · amplification_high_factor · fade_in_seconds",
+    "signature_compliance": "5_5_pass (타이포 GFS Didot · text stack 좌하단 · 마크 X · 1:1 cover · letterbox 그라데이션)",
+    "spec_정정_의제": "text stack 자리 spec 정합 검토 (현재 cover 외곽 frame 좌하단 vs spec *cover 안 좌하단*)"
+  },
+  "last_decision": "s300 (2026-05-14 20:45 KST): 짐노페디 YouTube publish 통과 자가 점검 통과 + post_release_meta_doctrine.md 6 step 진입. YouTube Data API v3 호출 자가 점검 자료 박힘 = PRIVACY public · UPLOAD_STATUS processed · PUBLISHED_AT 2026-05-14T11:01:29Z (KST 20:01:29 · 예약 정시 대비 +1분 29초) · VIEW_COUNT 5 · LIKE_COUNT 0 · COMMENT_COUNT 0 (publish 통과 시점 ~44분 경과 자료). 본 cycle 진행 = (1) series_history.csv release_date 2026-05-14 박음 + (2) status.json current_phase published_{date} 정정 + (3) reference_youtube_channel.md Muse 트랙 신축 + (4) MEMORY.md 본문 동기화 + (5) post_release_retrospective.md post-publish 자리 (24h~7d 자료는 별 cycle path) + (6) project_muse.md 시리즈 자리 update. 별 의제 = MEMORY.md 안 B tier review s299 종료 자료 stale 자료 정정 (자가 결함 E42 sample).\n\ns292 (2026-05-14): description intro 3줄 prepend 통과 ('Welcome to Atelier Miku Acappella!' + 정체성 1줄 + 'Hope you find something to love here ♪' · 코튼 4건 정정 흡수 = ♪ 음표 + en dash (1872–75) + © 공백 제거 + Hope 줄 묶음) + Cover art 양식 정본화 ('The painting:' → 'Cover art, after Whistler, ...' 미술사 표기 + 차용/변형 axis 박음) + description_template.md doctrine 신축 (workflows/video_release/docs/ · 3 블록 양식 + 가변 자리 4건 + anchor 자료 + 점검 의제 3건 default 결단 + 라이브 서비스 keep doctrine) + ♪ 공백 결단 path (코튼 1차 제거 → 2차 복귀 · typography 미감 axis = 코튼 직접 path doctrine) + 자가 정정 누적 sample (en dash 자리 over-careful 본능 + series_history.csv 첫 row 단정 under-check 본능 = s291 over-careful family 양 끝). 본 cycle (publish 통과 후 · 5/14 20:00 KST 이후): release_date + status.json 'publish_complete' + reference_youtube_channel.md Muse 트랙 추가 + MEMORY.md 자료 동기화 + post_release_retrospective.md post-publish 자리 update 의제 (post_release_meta_doctrine.md doctrine 따라 자동 path).\n\ns282: 채널 Atelier Miku Acappella 신축 통과 (어제 LOCK 'Miku Acappella Atelier' → 'Atelier Miku Acappella' 정정 흡수 · Atelier Ryza 양식 코튼 결단) · description 최종 영문 (영어 통일 + 압축 양식 + grammar 정정 'placed by hand in Vocaloid6 Editor' + hashtag 8건) · 제목 최종 'Erik Satie - Gymnopédie No. 1 (feat. Hatsune Miku)' · title.txt + description.md repo 동기화 통과 + 외부 메타 10 file sweep 통과 (옛 'Miku Acappella Atelier' → 'Atelier Miku Acappella') + 영리 전환 path 5축 섹션 신축 (project_muse.md) + 재생목록 4 신축 (Miku in the Baroque/Classical/Romantic/Modern Era) · 짐노페디 = Miku in the Romantic Era 자리 (코튼 (a) 재분류 결단 = 작품 연도 1888 = Romantic 후기 학술 standard · 옛 csv '20세기' axis 재검토) · 예약 게시 2026-05-14 목 20:00 KST 결단."
+}

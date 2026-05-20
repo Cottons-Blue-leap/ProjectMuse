@@ -1,0 +1,16 @@
+{
+  "piece": "The Entertainer (A Ragtime Two-Step)",
+  "composer": "Scott Joplin",
+  "section": "통째 (~3:30-4:00 · 자연 짧은 곡 양식 · 발췌 없음 · 짐노페디·비발디 family 정합)",
+  "vocal": "Hatsune Miku",
+  "music": {
+    "source_score_planning": "planning/candidates_opus/조플린_ 디 엔터테이너.pdf",
+    "imslp_path_axis": "https://imslp.org/wiki/The_Entertainer_(Joplin,_Scott) · PD 강 · 자료 풍성",
+    "dry_stems_dir": "music/renders/dry_stems",
+    "master_audio": "music/masters/master.wav"
+  },
+  "video": {
+    "brief": "video/video-brief.md",
+    "final_video": "video/exports/joplin_the_entertainer_final.mp4"
+  }
+}

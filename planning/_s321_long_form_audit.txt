@@ -1,0 +1,63 @@
+# csv 안 긴 곡 split 후보 audit
+후보 자료: 15건
+
+rank   3 (tier S): Air from Orchestral Suite No. 3
+         관현악 모음곡 3번 중 G선상의 아리아 (바흐)
+         IMSLP: https://imslp.org/wiki/Orchestral_Suite_No.3_in_D_major,_BWV_1068_(Bach,_Johann_Sebastian)
+
+rank  10 (tier S): Moonlight Sonata I
+         월광 소나타 1악장 (베토벤)
+         IMSLP: https://imslp.org/wiki/Piano_Sonata_No.14,_Op.27_No.2_(Beethoven,_Ludwig_van)
+
+rank  69 (tier S): Waltz No. 2 from Suite for Variety Orchestra
+         재즈 모음곡 중 왈츠 2번 (쇼스타코비치)
+         IMSLP: https://imslp.org/wiki/Suite_for_Variety_Orchestra_(Shostakovich,_Dmitry)
+
+rank  74 (tier S): Dies Irae from Messa da Requiem
+         베르디 레퀴엠 중 「진노의 날」
+         IMSLP: https://imslp.org/wiki/Messa_da_Requiem_(Verdi,_Giuseppe)
+
+rank 121 (tier A): Symphony No. 3 Organ Op. 78 finale
+         교향곡 3번 「오르간」 작품 78 피날레 (생상스)
+         IMSLP: https://imslp.org/wiki/Symphony_No.3,_Op.78_(Saint-Sa%C3%ABns,_Camille)
+
+rank 150 (tier B): Rachmaninoff Piano Concerto No. 2 theme
+         라흐마니노프 피아노 협주곡 2번 테마
+         IMSLP: https://imslp.org/wiki/Piano_Concerto_No.2,_Op.18_(Rachmaninoff,_Sergei)
+
+rank 177 (tier B): Poco Allegretto from Symphony No. 3
+         교향곡 3번 중 포코 알레그레토 (브람스)
+         IMSLP: https://imslp.org/wiki/Symphony_No.3,_Op.90_(Brahms,_Johannes)
+
+rank 193 (tier B): Requiem K.626 Dies Irae
+         레퀴엠 K.626 「진노의 날」 (모차르트)
+         IMSLP: https://imslp.org/wiki/Requiem,_K.626_(Mozart,_Wolfgang_Amadeus)
+
+rank 206 (tier B): Symphony No. 41 Jupiter K.551 finale
+         교향곡 41번 「주피터」 K.551 피날레 (모차르트)
+         IMSLP: https://imslp.org/wiki/Symphony_No.41_in_C_major,_K.551_(Mozart,_Wolfgang_Amadeus)
+
+rank 218 (tier B): Pie Jesu from Requiem Op. 48
+         레퀴엠 중 「피에 예수」 작품 48 (포레)
+         IMSLP: https://imslp.org/wiki/Requiem,_Op.48_(Faur%C3%A9,_Gabriel)
+
+rank 236 (tier B): Farandole from L'Arlesienne Suite No. 2
+         아를의 여인 모음곡 2번 「파랑돌」 (비제)
+         IMSLP: https://imslp.org/wiki/L%27Arl%C3%A9sienne_(Bizet,_Georges)
+
+rank 244 (tier C): Allegretto from Symphony No. 7
+         교향곡 7번 중 알레그레토 (베토벤)
+         IMSLP: https://imslp.org/wiki/Symphony_No.7,_Op.92_(Beethoven,_Ludwig_van)
+
+rank 307 (tier D): Libera me from Messa da Requiem
+         베르디 레퀴엠 중 「나를 구하소서」
+         IMSLP: https://imslp.org/wiki/Messa_da_Requiem_(Verdi,_Giuseppe)
+
+rank 315 (tier D): Granada from Suite Espanola Op. 47
+         그라나다 (수이트 에스파뇨라 작품 47-1) (알베니스)
+         IMSLP: https://imslp.org/wiki/Suite_espa%C3%B1ola_No.1,_Op.47_(Alb%C3%A9niz,_Isaac)
+
+rank 317 (tier D): Hary Janos Suite Intermezzo
+         하리 야노시 모음곡 간주곡 (코다이)
+         IMSLP: https://imslp.org/wiki/H%C3%A1ry_J%C3%A1nos_(Kod%C3%A1ly,_Zolt%C3%A1n)
+

@@ -1,0 +1,27 @@
+{
+  "project_name": "miku_acappella_proof",
+  "aesthetic": "Miku-centered classical acappella, transparent, non-instrumental, reverberant, restrained",
+  "default_tempo_bpm": 72,
+  "sample_rate": 48000,
+  "bit_depth": 24,
+  "target_duration_bars": 16,
+  "miku_ranges": {
+    "lead_miku": { "low_midi": 60, "high_midi": 79, "syllable": "Ah" },
+    "lead_double": { "low_midi": 60, "high_midi": 79, "syllable": "Ah" },
+    "halo_high": { "low_midi": 64, "high_midi": 84, "syllable": "Oo" },
+    "mid_oo": { "low_midi": 55, "high_midi": 72, "syllable": "Oo" },
+    "low_oo": { "low_midi": 48, "high_midi": 64, "syllable": "Oo" },
+    "air_mm": { "low_midi": 57, "high_midi": 76, "syllable": "Mm" }
+  },
+  "render_rules": {
+    "dry_stems_only": true,
+    "same_start_time": true,
+    "avoid_training_voice_models": true
+  },
+  "mix_defaults": {
+    "lead_pan": 0,
+    "harmony_width": 0.35,
+    "hall_reverb": "shared chamber or hall",
+    "compression": "light"
+  }
+}

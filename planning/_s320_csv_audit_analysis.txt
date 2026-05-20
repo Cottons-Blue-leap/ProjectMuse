@@ -1,0 +1,104 @@
+# csv 분석 (s320) — 교향곡 세분화 후보 + 중복 검사
+
+
+## Axis 1: 큰 작품 세분화 후보 분석
+
+
+### 단일 row 박힌 큰 작품 (70건 · 세분화 후보)
+
+  - rank 37 · "「아, 어머니께 말씀드리죠」 (모차르트, 작은 별 변주곡)" · piece="Ah! vous dirai-je maman" · tier=S · period=고전
+  - rank 312 · "고전 교향곡 작품 25 3악장 가보트 (프로코피예프)" · piece="Classical Symphony Op. 25 third movement Gavotte" · tier=D · period=20세기
+  - rank 174 · "골드베르크 변주곡 BWV 988 중 아리아 (바흐)" · piece="Aria from Goldberg Variations BWV 988" · tier=B · period=바로크
+  - rank 293 · "골드베르크 변주곡 BWV 988 변주 25 (바흐)" · piece="Goldberg Variations BWV 988 Variation 25" · tier=D · period=바로크
+  - rank 3 · "관현악 모음곡 3번 중 G선상의 아리아 (바흐)" · piece="Air from Orchestral Suite No. 3" · tier=S · period=바로크
+  - rank 212 · "교향곡 1번 4악장 (브람스)" · piece="Symphony No. 1 fourth movement Op. 68" · tier=B · period=낭만
+  - rank 131 · "교향곡 25번 G단조 1악장 (모차르트)" · piece="Symphony No. 25 G minor first movement" · tier=A · period=고전
+  - rank 177 · "교향곡 3번 중 포코 알레그레토 (브람스)" · piece="Poco Allegretto from Symphony No. 3" · tier=B · period=낭만
+  - rank 298 · "교향곡 3번 「라인」 작품 97 1악장 (슈만)" · piece="Symphony No. 3 Rhenish Op. 97 first movement" · tier=D · period=낭만
+  - rank 238 · "교향곡 3번 「영웅」 작품 55 1악장 (베토벤)" · piece="Symphony No. 3 Eroica Op. 55 first movement" · tier=B · period=고전
+  - rank 121 · "교향곡 3번 「오르간」 작품 78 피날레 (생상스)" · piece="Symphony No. 3 Organ Op. 78 finale" · tier=A · period=낭만
+  - rank 61 · "교향곡 40번 1악장 (모차르트)" · piece="Symphony No. 40 first movement" · tier=S · period=고전
+  - rank 295 · "교향곡 40번 K.550 4악장 (모차르트)" · piece="Symphony No. 40 K.550 fourth movement" · tier=D · period=고전
+  - rank 206 · "교향곡 41번 「주피터」 K.551 피날레 (모차르트)" · piece="Symphony No. 41 Jupiter K.551 finale" · tier=B · period=고전
+  - rank 260 · "교향곡 4번 작품 98 1악장 (브람스)" · piece="Symphony No. 4 Op. 98 first movement" · tier=C · period=낭만
+  - rank 166 · "교향곡 5번 4악장 아다지에토 (말러)" · piece="Symphony No. 5 fourth movement Adagietto" · tier=B · period=20세기
+  - rank 22 · "교향곡 5번 「운명」 도입부 (베토벤)" · piece="Symphony No. 5 Opening" · tier=S · period=고전
+  - rank 261 · "교향곡 5번 작품 64 2악장 안단테 칸타빌레 (차이콥스키)" · piece="Symphony No. 5 Op. 64 second movement Andante cantabile" · tier=C · period=낭만
+  - rank 240 · "교향곡 5번 작품 67 4악장 (베토벤)" · piece="Symphony No. 5 Op. 67 fourth movement" · tier=B · period=고전
+  - rank 181 · "교향곡 6번 「전원」 1악장 (베토벤)" · piece="Symphony No. 6 Pastoral first movement Op. 68" · tier=B · period=고전
+  - rank 244 · "교향곡 7번 중 알레그레토 (베토벤)" · piece="Allegretto from Symphony No. 7" · tier=C · period=고전
+  - rank 142 · "교향곡 7번 작품 92 1악장 (베토벤)" · piece="Symphony No. 7 Op. 92 first movement" · tier=A · period=고전
+  - rank 126 · "교향곡 94번 「놀람」 2악장 (하이든)" · piece="Symphony No. 94 Surprise Hob. I:94 second movement" · tier=A · period=고전
+  - rank 228 · "교향곡 9번 「그레이트」 D.944 1악장 (슈베르트)" · piece="Symphony No. 9 Great D.944 first movement" · tier=B · period=낭만
+  - rank 225 · "교향곡 9번 「합창」 작품 125 1악장 (베토벤)" · piece="Symphony No. 9 Choral Op. 125 first movement" · tier=B · period=고전
+  - rank 271 · "껍질을 깨지 못한 병아리들의 발레 (무소르그스키)" · piece="Ballet of the Unhatched Chicks" · tier=D · period=낭만
+  - rank 150 · "라흐마니노프 피아노 협주곡 2번 테마" · piece="Rachmaninoff Piano Concerto No. 2 theme" · tier=B · period=낭만
+  - rank 326 · "마르첼리 교황 미사 키리에 (팔레스트리나 - 6성부 미사)" · piece="Missa Papae Marcelli, Kyrie" · tier=D · period=르네상스
+  - rank 270 · "모음곡 HWV 437 중 사라방드 (헨델)" · piece="Sarabande from Suite HWV 437" · tier=D · period=바로크
+  - rank 35 · "무반주 첼로 모음곡 1번 전주곡 (바흐)" · piece="Cello Suite No. 1 Prelude" · tier=S · period=바로크
+  - rank 184 · "미완성 교향곡 1악장 (슈베르트)" · piece="Symphony No. 8 Unfinished first movement D.759" · tier=B · period=낭만
+  - rank 226 · "바이올린 소나타 5번 「봄」 작품 24 1악장 (베토벤)" · piece="Violin Sonata No. 5 Spring Op. 24 first movement" · tier=B · period=고전
+  - rank 242 · "바이올린 협주곡 D단조 작품 47 1악장 (시벨리우스)" · piece="Violin Concerto in D minor Op. 47 first movement" · tier=B · period=20세기
+  - rank 241 · "바이올린 협주곡 D장조 작품 35 1악장 (차이콥스키)" · piece="Violin Concerto Op. 35 first movement" · tier=B · period=낭만
+  - rank 266 · "바이올린 협주곡 D장조 작품 61 1악장 (베토벤)" · piece="Violin Concerto Op. 61 first movement" · tier=C · period=고전
+  - rank 264 · "바이올린 협주곡 D장조 작품 77 1악장 (브람스)" · piece="Violin Concerto Op. 77 first movement" · tier=C · period=낭만
+  - rank 162 · "바이올린 협주곡 E단조 1악장 (멘델스존)" · piece="Violin Concerto in E minor Op. 64 first movement" · tier=B · period=낭만
+  - rank 101 · "불새 모음곡 「자장가와 피날레」 1919년판 (스트라빈스키)" · piece="Firebird Suite Berceuse and Finale 1919 version" · tier=A · period=20세기
+  - rank 133 · "브란덴부르크 협주곡 2번 F장조 BWV 1047 1악장 (바흐)" · piece="Brandenburg Concerto No. 2 in F major BWV 1047 first movement" · tier=A · period=바로크
+  - rank 130 · "브란덴부르크 협주곡 3번 1악장 BWV 1048 (바흐)" · piece="Brandenburg Concerto No. 3 first movement BWV 1048" · tier=A · period=바로크
+  - rank 141 · "브란덴부르크 협주곡 5번 BWV 1050 1악장 (바흐)" · piece="Brandenburg Concerto No. 5 BWV 1050 first movement" · tier=A · period=바로크
+  - rank 58 · "사계 「여름」 3악장 프레스토 (비발디)" · piece="Summer III Presto from The Four Seasons" · tier=S · period=바로크
+  - rank 23 · "소나타 K331 중 터키 행진곡 (모차르트)" · piece="Rondo Alla Turca from Sonata K331" · tier=S · period=고전
+  - rank 146 · "수수께끼 변주곡 중 님로드 (엘가)" · piece="Nimrod from Enigma Variations" · tier=B · period=낭만
+  - rank 122 · "아랑훼즈 협주곡 2악장 아다지오 (로드리고)" · piece="Concierto de Aranjuez Adagio" · tier=A · period=20세기
+  - rank 236 · "아를의 여인 모음곡 2번 「파랑돌」 (비제)" · piece="Farandole from L'Arlesienne Suite No. 2" · tier=B · period=낭만
+  - rank 182 · "열정 소나타 1악장 (베토벤)" · piece="Appassionata Sonata first movement Op. 57" · tier=B · period=고전
+  - rank 183 · "영웅 교향곡 2악장 장송행진곡 (베토벤)" · piece="Eroica Symphony second movement Funeral March Op. 55" · tier=B · period=고전
+  - rank 314 · "오보에 협주곡 D단조 2악장 아다지오 (알레산드로 마르첼로)" · piece="Oboe Concerto in D minor second movement Adagio" · tier=D · period=바로크
+  - rank 10 · "월광 소나타 1악장 (베토벤)" · piece="Moonlight Sonata I" · tier=S · period=고전
+  - rank 211 · "이탈리아 교향곡 1악장 작품 90 (멘델스존)" · piece="Italian Symphony first movement Op. 90" · tier=B · period=낭만
+  - rank 222 · "이탈리아 협주곡 BWV 971 1악장 (바흐)" · piece="Italian Concerto BWV 971 first movement" · tier=B · period=바로크
+  - rank 69 · "재즈 모음곡 중 왈츠 2번 (쇼스타코비치)" · piece="Waltz No. 2 from Suite for Variety Orchestra" · tier=S · period=20세기
+  - rank 107 · "차이콥스키 피아노 협주곡 1번 도입부" · piece="Piano Concerto No. 1 Opening" · tier=A · period=낭만
+  - rank 267 · "첼로 협주곡 B단조 작품 104 2악장 아다지오 (드보르자크)" · piece="Cello Concerto in B minor Op. 104 second movement Adagio" · tier=C · period=낭만
+  - rank 77 · "카발레리아 루스티카나 간주곡 (마스카니)" · piece="Intermezzo from Cavalleria Rusticana" · tier=A · period=낭만
+  - rank 279 · "크리스마스 오라토리오 신포니아 (목가) BWV 248 10번 (바흐)" · piece="Sinfonia (Pastorale) from Christmas Oratorio BWV 248 No. 10" · tier=D · period=바로크
+  - rank 175 · "클라리넷 협주곡 K622 아다지오 (모차르트)" · piece="Adagio from Clarinet Concerto K622" · tier=B · period=고전
+  - rank 5 · "페르귄트 모음곡 중 산왕의 궁전에서 (그리그)" · piece="In the Hall of the Mountain King" · tier=S · period=낭만
+  - rank 82 · "피아노 소나타 2번 중 장송행진곡 (쇼팽)" · piece="Funeral March from Piano Sonata No. 2" · tier=A · period=낭만
+  - rank 79 · "피아노 소나타 K.545 1악장 (모차르트)" · piece="Piano Sonata K545 first movement" · tier=A · period=고전
+  - rank 245 · "피아노 협주곡 21번 안단테 (엘비라 마디간) (모차르트)" · piece="Andante from Piano Concerto No. 21 (Elvira Madigan)" · tier=C · period=고전
+  - rank 224 · "피아노 협주곡 23번 K.488 2악장 아다지오 (모차르트)" · piece="Piano Concerto No. 23 K.488 second movement Adagio" · tier=B · period=고전
+  - rank 268 · "피아노 협주곡 3번 D단조 작품 30 1악장 (라흐마니노프)" · piece="Piano Concerto No. 3 in D minor Op. 30 first movement" · tier=C · period=20세기
+  - rank 227 · "피아노 협주곡 4번 작품 58 1악장 (베토벤)" · piece="Piano Concerto No. 4 Op. 58 first movement" · tier=B · period=고전
+  - rank 210 · "피아노 협주곡 A단조 1악장 (슈만)" · piece="Piano Concerto in A minor Op. 54 first movement" · tier=B · period=낭만
+  - rank 125 · "피아노 협주곡 A단조 작품 16 1악장 (그리그)" · piece="Piano Concerto in A minor Op. 16 first movement" · tier=A · period=낭만
+  - rank 317 · "하리 야노시 모음곡 간주곡 (코다이)" · piece="Hary Janos Suite Intermezzo" · tier=D · period=20세기
+  - rank 213 · "하이든 주제에 의한 변주곡 (성 안토니우스 코랄) 작품 56 (브람스)" · piece="Variations on a Theme by Haydn Op. 56 St Anthony Chorale" · tier=B · period=낭만
+  - rank 207 · "황제 협주곡 2악장 아다지오 (베토벤)" · piece="Piano Concerto No. 5 Emperor Adagio Op. 73" · tier=B · period=고전
+
+### multi-row 박힌 큰 작품 (3건 · 이미 분리 axis)
+
+
+  base: "비창 교향곡 작품 74" (2 rows)
+    - rank 194 · "비창 교향곡 작품 74 1악장 (차이콥스키)"
+    - rank 265 · "비창 교향곡 작품 74 4악장 아다지오 라멘토소 (차이콥스키)"
+
+  base: "비창 소나타" (2 rows)
+    - rank 76 · "비창 소나타 중 아다지오 칸타빌레 (베토벤)"
+    - rank 95 · "비창 소나타 1악장 (베토벤)"
+
+  base: "신세계 교향곡" (4 rows)
+    - rank 4 · "신세계 교향곡 2악장 라르고 (드보르자크)"
+    - rank 29 · "신세계 교향곡 4악장 알레그로 콘 푸오코 (드보르자크)"
+    - rank 179 · "신세계 교향곡 1악장 아다지오 — 알레그로 몰토 (드보르자크)"
+    - rank 204 · "신세계 교향곡 3악장 스케르초 몰토 비바체 (드보르자크)"
+
+
+## Axis 2: 중복 자료 검사
+
+
+### piece (원어) normalize 중복 (0건)
+
+
+### piece_ko normalize 중복 (0건)

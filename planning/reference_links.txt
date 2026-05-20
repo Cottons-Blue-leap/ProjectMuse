@@ -1,0 +1,289 @@
+Project Muse Reference Links
+============================
+
+Purpose
+-------
+This file collects useful reference links for the Miku/VOCALOID acappella
+project. Treat these as leads, not final proof. For any released work, verify
+rights again in works/<piece>/rights/rights-log.md.
+
+
+VOCALOID Acappella / Choir Precedents
+-------------------------------------
+
+VOCALOID acappella choir album: "Bokapera - Theme: Beta" / Magical Album Vol.16
+https://www.ktrmagician.com/ma/html/ma_16.html
+Notes:
+- Page describes a VOCALOID acappella choir collection.
+- Includes SATB role assignments using Hatsune Miku and other VOCALOIDs.
+- Some tracks appear to use Hatsune Miku for all SATB parts.
+
+K.H.Editor: Dragon Quest Overture x Hatsune Miku vocalo-acappella
+https://kenkihikage.com/vocalo-acappella-dq1op/
+Notes:
+- Defines "vocalo-acappella" as music made only with VOCALOID voices.
+- States the project used only Hatsune Miku voice.
+- Mentions Miku V4X Original and Soft, which is useful for our Miku-only tests.
+
+Hatsune Miku Wiki tag list
+https://w.atwiki.jp/hmiku/pages/78.html
+Notes:
+- Contains tags for VOCALOID choir, all-Miku works, Hatsune Miku choir series,
+  Miku chorus, and Miku-Miku choir.
+- Useful for searching older Japanese/NicoNico choir and all-Miku precedents.
+
+KARENT: Lip Sync Records artist page
+https://karent.jp/artist/pp000614
+Notes:
+- Lists several Hatsune Miku tracks with "acapella/accapella" versions, such as
+  STAR GUITAR, EMAIL, Story Rider, and NEXT ON YOU.
+- These may be isolated vocal/acapella releases rather than arranged acappella,
+  so treat them as terminology precedent, not direct musical precedent.
+
+
+Search Terms To Reuse
+---------------------
+
+English:
+- "VOCALOID acappella"
+- "VOCALOID a cappella"
+- "Hatsune Miku acappella"
+- "Hatsune Miku a cappella"
+- "VOCALOID choir"
+- "Miku choir"
+- "all Miku"
+
+Japanese search terms:
+- bokaro akapera
+- VOCALOID akapera
+- Hatsune Miku akapera
+- VOCALOID gassho
+- Hatsune Miku gassho
+- zenbu Miku
+- Hatsune Miku gasshodan series
+- Hatsune Miku no gassho
+- Miku-Miku gasshodan
+- boiparoido
+
+
+Public-Domain Score / Rights References
+---------------------------------------
+
+IMSLP public domain guide
+https://imslp.org/wiki/Public_Domain
+Notes:
+- Use as a starting point for score-source decisions.
+- Still verify each work and edition separately.
+
+Satie: 3 Gymnopedies
+https://imslp.org/wiki/3_Gymnop%C3%A9dies_(Satie,_Erik)
+
+Pachelbel: Canon and Gigue in D major
+https://imslp.org/wiki/Canon_and_Gigue_in_D_major_(Pachelbel,_Johann)
+
+Bach: The Well-Tempered Clavier I, BWV 846-869
+https://imslp.org/wiki/Das_wohltemperierte_Klavier_I,_BWV_846-869_(Bach,_Johann_Sebastian)
+
+Saint-Saens: The Carnival of the Animals
+https://imslp.org/wiki/Le_carnaval_des_animaux_(Saint-Sa%C3%ABns,_Camille)
+
+Debussy: Suite bergamasque
+https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)
+
+Rachmaninoff: 14 Romances, Op.34
+https://imslp.org/wiki/14_Romances,_Op.34_(Rachmaninoff,_Sergei)
+
+Grieg: Peer Gynt Suite / In the Hall of the Mountain King lead
+https://imslp.org/wiki/Peer_Gynt_Suite_No.1,_Op.46_(Grieg,_Edvard)
+
+Offenbach: Doll Song lead
+https://www.cpdl.org/wiki/index.php/Les_oiseaux_dans_la_charmille_(Jacques_Offenbach)
+
+Rimsky-Korsakov: Flight of the Bumblebee
+https://imslp.org/wiki/Flight_of_the_Bumblebee
+
+Dukas: The Sorcerer's Apprentice
+https://imslp.org/wiki/L%27apprenti_sorcier_(Dukas,_Paul)
+
+Mussorgsky: Pictures at an Exhibition
+https://imslp.org/wiki/Pictures_at_an_Exhibition_(Mussorgsky,_Modest_Petrovich)
+
+Tchaikovsky: The Nutcracker
+https://imslp.org/wiki/The_Nutcracker_(ballet),_Op.71_(Tchaikovsky,_Pyotr)
+
+
+VOCALOID / Miku Tool References
+-------------------------------
+
+VOCALOID6 specs
+https://www.vocaloid.com/en/vocaloid6/specs/
+Notes:
+- Check track limits, file support, plugin support, and editor capabilities.
+
+VOCALOID6 Trial
+https://www.vocaloid.com/en/vocaloid6/trial
+Notes:
+- Useful for testing VOCALOID6 workflow even if it does not include Miku.
+
+Hatsune Miku V6 Starter Pack - SONICWIRE
+https://sonicwire.com/product/virtualsinger/special/miku-v6-starter
+Notes:
+- Main candidate for full purchase if the proof works.
+- Includes Miku V6 and full VOCALOID6 Editor.
+
+Hatsune Miku V6 Voicebank - SONICWIRE
+https://sonicwire.com/product/virtualsinger/special/miku-v6
+Notes:
+- Cheaper voicebank route, but with Editor Lite limitations.
+
+Hatsune Miku V4X - SONICWIRE
+https://sonicwire.com/product/virtualsinger/special/mikuv4x?lang=en
+Notes:
+- Useful for comparing classic Miku tone and V4X voice colors.
+
+Hatsune Miku NT - SONICWIRE
+https://sonicwire.com/product/virtualsinger/special/mikunt?lang=en
+Notes:
+- Useful trial candidate for testing Miku tone before buying V6.
+
+Piapro Characters Super Pack - SONICWIRE
+https://sonicwire.com/product/virtualsinger/special/superpack?lang=en
+Notes:
+- Useful later if the project expands from Miku-only to a broader virtual choir.
+
+
+Automation References
+---------------------
+
+MuseScore export handbook
+https://handbook.musescore.org/en_gb/file-management/file-export
+Notes:
+- Useful for MusicXML/MIDI export from score preparation.
+
+music21 documentation
+https://music21.org/music21docs/
+Notes:
+- Possible future upgrade if the workflow needs deeper harmonic analysis.
+
+
+Video / YouTube References
+--------------------------
+
+YouTube thumbnail guide
+https://support.google.com/youtube/answer/72431
+Notes:
+- Use for thumbnail size and format checks.
+
+YouTube upload encoding settings
+https://support.google.com/youtube/answer/1722171
+Notes:
+- Use for final video and audio encoding checks.
+
+
+Open-Access Artwork Sources
+---------------------------
+
+The Met Open Access
+https://www.metmuseum.org/en/hubs/open-access
+Notes:
+- The Met states that images of public-domain artworks and basic data are
+  available under Creative Commons Zero (CC0).
+
+Art Institute of Chicago Open Access
+https://www.artic.edu/open-access
+Notes:
+- Useful for public-domain and open-access artwork sources.
+
+Rijksmuseum Data Services
+https://data.rijksmuseum.nl/about/
+Notes:
+- Useful for public-domain and CC0 Rijksmuseum records.
+
+Wikimedia Commons
+https://commons.wikimedia.org/
+Notes:
+- Useful for public-domain and freely licensed media. Always check each file's
+  license and source page before release.
+
+
+Project Positioning Notes
+-------------------------
+
+Avoid saying:
+- "world first"
+- "first VOCALOID acappella"
+- "first Miku-only acappella"
+
+Safer positioning:
+- "Miku-centered classical acappella experiment"
+- "classical vocalise arranged for Miku-only acappella"
+- "a workflow for designing Hatsune Miku as a virtual acappella choir"
+- "public-domain classical music reimagined as Miku-centered vocal synthesis"
+
+
+World-Loved Classics Source Signals
+-----------------------------------
+
+Classic FM Hall of Fame
+https://www.classicfm.com/radio/hall-of-fame/
+Notes:
+- Classic FM describes this as the world's biggest classical music chart.
+- Useful as a broad popularity signal, not a rights source.
+
+Classic FM Hall of Fame 2026 Top 10 article
+https://www.classicfm.com/radio/hall-of-fame/karl-jenkins-armed-man-number-one/
+Notes:
+- Useful for current popularity context.
+- Many high-ranking works are modern or religious, so do not automatically
+  treat popularity as project fit.
+
+Classical California Ultimate 101 (2025)
+https://assets.ctfassets.net/8usdt07j8s00/3MCejR3BVT77IJZr8Li0sj/dff9d4c42bf59affb8cc01ce3b08327e/Classical_California-s_Ultimate_101__2025_.pdf
+Notes:
+- Useful contemporary public-radio popularity snapshot.
+- Includes several Project Muse candidates such as Clair de lune, Swan Lake,
+  The Four Seasons, Canon in D, The Swan, Gymnopedies, and Vocalise.
+
+BBC Music Magazine: 15 famous classical music moments
+https://www.classical-music.com/features/works/famous-classical-music-moments
+Notes:
+- Useful for identifying famous excerpts inside larger works, such as Bach's
+  Air from Orchestral Suite No. 3.
+
+
+Meme / Cartoon / Community-Familiar Classical Leads
+---------------------------------------------------
+
+Classical Music: Five uses of classical music in cartoons
+https://www.classical-music.com/articles/five-uses-classical-music-cartoons
+Notes:
+- Useful for cartoon familiarity signals, including Liszt and Wagner examples.
+
+Classical WCRB: Every Piece of Classical Music Ever Used in Old Cartoons
+https://www.classicalwcrb.org/blog/2021-03-05/every-piece-of-classical-music-ever-used-in-old-cartoons
+Notes:
+- Useful for a broad cartoon-classical discovery pass.
+
+William Tell Overture
+https://imslp.org/wiki/Guillaume_Tell_(Rossini,_Gioacchino)
+
+Entry of the Gladiators
+https://imslp.org/wiki/Einzug_der_Gladiatoren_(Fucik,_Julius)
+
+Hungarian Rhapsody No. 2
+https://imslp.org/wiki/Hungarian_Rhapsody_No.2,_S.244/2_(Liszt,_Franz)
+
+The Blue Danube
+https://imslp.org/wiki/An_der_schonen_blauen_Donau,_Op.314_(Strauss_Jr.,_Johann)
+
+Also sprach Zarathustra
+https://imslp.org/wiki/Also_sprach_Zarathustra,_Op.30_(Strauss,_Richard)
+
+Ride of the Valkyries
+https://imslp.org/wiki/Die_Walkure,_WWV_86B_(Wagner,_Richard)
+
+Mendelssohn: Wedding March
+https://imslp.org/wiki/A_Midsummer_Night%27s_Dream,_Op.61_(Mendelssohn,_Felix)
+
+Chopin: Funeral March / Piano Sonata No. 2
+https://imslp.org/wiki/Piano_Sonata_No.2,_Op.35_(Chopin,_Frederic)
