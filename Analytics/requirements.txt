@@ -1,0 +1,7 @@
+# Project Muse tools 의존성
+# 설치: python -m pip install --user -r requirements.txt
+google-api-python-client>=2.100
+google-auth-oauthlib>=1.2
+google-auth-httplib2>=0.2
+# report 명령의 Excel 워크북 생성용
+openpyxl>=3.1
