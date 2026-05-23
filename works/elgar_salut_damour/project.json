@@ -1,0 +1,17 @@
+{
+  "piece": "Salut d'Amour, Op. 12 (Edward Elgar)",
+  "composer": "Edward Elgar (1857-1934)",
+  "section": "통째 (~3분 · 자연 짧은 곡 양식 · 발췌 없음 · 짐노페디·비발디·조플린 family 정합)",
+  "vocal": "Hatsune Miku (모음/humming · Ah·Oo·Mm 6-role · 기악 원곡 = 가사 없음 · 첫 3곡 family 정합)",
+  "music": {
+    "source_score": "music/source_scores/salut_damour.pdf (candidates_opus ASCII copy · 단일 score 확정)",
+    "imslp_path_axis": "https://imslp.org/wiki/Salut_d'amour,_Op.12_(Elgar,_Edward) · PD 강 · Elgar d.1934 life+70 통과(2005)",
+    "transcription": "코튼 V6 editor 직접 입력 (OMR 없음 · s337 코튼 명시 · manual transcription default 정합)",
+    "dry_stems_dir": "music/renders/dry_stems",
+    "master_audio": "music/masters/master.wav"
+  },
+  "video": {
+    "brief": "video/video-brief.md",
+    "final_video": "video/exports/salut_damour_final.mp4"
+  }
+}

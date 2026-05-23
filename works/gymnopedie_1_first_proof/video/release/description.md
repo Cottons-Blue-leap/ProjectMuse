@@ -1,4 +1,4 @@
-# Erik Satie - Gymnopédie No. 1 (feat. Hatsune Miku)
+# Erik Satie - Gymnopédie No. 1 (Hatsune Miku Acappella)
 
 Welcome to Atelier Miku Acappella!
 

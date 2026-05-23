@@ -1,0 +1,16 @@
+{
+  "piece": "Greensleeves (Traditional)",
+  "composer": "Anonymous (Traditional · 16th-century England)",
+  "section": "통째 (자연 짧은 곡 양식 · 발췌 없음 · 짐노페디·비발디·조플린 family 정합 · strophic 반복 분배는 form 결단 자리)",
+  "vocal": "Hatsune Miku",
+  "music": {
+    "source_score_planning": "planning/candidates_opus/그린슬리브스_1~4.pdf (편곡 후보 4종 · 코튼 pick 대기 · pick 후 ASCII copy)",
+    "imslp_path_axis": "https://imslp.org/wiki/Greensleeves_(Traditional) · PD 강 · 16세기 전통 anonymous",
+    "dry_stems_dir": "music/renders/dry_stems",
+    "master_audio": "music/masters/master.wav"
+  },
+  "video": {
+    "brief": "video/video-brief.md",
+    "final_video": "video/exports/greensleeves_final.mp4"
+  }
+}

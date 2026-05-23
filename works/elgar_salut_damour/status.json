@@ -1,0 +1,22 @@
+{
+  "current_phase": "video production (s346 · 2026-05-23 · 코튼 오디오 2회 재익스포트[음량 조정] → 재렌더링 완료 · exports/salut_damour_final.mp4 교체 [14.1MB · 1920x1080 · 30fps · 4200f · 2:20.0] · 프레임 QC 통과 · 릴리스 텍스트 확정 [제목+설명 EN/JP/KR 코튼 verbatim LOCK · N=9 정정 · Subscribe CTA 제거 · 로케일 네이티브 해시태그] · publish 예약 2026-05-25 20:00 KST [코튼 업로드 예약 완료 · 설명 2 확인 = 코튼 의도])",
+  "rights": "composition Elgar d.1934 life+70 통과(2005) PD 강 전세계 · 1888 작곡/1889 출판 · score = IMSLP self-host PD + candidates_opus PDF (edition_id 자가 점검 V6 진입 시점 keep) · cover art = J.W. Waterhouse The Soul of the Rose (1903 · 화가 d.1917 life+70 통과 1987 PD 강 전세계) · 사전 audit 통과",
+  "vocal_input_v6": "done (코튼 V6 직접 입력 · 모음/humming · 원곡 바이올린 선율 → lead_miku · 결과 = Miku_elgar_salut_damour.wav · 재익스포트 2026-05-23 s346 최종 = 2:20.0 [음량 조정본 · s343 2:19 supersede] · .vpr = elgar_salut_damour.vpr)",
+  "lyrics": "없음 (기악 원곡 · 첫 3곡 family 정합 = 모음/humming · 그린슬리브즈 첫 성악 텍스트 axis는 보류와 함께 deferred)",
+  "dry_stems": "skipped (acappella-only path · doctrine 정합)",
+  "master": "approved (Miku_elgar_salut_damour.wav · 코튼 V6 재익스포트 2026-05-23 s346 최종 [음량 조정본 · s343 2:19 + 중간본 2:16.7 supersede] · 2:20.0 [140.0s] · 24bit/44.1k 스테레오 · -18.0 LUFS [s343 -18.2와 동급 레벨 복귀 · 클래식 다이내믹 보존 · LRA 6.4 LU] · true-peak -2.6 dBFS = 표준 천장 -1.0보다 1.6dB 여유 = 보정 불필요 · 표준 마스터링 스펙 통과 · copy = music/masters/Miku_elgar_salut_damour_master.wav 동기화)",
+  "listening_decision": "영상화 진행 승인 (코튼 s343 2026-05-22) + 최종 렌더 청취 통과 (코튼 s346 2026-05-23 *통과야* · 음량 조정본 2:20.0 · -18.0 LUFS 기준 · 영상 production_pass)",
+  "video_release": "scheduled 2026-05-25(일) 20:00 KST (코튼 업로드 예약 완료 s346 · publish 전 비공개) · 영상+제목+설명 EN/JP/KR LOCK · 썸네일 자동(s313) · 재생목록 Miku in the Romantic Era(코튼 업로드 시 설정) · post-release 6 step = publish 통과 후 발동 · 영상 URL = https://youtu.be/zshjmBhus2I (예약 · series_history.csv Step 1 row 박음 · release_date만 publish 후 채움)",
+  "channel": {
+    "name": "Atelier Miku Acappella",
+    "handle": "@AtelierMikuAcappella",
+    "url": "https://www.youtube.com/@AtelierMikuAcappella",
+    "playlist": "Miku in the Romantic Era (짐노페디와 공유 · 짐노페디 사티 1888 = 낭만 말기 분류 선례 · Elgar 1888 = 낭만 정합 · 영상 진입 시점 최종 결단)"
+  },
+  "release_title": "Edward Elgar - Salut d'Amour (Hatsune Miku Acappella) · description_template v9 양식 (s340 Acappella 키워드 · feat. 폐기)",
+  "cover_art": "John William Waterhouse, The Soul of the Rose (aka My Sweet Rose) (1903 · oil · private collection) · lock (코튼 2026-05-22 s345 확정) · Watts(s343)→Marcus Stone(s344 폐기)→Waterhouse 재선정 path · 단일 몰입 인물(장미 향 맡는 옆모습)이라 미쿠 합성 자연 + 장미=사랑의 인사 주제 직결 · PD 강 Waterhouse d.1917 life+70 통과 1987 전세계 · 원본 video/art_sources/waterhouse_soul_of_the_rose.jpg 1951x3000 verify 통과 · 최종 커버 video/cover/Miku_waterhouse_soul_of_the_rose.png 1254x1254 (배경/붓질 원작 보존 + 인물 미쿠 유화 리페인트 + 채도/명도 원작 대조 튜닝) · 렌더 cover.png = visualizer/public/cover.png",
+  "source_pdf": "music/source_scores/salut_damour.pdf (candidates_opus 에드워드 엘가_사랑의 인사.pdf ASCII copy · s337 박힘 · 단일 score 확정 · 4 후보 비교 없음)",
+  "signature_wordmark_v3_apply": true,
+  "naming_convention_applied": "s337 · piece_id = elgar_salut_damour (composer_first 양식 정상 · greensleeves anonymous 예외와 대비)",
+  "last_decision": "s337 (2026-05-20): 4차 곡 = 사랑의 인사 (엘가 Salut d'Amour Op.12) 결단. 그린슬리브즈 keep 보류(코튼 *아직 시기상조* · 첫 성악+첫 르네상스 동시 부담) 후 전 시대 S급 73곡 재선정 cycle → 코튼 결단. 선정 근거 = 원곡 바이올린 선율 = 현악·오보에적 지속 가창선이 미쿠 음색과 궁합 + 짧음(~3분)·또렷 멜로디 = 완성 리스크 최저 + 가벼운 낭만 소품 색(발행작 3곡 대비 신규). OMR 없음(코튼 *바로 에디터에 찍을 거야* · manual transcription default). 밑작업 phase 진입 = 작업 폴더 신축 + project/status/README/video-brief 박음 + rights 자가 점검 통과 + 명화 csv 자료(Fragonard The Swing tentative) + score 단일 확정 copy. 다음 = 코튼 V6 본격 입력."
+}

@@ -1,0 +1,23 @@
+{
+  "current_phase": "setup (s336 · 2026-05-20 · 4차 작품 진입 · 코튼 그린슬리브즈 결단 · 밑작업 phase 통과)",
+  "rights": "composition PD 강 (16세기 전통 · anonymous · 전세계 PD 확정 · 작곡가 사망 자료 무관 axis) · score = IMSLP self-host + candidates_opus 4 후보 (edition_id 자가 점검 V6 진입 시점 keep) · cover art = Ditchley Portrait of Elizabeth I (Marcus Gheeraerts the Younger d.1636 · life+70 통과 PD 강 · 전세계 정합) · 사전 audit 통과",
+  "vocal_input_v6": "pending (코튼 V6 직접 입력 · 영어 가사 사용 확정 s336 · 영어 voicebank 가능 confirmed s336 · score pick 후 진입 · 딕션 polish가 신규 craft axis)",
+  "lyrics": "영어 가사 사용 확정 (s336 코튼 결단 · 시리즈 첫 성악 텍스트 곡 · 16세기 전통 가사 PD · 가사 선정/절 분배 코튼 직접)",
+  "dry_stems": "skipped (acappella-only path · doctrine 정합)",
+  "master": "pending",
+  "listening_decision": "pending",
+  "video_release": "pending",
+  "channel": {
+    "name": "Atelier Miku Acappella",
+    "handle": "@AtelierMikuAcappella",
+    "url": "https://www.youtube.com/@AtelierMikuAcappella",
+    "playlist": "미정 (르네상스 = 신규 시대 · 재생목록 결단 자리 · 제안 *Miku in the Renaissance*)"
+  },
+  "release_title": "Greensleeves (feat. Hatsune Miku) · 양식 잠정 · 최종 결단 자리 (작곡가 anonymous라 *Composer - Title* 양식 변형 axis)",
+  "cover_art": "Marcus Gheeraerts the Younger, The Ditchley Portrait of Elizabeth I (c.1592) · csv row 101 자료 · 엘리자베스 시대 = 그린슬리브즈 동시대 정합 강 · 코튼 확정 결단 자리 (Joplin Seurat→Glackens 선례)",
+  "source_pdf": "pending pick (planning/candidates_opus/그린슬리브스_1~4.pdf · 편곡 후보 4종 · s336 MOKA 분석 + 추천). pick 후 music/source_scores/greensleeves.pdf ASCII copy.",
+  "score_candidate_analysis": "s336 4종 분석: _1(4p)=SATB 리코더 합주 S/A/T/B+타악 (Autor desconhecido · 4성부→미쿠 SATB 직결 · 르네상스 consort 정합 · MOKA 1순위 구조 템플릿) | _2(8p)=현악 6성부 Vln1/2/2b/Vla/Vc/Db (5~6 layer 풍성 · 비발디급 · 편곡 부담↑) | _3(20p/4MB)=Vaughan Williams SATB 합창 (Oxford University Press · 영어 가사 박힘 · 구조 완벽 BUT ⚠️ RVW d.1958 → 편곡 저작권 ~2029까지 살아있음 · publish용 X · 멜로디만 PD · 쇼스타코비치 family rights 함정) | _4(1p)=피아노+성악 Carlos Peón 편곡 (영어 가사 이미 박힘 · 가사+멜로디 레퍼런스 최적). MOKA 추천 = _1(구조)+_4(가사) 조합 · rights 가장 깨끗한 길 = PD 멜로디 기반 코튼 자작 화성 (특정 편곡 복붙 회피 · manual transcription default 정합)",
+  "signature_wordmark_v3_apply": true,
+  "naming_convention_applied": "s336 · piece_id = greensleeves (anonymous work · composer_first 양식 예외 · naming_convention.md 미커버 axis · 코튼 확인 자리)",
+  "last_decision": "s336 (2026-05-20 추가): 가사 = 영어 가사 사용 확정 (코튼 *가사도 붙일 거야*) · 시리즈 첫 성악 텍스트 곡 · score pick은 코튼 나중에 직접. ||| s336 (2026-05-20): 4차 곡 = 그린슬리브즈 (르네상스) 결단. 시대 선정 cycle 통과 — 미개척 시대 (르네상스/고전/낭만) 중 짐노페디(사티 1888)=낭만 말기 분류 → 르네상스 vs 고전 2파전 → 코튼 르네상스 그린슬리브즈 결단 (시대 새로움 최대 + 아카펠라 본향 axis + 모달 화성 신규 axis). 밑작업 phase 진입 = 작업 폴더 신축 + project/status/README/video-brief 박음 + rights 자가 점검 통과 + 명화 csv 자료 (Ditchley Portrait) + score 편곡 후보 4종 pick 대기. 다음 = 코튼 score pick → V6 본격 진입."
+}

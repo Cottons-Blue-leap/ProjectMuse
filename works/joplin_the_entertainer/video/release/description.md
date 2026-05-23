@@ -7,7 +7,7 @@
 ## 영상 제목 (YouTube title)
 
 ```
-Scott Joplin - The Entertainer (feat. Hatsune Miku)
+Scott Joplin - The Entertainer (Hatsune Miku Acappella)
 ```
 
 ## Description (정본 · publish lock)
@@ -33,7 +33,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 ## 가변 자리 4건 박힌 자료 (lock)
 
-1. **영상 제목**: `Scott Joplin - The Entertainer (feat. Hatsune Miku)`
+1. **영상 제목**: `Scott Joplin - The Entertainer (Hatsune Miku Acappella)`
 2. **작품 헌사 + curator voice 합본**: 
    - curator voice = `A familiar melody that became a classic.` (코튼 자가 결단 · 직접·간결 양식)
    - 작품 헌사 = `Scott Joplin - The Entertainer (1902). 9 Mikus sing it now.`

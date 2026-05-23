@@ -68,49 +68,44 @@
 
 > 본 섹션은 publish 통과 (2026-05-21 20:00 KST 예약) 후 24h~7d 자리 박음.
 
-### publish 직후 자료
+### publish + 48h 측정 (Data API v3 · s348 · 2026-05-23)
 
-YouTube Data API v3 호출 자가 점검 자료 (publish + ~30분 시점 박음):
-- PRIVACY = *(미박힘)*
-- UPLOAD_STATUS = *(미박힘)*
-- PUBLISHED_AT = *(미박힘)*
-- VIEW_COUNT = *(미박힘)*
-- LIKE_COUNT = *(미박힘)*
-- COMMENT_COUNT = *(미박힘)*
+> publish + 30분/24h 중간 스냅샷은 미측정. s347까지 Analytics API(`report` 도구)만 봤는데 그게 2~3일 지연이라 조플린이 1뷰로 보였음. 본 자료 = publish + ~48h 시점 Data API v3(공개 stats · 비지연) 단일 측정.
 
-### 첫 24h 자료 (publish + 24h 시점 박음)
+- PRIVACY = `public`
+- UPLOAD_STATUS = `processed`
+- PUBLISHED_AT = 2026-05-21T11:00:12Z (KST 20:00:12 · 예약 정시 +12초)
+- VIEW_COUNT = **93**
+- LIKE_COUNT = 7 (like rate 7.5%)
+- COMMENT_COUNT = 2
 
-- view 자료: *(미박힘)*
-- comment 자료: *(미박힘)*
-- like 자료: *(미박힘)*
+**채널 stats** (동시 측정):
+- subscriberCount = 8 (짐노페디 72h 시점 4 → +4 누적)
+- videoCount = 3 (짐노페디 · 비발디 · 조플린)
+- channel viewCount = 255
 
-### 72h 자리
+**시리즈 비교** (현재 누적 · 경과 일수 다름):
+- 짐노페디 138뷰 / 14라이크 (publish + ~9일)
+- 비발디 31뷰 / 4라이크 / 1댓글 (publish + ~5일)
+- 조플린 **93뷰 / 7라이크 / 2댓글 (publish + ~2일)** → 48h만에 비발디 5일치를 추월하고 짐노페디를 추격 = **시리즈 첫 breakout**
 
-- VIEW_COUNT = *(미박힘)*
-- LIKE_COUNT = *(미박힘)*
-- COMMENT_COUNT = *(미박힘)*
+### Audience 반응 (정성 · 시리즈 첫 실 댓글 2건)
 
-**채널 stats** (publish + ~72h 시점):
-- subscriberCount = *(미박힘 · 짐노페디 publish + 72h 시점 4 sub · 비발디 publish 후 누적 자료 자가 별 axis)*
-- videoCount = *(미박힘 · publish 후 3 영상 누적)*
+- @nickh7856 (05-21): "A classic" — curator voice *A familiar melody that became a classic.* 가 청자에게 그대로 닿음
+- @JumboJB23-s5s (05-22): "starting to do a sturdy to this beat" — 업비트 래그타임이 몸을 움직이게 함 (sturdy = 댄스 동작). breakout 원인 = "업비트 · 인식 멜로디"라는 s347 가설을 청자 반응이 직접 뒷받침
+- 채널 정체성 흡수: 시리즈 첫 ragtime이 가장 잘 퍼짐. 고요한 짐노페디 · 우아한 비발디보다 친숙 + 업비트 곡이 추천 알고리즘을 멀리 보냄
 
-### Audience 반응 (정성)
+### 자가 점검 (예측 vs 실측)
 
-- 첫 인상: *(미박힘)*
-- 발견 path (검색 / 추천 / 외부 link): *(미박힘)*
-- 채널 정체성 흡수 자료: *(미박힘 · ragtime 양식 axis 시리즈 첫 진입 · 청자 반응 axis)*
+- 예측(s347): 평균 retention은 구조적(니치 취향 × 호기심 트래픽 깔때기)이라 쫓을 대상 아님
+- 실측: 조플린 retention 23.1%(코튼 Studio) = 셋 중 최고 → "retention 쫓지 마라"는 곡 무관 일반론이 아니라 곡별 편차가 크다. 업비트 · 인식 멜로디는 retention도 높다
+- **핵심 교훈 (Analytics API 지연 함정)**: s347에서 조플린이 API상 1뷰로 보여 "오늘 무신호"로 결론 낼 뻔했으나, 실제로는 fresh publish가 2~3일 지연 window에 묻혀있던 것(실제 93뷰). 발행 2~3일 내 측정은 Data API(공개 stats · 비지연) 또는 Studio를 우선으로 봐야 함
 
-### 자가 점검 axis (예측 vs 실측)
+### Publish 후 결함 / 레버 자료
 
-- 예측: *(미박힘 · publish 전 박을지 결단)*
-- 실측: *(미박힘)*
-- 격차 자료: *(미박힘)*
-
-### Publish 후 결함 자료
-
-- 영상 자체 결함: *(미박힘)*
-- description 결함: *(미박힘)*
-- 시각 브랜딩 결함: *(미박힘)*
+- 영상 자체: 정상 (processed · public · 결함 없음)
+- description: 정상 (s340 SEO 양식 · category Music · 태그 17)
+- **CTR 0.5%** (s347 코튼 Studio · 일반 2~10%) = 노출은 알고리즘이 주는데 썸네일이 클릭으로 전환을 못 시킴 = **썸네일 병목**. 조플린이 모멘텀 탄 지금 썸네일 개선이 가장 큰 레버 → 본 세션 작업 A로 이어짐
 
 ---
 
@@ -126,9 +121,10 @@ YouTube Data API v3 호출 자가 점검 자료 (publish + ~30분 시점 박음)
 
 ### 네 번째 곡 후보
 
+> 갱신 (s348): 본 회고 작성 후 시리즈 진행됨 — 4번째 = Edward Elgar 사랑의 인사 (영상 완성 · publish 예약 2026-05-25 20:00 KST · zshjmBhus2I) / 5번째 = Mozart K.265 작은별 변주곡 (s347 코튼 *A로 진행* · keep 보류 해제 · 진행 중).
+
 - candidate_master.csv 자료 base (D tier review cycle 진입 의제 keep · s330 결단)
-- 시리즈 trajectory axis (낭만 [짐노페디] → 바로크 [비발디] → ragtime [Joplin] → 다음 시대 path)
-- 의제: Mozart K.265 (s326 deferred · 6개월차 본격 재진입 의제 keep)
+- 시리즈 trajectory: 낭만 [짐노페디] → 바로크 [비발디] → ragtime [Joplin] → 낭만 [Elgar] → 고전 [Mozart K.265]
 
 ### Doctrine 정정 의제 후보
 
@@ -142,3 +138,4 @@ YouTube Data API v3 호출 자가 점검 자료 (publish + ~30분 시점 박음)
 ## 정정 이력
 
 - v1 (s332 · 2026-05-19 publish 직전) — Pre-publish 자리 통째 박음 + Post-publish 자리 + 네 번째 곡 진입 자리 = 비워둠 (publish 후 update doctrine 정합)
+- v2 (s348 · 2026-05-23 · publish + ~48h) — Part 2 post-publish 자료 박음 (Data API v3 측정: 93뷰/7라이크/2댓글 = 시리즈 첫 breakout + 첫 실 댓글 2건 + 채널 8 sub/255뷰 + API 지연 함정 교훈 + CTR 0.5% 썸네일 병목 레버) + Part 3 갱신 (4·5번째 곡 진행 반영). post_release_meta_doctrine 6 step 완주.

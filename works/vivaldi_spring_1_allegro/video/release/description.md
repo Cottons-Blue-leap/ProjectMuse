@@ -6,7 +6,7 @@
 ## 영상 제목 (YouTube title)
 
 ```
-Antonio Vivaldi - Spring, Mvt. I (feat. Hatsune Miku)
+Antonio Vivaldi - Spring, Mvt. I (Hatsune Miku Acappella)
 ```
 
 ## Description (4 블록 양식)
@@ -38,7 +38,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 ## 가변 자리 4건 박힌 자료
 
-1. **영상 제목**: `Antonio Vivaldi - Spring, Mvt. I (feat. Hatsune Miku)`
+1. **영상 제목**: `Antonio Vivaldi - Spring, Mvt. I (Hatsune Miku Acappella)`
 2. **작품 헌사**: `Antonio Vivaldi - Spring, Mvt. I (1725). Six Mikus sing it now.`
    - N=6 결단 (6 voice 분배 = Solo Miku × 1 · Ripieno Miku × 3 · Bass reinforcement × 2)
    - 초기 5 voice 분배 (솔로 바이올린 + Violin I + Violin II + Viola + Cello/Basso continuo) → 베이스라인 부족 axis 적발 후 근음 성부 1건 추가 = 총 6 voice

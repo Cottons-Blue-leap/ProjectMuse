@@ -2,7 +2,7 @@
 
 > Atelier Miku Acappella 시리즈 YouTube 영상 description 정본 템플릿.
 > 매 작품 description 박을 때 본 template 따라 가변 자리 4건만 채움.
-> 박힌 날짜: 2026-05-14 (s292) · v2 update (s295) · v3 update (s303 — Crypton 라이선스 정합 강화) · v4 update (s303 — Block 3 압축) · v5 update (s303 — Block 3·4 swap, 면책 footer 격리) · v6 update (s310 — 일본 청중 유입 해시태그 4건 추가)
+> 박힌 날짜: 2026-05-14 (s292) · v2 update (s295) · v3 update (s303 — Crypton 라이선스 정합 강화) · v4 update (s303 — Block 3 압축) · v5 update (s303 — Block 3·4 swap, 면책 footer 격리) · v6 update (s310 — 일본 청중 유입 해시태그 4건 추가) · v7·v8 update (s339 — No-AI 줄 제거 + 제작툴 라벨) · v9 update (s340 — 영상 제목 Acappella 키워드 양식) · v10 update (s348 — 제목 앞 브래킷 양식 `[Miku Acappella] 작곡가 - 곡명`)
 > 첫 작품 자료: [`works/gymnopedie_1_first_proof/video/release/description.md`](../../../works/gymnopedie_1_first_proof/video/release/description.md)
 
 ## 4 블록 양식
@@ -29,12 +29,12 @@ Cover art, after {화가}, '{명화 제목}' ({명화 연도}).
 —
 
 [Block 3 — anchor]
-No AI for music — every note placed by hand in Vocaloid6 Editor.
 Subscribe to join the Atelier and discover a new side of classical music!
 
 —
 
 [Block 4 — anchor]
+Production tool: VOCALOID6
 Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
 #{작곡가성} #{곡명} #Cover #HatsuneMiku #初音ミク #Acappella #アカペラ #Vocaloid #ボカロ #VOCALOID #ClassicalMusic #AtelierMikuAcappella #Vocaloid6
@@ -46,9 +46,20 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 ### 1. 영상 제목 (YouTube title)
 ```
-{작곡가} - {곡명} (feat. Hatsune Miku)
+[Miku Acappella] {작곡가} - {곡명}
 ```
-예: `Erik Satie - Gymnopédie No. 1 (feat. Hatsune Miku)`
+예: `[Miku Acappella] Erik Satie - Gymnopédie No. 1`
+
+현지화 제목 (JP/KR · Studio 자막 또는 `Analytics/youtube_meta.py set-title`):
+- JP: `[初音ミク アカペラ] {작곡가JP} - {곡명JP}` 예: `[初音ミク アカペラ] エリック・サティ - ジムノペディ第1番`
+- KR: `[미쿠 아카펠라] {작곡가KR} - {곡명KR}` 예: `[미쿠 아카펠라] 에릭 사티 - 짐노페디 1번`
+
+양식 결단 (v10 · s348 · 코튼):
+- 앞 브래킷 `[<미쿠키워드> Acappella]` = 키워드 front-load (피드 스캔 + 브랜딩) + `작곡가 풀네임 - 곡명`.
+- 미쿠 키워드 로케일별 = EN `Miku` / KO `미쿠` / **JP `初音ミク`(검색어라 풀네임 유지 · 최대 시장)**. EN/KO는 간결 (풀네임은 설명·태그·채널명에 있음).
+- 곡명 = 시장 canonical (원어가 세계표준이면 원어 [Salut d'Amour·Gymnopédie] · 현지표준 있으면 현지 [四季 春·사계 봄]).
+- 철자 = `Acappella`(p 2개 · 채널명 정합). defaultLanguage=en + en/ko/ja 현지화 set.
+- **정본 규칙 = `planning/title_naming_guide.md` (s348 재작성).**
 
 ### 2. 작품 헌사 (Block 2 첫 줄)
 ```
@@ -57,7 +68,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 예: `Erik Satie - Gymnopédie No. 1 (1888). Seven Mikus sing it now.`
 
 가변 양식:
-- 작품 라벨 양식 = YouTube title (`{작곡가} - {곡명}`)과 일관 (display label 연속성)
+- 작품 라벨 양식 = YouTube title의 `{작곡가} - {곡명}` core와 일관 (`[Miku Acappella]` 브래킷 prefix 제외 · display label 연속성)
 - *(연도)* 괄호 = cover art *(명화 연도)* 와 평행 (미술관 라벨 양식 통일)
 - N = 합창 미쿠 수 (Seven / Five / Three 등 영어 단어 양식 keep)
 - N=1 변형: `Hatsune Miku sings it now.` (단수 처리)
@@ -100,11 +111,12 @@ https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-batters
 - 정체성 1줄 — *fan project · classical music · for Hatsune Miku's voice · one piece at a time*
 - *Hope you find something to love here ♪* — 따뜻한 closing + ♪ 음표 시그너처 (♪ 앞 공백 1칸 박음)
 
-### Block 3 — 본질 + CTA (v5 swap)
-- *No AI for music — every note placed by hand in Vocaloid6 Editor.* — 작업 본질 (음악 한정 명시 · cover art는 AI 합성 axis라 *covers* wording 회피 · v3 정합 keep)
+### Block 3 — CTA (v7 — No AI 줄 제거)
 - *Subscribe to join the Atelier and discover a new side of classical music!* — 구독 유도 + Atelier 소속감 + new side discovery axis (v2 신축 자료 · v5 swap으로 Block 3로 이동)
+- ~~*No AI for music — every note placed by hand in Vocaloid6 Editor.*~~ — v7 (s339) 제거 (코튼 결단 · 3곡 라이브 전부 이미 제거 상태 정합). 본질 = 작업 본질(손 작업·음악 AI 미사용) 명시 줄. 신호 남기려면 고정 댓글/채널 정보로 이전 선택지.
 
-### Block 4 — 의무 표기 + 해시태그 footer (v5 swap)
+### Block 4 — 제작 크레딧 + 의무 표기 + 해시태그 footer (v8)
+- *Production tool: VOCALOID6* — v8 (s339) 신축. 미니멀 제작 도구 크레딧 (손 조성 도구 명시 = AI 자동생성과 구분 신호). ja = `制作ツール：VOCALOID6` / ko = `제작툴: VOCALOID6`. (v7에서 뺀 'No AI' 줄의 대체 자리. 문장형 craft 진술 후보 → 코튼 결단으로 미니멀 라벨 확정 · 깔끔함 우선.)
 - *Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/* — 자료 §3.2 의무 표기 (저작자 표시 + 라이선스 원문 URL)
 - 해시태그 줄 — 작품별 2건 + 작품 분류 anchor 1건 (#Cover) + 채널 anchor 10건 (영문 6건 + 일본어 4건)
 
@@ -153,3 +165,19 @@ v5 swap 본질 = 면책 wording을 가장 마지막 *footer 자리*로 격리 (�
   - (2) 추가 자료 자체 = `#初音ミク + #アカペラ + #ボカロ + #VOCALOID` (#クラシック 자료 자체 #Vivaldi + #ClassicalMusic 자료 자체 mid 중복 axis 약하서 빼는 결단)
   - (3) 자리 자체 = 영문 양식 자체 옆 자체 mid 박는 path (`#HatsuneMiku #初音ミク` / `#Acappella #アカペラ` / `#Vocaloid #ボカロ #VOCALOID`)
   - 본질 = 일본 vocaloid 청중 axis 자체 자료 자체 = 영문 양식 검색 자체 자료 axis 자체 별도 자리. dilution risk 자료 자체 자체 axis 약 (별도 청중 자체 자료).
+- v7 (s339) — Block 3 'No AI for music…' 줄 제거. 코튼 결단 (디스코드 s339). 변경 자리:
+  - (1) Block 3 = 작업 본질 줄 제거 → Subscribe CTA 단독. 이유 = 3곡 라이브 전부 이미 해당 줄 제거 상태 (코튼 라이브 편집) + 명시적 제거 결단. 시청자 진입 자리 가벼움 axis.
+  - (2) 작업 본질(음악 AI 미사용) 신호 필요 시 고정 댓글/채널 정보 이전 선택지 (description 밖 자리).
+  - 주의 (미해결 drift): 본 template은 curator voice 양식 등 라이브 진화분과 추가 drift 존재 (Welcome 블록 optional + Subscribe 위치 + curator voice 1줄). 다음 곡 진입 전 full reconciliation 의제.
+- v8 (s339) — Block 4 푸터에 제작 도구 크레딧 1줄 신축. 코튼 결단 (디스코드 s339). 변경 자리:
+  - (1) Block 4 = `Production tool: VOCALOID6` + © 라인 + 해시태그. 크레딧 줄이 © 바로 위 footer 자리. (ja `制作ツール：VOCALOID6` / ko `제작툴: VOCALOID6`)
+  - (2) v7에서 뺀 'No AI for music' (부정·방어형 · 맨 위 무거움)의 대체. 후보 = 문장형 craft 진술(`Every Miku voice tuned by hand…` · 調声 용어) → 코튼 *깔끔함 우선* 결단으로 미니멀 도구 라벨로 확정.
+  - (3) 진입 자리(Block 1·2·3) 가벼움 keep + 제작 신호는 footer 자리. 채널 About은 prose라 라벨 미적용 (코튼 원본 환영문 keep · 영상 푸터 한정).
+- v9 (s340 · 2026-05-22) — 영상 제목 양식 `(feat. Hatsune Miku)` → `(Hatsune Miku Acappella)`. SEO cycle A 감사 결단 (코튼 디스코드 s340). 변경 자리:
+  - (1) 가변 자리 1 (영상 제목) = `feat.` 양식 폐기 → `Acappella` 키워드 양식. 라이브 3곡(짐노페디·비발디·조플린) 제목 전부 retrofit + 신곡부터 default. JP/KR 현지화 제목도 `（初音ミク アカペラ）` / `(하츠네 미쿠 아카펠라)` 양식 박음.
+  - (2) 이유 = A 감사(라이브 메타데이터 직접 추출)에서 EN/JP/KR 제목 전부 채널 최대 적합 검색어 *Acappella/アカペラ* 부재 적발. 채널명은 *Atelier Miku Acappella* 인데 영상 제목엔 키워드 미표기 = 검색 발견성 손실.
+  - (3) 부수 적발 (제목 양식과 별개 · backlog) = 3곡 카테고리 People&Blogs(22) 오설정 [→음악(10)] + 태그 0개. Studio 수동 fix 자리 (코튼 backlog).
+- v10 (s348 · 2026-05-23) — 영상 제목 양식 `{작곡가} - {곡명} (Hatsune Miku Acappella)` → `[<미쿠키워드> Acappella] {작곡가} - {곡명}` (앞 브래킷 · 키워드 front-load · 코튼 결단). 변경 자리:
+  - (1) 미쿠 키워드 로케일별 = EN `Miku` / KO `미쿠` / JP `初音ミク`(검색어라 풀네임 유지 · 최대 시장). EN/KO는 간결 (풀네임은 설명·태그·채널명에 잔존).
+  - (2) 비발디 JP/KO outlier(성만+다른 틀) 정규화 = 작곡가 풀네임 - 곡명 통일.
+  - (3) 라이브 4곡(짐노페디·비발디·조플린·사랑의 인사) 전부 코튼 Studio 적용 완료 + repo 동기화(title.txt·series_history.csv·description.localized.md·reference 메모리). 정본 규칙 = `planning/title_naming_guide.md` 재작성. 쓰기 자동화 = `Analytics/youtube_meta.py` (force-ssl).
