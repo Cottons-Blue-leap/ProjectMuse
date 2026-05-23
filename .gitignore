@@ -7,6 +7,9 @@
 .env
 .env.*
 !.env.example
+client_secret.json
+.youtube_oauth_token.json
+.youtube_write_token.json
 
 # --- node / build artifacts ---
 node_modules/
@@ -55,6 +58,9 @@ desktop.ini
 *.mp4
 *.mov
 *.mkv
+
+# --- Analytics 리포트 (CSV·md = source of truth commit · xlsx = 재생성 binary 제외) ---
+Analytics/*.xlsx
 
 # --- PDF (planning master · work source copies) ---
 *.pdf
