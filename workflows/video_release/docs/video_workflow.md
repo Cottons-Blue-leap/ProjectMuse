@@ -157,7 +157,7 @@ When generating or editing the image:
 - Avoid overly glossy anime rendering.
 - Keep the character recognizable but painterly.
 - Preserve the piece's emotional temperature.
-- Generate at a high enough resolution for 4K video.
+- Generate at ≥2560px (2K 출력 2560×1440에서 커버 표시 ~960px를 받치게 · Phase 9).
 
 ### Typography (시리즈 시그너처 lock)
 
@@ -224,7 +224,7 @@ Open on the album cover instead.
 
 ## Phase 5: Main Video Timeline
 
-영상 frame = 16:9 (3840×2160). Cover = 1:1 정사각, frame 가운데에 박힘.
+영상 frame = 16:9 · composition 1920×1080 좌표계 → 출력 2560×1440 (2K · `--scale=1.333` · Phase 9). Cover = 1:1 정사각, frame 가운데에 박힘.
 좌·우 negative space = letterbox (시리즈 시그너처 §5 명화 색조 그라데이션).
 
 Frame 구조:
@@ -321,12 +321,14 @@ Checklist:
 
 ## Phase 9: Export Specs
 
-Recommended (s310 박힘 · 짐노페디 실제 양식 정합):
+Recommended (s310 박힘 · **2K 표준 = 2026-05-25 코튼 결단**):
 
 ```text
 Video frame:
   16:9
-  1920×1080 default · 3840×2160 optional (4× render cost)
+  composition 1920×1080 (코드 좌표계 keep) → 출력 2560×1440 (2K / 1440p)
+  렌더 = remotion render ... --scale=1.333   ← composition 무변경 (px 하드코딩 보존)
+  ~1.78× render cost (4K 대비 절반 이하)
   30 fps
   H.264 High Profile
   BT.709 SDR
@@ -339,9 +341,14 @@ Audio:
   AAC-LC or PCM before final encode
 
 Album cover still (1:1 · 외부 배포 · 자동 썸네일 base):
-  2160×2160 또는 3840×3840 preferred
+  ≥2560×2560 (2K 커버 표시 ~960px를 충분히 받침 · 3840×3840이면 향후 4K 여지)
   PNG (transparency 자료가 visualizer에 쓰일 가능성)
 ```
+
+**왜 2K (4K 아님)**: 유튜브가 1440p+에 주는 고급 코덱(VP9)으로 1080p(AVC)보다 선명 + 명화
+디테일 품격 + 에버그린 아카이브 가치. 4K 기각 = 커버 소스(현 1254px)가 4K 커버 표시(1920px)
+미달 + 정적 콘텐츠(중앙 정사각 커버 + 레터박스)라 오버킬 + 렌더 4배. **기존 publish 영상은
+retrofit X** (재업로드 = URL·metric·algorithm boost 손실) — 신곡부터 적용.
 
 For a mostly static music visual, 30 fps is enough.
 

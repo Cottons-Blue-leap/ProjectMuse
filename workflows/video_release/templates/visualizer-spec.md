@@ -95,7 +95,8 @@ text_color: #e8e0c8 (시리즈 공통 keep)
 
 ## Export
 
-- Resolution: 1920×1080
+- Composition: 1920×1080 (좌표계 keep · 코드 무변경)
+- Output resolution: 2560×1440 (2K · `remotion render --scale=1.333` · 2026-05-25 표준)
 - Frame rate: 30
 - Codec: H.264 (default Remotion)
 - Audio codec: AAC 48kHz stereo
