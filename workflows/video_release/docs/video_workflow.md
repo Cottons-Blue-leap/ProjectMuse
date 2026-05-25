@@ -31,7 +31,12 @@ For every finished piece, create:
 - YouTube description.
 - Credits and rights notes.
 
-YouTube 썸네일은 자동 썸네일 활용 (정적 영상이라 별 합성 자리 X · s313 결단). cover 자체가 자동 썸네일 base.
+- Custom YouTube thumbnail (v5 format).
+
+> **썸네일 (s357 supersede · s313 자동썸네일 결정 폐기)**: 더 이상 자동 썸네일(cover 프레임)을 쓰지 않는다.
+> 전용 마케팅 표면으로 **custom 썸네일 v5**를 만든다 (3-정보: 명화 / 악곡 / 初音ミク·A CAPPELLA · 좌하단
+> 단일 블록 · baseline 앵커링으로 곡 무관 픽셀 동일). 제작·업로드 = **Phase 11 + `docs/thumbnail_guide.md`**.
+> 사유: 자동 썸네일은 미쿠가 안 보이고 영어만이라 JP 인식·CTR 약함 (s348 v4 → s357 v5로 진화).
 
 ## Phase 1: Video Brief
 
@@ -390,7 +395,16 @@ video/release/credits.md
 video/release/rights-notes.md
 ```
 
-YouTube 썸네일은 자동 썸네일 활용 (s313 결단). 별 thumbnail.png 자리 X · upload 양식에 thumbnail upload step 자리 X.
+### Custom thumbnail (v5 · s357)
+
+```text
+video/thumbnail_v5.jpg               # custom 썸네일 (자동 썸네일 폐기 · s357)
+```
+
+- 생성: `python workflows/video_release/make_thumbnail.py --song <name>` (신곡은 `REGISTRY`에 dir/cover/box/composer/piece 추가 → `--song`).
+- 검수: ~210px로 줄여 初音ミク 읽힘·블록 균형 확인.
+- 업로드(라이브, 이미지만 교체): `python Analytics/youtube_meta.py set-thumbnail <video_id> <thumbnail_v5.jpg>`.
+- 양식·디자인 LOCK·폰트 의존성 = `docs/thumbnail_guide.md`. (cover still은 여전히 제작하되 *썸네일 ≠ cover* — 전용 v5를 따로 만든다.)
 
 Title format examples:
 
@@ -423,7 +437,7 @@ After release, record:
 - Retention dips.
 - Comments about sound quality.
 - Comments about visual identity.
-- Whether the auto-thumbnail (cover frame) worked.
+- Thumbnail CTR (Studio 도달범위) — does the v5 custom thumbnail convert impressions to clicks.
 - Whether the next piece should be more Miku-only or more hybrid.
 
 The goal is not only views. The goal is whether listeners accept the sound as

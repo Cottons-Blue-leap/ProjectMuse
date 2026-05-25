@@ -1,18 +1,25 @@
 # -*- coding: utf-8 -*-
-"""Atelier Miku Acappella 썸네일 생성기 — v4 양식 (코튼 LOCK s348).
+"""Atelier Miku Acappella 썸네일 생성기 — v5 양식 (코튼 LOCK s357).
 
-v4 양식:
-  - 커버 속 미쿠를 줌(crop)해서 주인공으로 (인셋·텍스트 라벨 X — "썸네일은 그림으로 말한다")
-  - 좌하단 제목 블록 = 작곡가(소) / 곡명(대) / Atelier Miku Acappella 워드마크
-  - 줄 간격 = 디센더(p·é·g 등 글자 꼬리)까지 실측해 띄움 (제목↔워드마크 겹침 방지)
-  - 하단 그라데이션 스크림으로 텍스트 가독성 확보
+v5 양식 (3-정보 · 좌하단 단일 블록):
+  ① 명화 커버 배경 (커버 속 미쿠를 box로 줌)
+  ② 악곡 정보 = 곡명(大) · 작곡가(소) 한 줄 (middot 구분 · baseline 정렬)
+  ③ 미쿠·아카펠라 = 初音ミク(아이보리) / A CAPPELLA(민트) 배지
+  레이아웃:
+    初音ミク           ← Yu Mincho · 아이보리 (JP 인식)
+    A CAPPELLA        ← Didot 대문자 자간 · 민트 (포맷 · 영문대문자=작은화면 즉독)
+    Salut d'Amour · Edward Elgar   ← Didot · 곡명 흰색 大 + middot + 작곡가 흐림 小
+  - 좌측 시각 정렬(좌 side-bearing 보정) · 인라인 baseline 정렬 · 배지/타이틀 2단 여유(22/34)
+  - 하단 그라데이션 스크림으로 어떤 명화에서도 가독 확보 (별도 박스 없이 = 앨범커버 결 유지)
 
-per-song 가변값 = `box` (커버 안에서 미쿠를 잡는 crop 영역, 0~1 비율). 신곡은 커버를 보고 box를 정함.
-업로드는 별도 도구: `Analytics/youtube_meta.py set-thumbnail <video_id> <out.jpg>`.
+이전 v4(워드마크·민트 2줄·상단배지)는 폐기. 기존 thumbnail_v4.jpg는 롤백용 보존(덮어쓰지 않음).
+per-song 가변값 = `box`(커버 안 미쿠 crop 0~1) + composer + piece. 신곡은 커버 보고 box 정함.
+업로드: `Analytics/youtube_meta.py set-thumbnail <video_id> <out.jpg>`.
 
 사용:
   python workflows/video_release/make_thumbnail.py --song salut
-  python workflows/video_release/make_thumbnail.py --cover <path> --box 0.2,0.0,1.0,0.55 \
+  python workflows/video_release/make_thumbnail.py --all
+  python workflows/video_release/make_thumbnail.py --cover <p> --box x0,y0,x1,y1 \
          --composer "Edward Elgar" --piece "Salut d'Amour" --out <out.jpg>
 """
 import sys
@@ -24,10 +31,27 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 BASE = Path(__file__).resolve().parents[2]          # Project_Muse/
-FONT = BASE / "assets/fonts/gfs_didot/GFSDidot-Regular.ttf"
-W, H = 1280, 720
+DIDOT = str(BASE / "assets/fonts/gfs_didot/GFSDidot-Regular.ttf")
+# 일본어 글리프용 = Yu Mincho Regular (Windows 시스템 폰트 · MS 라이선스라 repo 미동봉).
+# 다른 환경이면 명조 계열 .ttf/.ttc 경로로 교체.
+JP_MINCHO = r"C:\Windows\Fonts\yumin.ttf"
 
-# per-song registry. box = (x0,y0,x1,y1) 0~1, 커버 안에서 미쿠를 주인공으로 잡는 영역.
+W, H = 1280, 720
+IVORY = (245, 243, 235)
+MINT  = (139, 223, 206)
+DIM   = (196, 192, 178)
+WHITE = (255, 255, 255)
+
+LEFT        = 72    # 공통 시각 좌측선
+# 세로는 baseline(폰트 메트릭 · 크기당 상수)에 앵커링 = 글자(디센더) 무관 → 시리즈 픽셀 동일.
+BASE_MARGIN = 44    # 곡명 baseline = H - BASE_MARGIN (하단 여백)
+LEAD_TITLE  = 98    # 곡명 → A CAPPELLA baseline 간격
+LEAD_BADGE  = 69    # A CAPPELLA → 初音ミク baseline 간격
+# 크기 고정 (s357 LOCK · 곡 바뀌어도 동일)
+F_MIKU, F_ACA, F_PIECE, F_COMP, F_DOT = 108, 60, 92, 36, 44
+ACA_TRACK = 8       # A CAPPELLA 자간
+
+# per-song registry. box=(x0,y0,x1,y1) 0~1, 커버 안에서 미쿠를 주인공으로 잡는 영역.
 REGISTRY = {
     "gymnopedie": dict(dir="gymnopedie_1_first_proof",
                        cover="video/visualizer/public/cover.png",
@@ -44,14 +68,11 @@ REGISTRY = {
 }
 
 _probe = ImageDraw.Draw(Image.new("RGB", (8, 8)))
-def fnt(sz): return ImageFont.truetype(str(FONT), sz)
+def didot(sz): return ImageFont.truetype(DIDOT, sz)
+def mincho(sz): return ImageFont.truetype(JP_MINCHO, sz, index=0)
 def tw(t, f): return _probe.textlength(t, font=f)
+def bbox(t, f): return _probe.textbbox((0, 0), t, font=f)
 
-def fit(text, maxw, start=122, lo=60):
-    for sz in range(start, lo - 1, -2):
-        if tw(text, fnt(sz)) <= maxw:
-            return fnt(sz)
-    return fnt(lo)
 
 def sub_then_fill(img, box01):
     x0, y0, x1, y1 = box01
@@ -61,61 +82,93 @@ def sub_then_fill(img, box01):
     x, y = (r.width-W)//2, (r.height-H)//2
     return r.crop((x, y, x+W, y+H))
 
-def bottom_scrim(bg, start=350):
+
+def scrim(bg, start, amax=226):
     ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); od = ImageDraw.Draw(ov)
     for y in range(H):
-        a = int(205 * max(0, (y-start)/(H-start)))
+        a = int(amax * max(0, (y-start)/(H-start)))
         od.line([(0, y), (W, y)], fill=(6, 9, 13, a))
     return Image.alpha_composite(bg.convert("RGBA"), ov).convert("RGB")
 
-def tsh(d, xy, t, f, fill=(255, 255, 255), off=4):
-    x, y = xy
-    d.text((x+off, y+off), t, font=f, fill=(0, 0, 0, 170))
+
+def sh(d, x, y, t, f, fill, off=4):
+    """드롭섀도 + 본 텍스트."""
+    d.text((x+off, y+off), t, font=f, fill=(0, 0, 0))
     d.text((x, y), t, font=f, fill=fill)
 
-def wordmark(d, x, y, sz=38):
-    f = fnt(sz)
-    for t, c in [("Atelier ", (232, 230, 222)), ("M", (120, 224, 224)), ("iku Acappella", (232, 230, 222))]:
-        d.text((x+2, y+2), t, font=f, fill=(0, 0, 0, 150))
-        d.text((x, y), t, font=f, fill=c)
-        x += tw(t, f)
+
+def sh_sp(d, x, y, t, f, fill, sp, off=4):
+    """자간 적용 드롭섀도 텍스트."""
+    for ch in t:
+        d.text((x+off, y+off), ch, font=f, fill=(0, 0, 0))
+        d.text((x, y), ch, font=f, fill=fill)
+        x += tw(ch, f) + sp
+
 
 def render(cover_path, box, composer, piece, out_path):
     bg = sub_then_fill(Image.open(cover_path).convert("RGB"), box)
-    bg = bottom_scrim(bg, start=350)
+    mf, af, pf, cf, df = mincho(F_MIKU), didot(F_ACA), didot(F_PIECE), didot(F_COMP), didot(F_DOT)
+    # bbox[0]=좌 side-bearing(가로 정렬용 · 글자별 OK) · tw=가로 진행폭. 세로엔 미사용(메트릭만).
+    mb, ab, pb = bbox("初音ミク", mf), bbox("A CAPPELLA", af), bbox(piece, pf)
+    asc_p, asc_a, asc_m = pf.getmetrics()[0], af.getmetrics()[0], mf.getmetrics()[0]
+    asc_c, asc_d = cf.getmetrics()[0], df.getmetrics()[0]
+
+    # 인라인 타이틀 너비 점검 — 오버플로면 경고 (크기는 LOCK이라 유지, box/표기 재검토 신호)
+    inline_w = tw(piece, pf) + 20 + tw("·", df) + 20 + tw(composer, cf)
+    if (LEFT - pb[0]) + inline_w > W - 24:
+        print(f"  ⚠ 인라인 타이틀이 폭을 넘음({int(inline_w)}px) — '{piece} · {composer}'")
+
+    # 세로 = 고정 baseline (글자 무관 = 모든 곡 픽셀 동일). draw y(셀 상단) = baseline - ascent.
+    B_piece = H - BASE_MARGIN
+    B_aca   = B_piece - LEAD_TITLE
+    B_miku  = B_aca - LEAD_BADGE
+    piece_y, aca_y, miku_y = B_piece - asc_p, B_aca - asc_a, B_miku - asc_m
+
+    bg = scrim(bg, miku_y - 46)
     d = ImageDraw.Draw(bg)
-    comp_f, big_f, wm_f = fnt(46), fit(piece, W - 150), fnt(38)
-    # 디센더 포함 ink bbox 측정 → 아래(워드마크)부터 위로 스택, 줄 사이 실측 간격 GAP 보장.
-    cb = _probe.textbbox((0, 0), composer, font=comp_f)
-    pb = _probe.textbbox((0, 0), piece, font=big_f)
-    wb = _probe.textbbox((0, 0), "Atelier Miku Acappella", font=wm_f)
-    GAP, GAP2 = 22, 12
-    wm_y = (H - 26) - wb[3]
-    big_y = (wm_y + wb[1]) - GAP - pb[3]
-    comp_y = (big_y + pb[1]) - GAP2 - cb[3]
-    tsh(d, (70, comp_y), composer, comp_f, fill=(216, 212, 198))
-    tsh(d, (66, big_y), piece, big_f)
-    wordmark(d, 72, wm_y)
+
+    # 좌측 시각 정렬: x = LEFT - 좌 side-bearing
+    sh(d, LEFT - mb[0], miku_y, "初音ミク", mf, IVORY)
+    sh_sp(d, LEFT - ab[0], aca_y, "A CAPPELLA", af, MINT, ACA_TRACK)
+
+    # 인라인 타이틀 (곡명 · 작곡가 — 같은 baseline)
+    x = LEFT - pb[0]
+    sh(d, x, piece_y, piece, pf, WHITE)
+    x += tw(piece, pf) + 20
+    sh(d, x, B_piece - asc_d, "·", df, DIM)
+    x += tw("·", df) + 20
+    sh(d, x, B_piece - asc_c, composer, cf, DIM)
+
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     bg.save(out_path, quality=92)
     print(f"✓ {out_path}")
 
+
+def render_song(key, out=None):
+    c = REGISTRY[key]
+    cover = BASE / "works" / c["dir"] / c["cover"]
+    out = out or (BASE / "works" / c["dir"] / "video" / "thumbnail_v5.jpg")
+    render(cover, c["box"], c["composer"], c["piece"], out)
+
+
 def main():
-    p = argparse.ArgumentParser(description="Atelier Miku Acappella v4 썸네일 생성기")
-    p.add_argument("--song", choices=list(REGISTRY), help="등록된 곡 (registry 사용)")
+    p = argparse.ArgumentParser(description="Atelier Miku Acappella v5 썸네일 생성기")
+    p.add_argument("--song", choices=list(REGISTRY), help="등록된 곡 (registry)")
+    p.add_argument("--all", action="store_true", help="등록된 4곡 전부")
     p.add_argument("--cover"); p.add_argument("--box", help="x0,y0,x1,y1 (0~1)")
     p.add_argument("--composer"); p.add_argument("--piece"); p.add_argument("--out")
     a = p.parse_args()
-    if a.song:
-        c = REGISTRY[a.song]
-        cover = BASE / "works" / c["dir"] / c["cover"]
-        out = a.out or (BASE / "works" / c["dir"] / "video" / "thumbnail_v4.jpg")
-        render(cover, c["box"], c["composer"], c["piece"], out)
+    if a.all:
+        for k in REGISTRY:
+            render_song(k)
+    elif a.song:
+        render_song(a.song, a.out)
     else:
         if not all([a.cover, a.box, a.composer, a.piece, a.out]):
-            p.error("--song 또는 (--cover --box --composer --piece --out) 전부 필요")
+            p.error("--all / --song / (--cover --box --composer --piece --out) 중 하나 필요")
         box = tuple(float(v) for v in a.box.split(","))
         render(a.cover, box, a.composer, a.piece, a.out)
+
 
 if __name__ == "__main__":
     main()
