@@ -33,7 +33,7 @@ Subscribe to join the Atelier and discover a new side of classical music!
 
 Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
-#Vivaldi #Spring #Cover #HatsuneMiku #初音ミク #Acappella #アカペラ #Vocaloid #ボカロ #VOCALOID #ClassicalMusic #AtelierMikuAcappella #Vocaloid6
+#HatsuneMiku #Acappella #FourSeasons #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #Baroque #Vivaldi #AtelierMikuAcappella
 ```
 
 ## 가변 자리 4건 박힌 자료
@@ -47,10 +47,11 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
    - 화가 성만 = Botticelli
    - 명화 연도 = c. 1482 (대략 연도 양식 keep)
    - URL = Wikipedia commons (s309 코튼 결단)
-4. **작품별 해시태그 2건**: `#Vivaldi #Spring`
-   - 작곡가성 = Vivaldi
-   - 곡명 = Spring (단일 단어 · template 양식 정합)
+4. **해시태그 (v11 · s351 로케일-퓨어)**: EN `#HatsuneMiku #Acappella #FourSeasons #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #Baroque #Vivaldi #AtelierMikuAcappella` (10) · JP/KO = `description.localized.md`
+   - 작곡가 = Vivaldi / ヴィヴァルディ / 비발디
+   - 작품 = **#FourSeasons / #四季 / #사계** (v11 · 범용 `#Spring` 회피 = 작품 식별력)
+   - 시대 = Baroque / バロック / 바로크
 
-## 코튼 결단 의제 1건
+## 코튼 결단 (s351 해결)
 
-- **곡명 해시태그 결단** — `#Spring` (단일 단어 · template 양식 정합) vs `#FourSeasons` (parent work · 작품 식별 강) 중 결단. MOKA 추천 = `#Spring` keep (template 양식 정합 + 곡명 직접 axis). 다만 `#Spring`이 너무 generic 자료라면 `#FourSeasons` 또는 둘 다 박는 path도 가능 (해시태그 3건 양식 변형).
+- **곡명 해시태그** — v11(s351)에서 `#FourSeasons / #四季 / #사계`로 확정 (범용 `#Spring` 회피 · 작품 식별력 우선). 이전 s310 MOKA 추천 `#Spring keep` 은 v11 다이어트 cycle에서 번복.

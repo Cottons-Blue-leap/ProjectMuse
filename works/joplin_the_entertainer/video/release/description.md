@@ -28,7 +28,7 @@ Subscribe to join the Atelier and discover a new side of classical music!
 
 Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
-#Joplin #TheEntertainer #Ragtime #Cover #HatsuneMiku #初音ミク #Acappella #アカペラ #Vocaloid #ボカロ #VOCALOID #ClassicalMusic #AtelierMikuAcappella #Vocaloid6
+#HatsuneMiku #Acappella #TheEntertainer #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #Ragtime #Joplin #AtelierMikuAcappella
 ```
 
 ## 가변 자리 4건 박힌 자료 (lock)
@@ -44,10 +44,10 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
    - 화가 성만 = Glackens (William Glackens d.1938)
    - 명화 연도 = c. 1901
    - URL = Wikimedia Commons (vivaldi precedent 정합 · s332 자가 verify 통과)
-4. **작품별 해시태그 3건**: `#Joplin #TheEntertainer #Ragtime`
-   - 작곡가성 = Joplin
-   - 곡명 = TheEntertainer (다중 단어 합본)
-   - 장르 anchor = Ragtime (s332 코튼 결단 · 해시태그 3건 양식 변형)
+4. **해시태그 (v11 · s351 로케일-퓨어)**: EN `#HatsuneMiku #Acappella #TheEntertainer #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #Ragtime #Joplin #AtelierMikuAcappella` (10) · JP/KO = `description.localized.md`
+   - 작곡가 = Joplin / ジョプリン / 조플린
+   - 작품 = TheEntertainer / ジエンターテイナー / 디엔터테이너 (다중 단어 합본)
+   - 시대/장르 슬롯 = **#Ragtime / #ラグタイム / #래그타임** (장르가 시대보다 정확한 좌표 · s332→v11 keep)
 
 ## 코튼 결단 자료 lock (s332)
 

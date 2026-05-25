@@ -24,7 +24,7 @@ https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_The_Soul_of_th
 Production tool: VOCALOID6
 Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
-#Elgar #SalutDamour #Cover #HatsuneMiku #初音ミク #Acappella #アカペラ #Vocaloid #ボカロ #VOCALOID #ClassicalMusic #AtelierMikuAcappella #Vocaloid6
+#HatsuneMiku #Acappella #SalutDamour #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #RomanticEra #Elgar #AtelierMikuAcappella
 ```
 
 ## 가변 자리 박힌 자료 (s346 LOCK)
@@ -36,7 +36,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
    - **N=9 Mikus** = .vpr 재실측 2026-05-23 s346 (Miku Lead 1 + Mid 0~4[5] + Base 1~3[3] = 9 활성 보컬 트랙 · s345 재편곡으로 lead double 제거 → 10→9 정정)
    - 연도 = 1888 (작곡 · 1889 출판 · 약혼녀 Alice 헌정)
 3. **Cover art** = `Cover art, after Waterhouse, 'The Soul of the Rose' (1903).` + Wikimedia Commons URL (Waterhouse d.1917 PD)
-4. **작품 해시태그** = `#Elgar #SalutDamour` (+ `#Cover` anchor) · 장르 3번째 태그 생략 (코튼 · 살롱 소품 장르태그 fit 약)
+4. **해시태그 (v11 · s351 로케일-퓨어)** = EN `#HatsuneMiku #Acappella #SalutDamour #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #RomanticEra #Elgar #AtelierMikuAcappella` (10) · JP/KO = `description.localized.md`. 작곡가 = Elgar/エルガー/엘가 · 작품 = SalutDamour/愛の挨拶/사랑의인사 · 시대 = RomanticEra/ロマン派/낭만주의.
 
 ## 양식 진화 (s346 · 코튼 결단)
 

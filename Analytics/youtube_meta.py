@@ -16,6 +16,7 @@ youtube_analytics.py 는 읽기 전용(analytics). 본 도구는 **쓰기**(forc
   python Analytics/youtube_meta.py auth                       # 1회 OAuth (브라우저 동의)
   python Analytics/youtube_meta.py get <video_id>            # 현재 제목/현지화 확인
   python Analytics/youtube_meta.py set-title <video_id> --default "..." --en "..." --ko "..." --ja "..."
+  python Analytics/youtube_meta.py set-tags <video_id> "tag1, tag2, ..."   # 백엔드 태그 칸 (--dry-run 권장)
   python Analytics/youtube_meta.py set-thumbnail <video_id> <image.png>
 """
 import sys
@@ -157,6 +158,52 @@ def cmd_set_title(args):
     cmd_get(argparse.Namespace(video=args.video))
 
 
+def cmd_set_tags(args):
+    if args.from_file:
+        raw = Path(args.from_file).read_text(encoding="utf-8")
+    else:
+        raw = args.tags or ""
+    tags = [t.strip() for t in raw.replace("\n", ",").split(",") if t.strip()]
+    if not tags:
+        sys.exit("태그가 비어있음 (콤마 구분 문자열 또는 --from-file 지정).")
+
+    # YouTube 태그 칸 = 전 태그 합산 ~500자 한도 (콤마 포함 근사). 초과 시 API가 거부.
+    approx = sum(len(t) for t in tags) + (len(tags) - 1) * 2
+    if approx > 500:
+        sys.exit(f"태그 총 길이 ~{approx}자 > 500 한도. 줄이세요.")
+
+    svc = yt()
+    v = _get_video(svc, args.video)
+    old = v["snippet"]
+
+    # read-modify-write: snippet 의 tags 만 교체, 나머지(제목·설명·카테고리·언어)는 보존.
+    # part="snippet" 만 보내므로 localizations 파트는 건드리지 않음 = 현지화 제목/설명 보존.
+    new_snippet = {
+        "title": old.get("title"),
+        "categoryId": old.get("categoryId"),
+        "description": old.get("description", ""),
+        "tags": tags,
+    }
+    if old.get("defaultLanguage"):
+        new_snippet["defaultLanguage"] = old["defaultLanguage"]
+    if old.get("defaultAudioLanguage"):
+        new_snippet["defaultAudioLanguage"] = old["defaultAudioLanguage"]
+
+    if args.dry_run:
+        old_tags = old.get("tags") or []
+        print(f"[dry-run] {args.video}")
+        print(f"  현재 태그 {len(old_tags)}개 → 새 태그 {len(tags)}개 (~{approx}/500자)")
+        print("  새 태그: " + ", ".join(tags))
+        print("  (제목·설명·현지화 등 나머지 snippet/localizations 보존)")
+        return
+
+    try:
+        svc.videos().update(part="snippet", body={"id": args.video, "snippet": new_snippet}).execute()
+    except HttpError as e:
+        sys.exit(f"update 실패: {e}")
+    print(f"✓ 태그 적용 완료: {args.video} ({len(tags)}개 · ~{approx}/500자)")
+
+
 def cmd_set_thumbnail(args):
     img = Path(args.image)
     if not img.exists():
@@ -189,6 +236,12 @@ def main():
     s.add_argument("--ja")
     s.add_argument("--dry-run", action="store_true", help="적용 없이 미리보기")
 
+    st = sub.add_parser("set-tags", help="백엔드 태그 칸 read-modify-write (전 로케일 공유)")
+    st.add_argument("video")
+    st.add_argument("tags", nargs="?", help="콤마 구분 태그 문자열")
+    st.add_argument("--from-file", help="태그 문자열을 파일에서 읽기 (콤마/줄바꿈 구분)")
+    st.add_argument("--dry-run", action="store_true", help="적용 없이 미리보기")
+
     t = sub.add_parser("set-thumbnail", help="커스텀 썸네일 업로드")
     t.add_argument("video")
     t.add_argument("image")
@@ -198,6 +251,7 @@ def main():
         "auth": cmd_auth,
         "get": cmd_get,
         "set-title": cmd_set_title,
+        "set-tags": cmd_set_tags,
         "set-thumbnail": cmd_set_thumbnail,
     }[args.cmd](args)
 

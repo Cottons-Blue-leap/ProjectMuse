@@ -21,4 +21,4 @@ Subscribe to join the Atelier and discover a new side of classical music!
 
 Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
-#Satie #Gymnopedie #Cover #HatsuneMiku #Acappella #Vocaloid #ClassicalMusic #AtelierMikuAcappella #Vocaloid6
+#HatsuneMiku #Acappella #Gymnopedie #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #RomanticEra #Satie #AtelierMikuAcappella

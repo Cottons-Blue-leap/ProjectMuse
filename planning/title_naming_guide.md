@@ -1,35 +1,49 @@
 # Title Naming Guide
 
 > Canonical rule for Atelier Miku Acappella release titles.
-> Locked s348 (2026-05-23, 코튼 결단). Supersedes the old "Canon in Miku" playful-substitution
-> draft (that predated the channel's faithful/serious direction).
+> Locked s355 (2026-05-25, 코튼 결단). Supersedes the s348 front-bracket format
+> `[Miku Acappella] Composer - Piece`.
 
 ## The format
 
 ```text
-[<Miku keyword> Acappella] <Composer full name> - <Piece>
+<Composer full name> - <Piece> (feat. 初音ミク)
 ```
 
-The Miku keyword is **front-loaded in brackets** so Vocaloid fans scanning a feed see it
-first (scan + branding). Faithful titles only — no playful substitution.
+Minimal. The composer + piece, then the featured-artist credit as a suffix. No "Acappella"
+in the title — that lives in the channel name + tags, and the video *reveals* itself as
+acappella. The feat. credit uses `初音ミク` (the canonical Japanese wordmark) in **every locale**.
+
+### Why this shape (s355 rationale)
+
+1. **Reveal / curiosity-gap design (코튼 핵심).** Front-loading every spec
+   (`[Miku Acappella] …`) turns the title into a full spec-sheet → the viewer pre-judges
+   before clicking ("as expected / not for me" = *evaluation mode*). Withholding "acappella"
+   makes it a payoff discovered *inside* the video: "Classical, by Miku?!" (hook) → click →
+   "ah — acappella!" (reward) = *discovery mode*. This optimizes for new viewers, who are ~all
+   our traffic (recommendation ≈ 65%, s349/s351).
+2. **The feat. credit's job = identity signal, not search.** Search ≈ 0 on this channel and the
+   title is no longer the search lever (s352 web research: thumbnail >> title for CTR; end-of-title
+   text is near-useless for search; recommendation is the driver). So keyword-position in the
+   title barely matters. The credit's job is to *signal identity at the click moment* — and
+   `初音ミク` is the most iconic, authentic, globally-recognized mark for that. The romaji/hangul
+   spellings still serve search via tags + description.
+3. **`初音ミク` universal ≠ inconsistent with s351 locale-pure hashtags.** Different surfaces,
+   different jobs: hashtags = *search/discovery* (locale-native names help locale search) →
+   `#HatsuneMiku` (EN) / `#하츠네미쿠` (KO) / `#初音ミク` (JP); title credit = *identity mark*
+   (the "logo" moment) → `初音ミク` everywhere. The two surfaces intentionally differ by function.
 
 ### Per-locale fields
 
-YouTube serves each viewer the title matching their account language (localizations are set
-on every video; `defaultLanguage = en`). So we keep **three clean native titles** and never
-mix scripts inside one title.
+YouTube serves each viewer the title matching their account language (localizations are set on
+every video; `defaultLanguage = en`). Composer + piece are localized; the `(feat. 初音ミク)`
+credit is identical in all three.
 
 | field | EN (default) | KO | JA |
 |---|---|---|---|
-| Miku keyword | `Miku Acappella` | `미쿠 아카펠라` | `初音ミク アカペラ` |
 | composer | full name, Latin | full name, Hangul | full name, Katakana |
-| piece | see below | see below | see below |
-
-**Why JA keeps `初音ミク` but EN/KO drop "Hatsune"/"하츠네":** `初音ミク` is the exact term the
-Japanese audience searches, and Japan is our biggest untapped market — the title is the
-highest-weighted search field, so we keep the full term where it matters most. EN/KO stay
-concise ("Miku" is iconic enough); the full name still lives in the description + tags + channel
-name for those locales.
+| piece | see policy below | see policy below | see policy below |
+| credit | `(feat. 初音ミク)` | `(feat. 初音ミク)` | `(feat. 初音ミク)` |
 
 ### Piece name policy
 
@@ -42,42 +56,56 @@ Use the name **the local audience actually searches**:
 
 ### Rules
 
-1. `[<Miku keyword> Acappella]` prefix on every title, every locale.
-2. Composer full name + ` - ` + piece. One consistent structure across locales (no surname-only
-   or alternate framing — this was the Vivaldi outlier, fixed s348).
-3. `Acappella` spelling matches the channel name (one word, double-p).
+1. `<Composer full name> - <Piece> (feat. 初音ミク)`. The `(feat. 初音ミク)` suffix on every
+   title, every locale (composer + piece localized; credit identical).
+2. No "Acappella" / "アカペラ" / "아카펠라" in the title — channel name + tags carry it; the
+   video reveals it. (This is the design, not an omission.)
+3. Composer full name + ` - ` + piece. One consistent structure across locales (no surname-only
+   or alternate framing — this was the Vivaldi outlier, fixed s348 and kept).
 4. `defaultLanguage = en`; set localizations for en/ko/ja on every video.
 5. Never imply an altered title is the historical title; credit the source in the description
    (`Composer - Piece (year)`).
 
-## Current catalog (live, s348)
+## Current catalog (live, s355)
 
 ```text
-[Miku Acappella] Erik Satie - Gymnopédie No. 1
-  KO  [미쿠 아카펠라] 에릭 사티 - 짐노페디 1번
-  JA  [初音ミク アカペラ] エリック・サティ - ジムノペディ第1番
+Erik Satie - Gymnopédie No. 1 (feat. 初音ミク)
+  KO  에릭 사티 - 짐노페디 1번 (feat. 初音ミク)
+  JA  エリック・サティ - ジムノペディ第1番 (feat. 初音ミク)
 
-[Miku Acappella] Antonio Vivaldi - Spring, Mvt. I
-  KO  [미쿠 아카펠라] 안토니오 비발디 - 사계 '봄' 1악장
-  JA  [初音ミク アカペラ] アントニオ・ヴィヴァルディ - 四季 春 第1楽章
+Antonio Vivaldi - Spring, Mvt. I (feat. 初音ミク)
+  KO  안토니오 비발디 - 사계 '봄' 1악장 (feat. 初音ミク)
+  JA  アントニオ・ヴィヴァルディ - 四季 春 第1楽章 (feat. 初音ミク)
 
-[Miku Acappella] Scott Joplin - The Entertainer
-  KO  [미쿠 아카펠라] 스콧 조플린 - 디 엔터테이너
-  JA  [初音ミク アカペラ] スコット・ジョプリン - ジ・エンターテイナー
+Scott Joplin - The Entertainer (feat. 初音ミク)
+  KO  스콧 조플린 - 디 엔터테이너 (feat. 初音ミク)
+  JA  スコット・ジョプリン - ジ・エンターテイナー (feat. 初音ミク)
 
-[Miku Acappella] Edward Elgar - Salut d'Amour
-  KO  [미쿠 아카펠라] 에드워드 엘가 - 사랑의 인사
-  JA  [初音ミク アカペラ] エドワード・エルガー - 愛の挨拶
+Edward Elgar - Salut d'Amour (feat. 初音ミク)
+  KO  에드워드 엘가 - 사랑의 인사 (feat. 初音ミク)
+  JA  エドワード・エルガー - 愛の挨拶 (feat. 初音ミク)
 ```
 
 ## Applying titles
 
 Write access is automated via `Analytics/youtube_meta.py` (OAuth `youtube.force-ssl`,
-read-modify-write so other fields are preserved):
+read-modify-write so other fields are preserved). `set-title` writes the default + en/ko/ja
+localizations in one call:
 
 ```text
 python Analytics/youtube_meta.py get <video_id>
 python Analytics/youtube_meta.py set-title <video_id> --default "..." --en "..." --ko "..." --ja "..."
 ```
 
-The same tool uploads custom thumbnails (`set-thumbnail`).
+Note: the post-update `get` printed by `set-title` can show a stale `[default title]` for a few
+seconds (read-after-write lag); re-run `get` to confirm. The same tool uploads custom thumbnails
+(`set-thumbnail`).
+
+## Format history
+
+- (launch, s282) `Composer - Piece (feat. Hatsune Miku)` — original Gymnopédie title.
+- v9 (s340) → `Composer - Piece (Hatsune Miku Acappella)` — SEO cycle, surface the "Acappella" keyword.
+- v10/s348 → `[Miku Acappella] Composer - Piece` — front-bracket keyword front-load (+ Vivaldi format fix).
+- **s355 → `Composer - Piece (feat. 初音ミク)`** — reveal/curiosity-gap design + feat.-credit-as-identity;
+  data (s352) showed the front-load SEO bet was weak (search ≈ 0, thumbnail drives CTR). Returns to the
+  suffix shape of the launch title, with `初音ミク` as the universal credit. All 4 live videos retrofitted.

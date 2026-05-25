@@ -1,15 +1,15 @@
 # YouTube Localization — Gymnopédie No. 1
 
 > 영상 단위 현지화본 (제목 + 설명). YouTube Studio → 자막(Subtitles) → 언어 추가 → 제목 및 설명에 붙여넣기.
-> base = 라이브 설명 (코튼 s339 paste). Welcome 블록 양식 유지 (조플린·비발디는 curator voice). 핸들·채널명·해시태그·© 라인은 전 로케일 공통 keep.
-> 박힌 날짜: 2026-05-21 (s339)
-> ⚠️ 라이브 ↔ repo drift 2건: (1) 라이브엔 'No AI for music…' 줄 없음 (repo 정본엔 있음 · 3곡 공통). (2) 라이브 해시태그 = JP 태그 #初音ミク #ボカロ 2건만 끝에 append (비발디·조플린은 #初音ミク #アカペラ #ボカロ #VOCALOID 4건 interleave). 본 현지화본은 **라이브 충실** — 해시태그도 라이브 그대로.
+> base = 라이브 설명 (코튼 s339 paste). Welcome 블록 양식 유지 (조플린·비발디는 curator voice). 핸들·채널명·© 라인은 전 로케일 공통 keep.
+> 박힌 날짜: 2026-05-21 (s339) · 해시태그 v11 update (s351 — 로케일-퓨어 재설계) · 제목 update (s355 — `(feat. 初音ミク)` 후치 양식 · 브래킷 폐기)
+> ⚠️ 라이브 ↔ repo drift: (1) 라이브엔 'No AI for music…' 줄 없음 (repo description.md 정본엔 있음). (2) **해시태그 = v11(s351) 로케일-퓨어** (공유 이중언어 블록 폐기 → 로케일별 네이티브 · 전 로케일 공통 아님). 라이브는 Studio 수동 끝줄 교체 대기.
 
 ## 🇯🇵 日本語 (Japanese)
 
 ### 제목 (Title)
 ```
-[初音ミク アカペラ] エリック・サティ - ジムノペディ第1番
+エリック・サティ - ジムノペディ第1番 (feat. 初音ミク)
 ```
 
 ### 설명 (Description)
@@ -33,14 +33,14 @@ https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-batters
 制作ツール：VOCALOID6
 初音ミク © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
-#Satie #Gymnopedie #Cover #HatsuneMiku #Acappella #Vocaloid #ClassicalMusic #AtelierMikuAcappella #Vocaloid6 #初音ミク #ボカロ
+#初音ミク #アカペラ #ジムノペディ #ボカロ #ボカロカバー #クラシック #ロマン派 #サティ #AtelierMikuAcappella
 ```
 
 ## 🇰🇷 한국어 (Korean)
 
 ### 제목 (Title)
 ```
-[미쿠 아카펠라] 에릭 사티 - 짐노페디 1번
+에릭 사티 - 짐노페디 1번 (feat. 初音ミク)
 ```
 
 ### 설명 (Description)
@@ -64,5 +64,5 @@ https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-batters
 제작툴: VOCALOID6
 하츠네 미쿠 © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
-#Satie #Gymnopedie #Cover #HatsuneMiku #Acappella #Vocaloid #ClassicalMusic #AtelierMikuAcappella #Vocaloid6 #初音ミク #ボカロ
+#하츠네미쿠 #아카펠라 #짐노페디 #初音ミク #보컬로이드 #클래식 #낭만주의 #사티 #AtelierMikuAcappella
 ```
