@@ -4,6 +4,13 @@ import sys
 from pathlib import Path
 from playwright.async_api import async_playwright
 
+# Windows cp949 한글 깨짐 방어 (s355 광역 audit)
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 
 async def render(svg_path: Path, png_path: Path, size: int = 800):
     html = f"""

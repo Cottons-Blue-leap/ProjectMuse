@@ -10,8 +10,16 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 import shutil
+
+# Windows cp949 한글 깨짐 방어 (s355 광역 audit)
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+except Exception:
+    pass
 
 
 FOLDERS = [
