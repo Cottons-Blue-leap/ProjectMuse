@@ -229,7 +229,7 @@ Open on the album cover instead.
 
 ## Phase 5: Main Video Timeline
 
-영상 frame = 16:9 · composition 1920×1080 좌표계 → 출력 2560×1440 (2K · `--scale=1.333` · Phase 9). Cover = 1:1 정사각, frame 가운데에 박힘.
+영상 frame = 16:9 · composition 2560×1440 (2K) + 내부 wrap div transform: scale(4/3)로 1920×1080 좌표계 keep · 상세 = Phase 9. Cover = 1:1 정사각, frame 가운데에 박힘.
 좌·우 negative space = letterbox (시리즈 시그너처 §5 명화 색조 그라데이션).
 
 Frame 구조:
@@ -326,13 +326,14 @@ Checklist:
 
 ## Phase 9: Export Specs
 
-Recommended (s310 박힘 · **2K 표준 = 2026-05-25 코튼 결단**):
+Recommended (s310 박힘 · **2K 표준 = 2026-05-25 코튼 결단 · s361 정공 path 정정**):
 
 ```text
 Video frame:
   16:9
-  composition 1920×1080 (코드 좌표계 keep) → 출력 2560×1440 (2K / 1440p)
-  렌더 = remotion render ... --scale=1.333   ← composition 무변경 (px 하드코딩 보존)
+  composition 2560×1440 (2K · Root.tsx Composition width/height 직접 지정)
+  내부 wrap div + transform: scale(1.3333333) + transformOrigin: top-left로
+    1920×1080 좌표계 keep (px 하드코딩 보존)
   ~1.78× render cost (4K 대비 절반 이하)
   30 fps
   H.264 High Profile
@@ -349,6 +350,42 @@ Album cover still (1:1 · 외부 배포 · 자동 썸네일 base):
   ≥2560×2560 (2K 커버 표시 ~960px를 충분히 받침 · 3840×3840이면 향후 4K 여지)
   PNG (transparency 자료가 visualizer에 쓰일 가능성)
 ```
+
+**⚠️ `--scale=1.333` 비정수 trap (s361 catch · doctrine 정정)**: 이전 doctrine은 *composition
+1920×1080 keep + `remotion render ... --scale=1.333`* 양식이었으나 실측 = 1080 × 1.333 =
+**1439.64** (비정수) → Remotion `stitchFramesToVideo()` dimension validation 실패 →
+`TypeError: The "height" prop ... must be an integer`. 1.333은 4/3(1.3333...) 근사값이라
+1080 × 1.3333... = 1440-ε으로 항상 비정수.
+
+**정공 path** (s361 작은별 K.265 풀 렌더 통과 양식):
+```tsx
+// Root.tsx
+<Composition
+  id="..."
+  width={2560}   // 2K 직접 지정 (1920 X)
+  height={1440}  // 2K 직접 지정 (1080 X)
+  ...
+/>
+
+// VisualizerComposition.tsx (또는 동등 컴포넌트)
+return (
+  <AbsoluteFill style={{ background: letterboxGradient, ... }}>
+    <Audio src={...} />
+    <div style={{
+      position: "absolute",
+      top: 0, left: 0,
+      width: 1920,   // 1920×1080 좌표계 keep
+      height: 1080,
+      transform: "scale(1.3333333333333333)",
+      transformOrigin: "top left",
+    }}>
+      {/* 기존 1920×1080 좌표계 콘텐츠 (Bars, Cover, Labels, Wordmark) */}
+    </div>
+  </AbsoluteFill>
+);
+```
+
+렌더 명령 = `remotion render ... <out.mp4>` (✘ `--scale` 옵션 X).
 
 **왜 2K (4K 아님)**: 유튜브가 1440p+에 주는 고급 코덱(VP9)으로 1080p(AVC)보다 선명 + 명화
 디테일 품격 + 에버그린 아카이브 가치. 4K 기각 = 커버 소스(현 1254px)가 4K 커버 표시(1920px)

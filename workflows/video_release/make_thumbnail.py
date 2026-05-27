@@ -65,6 +65,9 @@ REGISTRY = {
     "salut":      dict(dir="elgar_salut_damour",
                        cover="video/cover/Miku_waterhouse_soul_of_the_rose.png",
                        box=(0.00, 0.04, 1.00, 0.80), composer="Edward Elgar", piece="Salut d'Amour"),
+    "mozart_twinkle_variations": dict(dir="mozart_twinkle_variations_k265",
+                       cover="video/cover/album_1x1.png",
+                       box=(0.30, 0.40, 1.00, 1.00), composer="W.A. Mozart", piece="Twinkle Twinkle Variations"),
 }
 
 _probe = ImageDraw.Draw(Image.new("RGB", (8, 8)))
@@ -107,16 +110,27 @@ def sh_sp(d, x, y, t, f, fill, sp, off=4):
 
 def render(cover_path, box, composer, piece, out_path):
     bg = sub_then_fill(Image.open(cover_path).convert("RGB"), box)
-    mf, af, pf, cf, df = mincho(F_MIKU), didot(F_ACA), didot(F_PIECE), didot(F_COMP), didot(F_DOT)
+    mf, af = mincho(F_MIKU), didot(F_ACA)
+    # 인라인(piece · composer · middot) = 폭 초과 시 비례 축소 fallback (s361 박힘 · 작은별 K.265 = 첫 적용 곡).
+    # 본질 = *잘림이 축소보다 양식 깸이 더 강 axis* + 다른 곡 영향 0 (폭 안 자리 곡은 default LOCK keep).
+    piece_sz, comp_sz, dot_sz = F_PIECE, F_COMP, F_DOT
+    pf, cf, df = didot(piece_sz), didot(comp_sz), didot(dot_sz)
+    pb = bbox(piece, pf)
+    inline_w = tw(piece, pf) + 20 + tw("·", df) + 20 + tw(composer, cf)
+    inline_target_w = (W - 24) - (LEFT - pb[0])
+    if inline_w > inline_target_w:
+        scale = inline_target_w / inline_w
+        piece_sz, comp_sz, dot_sz = int(F_PIECE*scale), int(F_COMP*scale), int(F_DOT*scale)
+        pf, cf, df = didot(piece_sz), didot(comp_sz), didot(dot_sz)
+        pb = bbox(piece, pf)
+        inline_w_new = tw(piece, pf) + 20 + tw("·", df) + 20 + tw(composer, cf)
+        print(f"  ↳ 인라인 폭 자동 축소 scale={scale:.3f} · {int(inline_w)}px → {int(inline_w_new)}px · "
+              f"F_PIECE {F_PIECE}→{piece_sz} · F_COMP {F_COMP}→{comp_sz}")
+
     # bbox[0]=좌 side-bearing(가로 정렬용 · 글자별 OK) · tw=가로 진행폭. 세로엔 미사용(메트릭만).
-    mb, ab, pb = bbox("初音ミク", mf), bbox("A CAPPELLA", af), bbox(piece, pf)
+    mb, ab = bbox("初音ミク", mf), bbox("A CAPPELLA", af)
     asc_p, asc_a, asc_m = pf.getmetrics()[0], af.getmetrics()[0], mf.getmetrics()[0]
     asc_c, asc_d = cf.getmetrics()[0], df.getmetrics()[0]
-
-    # 인라인 타이틀 너비 점검 — 오버플로면 경고 (크기는 LOCK이라 유지, box/표기 재검토 신호)
-    inline_w = tw(piece, pf) + 20 + tw("·", df) + 20 + tw(composer, cf)
-    if (LEFT - pb[0]) + inline_w > W - 24:
-        print(f"  ⚠ 인라인 타이틀이 폭을 넘음({int(inline_w)}px) — '{piece} · {composer}'")
 
     # 세로 = 고정 baseline (글자 무관 = 모든 곡 픽셀 동일). draw y(셀 상단) = baseline - ascent.
     B_piece = H - BASE_MARGIN

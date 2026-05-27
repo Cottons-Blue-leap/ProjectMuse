@@ -14,9 +14,9 @@
 
 본 양식은 시리즈 모든 곡 공통 keep. 변경 시 시리즈 시그너처 reset 본질.
 
-- **Frame**: 1920×1080 (16:9)
-- **Cover**: 720×720 center 양식 (1:1 ratio keep · size scale 양식 axis)
-- **Letterbox**: cover 외곽 4방향 (좌 600 · 우 600 · 위 180 · 아래 180)
+- **Frame**: Composition 2560×1440 (2K · 16:9) · 내부 1920×1080 좌표계 wrap 양식 (default = s361 박힘 · 작은별 K.265 첫 적용 · 신곡 default · 기존 publish 작품 retrofit X)
+- **Cover**: 720×720 center (1920×1080 좌표계 안 · wrap scale 4/3 후 출력 자리엔 960×960 박힘)
+- **Letterbox**: cover 외곽 4방향 (좌 600 · 우 600 · 위 180 · 아래 180 · 1920×1080 좌표계)
 - **Letterbox gradient**: vertical 3 stop (props 자료)
 - **Text stack**: 좌하단 frame 자리 (left 80 · bottom 60) · GFS Didot · composer 32px / piece 56px / subtitle 26px italic
 - **Sound visualization**: 좌·우 letterbox vertical bars
@@ -95,8 +95,12 @@ text_color: #e8e0c8 (시리즈 공통 keep)
 
 ## Export
 
-- Composition: 1920×1080 (좌표계 keep · 코드 무변경)
-- Output resolution: 2560×1440 (2K · `remotion render --scale=1.333` · 2026-05-25 표준)
+- Composition: **2560×1440 (2K · default · s361 박힘)**
+  - Root.tsx `width={2560} height={1440}`
+  - 내부 wrap div: `width: 1920, height: 1080, transform: scale(1.3333333), transformOrigin: "top left"` → 1920×1080 좌표계 keep (px 하드코딩 보존)
+  - 본 양식 = s361 정공 path (이전 `--scale=1.333` 박힌 doctrine 자체엔 ffmpeg dimension 비정수 trap [1080×1.333 = 1439.64] 자가 catch · 정정)
+- Output resolution: 2560×1440 (composition 그대로 · `--scale` 옵션 X)
+- Render 명령: `remotion render src/index.ts <CompositionId> out/<piece_id>_final.mp4`
 - Frame rate: 30
 - Codec: H.264 (default Remotion)
 - Audio codec: AAC 48kHz stereo
