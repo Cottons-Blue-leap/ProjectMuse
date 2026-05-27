@@ -108,14 +108,14 @@ const Bar: React.FC<BarProps> = ({
   );
 };
 
-export interface VisualizerProps {
+export type VisualizerProps = {
   letterboxColors: [string, string, string];
   composerName: string;
   pieceTitle: string;
   pieceSubtitle: string;
   audioPath: string;
   coverPath: string;
-}
+} & Record<string, unknown>;
 
 export const VisualizerComposition: React.FC<VisualizerProps> = ({
   letterboxColors,
