@@ -103,8 +103,8 @@ def cmd_get(args):
 
 def cmd_set_title(args):
     provided = {k: v for k, v in (("en", args.en), ("ko", args.ko), ("ja", args.ja)) if v}
-    if not provided and not args.default:
-        sys.exit("바꿀 제목을 하나 이상 지정 (--default / --en / --ko / --ja).")
+    if not provided and not args.default and not args.default_language:
+        sys.exit("바꿀 자료를 하나 이상 지정 (--default / --en / --ko / --ja / --default-language).")
 
     svc = yt()
     v = _get_video(svc, args.video)
@@ -119,7 +119,9 @@ def cmd_set_title(args):
     }
     if old.get("tags"):
         new_snippet["tags"] = old["tags"]
-    if old.get("defaultLanguage"):
+    if args.default_language:
+        new_snippet["defaultLanguage"] = args.default_language
+    elif old.get("defaultLanguage"):
         new_snippet["defaultLanguage"] = old["defaultLanguage"]
     if old.get("defaultAudioLanguage"):
         new_snippet["defaultAudioLanguage"] = old["defaultAudioLanguage"]
@@ -234,6 +236,7 @@ def main():
     s.add_argument("--en")
     s.add_argument("--ko")
     s.add_argument("--ja")
+    s.add_argument("--default-language", help="snippet.defaultLanguage 박기 (e.g. en) · 제목 안 바꾸고 언어만 set 가능")
     s.add_argument("--dry-run", action="store_true", help="적용 없이 미리보기")
 
     st = sub.add_parser("set-tags", help="백엔드 태그 칸 read-modify-write (전 로케일 공유)")

@@ -21,6 +21,13 @@ import csv
 import datetime as dt
 from pathlib import Path
 
+# Windows cp949 한글 깨짐 방어 (s355 광역 audit)
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.chart import LineChart, BarChart, Reference
