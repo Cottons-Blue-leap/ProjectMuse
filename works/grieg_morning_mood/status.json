@@ -1,0 +1,22 @@
+{
+  "current_phase": "setup (s365 · 2026-05-27 · 작업 폴더 신축 + score PDF copy + 메타 자료 박음 · V6 입력 진입 대기 · 코튼 자리)",
+  "rights": "composition Grieg d.1907 life+70 통과(1977) PD 강 전세계 · 1875 작곡 (Peer Gynt 극음악) · 1888 Op.46 Suite No.1 재편 · score = IMSLP self-host PD + candidates_opus PDF (edition_id 자가 점검 V6 진입 시점 keep) · cover art = Claude Monet *Impression, Sunrise* (1872 · 화가 d.1926 life+70 통과 1996 PD 강 전세계 · Musée Marmottan Monet 소장) · 사전 audit 통과",
+  "vocal_input_v6": "pending (코튼 V6 직접 입력 대기 · 모음/humming · 원곡 plaintive 목관 멜로디[플루트·오보에 교대] → lead_miku · 결과 출력 자리 = Miku_grieg_morning_mood.wav)",
+  "lyrics": "없음 (기악 원곡 · 첫 5곡 family 정합 = 모음/humming · 그린슬리브즈 첫 성악 텍스트 axis는 보류와 함께 deferred)",
+  "dry_stems": "skipped (acappella-only path · doctrine 정합)",
+  "master": "pending (V6 입력 후 익스포트 → 마스터링 → -18.0 LUFS 양식 정합 · true-peak ≤-1.0 천장 · 24bit/44.1k 스테레오)",
+  "listening_decision": "pending (V6 master 완성 후 코튼 청취 게이트 · 스피커+헤드폰 양쪽)",
+  "video_release": "pending (음악 listening_decision 통과 후 영상 진입 path · 작은별 publish 통과 후 본격 진입 권고 자리 = s359 doctrine 정합 · 작은별 publish 2026-05-28 20:00 KST 예약 박힘)",
+  "channel": {
+    "name": "Atelier Miku Acappella",
+    "handle": "@AtelierMikuAcappella",
+    "url": "https://www.youtube.com/@AtelierMikuAcappella",
+    "playlist": "Miku in the Romantic Era (짐노페디·사랑의 인사 공유 · 낭만 family 정합 · 신축 *Nationalist Era* 의제 X 결단 s359)"
+  },
+  "release_title": "Edvard Grieg - Morning Mood (feat. 初音ミク) · s355 후치 양식 정합 (제목에서 Acappella 제거 · feat. 크레딧 = 정체성 마크 初音ミク)",
+  "cover_art": "Claude Monet, *Impression, Sunrise* (1872 · oil · Musée Marmottan Monet) · csv 기본값 · 인상주의 회화 시조 작품 (인상주의 라는 이름 자체가 이 그림에서 유래) · 음악(낭만 후기 1875)과 *인상주의로 가는 다리* axis 정합 · csv 분석 *A sunrise image fits the musical morning reveal.* · 합성 cover 자리 = video/cover/Miku_monet_impression_sunrise.png · iterations = video/cover/iterations/ · 원본 다운로드 자리 = video/art_sources/monet_impression_sunrise.jpg (V6 진행 중 verify)",
+  "source_pdf": "music/source_scores/grieg_peer_gynt_suite_1.pdf (candidates_opus 에드바르 그리그_페르 귄트 모음곡.pdf ASCII copy · s365 박힘 · 페르 귄트 모음곡 통째 = Morning Mood + 향후 산왕의 궁전(rank 5 · S)·솔베이그의 노래(rank 75 · B) 재사용 base · Atelier Miku Acappella 그리그 시리즈 axis keep)",
+  "signature_wordmark_v3_apply": true,
+  "naming_convention_applied": "s365 · piece_id = grieg_morning_mood (composer_first 양식 정상 · joplin_the_entertainer / elgar_salut_damour family 정합)",
+  "last_decision": "s365 (2026-05-27): 6차 곡 setup 진입 통과. 작업 폴더 신축 + score PDF copy (페르 귄트 모음곡 통째 36MB) + 메타 자료 박음 (project.json + status.json + README.md + video-brief.md). rights 사전 audit 통과 (composition Grieg d.1907 · cover art Monet d.1926 · 둘 다 life+70 강 통과 PD 전세계). 본격 V6 입력 진입 = 작은별(5차) publish 통과 후 권고 (s359 doctrine 정합 · 작은별 publish 2026-05-28 20:00 KST 예약 박힘 · 본 setup은 사전 자료 준비 axis). 다음 cycle = 코튼 V6 본격 입력 + 명화 원본 verify + 작은별 publish 통과 시점 고정 댓글 자리에 *次の曲：グリーグ「朝の気分」* 박음 path."
+}

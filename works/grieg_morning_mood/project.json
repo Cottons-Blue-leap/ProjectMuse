@@ -1,0 +1,17 @@
+{
+  "piece": "Morning Mood, Peer Gynt Suite No. 1, Op. 46 No. 1 (Edvard Grieg)",
+  "composer": "Edvard Grieg (1843-1907)",
+  "section": "통째 (~4분 · 자연 짧은 곡 양식 · 발췌 없음 · 짐노페디·비발디·조플린·사랑의 인사 family 정합 · 작은별 대작 후 콤팩트 호흡 axis)",
+  "vocal": "Hatsune Miku (모음/humming · Ah·Oo·Mm 6-role · 기악 원곡 = 가사 없음 · 첫 5곡 family 정합)",
+  "music": {
+    "source_score": "music/source_scores/grieg_peer_gynt_suite_1.pdf (candidates_opus ASCII copy · 페르 귄트 모음곡 1번 통째 박힘 = Morning Mood + 향후 산왕의 궁전·솔베이그의 노래 재사용 base)",
+    "imslp_path_axis": "https://imslp.org/wiki/Peer_Gynt_Suite_No.1,_Op.46_(Grieg,_Edvard) · PD 강 · Grieg d.1907 life+70 통과(1977) 전세계",
+    "transcription": "코튼 V6 editor 직접 입력 (OMR 없음 · manual transcription default 정합)",
+    "dry_stems_dir": "music/renders/dry_stems",
+    "master_audio": "music/masters/master.wav"
+  },
+  "video": {
+    "brief": "video/video-brief.md",
+    "final_video": "video/exports/grieg_morning_mood_final.mp4"
+  }
+}
