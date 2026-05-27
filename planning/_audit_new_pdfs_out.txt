@@ -1,0 +1,31 @@
+## 전체 state
+PDF total: 144
+csv rows: 358
+referenced (score_file 채워진 row): 143
+verified (PDF 실존): 141
+dangling (csv 참조하는데 PDF 없음): 2
+  dangling: (삭제됨)
+  dangling: (저작권)
+
+## unmatched PDF (폴더엔 있는데 csv 미참조): 3
+   (이 중 오늘 추가분: 3)
+
+## unmatched 각각 fuzzy 후보 (기존 row 매칭 가능성)
+
+  PDF: 그린슬리브스_2.pdf [오늘추가]
+       core="2"
+       -> rank 4 [S] 신세계 교향곡 2악장 라르고 (드보르자크) [score_file 이미: 안토닌 드보르작_신세계로부터.pdf]
+       -> rank 36 [S] 야상곡 작품 9-2 (쇼팽) [score_file 이미: 프레데리크 쇼팽_녹턴 op.9.pdf]
+       -> rank 54 [S] 마왕 D.328 (슈베르트) [score_file 이미: 프란츠 슈베르트_마왕.pdf]
+
+  PDF: 그린슬리브스_3.pdf [오늘추가]
+       core="3"
+       -> rank 3 [S] 관현악 모음곡 3번 중 G선상의 아리아 (바흐) [score_file 이미: 요한 제바스티안 바흐_G선상의 아리아.pdf]
+       -> rank 23 [S] 소나타 K331 중 터키 행진곡 (모차르트) [score_file 이미: 볼프강 아마데우스 모차르트_터키 행진곡.pdf]
+       -> rank 54 [S] 마왕 D.328 (슈베르트) [score_file 이미: 프란츠 슈베르트_마왕.pdf]
+
+  PDF: 그린슬리브스_4.pdf [오늘추가]
+       core="4"
+       -> rank 29 [S] 신세계 교향곡 4악장 알레그로 콘 푸오코 (드보르자크) [score_file 이미: 안토닌 드보르작_신세계로부터.pdf]
+       -> rank 31 [S] 봄의 소리 왈츠 작품 410 (요한 슈트라우스 2세) [score_file 이미: 요한 슈트라우스 2세_봄의 소리 왈츠 Op. 410.pdf]
+       -> rank 48 [S] 평균율 클라비어곡집 1권 1번 C장조 전주곡 BWV 846 (바흐) [score_file 이미: 요한 제바스티안 바흐_평균율 클라비어곡집 1권 1번.pdf]
