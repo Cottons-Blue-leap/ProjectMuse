@@ -1,3 +1,14 @@
+<!--
+name: shorts_first_proof
+stage: 5 · 본 영상 publish + 1달 → 쇼츠 1편
+type: manual
+entry: 본 영상 master 30초 cut + V6 화면 녹화 + 9:16 letterbox (수동 8 step)
+inputs: [works/<piece>/music/masters/master.wav, works/<piece>/video/ (publish 완료)]
+outputs: [YouTube Shorts (Studio 예약 publish)]
+depends_on: [video_release]
+owner: Cotton+MOKA
+-->
+
 # Shorts First Proof — Atelier Miku Acappella
 
 > 시범 1편 자리. 본 영상 publish + 1달 cadence axis · 곡당 쇼츠 자료 박는 자리.

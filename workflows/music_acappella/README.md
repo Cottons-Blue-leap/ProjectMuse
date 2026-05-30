@@ -1,3 +1,14 @@
+<!--
+name: music_acappella
+stage: 2 · V6 entry reference (production X)
+type: reference
+entry: V6 진입 시점 docs/ 자료 참고 (코튼 직접 입력)
+inputs: [planning/candidates_opus/<곡>.pdf, works/<piece>/rights/rights-log.md (approved)]
+outputs: [works/<piece>/music/renders/dry_stems/*.wav (V6 export)]
+depends_on: [rights_clearance]
+owner: Cotton
+-->
+
 # Music Acappella Workflow
 
 이 워크플로우는 *V6 entry reference library*. 코튼이 PDF 보면서 V6 piano roll에 직접 음표를 찍는 시점에 옆에 펴두고 참고하는 자료 자리.

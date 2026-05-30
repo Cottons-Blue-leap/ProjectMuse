@@ -17,9 +17,9 @@ per-song 가변값 = `box`(커버 안 미쿠 crop 0~1) + composer + piece. 신�
 업로드: `Analytics/youtube_meta.py set-thumbnail <video_id> <out.jpg>`.
 
 사용:
-  python workflows/video_release/make_thumbnail.py --song salut
-  python workflows/video_release/make_thumbnail.py --all
-  python workflows/video_release/make_thumbnail.py --cover <p> --box x0,y0,x1,y1 \
+  python workflows/video_release/scripts/muse_thumbnail.py --song salut
+  python workflows/video_release/scripts/muse_thumbnail.py --all
+  python workflows/video_release/scripts/muse_thumbnail.py --cover <p> --box x0,y0,x1,y1 \
          --composer "Edward Elgar" --piece "Salut d'Amour" --out <out.jpg>
 """
 import sys
@@ -30,7 +30,7 @@ from PIL import Image, ImageDraw, ImageFont
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
-BASE = Path(__file__).resolve().parents[2]          # Project_Muse/
+BASE = Path(__file__).resolve().parents[3]          # Project_Muse/ (scripts/→video_release/→workflows/→root)
 DIDOT = str(BASE / "assets/fonts/gfs_didot/GFSDidot-Regular.ttf")
 # 일본어 글리프용 = Yu Mincho Regular (Windows 시스템 폰트 · MS 라이선스라 repo 미동봉).
 # 다른 환경이면 명조 계열 .ttf/.ttc 경로로 교체.

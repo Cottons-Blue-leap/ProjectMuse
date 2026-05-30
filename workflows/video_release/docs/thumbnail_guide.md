@@ -80,15 +80,15 @@ as the subject. Pick it by viewing the cover. Keep Miku's **head/face + teal hai
 ## Font dependency
 
 `初音ミク` uses **Yu Mincho Regular** (`C:\Windows\Fonts\yumin.ttf`), a Windows system font — *not*
-bundled in the repo (Microsoft license). On another machine, point `JP_MINCHO` in `make_thumbnail.py`
+bundled in the repo (Microsoft license). On another machine, point `JP_MINCHO` in `scripts/muse_thumbnail.py`
 to any Mincho `.ttf/.ttc`. GFS Didot ships in `assets/fonts/`.
 
 ## Workflow
 
 ```text
 1. Generate:
-     python workflows/video_release/make_thumbnail.py --all          # all 4 in the registry
-     python workflows/video_release/make_thumbnail.py --song <name>  # one
+     python workflows/video_release/scripts/muse_thumbnail.py --all          # all 4 in the registry
+     python workflows/video_release/scripts/muse_thumbnail.py --song <name>  # one
      (ad-hoc new song: --cover <path> --box x0,y0,x1,y1 --composer "..." --piece "..." --out <path>)
      → works/<song>/video/thumbnail_v5.jpg
 2. Review at feed scale (shrink to ~210px wide): does 初音ミク read? title legible? block balanced?

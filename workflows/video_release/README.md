@@ -1,3 +1,14 @@
+<!--
+name: video_release
+stage: 4 · 승인된 audio → YouTube package
+type: cli+manual
+entry: video-brief.md 작성 → Remotion visualizer → export → release/ 패키지 (썸네일 = scripts/muse_thumbnail.py)
+inputs: [works/<piece>/music/masters/master.wav, works/<piece>/rights/rights-log.md, works/<piece>/project.json]
+outputs: [works/<piece>/video/exports/<piece_id>_final.mp4, works/<piece>/video/release/title.txt, works/<piece>/video/release/description.md, works/<piece>/video/release/credits.md, works/<piece>/video/release/rights-notes.md]
+depends_on: [audio_production]
+owner: Cotton+MOKA
+-->
+
 # Video Release Workflow
 
 This workflow packages an approved music proof into a YouTube-ready music video.

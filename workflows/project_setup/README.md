@@ -1,3 +1,14 @@
+<!--
+name: project_setup
+stage: 0 · 작업 폴더 + project.json 신축
+type: cli
+entry: python ./workflows/project_setup/scripts/muse_project.py init --project ./works/<piece_id>
+inputs: []
+outputs: [works/<piece>/project.json, works/<piece>/status.json, works/<piece>/ 정본 11폴더]
+depends_on: []
+owner: MOKA
+-->
+
 # Project Setup Workflow
 
 본 워크플로우는 *작업 폴더 신축 + project.json 양식*을 담당한다.

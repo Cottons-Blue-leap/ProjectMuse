@@ -1,0 +1,112 @@
+{
+  "_comment": "Project Muse 워크플로우 단일 레지스트리. 워크플로우 추가/수정/삭제 시 이 파일 + 해당 폴더 README front-matter만 갱신. 인간용 인덱스 = workflows/README.md. 정본 양식 = workflows/_TEMPLATE/.",
+  "schema_version": "1.0",
+  "updated": "2026-05-30",
+  "pipeline_order": [
+    "project_setup",
+    "rights_clearance",
+    "music_acappella",
+    "audio_production",
+    "video_release",
+    "shorts_first_proof"
+  ],
+  "workflows": {
+    "project_setup": {
+      "stage": "0 · 작업 폴더 신축",
+      "type": "cli",
+      "entry": "python ./workflows/project_setup/scripts/muse_project.py init --project ./works/<piece_id>",
+      "inputs": [],
+      "outputs": [
+        "works/<piece>/project.json",
+        "works/<piece>/status.json",
+        "works/<piece>/ (정본 11폴더 계약)"
+      ],
+      "depends_on": [],
+      "owner": "MOKA",
+      "docs": ["docs/project_manifest.md"],
+      "subdirs": ["docs", "scripts"]
+    },
+    "rights_clearance": {
+      "stage": "1 · 권리 정합 게이트",
+      "type": "manual",
+      "entry": "works/<piece>/rights/rights-log.md 작성 (양식 = shared/templates/rights-log.md)",
+      "inputs": ["works/<piece>/project.json"],
+      "outputs": ["works/<piece>/rights/rights-log.md"],
+      "depends_on": ["project_setup"],
+      "owner": "MOKA",
+      "gate": ["approved", "needs review", "rejected"],
+      "subdirs": []
+    },
+    "music_acappella": {
+      "stage": "2 · V6 entry reference (production X)",
+      "type": "reference",
+      "entry": "V6 진입 시점 docs/ 자료 참고 (코튼 직접 입력)",
+      "inputs": ["planning/candidates_opus/<곡>.pdf", "works/<piece>/rights/rights-log.md (approved)"],
+      "outputs": ["works/<piece>/music/renders/dry_stems/*.wav (V6 export)"],
+      "depends_on": ["rights_clearance"],
+      "owner": "Cotton",
+      "docs": ["docs/role_taxonomy.md", "docs/instrument_pronunciation.md", "docs/vocal_polishing.md", "docs/role_division.md", "docs/toolchain.md"],
+      "subdirs": ["docs", "prompts", "templates"],
+      "note": "reference-only. config/ 는 미사용 reference (s302 정리 잔여)."
+    },
+    "audio_production": {
+      "stage": "3 · dry stem 점검 + light assembly + master",
+      "type": "cli",
+      "entry": "python ./workflows/audio_production/scripts/muse_audio.py check-stems | assemble-proof",
+      "inputs": ["works/<piece>/music/renders/dry_stems/*.wav"],
+      "outputs": [
+        "works/<piece>/music/mix/stem-report.json",
+        "works/<piece>/music/masters/master.wav",
+        "works/<piece>/music/mix/listening-scorecard.csv",
+        "works/<piece>/notes/listening-notes.md"
+      ],
+      "depends_on": ["music_acappella"],
+      "owner": "Cotton+MOKA",
+      "docs": ["docs/v6_render_workflow.md"],
+      "subdirs": ["docs", "scripts", "templates"]
+    },
+    "video_release": {
+      "stage": "4 · 승인된 audio → YouTube package",
+      "type": "cli+manual",
+      "entry": "video-brief.md 작성 → Remotion visualizer → export → release/ 패키지. 썸네일: python ./workflows/video_release/scripts/muse_thumbnail.py",
+      "inputs": [
+        "works/<piece>/music/masters/master.wav",
+        "works/<piece>/rights/rights-log.md",
+        "works/<piece>/project.json"
+      ],
+      "outputs": [
+        "works/<piece>/video/exports/<piece_id>_final.mp4",
+        "works/<piece>/video/release/title.txt",
+        "works/<piece>/video/release/description.md",
+        "works/<piece>/video/release/credits.md",
+        "works/<piece>/video/release/rights-notes.md"
+      ],
+      "depends_on": ["audio_production"],
+      "owner": "Cotton+MOKA",
+      "docs": ["docs/video_workflow.md", "docs/description_template.md", "docs/post_release_meta_doctrine.md", "docs/thumbnail_guide.md"],
+      "subdirs": ["docs", "scripts", "templates"]
+    },
+    "shorts_first_proof": {
+      "stage": "5 · 본 영상 publish + 1달 → 쇼츠 1편",
+      "type": "manual",
+      "entry": "본 영상 master 30초 cut + V6 화면 녹화 + 9:16 letterbox (수동 8 step)",
+      "inputs": ["works/<piece>/music/masters/master.wav", "works/<piece>/video/ (publish 완료)"],
+      "outputs": ["YouTube Shorts (Studio 예약 publish)"],
+      "depends_on": ["video_release"],
+      "owner": "Cotton+MOKA",
+      "subdirs": []
+    }
+  },
+  "support": {
+    "shared": {
+      "purpose": "워크플로우 간 공유 템플릿 + 스키마. process logic 소유 X.",
+      "subdirs": ["templates", "schemas"]
+    },
+    "naming_convention.md": "piece_id + 파일 양식 doctrine (v1 · s332)"
+  },
+  "conventions": {
+    "script_prefix": "muse_*.py",
+    "template_placement": "2개 이상 워크플로우 공유 → shared/templates/ · 단일 → 워크플로우-local templates/",
+    "add_workflow": "workflows/_TEMPLATE/ 복사 → README front-matter 채움 → 본 registry.json workflows{} + pipeline_order 등재"
+  }
+}

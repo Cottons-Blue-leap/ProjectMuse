@@ -438,7 +438,7 @@ video/release/rights-notes.md
 video/thumbnail_v5.jpg               # custom 썸네일 (자동 썸네일 폐기 · s357)
 ```
 
-- 생성: `python workflows/video_release/make_thumbnail.py --song <name>` (신곡은 `REGISTRY`에 dir/cover/box/composer/piece 추가 → `--song`).
+- 생성: `python workflows/video_release/scripts/muse_thumbnail.py --song <name>` (신곡은 `REGISTRY`에 dir/cover/box/composer/piece 추가 → `--song`).
 - 검수: ~210px로 줄여 初音ミク 읽힘·블록 균형 확인.
 - 업로드(라이브, 이미지만 교체): `python Analytics/youtube_meta.py set-thumbnail <video_id> <thumbnail_v5.jpg>`.
 - 양식·디자인 LOCK·폰트 의존성 = `docs/thumbnail_guide.md`. (cover still은 여전히 제작하되 *썸네일 ≠ cover* — 전용 v5를 따로 만든다.)

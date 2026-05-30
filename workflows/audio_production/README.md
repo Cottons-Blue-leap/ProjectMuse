@@ -1,3 +1,14 @@
+<!--
+name: audio_production
+stage: 3 · dry stem 점검 + light assembly + master
+type: cli
+entry: python ./workflows/audio_production/scripts/muse_audio.py check-stems | assemble-proof
+inputs: [works/<piece>/music/renders/dry_stems/*.wav]
+outputs: [works/<piece>/music/mix/stem-report.json, works/<piece>/music/masters/master.wav, works/<piece>/music/mix/listening-scorecard.csv, works/<piece>/notes/listening-notes.md]
+depends_on: [music_acappella]
+owner: Cotton+MOKA
+-->
+
 # Audio Production Workflow
 
 This workflow owns rendering, stem checks, light acappella assembly, critique, and the approved

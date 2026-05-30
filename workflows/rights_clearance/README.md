@@ -1,3 +1,14 @@
+<!--
+name: rights_clearance
+stage: 1 · 권리 정합 게이트
+type: manual
+entry: works/<piece>/rights/rights-log.md 작성 (양식 = workflows/shared/templates/rights-log.md)
+inputs: [works/<piece>/project.json]
+outputs: [works/<piece>/rights/rights-log.md]
+depends_on: [project_setup]
+owner: MOKA
+-->
+
 # Rights Clearance Workflow
 
 This workflow owns cross-workflow rights decisions.
