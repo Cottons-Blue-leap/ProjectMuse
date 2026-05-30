@@ -15,45 +15,49 @@ owner: MOKA
 
 음악 / 오디오 / 권리 / 영상 자리와 의도적으로 분리되어 있다. 작업 폴더는 한 번 신축한 후 후속 워크플로우가 같은 `project.json` / `rights/` / `music/` / `video/` 폴더를 공유한다.
 
-## Command
+## Commands
 
 Project Muse root에서:
 
 ```powershell
-python .\workflows\project_setup\scripts\muse_project.py init `
-  --project .\works\<piece_name>
+# 신축
+python .\workflows\project_setup\scripts\muse_project.py init --project .\works\<piece_name>
+
+# 정본 골격 검사 (전 작품 lint · CORE 누락 = FAIL · 루트 오배치 = WARN)
+python .\workflows\project_setup\scripts\muse_project.py doctor
+python .\workflows\project_setup\scripts\muse_project.py doctor --fix       # 누락 CORE 폴더 .gitkeep 생성
+python .\workflows\project_setup\scripts\muse_project.py doctor --project .\works\<piece_name>
+
+# 전 작품 진척 대시보드 (status.json: phase / video / last_decision)
+python .\workflows\project_setup\scripts\muse_project.py status
 ```
 
 `<piece_name>`은 Atelier Ryza 양식 — 짧고 식별성 있게 (e.g. `vivaldi_spring_1_allegro`).
 
-## Created Contract
+## Created Contract (정본 골격)
 
 ```text
 works/<piece>/
-  project.json
-  status.json
-  README.md
-  rights/
-    rights-log.md
-  notes/
-    listening-notes.md
+  project.json · status.json · README.md
+  rights/      rights-log.md           [CORE]
+  notes/       listening-notes.md      [CORE]
   music/
-    renders/dry_stems/
-    mix/
-      listening-scorecard.csv
-    masters/
+    mix/  listening-scorecard.csv      [CORE]
+    renders/dry_stems/                 [LOCAL · .gitignore renders/]
+    masters/                           [LOCAL · .gitignore masters/]
+    source_scores/                     [LOCAL · V6 진입 시 ASCII PDF copy]
   video/
-    art_sources/
-    cover/
-    visualizer/
-    edit_project/
-    exports/
-    release/
-    video-brief.md
-    visualizer-spec.md
+    art_sources/ cover/ visualizer/    [CORE]
+    exports/ release/                  [CORE]
+    edit_project/                      [LOCAL · 외부 편집 사용 작품만]
+    video-brief.md · visualizer-spec.md
 ```
 
-11 폴더. 음악 자료 (PDF 자체)는 작업 폴더에 복사되지 않음 — `planning/candidates_opus/`에서 직접 reference.
+- **CORE** = git 영속 골격. 항상 생성 + 빈 폴더는 `.gitkeep`으로 영속화 (clone 시 골격 일관). `doctor` 누락 = **FAIL**.
+- **LOCAL** = 스캐폴더가 만들지만 내용물이 `.gitignore` 대상(렌더·마스터·바이너리)인 로컬 작업 폴더. git 영속 불가 → `.gitkeep` X. `doctor` 누락 = info.
+- 음악 자료 (PDF 자체)는 작업 폴더에 복사되지 않음 — `planning/candidates_opus/`에서 직접 reference.
+- 레거시 작품은 루트 `_LEGACY.md` 표식 → `doctor` 자동 skip (현 정본 retrofit 면제).
+- 작업 폴더 루트의 `.vpr`/`.wav`/`.mp4` = `doctor` WARN (naming_convention: `music/` 하위가 정본 · 자동 이동 X · 수동 결단).
 
 (thumbnail-brief.md scaffold 자리 폐기 · s313 결단 · YouTube 자동 썸네일 활용 path · 별 썸네일 합성 자리 X.)
 
