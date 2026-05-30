@@ -1,3 +1,4 @@
+# ONE-OFF (2026-05-29 · s375 · 임시 진단)
 """s375 cycle 박힘 — 임시 진단 자료. 5곡 메타데이터 비교 dump."""
 import sys
 from pathlib import Path
