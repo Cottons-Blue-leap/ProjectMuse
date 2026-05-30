@@ -3,15 +3,19 @@
 본 가이드는 분리된 워크플로우의 진행 순서를 박는다 (s302 리팩토링 + 후속 cut 통과 양식).
 
 ```text
-project_setup    -> 작업 폴더 + project.json 신축
-rights_clearance -> source + release 권리 정합
-music_acappella  -> V6 entry reference (role taxonomy / syllable doc · 코튼이 V6 시점 참고)
-audio_production -> V6 dry stem 점검 + light assembly + master
-video_release    -> 결단된 audio를 YouTube package로 박음
-shared           -> 워크플로우 간 공유 양식
-works            -> 곡 작업 폴더
-planning         -> 곡 후보 + PDF (`candidates_opus/`) + 시그너처 자산
+project_setup      -> 작업 폴더 + project.json 신축 (+ doctor/status 도구)
+rights_clearance   -> source + release 권리 정합
+music_acappella    -> V6 entry reference (role taxonomy / syllable doc · 코튼이 V6 시점 참고)
+audio_production   -> V6 dry stem 점검 + light assembly + master
+video_release      -> 결단된 audio를 YouTube package로 박음
+shorts_first_proof -> 본 영상 publish + 1달 -> 쇼츠 1편
+shared             -> 워크플로우 간 공유 양식
+works              -> 곡 작업 폴더 (정본 골격 · muse.py doctor)
+planning           -> 곡 후보 + PDF (`candidates_opus/`) + 시그너처 자산
 ```
+
+워크플로우 인덱스 + 머신리더블 레지스트리 = `workflows/README.md` + `workflows/registry.json`.
+단일 CLI = `python muse.py <project|audio|thumbnail|tidy|doctor|status|list>`. 명명·아카이빙 독트린 = `CONVENTIONS.md`.
 
 모든 명령은 Project Muse root에서:
 
@@ -21,7 +25,7 @@ cd C:\Users\user\Desktop\myProject\Project_Muse
 
 ## 1. Pick A Piece
 
-`planning/candidate_master.csv` (340곡 · 14 컬럼)에서 axis throw → 후보 추출 → 코튼 결단. 본 자리에서 *디렉토리 이름* + *명화* + *재생목록* + *진입 timing* 결단.
+`planning/candidate_master.csv` (353곡 · 14 컬럼)에서 axis throw → 후보 추출 → 코튼 결단. 본 자리에서 *디렉토리 이름* + *명화* + *재생목록* + *진입 timing* 결단.
 
 PDF는 `planning/candidates_opus/`에 모여있어. csv `score_file` 컬럼이 채워진 곡 = PDF 박혀있음.
 
@@ -30,32 +34,27 @@ PDF는 `planning/candidates_opus/`에 모여있어. csv `score_file` 컬럼이 �
 식별성 있고 짧은 작업 폴더 이름 (Atelier Ryza 양식 — e.g. `vivaldi_spring_1_allegro`):
 
 ```powershell
-python .\workflows\project_setup\scripts\muse_project.py init `
-  --project .\works\vivaldi_spring_1_allegro
+python .\muse.py project init --project .\works\vivaldi_spring_1_allegro
+# 또는: python .\workflows\project_setup\scripts\muse_project.py init --project .\works\vivaldi_spring_1_allegro
 ```
 
-신축 결과 (11 폴더):
+신축 결과 (정본 골격 · CORE는 빈 폴더도 `.gitkeep` 영속):
 
 ```text
 works/vivaldi_spring_1_allegro/
-  project.json
-  status.json
-  README.md
-  rights/
-  notes/
+  project.json · status.json · README.md
+  rights/  notes/                          [CORE]
   music/
-    renders/dry_stems/
-    mix/
-    masters/
+    mix/                                   [CORE]
+    renders/dry_stems/  masters/           [LOCAL · gitignore]
+    source_scores/                         [LOCAL · V6 진입 시]
   video/
-    art_sources/
-    cover/
-    visualizer/
-    edit_project/
-    exports/
-    release/
+    art_sources/  cover/  visualizer/      [CORE]
+    exports/  release/                     [CORE]
+    edit_project/                          [LOCAL · 선택]
 ```
 
+상세 정본 = `workflows/project_setup/README.md` *Created Contract*. 구조 검사 = `python muse.py doctor`.
 PDF는 작업 폴더에 복사되지 않음. `planning/candidates_opus/`에서 직접 reference.
 
 ## 3. Fill Metadata + Rights

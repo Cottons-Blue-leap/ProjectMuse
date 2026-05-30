@@ -5,47 +5,37 @@ projects.
 
 ```text
 Project_Muse/
+  muse.py                        # 단일 CLI 디스패처
+  muse_tidy.py                   # 일회성 파일 sweep
+  CONVENTIONS.md                 # 명명·아카이빙·일회성 독트린
   workflows/
-    project_setup/
-    rights_clearance/
-    music_acappella/
-    audio_production/
-    video_release/
-    shared/
-
+    README.md  registry.json     # 워크플로우 인덱스 + 머신리더블 레지스트리
+    _TEMPLATE/                   # 새 워크플로우 복사 골격
+    project_setup/  rights_clearance/  music_acappella/
+    audio_production/  video_release/  shorts_first_proof/
+    shared/                      # 공유 템플릿·스키마
   planning/
-    candidate_master.csv
+    candidate_master.csv         # 353곡 · 14 컬럼
     candidates_opus/             # source score PDFs
-    classical_miku_anchor.md
-    title_naming_guide.md
-    artwork_matching_guide.md
-
-  works/
-    <piece_name>/
-      rights/
-      notes/
-      music/
-      video/
+    _archive/  _keepers/         # 닫힌 cycle 산출물 · 미래 reference
+  Analytics/                     # YouTube 메트릭 도구 (+_archive/ 1회용)
+  works/<piece>/                 # 작품 폴더 (정본 골격 · muse.py doctor)
 ```
 
 ## Workflows
 
-- `workflows/project_setup`: piece workspace creation and `project.json`
-  manifest contract.
-- `workflows/rights_clearance`: score, voicebank, character, visual, and
-  release rights decisions.
-- `workflows/music_acappella`: V6 entry reference — role taxonomy, syllable
-  guide, vocal polishing notes (source PDF 자체엔 `planning/candidates_opus/`
-  자료 직접 reference · 별 score ingestion 워크플로우 X · s302 cut).
-- `workflows/audio_production`: V6 dry renders, stem checks, light acappella
-  assembly (level matching + optional reverb · no DAW), listening critique,
-  and approved master audio.
-- `workflows/video_release`: album-cover, visualizer, video edit, and YouTube
-  release package. (YouTube 자동 썸네일 활용 — 별 썸네일 합성 자리 X · s313 결단.)
-- `workflows/shared`: cross-workflow templates and schemas only.
-- `planning`: candidate repertoire and early selection notes.
+전체 인덱스 + 파이프라인 순서 = [`workflows/README.md`](workflows/README.md) · 머신리더블 = [`workflows/registry.json`](workflows/registry.json).
 
-For the full step-by-step usage flow, read [USAGE.md](USAGE.md).
+- `workflows/project_setup`: piece workspace 신축 + `project.json` 계약 + `doctor`/`status` 도구.
+- `workflows/rights_clearance`: score, voicebank, character, visual, release 권리 결단.
+- `workflows/music_acappella`: V6 entry reference — role taxonomy, syllable, vocal polishing (PDF는 `planning/candidates_opus/` 직접 reference · s302 cut).
+- `workflows/audio_production`: V6 dry renders, stem checks, light assembly (no DAW), 청취 평가, master.
+- `workflows/video_release`: album-cover, visualizer, video edit, YouTube release package + `scripts/muse_thumbnail.py`.
+- `workflows/shorts_first_proof`: 본 영상 publish + 1달 → 쇼츠 1편 (s371).
+- `workflows/shared`: cross-workflow templates + schemas.
+- `planning`: candidate repertoire + selection notes.
+
+전 프로젝트 명명·아카이빙·일회성 독트린 = [`CONVENTIONS.md`](CONVENTIONS.md). 전체 사용 흐름 = [USAGE.md](USAGE.md).
 
 ## Series Signature — Atelier Miku Acappella
 
@@ -58,9 +48,13 @@ Character anchor (3-line outline): [`planning/classical_miku_anchor.md`](plannin
 From this folder:
 
 ```powershell
-python .\workflows\project_setup\scripts\muse_project.py init `
-  --project .\works\canon_in_d_first_proof
+python .\muse.py project init --project .\works\canon_in_d_first_proof
+python .\muse.py doctor          # 정본 골격 검사 (전 작품)
+python .\muse.py status          # 전 작품 진척 대시보드
+python .\muse.py list            # 등록 워크플로우 목록
 ```
+
+(각 워크플로우 스크립트를 직접 실행해도 됨 — `muse.py`는 얇은 디스패처.)
 
 The generated work project will contain both `music/` and `video/` folders, but
 the workflows stay separate.
