@@ -1,7 +1,10 @@
 # Project Muse — 폴더/워크플로우 최적화 작업계획서
 
-> 작성 2026-05-30 · 작성자 MOKA · status = **제안 (코튼 승인 대기)**
+> 작성 2026-05-30 · 작성자 MOKA · status = **✅ 실행 완료 (코튼 승인 후 P0~P5 통과 · main ff 병합 · origin push 보류)**
 > 목적 = 라이브 운영 시 워크플로우 추가/수정/삭제 간소화 + 체계화 + 폴더 구조 정돈 + 일회성 파일 자동 수명관리
+>
+> **실행 결과**: P0 베이스라인(77a2dc9) · P1 워크플로우 레지스트리+_TEMPLATE+front-matter(3c3d5cd) · P2 doctor/status+정본 골격(0fb5f8d) · P3 CONVENTIONS+muse_tidy+muse.py(0a10aa2) · P4 명명+문서(3dc3a09). P5 5축 검증 통과(doctor FAIL 0).
+> **A(muse.py)·C(스키마 자리) 채택 · B(공유 visualizer) 별도 사이클 보류.** 잔여 코튼 결단: elgar·greensleeves 루트 .vpr/.wav 이동(doctor WARN) · vivaldi cover 목업 11건(tidy REVIEW) · origin push.
 
 ---
 
