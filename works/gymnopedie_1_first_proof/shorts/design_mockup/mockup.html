@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gymnopédie No.1 — Shorts Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+    padding: 40px;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .frame-wrap { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .frame-label {
+    color: #888;
+    font-size: 14px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .frame-time {
+    color: #b8a673;
+    font-size: 13px;
+    font-family: 'GFS Didot', serif;
+    letter-spacing: 0.06em;
+  }
+  .frame {
+    width: 360px;
+    height: 640px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+      180deg,
+      #1f2c3d 0%,
+      #2a3a4f 30%,
+      #4a5a6e 55%,
+      #6e7c7a 75%,
+      #b8a673 100%
+    );
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  }
+
+  /* V6 placeholder — 16:9 area centered */
+  .v6-area {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background:
+      linear-gradient(135deg, rgba(40,46,58,0.95) 0%, rgba(28,32,42,0.95) 100%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .v6-toolbar {
+    height: 18px;
+    background: #20242c;
+    border-bottom: 1px solid #2e333d;
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    gap: 6px;
+  }
+  .v6-toolbar::before {
+    content: '';
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #ff5f57;
+    box-shadow: 14px 0 0 #febc2e, 28px 0 0 #28c840;
+  }
+  .v6-tracks { flex: 1; display: flex; flex-direction: column; padding: 4px 0; }
+  .track {
+    flex: 1;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    gap: 4px;
+  }
+  .track-label {
+    width: 52px;
+    font-size: 7px;
+    color: #8a93a3;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.04em;
+  }
+  .track-notes {
+    flex: 1;
+    height: 60%;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 12px,
+      rgba(184,166,115,0.18) 12px,
+      rgba(184,166,115,0.18) 28px
+    );
+    border-radius: 1px;
+    position: relative;
+  }
+  .track-notes::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 35%;
+    width: 1px;
+    background: #b8a673;
+    box-shadow: 0 0 4px #b8a673;
+  }
+
+  /* lower-left text stack */
+  .text-stack {
+    position: absolute;
+    left: 28px;
+    bottom: 64px;
+    max-width: 280px;
+    color: #f5efe0;
+    font-family: 'GFS Didot', serif;
+    line-height: 1.35;
+  }
+  .text-stack .line {
+    font-size: 22px;
+    margin-bottom: 4px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  }
+  .text-stack .line.small {
+    font-size: 17px;
+    color: #d8cfb8;
+  }
+  .text-stack .sig {
+    margin-top: 12px;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    color: #b8a673;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+  }
+
+  /* Frame 4 — close card */
+  .frame.closing .text-stack {
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+  .frame.closing .text-stack .title {
+    font-size: 30px;
+    font-style: italic;
+    color: #f5efe0;
+  }
+  .frame.closing .text-stack .composer {
+    font-size: 18px;
+    color: #d8cfb8;
+    margin-top: 6px;
+  }
+  .frame.closing .text-stack .mark {
+    margin-top: 16px;
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: #b8a673;
+  }
+  .frame.closing .v6-area { opacity: 0.35; }
+
+</style>
+</head>
+<body>
+
+<div class="frame-wrap">
+  <div class="frame-label">Frame 1</div>
+  <div class="frame-time">00:05 — 00:12</div>
+  <div class="frame">
+    <div class="v6-area">
+      <div class="v6-toolbar"></div>
+      <div class="v6-tracks">
+        <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+      </div>
+    </div>
+    <div class="text-stack">
+      <div class="line">Gymnopédie</div>
+      <div class="line small">— from <em>gymnopaidia</em>,</div>
+      <div class="line small">an ancient Spartan dance.</div>
+    </div>
+  </div>
+</div>
+
+<div class="frame-wrap">
+  <div class="frame-label">Frame 2</div>
+  <div class="frame-time">00:12 — 00:20</div>
+  <div class="frame">
+    <div class="v6-area">
+      <div class="v6-toolbar"></div>
+      <div class="v6-tracks">
+        <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+      </div>
+    </div>
+    <div class="text-stack">
+      <div class="line">Erik Satie, 1888.</div>
+      <div class="line small">Twenty-two.</div>
+      <div class="line small">A pianist at a Montmartre cabaret.</div>
+    </div>
+  </div>
+</div>
+
+<div class="frame-wrap">
+  <div class="frame-label">Frame 3</div>
+  <div class="frame-time">00:20 — 00:27</div>
+  <div class="frame">
+    <div class="v6-area">
+      <div class="v6-toolbar"></div>
+      <div class="v6-tracks">
+        <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+      </div>
+    </div>
+    <div class="text-stack">
+      <div class="line">He called himself</div>
+      <div class="line"><em>"a Gymnopédist"</em></div>
+      <div class="line small">— before the music existed.</div>
+    </div>
+  </div>
+</div>
+
+<div class="frame-wrap">
+  <div class="frame-label">Frame 4 — Close</div>
+  <div class="frame-time">00:27 — 00:30</div>
+  <div class="frame closing">
+    <div class="v6-area">
+      <div class="v6-toolbar"></div>
+      <div class="v6-tracks">
+        <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+        <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+      </div>
+    </div>
+    <div class="text-stack">
+      <div class="title">Gymnopédie No. 1</div>
+      <div class="composer">Erik Satie</div>
+      <div class="mark">Atelier Miku Acappella</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

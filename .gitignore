@@ -62,6 +62,12 @@ desktop.ini
 # --- Analytics 리포트 (CSV·md = source of truth commit · xlsx = 재생성 binary 제외) ---
 Analytics/*.xlsx
 
+# --- Office 바이너리 (UI 시안 등 · 로컬 keep · 히스토리 제외) ---
+*.pptx
+*.ppt
+*.docx
+*.doc
+
 # --- PDF (planning master · work source copies) ---
 *.pdf
 

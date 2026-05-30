@@ -63,6 +63,8 @@ VIDEOS = {
     "rRnl8RZ3EjY": "Gymnopédie No. 1",
     "0qXLYmZXAx0": "Vivaldi - Spring I",
     "DVIYl09zX-w": "Joplin - Entertainer",
+    "zshjmBhus2I": "Elgar - Salut d'Amour",
+    "PiR9hy6xmGQ": "Mozart - K.265",
 }
 
 # `report` 명령 산출물 자리 (스크립트와 같은 Analytics/ 폴더에 함께 둠).

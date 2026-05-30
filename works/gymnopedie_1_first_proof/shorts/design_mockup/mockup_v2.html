@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gymnopédie No.1 — Shorts Mockup v2 (3 variations)</title>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+    padding: 32px 40px;
+    color: #ddd;
+  }
+  .variation {
+    margin-bottom: 36px;
+    padding: 24px 28px;
+    background: #222;
+    border-radius: 12px;
+  }
+  .variation-head {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .variation-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f5efe0;
+    letter-spacing: 0.04em;
+  }
+  .variation-desc {
+    font-size: 13px;
+    color: #999;
+    line-height: 1.5;
+    max-width: 1400px;
+  }
+  .variation-hook {
+    font-size: 12px;
+    color: #b8a673;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .row {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .frame-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .frame-label {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .frame-time {
+    color: #b8a673;
+    font-size: 11px;
+    font-family: 'GFS Didot', serif;
+  }
+  .frame {
+    width: 300px;
+    height: 533px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+      180deg,
+      #1f2c3d 0%, #2a3a4f 30%, #4a5a6e 55%, #6e7c7a 75%, #b8a673 100%
+    );
+    border-radius: 6px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.4);
+  }
+
+  .v6-area {
+    position: absolute; top: 50%; left: 0; right: 0;
+    transform: translateY(-50%);
+    width: 100%; aspect-ratio: 16/9;
+    background: linear-gradient(135deg, rgba(40,46,58,0.95), rgba(28,32,42,0.95));
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .v6-toolbar {
+    height: 14px; background: #20242c;
+    border-bottom: 1px solid #2e333d;
+    display: flex; align-items: center; padding: 0 6px; gap: 4px;
+  }
+  .v6-toolbar::before {
+    content: ''; width: 6px; height: 6px; border-radius: 50%;
+    background: #ff5f57;
+    box-shadow: 10px 0 0 #febc2e, 20px 0 0 #28c840;
+  }
+  .v6-toolbar::after {
+    content: 'Vocaloid 6  ·  7 voices';
+    margin-left: auto;
+    font-size: 7px;
+    color: #6a7385;
+    letter-spacing: 0.08em;
+    font-family: 'Inter', sans-serif;
+  }
+  .v6-tracks { flex: 1; display: flex; flex-direction: column; padding: 2px 0; }
+  .track {
+    flex: 1;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    display: flex; align-items: center;
+    padding: 0 3px; gap: 3px;
+  }
+  .track-label {
+    width: 44px; font-size: 6px;
+    color: #8a93a3; letter-spacing: 0.04em;
+  }
+  .track-notes {
+    flex: 1; height: 55%;
+    background: repeating-linear-gradient(90deg,
+      transparent 0, transparent 10px,
+      rgba(184,166,115,0.18) 10px, rgba(184,166,115,0.18) 22px);
+    border-radius: 1px; position: relative;
+  }
+  .track-notes::after {
+    content: ''; position: absolute;
+    top: 0; bottom: 0; left: 35%;
+    width: 1px; background: #b8a673;
+    box-shadow: 0 0 3px #b8a673;
+  }
+
+  .text-stack {
+    position: absolute; left: 22px; bottom: 50px;
+    max-width: 240px; color: #f5efe0;
+    font-family: 'GFS Didot', serif; line-height: 1.32;
+  }
+  .text-stack .line {
+    font-size: 18px; margin-bottom: 3px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  }
+  .text-stack .line.small { font-size: 14px; color: #d8cfb8; }
+  .text-stack .line.hook {
+    font-size: 22px; font-style: italic;
+    color: #f5efe0; margin-bottom: 6px;
+  }
+  .text-stack .badge {
+    display: inline-block; margin-top: 8px;
+    padding: 3px 8px;
+    border: 1px solid #b8a673; border-radius: 3px;
+    font-family: 'Inter', sans-serif;
+    font-size: 9px; letter-spacing: 0.2em;
+    color: #b8a673; text-transform: uppercase;
+  }
+
+  /* CTA for frame 4 */
+  .frame.closing .v6-area { opacity: 0.3; }
+  .frame.closing .text-stack {
+    bottom: 50%; transform: translateY(50%);
+    left: 22px; right: 22px; max-width: none;
+  }
+  .frame.closing .title {
+    font-size: 24px; font-style: italic;
+    color: #f5efe0;
+  }
+  .frame.closing .composer {
+    font-size: 15px; color: #d8cfb8; margin-top: 4px;
+  }
+  .frame.closing .cta {
+    margin-top: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: #b8a673;
+    padding: 7px 12px;
+    border: 1px solid #b8a673;
+    display: inline-block;
+    border-radius: 3px;
+  }
+  .frame.closing .mark {
+    margin-top: 14px; font-size: 9px;
+    letter-spacing: 0.3em; color: #8a836b;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Variation B — mystery */
+  .frame.mystery .text-stack {
+    bottom: 50%; transform: translateY(50%);
+    left: 22px; right: 22px; max-width: none;
+    text-align: center;
+  }
+  .frame.mystery .text-stack .q {
+    font-size: 19px; font-style: italic;
+    color: #f5efe0; line-height: 1.4;
+  }
+
+  /* Variation C — DAW dominant */
+  .frame.daw-bold .v6-area { transform: translateY(-50%) scale(1.18); }
+  .frame.daw-bold .text-stack { bottom: 36px; }
+  .frame.daw-bold .text-stack .line { font-size: 16px; }
+  .frame.daw-bold .text-stack .line.small { font-size: 12px; }
+
+</style>
+</head>
+<body>
+
+<!-- ============ V2-A: Hook-forward ============ -->
+<div class="variation">
+  <div class="variation-head">
+    <div class="variation-title">V2-A · Hook-forward</div>
+    <div class="variation-hook">First 5s = "7 voices, one Miku."</div>
+    <div class="variation-desc">7-voice 아카펠라 본질 자료 frame 1 박음. 어원·역사 자료는 frame 2·3에 후행. 시청자 진입 즉시 "이게 무슨 양식이지?" hook 양식.</div>
+  </div>
+  <div class="row">
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 1</div><div class="frame-time">00:00 — 00:07</div>
+      <div class="frame">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack">
+          <div class="line hook">Seven voices.</div>
+          <div class="line hook">One Miku.</div>
+          <div class="badge">A cappella</div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 2</div><div class="frame-time">00:07 — 00:15</div>
+      <div class="frame">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack">
+          <div class="line">The piece:</div>
+          <div class="line"><em>Gymnopédie</em></div>
+          <div class="line small">— from <em>gymnopaidia</em>,</div>
+          <div class="line small">an ancient Spartan dance.</div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 3</div><div class="frame-time">00:15 — 00:24</div>
+      <div class="frame">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack">
+          <div class="line">Satie, 1888.</div>
+          <div class="line small">A cabaret pianist</div>
+          <div class="line small">who called himself</div>
+          <div class="line"><em>"a Gymnopédist"</em></div>
+          <div class="line small">— before the music existed.</div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 4 — Close</div><div class="frame-time">00:24 — 00:30</div>
+      <div class="frame closing">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack" style="text-align:center;">
+          <div class="title">Gymnopédie No. 1</div>
+          <div class="composer">Erik Satie</div>
+          <div class="cta">Watch the full piece →</div>
+          <div class="mark">Atelier Miku Acappella</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ V2-B: Mystery / Question ============ -->
+<div class="variation">
+  <div class="variation-head">
+    <div class="variation-title">V2-B · Mystery</div>
+    <div class="variation-hook">First 5s = question, not statement.</div>
+    <div class="variation-desc">시청자 자가 question 박는 양식. *고대 스파르타 춤 자료 + 7 voice 아카펠라?* 자가 question hook. 답은 본 영상 자료 자체 axis.</div>
+  </div>
+  <div class="row">
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 1</div><div class="frame-time">00:00 — 00:07</div>
+      <div class="frame mystery">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack">
+          <div class="q">What does</div>
+          <div class="q" style="margin-top:8px;"><em>an ancient Spartan dance</em></div>
+          <div class="q" style="margin-top:8px;">sound like</div>
+          <div class="q" style="margin-top:6px;">in <em>7 voices?</em></div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 2</div><div class="frame-time">00:07 — 00:15</div>
+      <div class="frame">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack">
+          <div class="line">Gymnopédie</div>
+          <div class="line small">— from <em>gymnopaidia</em>,</div>
+          <div class="line small">an ancient Spartan dance</div>
+          <div class="line small">of bare-limbed youth.</div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 3</div><div class="frame-time">00:15 — 00:24</div>
+      <div class="frame">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack">
+          <div class="line">Satie, 1888,</div>
+          <div class="line small">called himself</div>
+          <div class="line"><em>"a Gymnopédist"</em></div>
+          <div class="line small">before writing a single note.</div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 4 — Close</div><div class="frame-time">00:24 — 00:30</div>
+      <div class="frame closing">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack" style="text-align:center;">
+          <div class="title">Gymnopédie No. 1</div>
+          <div class="composer">Erik Satie</div>
+          <div class="cta">Hear it whole →</div>
+          <div class="mark">Atelier Miku Acappella</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ V2-C: Story-build (현재 시안 + 4 axis 박음) ============ -->
+<div class="variation">
+  <div class="variation-head">
+    <div class="variation-title">V2-C · Story-build (v1 + 4 axis)</div>
+    <div class="variation-hook">교양 양식 keep + 본 영상 진입 hook axis 4건 박음</div>
+    <div class="variation-desc">현재 시안 자체 *교양 자료 build-up* 양식 keep. 7-voice line + V6 toolbar label + CTA + 시그너처 axis 추가.</div>
+  </div>
+  <div class="row">
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 1</div><div class="frame-time">00:00 — 00:08</div>
+      <div class="frame">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack">
+          <div class="line">Gymnopédie</div>
+          <div class="line small">— from <em>gymnopaidia</em>,</div>
+          <div class="line small">an ancient Spartan dance.</div>
+          <div class="badge">7 voices · a cappella</div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 2</div><div class="frame-time">00:08 — 00:15</div>
+      <div class="frame">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack">
+          <div class="line">Erik Satie, 1888.</div>
+          <div class="line small">Twenty-two.</div>
+          <div class="line small">A pianist at a Montmartre cabaret.</div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 3</div><div class="frame-time">00:15 — 00:24</div>
+      <div class="frame">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack">
+          <div class="line">He called himself</div>
+          <div class="line"><em>"a Gymnopédist"</em></div>
+          <div class="line small">— before the music existed.</div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-wrap">
+      <div class="frame-label">Frame 4 — Close</div><div class="frame-time">00:24 — 00:30</div>
+      <div class="frame closing">
+        <div class="v6-area">
+          <div class="v6-toolbar"></div>
+          <div class="v6-tracks">
+            <div class="track"><div class="track-label">Lead</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Hi</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 1</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 2</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid 3</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Mid Lo</div><div class="track-notes"></div></div>
+            <div class="track"><div class="track-label">Bass 1</div><div class="track-notes"></div></div>
+          </div>
+        </div>
+        <div class="text-stack" style="text-align:center;">
+          <div class="title">Gymnopédie No. 1</div>
+          <div class="composer">Erik Satie · 7 voices</div>
+          <div class="cta">Listen in full →</div>
+          <div class="mark">Atelier Miku Acappella</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

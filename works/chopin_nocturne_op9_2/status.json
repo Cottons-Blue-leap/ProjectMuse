@@ -1,0 +1,22 @@
+{
+  "current_phase": "setup (s369 · 2026-05-27 · 작업 폴더 신축 + score PDF copy + 메타 자료 박음 · V6 입력 진입 대기 · 코튼 자리 · 그리그 swap path · 작은별 publish 통과 후 권고 axis = s359 doctrine 정합 [작은별 publish 2026-05-28 20:00 KST 예약])",
+  "rights": "composition Chopin d.1849 life+70 통과(1919) PD 강 전세계 · 1830-32 작곡 · 1833 출판 · score = IMSLP self-host PD + candidates_opus PDF (edition_id 자가 점검 V6 진입 시점 keep) · cover art = Whistler *Nocturne: Blue and Silver — Chelsea* (1871 · oil on wood · Tate Britain T01571) LOCK (s380 코튼 결단 · 휘슬러 녹턴 연작↔쇼팽 음악 녹턴 장르 기원 관계 axis). ⚠️ 작품 자체는 PD 확실 (Whistler d.1903 life+70 통과 1973) BUT Tate는 자기네 사진 복제본에 reproduction 권리 주장 → 깨끗한 소스 = Wikimedia Commons Google Art Project 판 (PD-Art tag · `File:James_Abbott_McNeill_Whistler_-_Nocturne-_Blue_and_Silver_-_Chelsea_-_Google_Art_Project.jpg`) 사용 · Tate 자체 이미지 직접 scrape X. cover 합성 진입 시점(음악 통과 후)에 art_sources/source-image-url.txt + source-rights-notes.md 박음 path. 사전 audit 통과 (composition PD 강 · cover artwork PD 강 · 소스 Commons PD-Art)",
+  "vocal_input_v6": "pending (코튼 V6 직접 입력 대기 · 모음/humming · 원곡 solo piano · RH bel canto 멜로디 → lead_miku · LH waltz-like arpeggio → mid_oo+low_oo 분배 axis · 결과 출력 자리 = Miku_chopin_nocturne_op9_2.wav)",
+  "lyrics": "없음 (기악 원곡 · 첫 5곡 family 정합 = 모음/humming · 그린슬리브즈 첫 성악 텍스트 axis는 보류와 함께 deferred)",
+  "dry_stems": "skipped (acappella-only path · doctrine 정합)",
+  "master": "pending (V6 입력 후 익스포트 → 마스터링 → -18.0 LUFS 양식 정합 · true-peak ≤-1.0 천장 · 24bit/44.1k 스테레오)",
+  "listening_decision": "pending (V6 master 완성 후 코튼 청취 게이트 · 스피커+헤드폰 양쪽)",
+  "video_release": "pending (음악 listening_decision 통과 후 영상 진입 path · 작은별 publish 통과 후 본격 진입 권고 자리 = s359 doctrine 정합)",
+  "channel": {
+    "name": "Atelier Miku Acappella",
+    "handle": "@AtelierMikuAcappella",
+    "url": "https://www.youtube.com/@AtelierMikuAcappella",
+    "playlist": "Miku in the Romantic Era (짐노페디·사랑의 인사 공유 · 낭만 family 정합 · 쇼팽 1830-32 작곡 · 시대 정합 강)"
+  },
+  "release_title": "Frédéric Chopin - Nocturne Op. 9 No. 2 (feat. 初音ミク) · s355 후치 양식 정합 (제목에서 Acappella 제거 · feat. 크레딧 = 정체성 마크 初音ミク)",
+  "cover_art": "LOCK (s380 · 2026-05-29 코튼 결단) = Whistler *Nocturne: Blue and Silver — Chelsea* (1871 · oil on wood 50.2×60.8cm · Tate Britain T01571). 결단 사유 = 휘슬러가 *Nocturne* 연작 제목을 쇼팽 음악 녹턴에서 따옴 → 곡↔명화 장르 기원 관계 깊음 (코튼 *명화와 악곡 간 관계가 깊어*). 휘슬러 첫 Nocturne (1871년 8월) · 배터시 다리에서 첼시 방향 템스강 야경 · 전경에 어부 1인 · 청록-은빛 톤(Classical Miku 청록 트윈테일 + muted dress anchor 정합 강). ⚠️ 짐노페디(①) 라이브도 휘슬러 Nocturne(*Old Battersea Bridge*)이라 같은 화가·재생목록(Romantic Era) 반복 axis = 코튼 의식적 결단(관계 깊이 우선). 소스 = Wikimedia Commons Google Art Project 판 (PD-Art) · Tate 직접 이미지 X. cover 합성(미쿠를 어부 자리 or 강가 배치 + 청록 톤 통합)은 음악 listening_decision 통과 후 진입.",
+  "source_pdf": "music/source_scores/chopin_nocturne_op9.pdf (candidates_opus 프레데리크 쇼팽_녹턴 op.9.pdf ASCII copy · s369 박힘 · op.9 통째 = Op.9-1·9-2·9-3 추정 · 1.87MB · V6 진입 시점 9-2 자가 picking + edition_id 자가 점검 의제)",
+  "signature_wordmark_v3_apply": true,
+  "naming_convention_applied": "s369 · piece_id = chopin_nocturne_op9_2 (composer_first 양식 정상 · joplin_the_entertainer / elgar_salut_damour / grieg_morning_mood family 정합)",
+  "last_decision": "s380 (2026-05-29): 명화 LOCK = Whistler *Nocturne: Blue and Silver — Chelsea* (1871 · Tate T01571). 작은별(5차) publish 통과 확인 후 V6 입력 전 명화 결단 cycle 진입 → MOKA 후보 3안 정리 (이미 쓴 5명화 중복 회피 · status (c)Van Gogh Rhône는 작은별이 씀 탈락 · csv기본 Whistler Old Battersea Bridge는 ①짐노페디 동일 탈락) → A.Friedrich Moonrise(MOKA 1순위 · 무중복) / B.Whistler Chelsea(녹턴↔녹턴 장르 기원 · ①과 화가 반복 ⚠️) / C.Grimshaw 달빛 → 코튼 B 결단 (*명화와 악곡 간 관계가 깊어* · ① 반복 의식적 수용). 권리 = 작품 PD 강(d.1903) BUT Tate reproduction 권리 주장 → Commons Google Art Project PD-Art 소스 사용. 다음 = 코튼 V6 본격 입력(RH bel canto→lead / LH arpeggio→mid+low · op.9 PDF서 9-2 picking + edition_id 자가 점검) → 음악 통과 후 cover 합성. ─── s369 (2026-05-27): 6차 곡 swap 결단 흡수 통과. 코튼 *그리그 아침의 기분 부담이 커서 다른 곡 · 쇼팽 녹턴 Op.9-2는 어떨까* 자가 발화 → MOKA 자료 박힘 통과 (csv row 36 S tier · score_file 프레데리크 쇼팽_녹턴 op.9.pdf 1.87MB · 명화 conflict 자가 사전 적발 = 짐노페디 라이브 명화와 동일 axis) → 코튼 결단 (i) swap OK / (ii) 그리그 keep 보류 (7~8번째 재진입 의제) / (iii) 명화 *초안 · 곡 만들고 다시 봐* 결단 흡수. 작업 폴더 신축 + score PDF copy + 메타 4파일 박음 통과 (엘가/조플린/그리그 family verbatim mirror). 본격 V6 입력 진입 = 작은별(5차) publish 통과 후 권고 (s359 doctrine 정합 · 작은별 publish 2026-05-28 20:00 KST 예약 박힘 · 본 setup은 사전 자료 준비 axis). 다음 cycle = 코튼 V6 본격 입력 + 명화 결단 (V6 본격 진입 후) + 작은별 publish 통과 시점 고정 댓글 자리에 *次の曲：ショパン「夜想曲 第2番」* 박음 path."
+}

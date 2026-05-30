@@ -21,11 +21,7 @@ https://commons.wikimedia.org/wiki/File:Hammerstein%27s_Roof_Garden,_by_William_
 
 —
 
-No AI for music — every note placed by hand in Vocaloid6 Editor.
-Subscribe to join the Atelier and discover a new side of classical music!
-
-—
-
+Production tool: VOCALOID6 / Voicebank: Hatsune Miku V6
 Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
 #HatsuneMiku #Acappella #TheEntertainer #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #Ragtime #Joplin #AtelierMikuAcappella

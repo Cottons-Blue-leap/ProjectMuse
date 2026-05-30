@@ -26,11 +26,7 @@ https://commons.wikimedia.org/wiki/File:Botticelli-primavera.jpg
 
 —
 
-No AI for music — every note placed by hand in Vocaloid6 Editor.
-Subscribe to join the Atelier and discover a new side of classical music!
-
-—
-
+Production tool: VOCALOID6 / Voicebank: Hatsune Miku V6
 Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
 #HatsuneMiku #Acappella #FourSeasons #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #Baroque #Vivaldi #AtelierMikuAcappella

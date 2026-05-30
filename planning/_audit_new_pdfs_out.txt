@@ -1,13 +1,13 @@
 ## 전체 state
-PDF total: 144
-csv rows: 358
-referenced (score_file 채워진 row): 143
-verified (PDF 실존): 141
+PDF total: 141
+csv rows: 353
+referenced (score_file 채워진 row): 139
+verified (PDF 실존): 137
 dangling (csv 참조하는데 PDF 없음): 2
   dangling: (삭제됨)
   dangling: (저작권)
 
-## unmatched PDF (폴더엔 있는데 csv 미참조): 3
+## unmatched PDF (폴더엔 있는데 csv 미참조): 4
    (이 중 오늘 추가분: 3)
 
 ## unmatched 각각 fuzzy 후보 (기존 row 매칭 가능성)
@@ -29,3 +29,7 @@ dangling (csv 참조하는데 PDF 없음): 2
        -> rank 29 [S] 신세계 교향곡 4악장 알레그로 콘 푸오코 (드보르자크) [score_file 이미: 안토닌 드보르작_신세계로부터.pdf]
        -> rank 31 [S] 봄의 소리 왈츠 작품 410 (요한 슈트라우스 2세) [score_file 이미: 요한 슈트라우스 2세_봄의 소리 왈츠 Op. 410.pdf]
        -> rank 48 [S] 평균율 클라비어곡집 1권 1번 C장조 전주곡 BWV 846 (바흐) [score_file 이미: 요한 제바스티안 바흐_평균율 클라비어곡집 1권 1번.pdf]
+
+  PDF: 프레데리크 쇼팽_녹턴.pdf
+       core="녹턴"
+       -> (NO MATCH · 신규 후보 가능성)

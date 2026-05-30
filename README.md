@@ -73,7 +73,9 @@ Channel: **Atelier Miku Acappella** ([@AtelierMikuAcappella](https://www.youtube
 |---|---|---|---|---|
 | 1 | Gymnopédie No. 1 | Erik Satie | 2026-05-14 | `works/gymnopedie_1_first_proof/` |
 | 2 | Spring (RV 269), Mvt. I Allegro | Antonio Vivaldi | 2026-05-18 | `works/vivaldi_spring_1_allegro/` |
-| 3 | The Entertainer | Scott Joplin | 2026-05-21 (scheduled) | `works/joplin_the_entertainer/` |
+| 3 | The Entertainer | Scott Joplin | 2026-05-21 | `works/joplin_the_entertainer/` |
+| 4 | Salut d'Amour | Edward Elgar | 2026-05-25 | `works/elgar_salut_damour/` |
+| 5 | Twelve Variations on "Ah, vous dirai-je, maman" K.265 | W. A. Mozart | 2026-05-28 | `works/mozart_twinkle_variations_k265/` |
 
 상세 publish 자료 = `series_history.csv`.
 

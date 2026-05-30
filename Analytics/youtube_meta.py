@@ -18,6 +18,8 @@ youtube_analytics.py 는 읽기 전용(analytics). 본 도구는 **쓰기**(forc
   python Analytics/youtube_meta.py set-title <video_id> --default "..." --en "..." --ko "..." --ja "..."
   python Analytics/youtube_meta.py set-tags <video_id> "tag1, tag2, ..."   # 백엔드 태그 칸 (--dry-run 권장)
   python Analytics/youtube_meta.py set-thumbnail <video_id> <image.png>
+  python Analytics/youtube_meta.py update-description-line <vid> [vid...] \
+      --en-find "X" --en-replace "Y" [--ja-find ... --ja-replace ... --ko-find ... --ko-replace ...] [--dry-run]
 """
 import sys
 import argparse
@@ -99,6 +101,10 @@ def cmd_get(args):
     print(f"[default title] {sn.get('title')}")
     for lang, loc in (v.get("localizations") or {}).items():
         print(f"  [{lang}] {loc.get('title')}")
+    if getattr(args, "description", False):
+        print(f"\n[default description]\n{sn.get('description', '')}")
+        for lang, loc in (v.get("localizations") or {}).items():
+            print(f"\n[{lang} description]\n{loc.get('description', '')}")
 
 
 def cmd_set_title(args):
@@ -206,6 +212,102 @@ def cmd_set_tags(args):
     print(f"✓ 태그 적용 완료: {args.video} ({len(tags)}개 · ~{approx}/500자)")
 
 
+def _update_description_line_one(svc, vid, pairs, dry_run):
+    """단일 영상에 per-locale find/replace 적용 (read-modify-write · description 외 필드 보존).
+
+    pairs = {'en': (find, replace), 'ja': (find, replace), 'ko': (find, replace), ...}
+    'en' 키는 defaultLanguage 로케일과 매칭되면 snippet.description (default) 에도 적용.
+    각 로케일은 첫 번째 occurrence만 교체(replace count=1) · find 못 찾으면 skip + warn.
+    """
+    v = _get_video(svc, vid)
+    old = v["snippet"]
+    locs = dict(v.get("localizations") or {})
+    default_lang = old.get("defaultLanguage")
+    if not default_lang:
+        default_lang = "en"
+        print(f"  [{vid}] defaultLanguage 미설정 → 'en' fallback 박힘 (localizations update 의무 필드)")
+
+    desc = old.get("description", "")
+    changes = []  # (label, before, after) tuples for logging
+
+    # default = snippet.description (matched by defaultLanguage)
+    if default_lang in pairs:
+        find, replace = pairs[default_lang]
+        if find in desc:
+            desc = desc.replace(find, replace, 1)
+            changes.append((f"default[{default_lang}]", find, replace))
+        else:
+            print(f"  [{vid}/default-{default_lang}] '{find}' 못 찾음 · skip")
+
+    # localizations
+    new_locs = dict(locs)
+    for lang, (find, replace) in pairs.items():
+        if lang not in locs:
+            print(f"  [{vid}/{lang}] localization 부재 · skip")
+            continue
+        entry = dict(locs[lang])
+        ldesc = entry.get("description", "")
+        if find in ldesc:
+            entry["description"] = ldesc.replace(find, replace, 1)
+            new_locs[lang] = entry
+            changes.append((lang, find, replace))
+        else:
+            print(f"  [{vid}/{lang}] '{find}' 못 찾음 · skip")
+
+    if not changes:
+        print(f"✗ {vid}: 교체 자료 없음 (find 자료 부재)")
+        return
+
+    # snippet 재구성: 쓰기 가능한 필드만 보존 (read-only 필드 제외).
+    new_snippet = {
+        "title": old.get("title"),
+        "categoryId": old.get("categoryId"),
+        "description": desc,
+    }
+    if old.get("tags"):
+        new_snippet["tags"] = old["tags"]
+    if default_lang:
+        new_snippet["defaultLanguage"] = default_lang
+    if old.get("defaultAudioLanguage"):
+        new_snippet["defaultAudioLanguage"] = old["defaultAudioLanguage"]
+
+    if dry_run:
+        print(f"[dry-run] {vid}: {len(changes)} 자리 교체 예정")
+        for label, before, after in changes:
+            print(f"  [{label}] {before!r} → {after!r}")
+        return
+
+    try:
+        svc.videos().update(
+            part="snippet,localizations",
+            body={"id": vid, "snippet": new_snippet, "localizations": new_locs},
+        ).execute()
+    except HttpError as e:
+        sys.exit(f"update 실패 ({vid}): {e}")
+    print(f"✓ {vid}: {len(changes)} 자리 교체 적용")
+    for label, before, after in changes:
+        print(f"  [{label}] {before!r} → {after!r}")
+
+
+def cmd_update_description_line(args):
+    pairs = {}
+    for lang, find, replace in (
+        ("en", args.en_find, args.en_replace),
+        ("ja", args.ja_find, args.ja_replace),
+        ("ko", args.ko_find, args.ko_replace),
+    ):
+        if find and replace:
+            pairs[lang] = (find, replace)
+        elif find or replace:
+            sys.exit(f"--{lang}-find와 --{lang}-replace는 함께 지정해야 함.")
+    if not pairs:
+        sys.exit("교체 자료 지정 X (--en-find/--en-replace · --ja-find/--ja-replace · --ko-find/--ko-replace 중 1쌍 이상).")
+
+    svc = yt()
+    for vid in args.videos:
+        _update_description_line_one(svc, vid, pairs, dry_run=args.dry_run)
+
+
 def cmd_set_thumbnail(args):
     img = Path(args.image)
     if not img.exists():
@@ -229,6 +331,7 @@ def main():
 
     g = sub.add_parser("get", help="현재 제목/현지화 확인")
     g.add_argument("video")
+    g.add_argument("--description", action="store_true", help="설명 본문도 출력 (default + 로케일별)")
 
     s = sub.add_parser("set-title", help="제목 read-modify-write")
     s.add_argument("video")
@@ -249,6 +352,19 @@ def main():
     t.add_argument("video")
     t.add_argument("image")
 
+    u = sub.add_parser(
+        "update-description-line",
+        help="설명 1줄 surgical find/replace (per-locale · drift safe · anchor footer 변경 cycle 자리)",
+    )
+    u.add_argument("videos", nargs="+", help="비디오 ID (여러 개 가능)")
+    u.add_argument("--en-find", help="EN(=defaultLanguage)에서 찾을 문자열 · snippet.description + localizations.en 양쪽 적용")
+    u.add_argument("--en-replace", help="EN 교체 문자열")
+    u.add_argument("--ja-find", help="localizations.ja 에서 찾을 문자열")
+    u.add_argument("--ja-replace", help="JA 교체 문자열")
+    u.add_argument("--ko-find", help="localizations.ko 에서 찾을 문자열")
+    u.add_argument("--ko-replace", help="KO 교체 문자열")
+    u.add_argument("--dry-run", action="store_true", help="적용 없이 미리보기")
+
     args = p.parse_args()
     {
         "auth": cmd_auth,
@@ -256,6 +372,7 @@ def main():
         "set-title": cmd_set_title,
         "set-tags": cmd_set_tags,
         "set-thumbnail": cmd_set_thumbnail,
+        "update-description-line": cmd_update_description_line,
     }[args.cmd](args)
 
 

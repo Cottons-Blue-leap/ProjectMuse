@@ -9,7 +9,7 @@
 
 ### 제목 (Title)
 ```
-アントニオ・ヴィヴァルディ - 四季 春 第1楽章 (feat. 初音ミク)
+ヴィヴァルディ - 四季 春 第1楽章 (feat. 初音ミク)
 ```
 <!-- s355 양식 (코튼 결단): 작곡가 풀네임 - 곡명 (feat. 初音ミク) 후치 양식 · 브래킷/아카펠라 폐기 (reveal 설계). feat. 크레딧 = 전 로케일 初音ミク (정체성 마크). 곡명 현지화(四季 春 第1楽章) keep. 라이브 적용 완료. -->
 
@@ -26,7 +26,7 @@ https://commons.wikimedia.org/wiki/File:Botticelli-primavera.jpg
 
 —
 
-制作ツール：VOCALOID6
+制作ツール：VOCALOID6 / ボイスバンク：初音ミクV6
 初音ミク © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
 #初音ミク #アカペラ #四季 #ボカロ #ボカロカバー #クラシック #バロック #ヴィヴァルディ #AtelierMikuAcappella
@@ -36,7 +36,7 @@ https://commons.wikimedia.org/wiki/File:Botticelli-primavera.jpg
 
 ### 제목 (Title)
 ```
-안토니오 비발디 - 사계 '봄' 1악장 (feat. 初音ミク)
+비발디 - 사계 '봄' 1악장 (feat. 初音ミク)
 ```
 
 ### 설명 (Description)
@@ -51,7 +51,7 @@ https://commons.wikimedia.org/wiki/File:Botticelli-primavera.jpg
 
 —
 
-제작툴: VOCALOID6
+제작툴: VOCALOID6 / 보이스뱅크: 하츠네 미쿠 V6
 하츠네 미쿠 © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
 #하츠네미쿠 #아카펠라 #사계 #初音ミク #보컬로이드 #클래식 #바로크 #비발디 #AtelierMikuAcappella

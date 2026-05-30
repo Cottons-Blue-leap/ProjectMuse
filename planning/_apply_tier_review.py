@@ -10,6 +10,7 @@ doctrine:
 cycle 운영:
 - cycle 진행 중 = CHANGES dict 누적 + 매 곡 변경 후 호출.
 - cycle 끝 = retro/markdown archive 박음 + dict 비움.
+- DELETIONS set = 후보 풀에서 제거 (막 통째/악장 통째 분류 불가 axis · 저작권 risk 등). s376 양식 확장.
 
 cycle history (압축):
 - s292 partial: 파반 작품 50 A→B / 메이플 리프 래그 A→S / 피가로의 결혼 서곡 A→S
@@ -24,6 +25,16 @@ cycle history (압축):
 - 누적 분류 (s304 [60/102] 시점): S 73 / A 65 / B 72 / C 58 / D 56 = 324 (s303 종료 대비 S +4 / A +10 / B +21 / C -35 / D ±0)
 - s317 (C tier review [61/102]~[102/102] · rank 227~268 잔여 미 review 42곡 · 코튼 한꺼번에 결단 흡수 · C tier review cycle 종료): 일 트로바토레 중 「대장간 합창」 (베르디) C→A / 베르디 레퀴엠 중 「진노의 날」 C→S / 레퀴엠 중 「피에 예수」 작품 48 (포레) C→B / 행성 중 「화성, 전쟁을 가져오는 자」 작품 32 (홀스트) C→B / 루슬란과 류드밀라 서곡 (글린카) C→B / 사랑은 마술사 중 「불의 의식의 춤」 (파야) C→B / 이탈리아 협주곡 BWV 971 1악장 (바흐) C→B / 브란덴부르크 협주곡 5번 BWV 1050 1악장 (바흐) C→A / 아이네 클라이네 나흐트무지크 K.525 2악장 로망스 (모차르트) C→B / 피아노 협주곡 23번 K.488 2악장 아다지오 (모차르트) C→B / 교향곡 9번 「합창」 작품 125 1악장 (베토벤) C→B / 교향곡 7번 작품 92 1악장 (베토벤) C→A / 바이올린 소나타 5번 「봄」 작품 24 1악장 (베토벤) C→B / 피아노 협주곡 4번 작품 58 1악장 (베토벤) C→B / 교향곡 9번 「그레이트」 D.944 1악장 (슈베르트) C→B / 전주곡 E단조 작품 28-4 (쇼팽) C→B / 헝가리 무곡 1번 G단조 (브람스) C→B / 메피스토 왈츠 1번 S.514 (리스트) C→B / 슬픈 왈츠 작품 44-1 (시벨리우스) C→B / 팔려간 신부 서곡 (스메타나) C→B / 현악 4중주 2번 3악장 야상곡 (보로딘) C→B / 트리치트라치 폴카 작품 214 (요한 슈트라우스 2세) C→A / 시인과 농부 서곡 (주페) C→B / 아를의 여인 모음곡 2번 「파랑돌」 (비제) C→B / 수상 음악 2번 알라 혼파이프 HWV 349 (헨델) C→A / 진노의 날 (그레고리오 성가) C→B / 교향곡 3번 「영웅」 작품 55 1악장 (베토벤) C→B / 봄의 제전 도입부 (스트라빈스키) C→B / 교향곡 5번 작품 67 4악장 (베토벤) C→B / 바이올린 협주곡 D장조 작품 35 1악장 (차이콥스키) C→B / 바이올린 협주곡 D단조 작품 47 1악장 (시벨리우스) C→B / 목신의 오후 전주곡 L.86 (드뷔시) C→A / C keep 10곡 (229 꿈을 꾼 후에 포레 · 245 브람스 교향곡 4번 · 247 차이콥스키 5번 안단테 칸타빌레 · 251 라흐 Op.3-2 · 256 정결한 여신이여 벨리니 · 259 브람스 바협 · 260 차이콥스키 비창 4악장 · 262 베토벤 바협 · 264 드보르자크 첼로 2악장 · 267 라흐 피협 3번) — 자가 결함 27건 (under 9 + over 18 · s304 under skew → s317 over skew 역전) · over family 5 sub-axis (베토벤 단 movement dominant transfer / Russian core / 4대 바협 / nickname trap / 매니아 자리 B default) · under family 4 sub-axis (한국 대중 노출 약 / 베르디 dominant / 슈트라우스 polka / 헨델 Water Music) · popularity_tier miscalibration family 누적 = s299 22 + s303 13 + s304 26 + s317 27 = 88건 — **C tier review cycle 종료** (102곡 review · 변경 누적 76 = C→S 5 + C→A 19 + C→B 52)
 - 누적 분류 (s317 종료 시점 · C tier review cycle 종료): S 74 / A 71 / B 97 / C 26 / D 56 = 324 (s304 [60/102] 시점 대비 S +1 / A +6 / B +25 / C -32 / D ±0) — tier boundaries S 1~74 / A 75~145 / B 146~242 / C 243~268 / D 269~324
+- s330 (2026-05-19) 코튼 12곡 axis (나) cycle: 송어 5중주 4악장 (슈베르트) S→D (변주된 송어 axis 자가 자가 · *피아노 매니아 자리* under family 박힌 자료 → D 미분류 buffer 옮김)
+- s375 누적 분류 시점: S 73 / A 71 / B 97 / C 26 / D 91 = 358 (s330 이후 PDF audit 누적으로 D buffer 신축 + 1차 곡 Gymnopedie publish/Vivaldi/Joplin/Elgar 통과 등 별도 cycle 자가 자가)
+- s376 (2026-05-29) D tier review cycle 종료 · 코튼 피드백 파일 base · 84 row tier change + 5 row delete + 2 row D keep:
+  - D→S 19곡 (송어 5중주 4악장 / 사라방드 헨델 / 피가로 「더는 날지 못하리」 / 시칠리엔 포레 / 보케리니 미뉴에트 / 모차르트 레퀴엠 「사악한 자들을」 / 교향곡 40번 4악장 / 호두까기 갈대 피리 / 베르디 레퀴엠 「나를 구하소서」 / 비창 소나타 3악장 / 라 캄파넬라 / 트럼펫 협주곡 3악장 / 어메이징 그레이스 / 황제 찬가 / 푸니쿨리 푸니쿨라 / 세키예르벤 폴카 / 드보르자크 미뉴에트 / 시바 여왕의 도착 / 테 데움 H.146 전주곡)
+  - D→A 25곡 (병아리 발레 / 화석 / 새장 / 들장미 / 죽음과 소녀 4중주 2악장 / 낯선 나라와 사람들 / 헌정 / 마농 레스코 / 고전 교향곡 가보트 / 그라나다 / 루마니아 민속 / 5월이 오니 / 사계 여름 1·2 + 겨울 1·3 + 가을 1·2·3 / 영웅 3악장 스케르초 / 조화의 영감 3-6 1악장 / 차르다시 / 첼로 협주곡 1번 / 세레나데 작품 48 2악장 왈츠 / 천지창조 「하늘은 말하네」)
+  - D→B 20곡 (크리스마스 오라토리오 신포니아 / 코지 판 투테 「부드러운 바람이여」 / 피가로 「사랑이란 무엇인가요」 / 골드베르크 변주 25 / 슈베르트 D.929 2악장 / 라인 교향곡 1악장 / 멘델스존 옥텟 스케르초 / 발퀴레 / 발할라 입성 / 리골레토 「그리운 이름이여」 / 중앙 아시아 초원 / 옛 성 / 스페인 기상곡 / 장미의 기사 왈츠 / 마르첼로 오보에 협주곡 2악장 / 몬테베르디 마니피카트 / 영웅 4악장 피날레 / 비창 교향곡 2악장 / 정령들의 춤 / 라우다테 도미눔)
+  - D→C 20곡 (윌리엄 텔 「새벽」 / 드뷔시 전주곡 L.117 1-6 [csv 단일 row · 코튼 1~6번 6 entry → 단일 row C 일괄] / 그대는 나의 안식 / 장 라신의 찬가 / 러시아 부활제 서곡 / 로자문데 간주곡 3번 / 지크프리트 목가 / 이탈리아 기상곡 / 운명의 힘 서곡 / Tallis Spem in Alium [「희망을 다른 데서 찾지 않으리」] / 너희가 나를 사랑하면 / 오 위대한 신비 / 아베 베룸 코르푸스 [버드] / 사슴이 시냇물을 / 흘러라 내 눈물 / 조스캥 Ave Maria / 마르첼리 키리에 / 미제레레 [알레그리] / 비창 교향곡 3악장 Allegro molto vivace / 디도의 탄식)
+  - DELETE 5 row (나비부인 1막 / 호프만 2막·4막·4막 피날레 / 페르골레시 스타바트 마테르 1악장 — 막·악장 통째 분류 불가 axis 코튼 결단)
+  - D keep 2 row (코다이 하리 야노시 간주곡 [저작권 risk axis · 사망 1967 / life+50 = 2017 + 위탁 publisher Universal Edition 출판 contract] / 살탄 황제 「세 가지 기적」 [미분류 buffer keep · 코튼 결단])
+  - 분포 변화: S 73→92 / A 71→96 / B 97→117 / C 26→46 / D 91→2 / total 358→353
 """
 import csv
 import sys
@@ -34,9 +45,104 @@ sys.stdout.reconfigure(encoding='utf-8')
 p = Path(r'C:\Users\user\Desktop\myProject\Project_Muse\planning\candidate_master.csv')
 
 CHANGES = {
-    # s330 (2026-05-19) 코튼 12곡 axis (나) cycle · D tier 본질 doctrine 박힘 (미분류 buffer)
-    # · *변주된 송어 곡 = 5중주 4악장 D.667* axis 코튼 결단 D 강등 (s304 시점 C→S axis 자가 자가 axis = *피아노 매니아 자리* under family 박힌 자료 · 본 cycle 자가 자가 axis 자가 자가 axis = 미분류 buffer로 옮김)
-    '송어 5중주 4악장 (슈베르트)': ('S', 'D'),
+    # s376 (2026-05-29) D tier review cycle · 코튼 피드백 파일 base · 84 row D→{S,A,B,C} 흡수
+    # D→S (19곡)
+    '송어 5중주 4악장 (슈베르트)': ('D', 'S'),
+    '모음곡 HWV 437 중 사라방드 (헨델)': ('D', 'S'),
+    '피가로의 결혼 중 「더는 날지 못하리」 (모차르트)': ('D', 'S'),
+    '시칠리엔 작품 78 (포레)': ('D', 'S'),
+    '현악 5중주 작품 11-5 중 미뉴에트 (보케리니)': ('D', 'S'),
+    '레퀴엠 K.626 「사악한 자들을 물리치시고」 (모차르트)': ('D', 'S'),
+    '교향곡 40번 K.550 4악장 (모차르트)': ('D', 'S'),
+    '호두까기 인형 「갈대 피리의 춤」 (차이콥스키)': ('D', 'S'),
+    '베르디 레퀴엠 중 「나를 구하소서」': ('D', 'S'),
+    '비창 소나타 3악장 론도 알레그로 (베토벤)': ('D', 'S'),
+    '바이올린 협주곡 2번 3악장 론도 라 캄파넬라 (파가니니)': ('D', 'S'),
+    '트럼펫 협주곡 3악장 피날레 알레그로 (하이든)': ('D', 'S'),
+    '어메이징 그레이스 (전통 찬송가)': ('D', 'S'),
+    '황제 찬가 「하느님, 프란츠 황제를 지켜주소서」 (하이든)': ('D', 'S'),
+    '푸니쿨리 푸니쿨라 (덴차)': ('D', 'S'),
+    '세키예르벤 폴카 (핀란드 민요)': ('D', 'S'),
+    '미뉴에트 (드보르자크)': ('D', 'S'),
+    '솔로몬 중 「시바 여왕의 도착」 (헨델)': ('D', 'S'),
+    '테 데움 H.146 전주곡 (마르슈 앙 롱도) (샤르팡티에)': ('D', 'S'),
+    # D→A (25곡)
+    '껍질을 깨지 못한 병아리들의 발레 (무소르그스키)': ('D', 'A'),
+    '동물의 사육제 중 화석 (생상스)': ('D', 'A'),
+    '동물의 사육제 중 새장 (생상스)': ('D', 'A'),
+    '들장미 D.257 (슈베르트)': ('D', 'A'),
+    '「죽음과 소녀」 4중주 2악장 (슈베르트)': ('D', 'A'),
+    '「낯선 나라와 사람들」 (슈만 - 어린이 정경 1번)': ('D', 'A'),
+    '헌정 (슈만 - 미르테)': ('D', 'A'),
+    '마농 레스코 중 「그 부드러운 레이스 속에서」 (푸치니)': ('D', 'A'),
+    '고전 교향곡 작품 25 3악장 가보트 (프로코피예프)': ('D', 'A'),
+    '그라나다 (수이트 에스파뇨라 작품 47-1) (알베니스)': ('D', 'A'),
+    '루마니아 민속 무곡 Sz.56 (바르토크)': ('D', 'A'),
+    '5월이 오니 (몰리 - 영국 마드리갈)': ('D', 'A'),
+    '사계 중 여름 1악장 Allegro non molto (비발디)': ('D', 'A'),
+    '사계 중 여름 2악장 Adagio (비발디)': ('D', 'A'),
+    '사계 중 겨울 1악장 Allegro non molto (비발디)': ('D', 'A'),
+    '사계 중 겨울 3악장 Allegro (비발디)': ('D', 'A'),
+    '영웅 교향곡 3악장 스케르초 (베토벤)': ('D', 'A'),
+    '조화의 영감 작품 3-6 1악장 알레그로 (비발디)': ('D', 'A'),
+    '사계 중 가을 1악장 Allegro (비발디)': ('D', 'A'),
+    '사계 중 가을 2악장 Adagio molto (비발디)': ('D', 'A'),
+    '사계 중 가을 3악장 Allegro (비발디)': ('D', 'A'),
+    '차르다시 (몬티)': ('D', 'A'),
+    '첼로 협주곡 1번 다장조 1악장 Moderato (하이든)': ('D', 'A'),
+    '현을 위한 세레나데 작품 48 2악장 왈츠 (차이콥스키)': ('D', 'A'),
+    '천지창조 중 「하늘은 말하네」 (하이든)': ('D', 'A'),
+    # D→B (20곡)
+    '크리스마스 오라토리오 신포니아 (목가) BWV 248 10번 (바흐)': ('D', 'B'),
+    '코지 판 투테 중 「부드러운 바람이여」 (모차르트)': ('D', 'B'),
+    '피가로의 결혼 중 「사랑이란 무엇인가요」 (모차르트)': ('D', 'B'),
+    '골드베르크 변주곡 BWV 988 변주 25 (바흐)': ('D', 'B'),
+    '피아노 3중주 2번 D.929 2악장 안단테 콘 모토 (슈베르트)': ('D', 'B'),
+    '교향곡 3번 「라인」 작품 97 1악장 (슈만)': ('D', 'B'),
+    '옥텟 E플랫장조 작품 20 3악장 스케르초 (멘델스존)': ('D', 'B'),
+    '발퀴레 「보탄의 이별과 마술의 불」 (바그너)': ('D', 'B'),
+    '라인의 황금 「발할라 입성」 (바그너)': ('D', 'B'),
+    '리골레토 중 「그리운 이름이여」 (베르디)': ('D', 'B'),
+    '중앙 아시아의 초원에서 (보로딘)': ('D', 'B'),
+    '전람회의 그림 중 「옛 성」 (무소르그스키)': ('D', 'B'),
+    '스페인 기상곡 작품 34 (림스키코르사코프)': ('D', 'B'),
+    '장미의 기사 작품 59 왈츠 (리하르트 슈트라우스)': ('D', 'B'),
+    '오보에 협주곡 D단조 2악장 아다지오 (알레산드로 마르첼로)': ('D', 'B'),
+    '성모 마리아의 저녁 기도 SV 206 마니피카트 (몬테베르디)': ('D', 'B'),
+    '영웅 교향곡 4악장 피날레 (베토벤)': ('D', 'B'),
+    '비창 교향곡 작품 74 2악장 Allegro con grazia (차이콥스키)': ('D', 'B'),
+    '오르페오와 에우리디케 중 「정령들의 춤」 (글루크)': ('D', 'B'),
+    '저녁기도 K.339 중 「라우다테 도미눔」 (모차르트)': ('D', 'B'),
+    # D→C (20곡)
+    '윌리엄 텔 서곡 「새벽」 도입부 (로시니)': ('D', 'C'),
+    '전주곡 1권 L.117 1-6번 (드뷔시)': ('D', 'C'),
+    '그대는 나의 안식 D.776 (슈베르트)': ('D', 'C'),
+    '장 라신의 찬가 작품 11 (포레)': ('D', 'C'),
+    '러시아 부활제 서곡 작품 36 (림스키코르사코프)': ('D', 'C'),
+    '로자문데 D.797 간주곡 3번 (슈베르트)': ('D', 'C'),
+    '지크프리트 목가 WWV 103 (바그너)': ('D', 'C'),
+    '이탈리아 기상곡 작품 45 (차이콥스키)': ('D', 'C'),
+    '운명의 힘 서곡 (베르디)': ('D', 'C'),
+    '「희망을 다른 데서 찾지 않으리」 (탤리스 - 40성부 모테트)': ('D', 'C'),
+    '「너희가 나를 사랑하면」 (탤리스)': ('D', 'C'),
+    '「오 위대한 신비」 (빅토리아)': ('D', 'C'),
+    '아베 베룸 코르푸스 (버드)': ('D', 'C'),
+    '「사슴이 시냇물을 찾기에 갈급함같이」 (팔레스트리나)': ('D', 'C'),
+    '「흘러라 내 눈물」 (다울런드)': ('D', 'C'),
+    '아베 마리아... 영원한 동정녀 (조스캥 - 르네상스 motet 대표)': ('D', 'C'),
+    '마르첼리 교황 미사 키리에 (팔레스트리나 - 6성부 미사)': ('D', 'C'),
+    '미제레레 (알레그리 - 시스티나 채플 9성부)': ('D', 'C'),
+    '비창 교향곡 작품 74 3악장 Allegro molto vivace (차이콥스키)': ('D', 'C'),
+    '디도와 아이네아스 중 「디도의 탄식」 (퍼셀)': ('D', 'C'),
+}
+
+# s376 (2026-05-29) DELETIONS: 막 통째/악장 통째 분류 불가 axis 코튼 결단
+DELETIONS = {
+    '나비부인 1막 (푸치니)',
+    '호프만의 이야기 2막 (오펜바흐)',
+    '호프만의 이야기 4막 (오펜바흐)',
+    '호프만의 이야기 4막 피날레 (오펜바흐)',
+    '스타바트 마테르 1악장 (페르골레시)',
 }
 
 with p.open(encoding='utf-8-sig', newline='') as f:
@@ -46,31 +152,42 @@ with p.open(encoding='utf-8-sig', newline='') as f:
 
 changes = []
 skipped = []
+deleted = []
+kept_rows = []
 for r in rows:
     pk = r['piece_ko'].strip()
+    if pk in DELETIONS:
+        deleted.append((int(r['rank']), pk, r['popularity_tier'].strip()))
+        continue
     if pk in CHANGES:
         expected_old, new = CHANGES[pk]
         actual_old = r['popularity_tier'].strip()
         if actual_old == new:
             skipped.append((int(r['rank']), pk, actual_old))
-            continue
-        if actual_old != expected_old:
+        elif actual_old != expected_old:
             raise ValueError(
                 f"tier mismatch for piece_ko='{pk}': "
                 f"expected old={expected_old} or new={new}, actual={actual_old}"
             )
-        r['popularity_tier'] = new
-        changes.append((int(r['rank']), pk, actual_old, new))
+        else:
+            r['popularity_tier'] = new
+            changes.append((int(r['rank']), pk, actual_old, new))
+    kept_rows.append(r)
 
 matched_pks = {c[1] for c in changes} | {s[1] for s in skipped}
 missing = set(CHANGES.keys()) - matched_pks
 if missing:
-    raise ValueError(f'piece_ko not found in csv: {missing}')
+    raise ValueError(f'piece_ko not found in csv (CHANGES): {missing}')
+
+deleted_pks = {d[1] for d in deleted}
+missing_del = DELETIONS - deleted_pks
+if missing_del:
+    raise ValueError(f'piece_ko not found in csv (DELETIONS): {missing_del}')
 
 with p.open('w', encoding='utf-8-sig', newline='') as f:
     writer = csv.DictWriter(f, fieldnames=fieldnames)
     writer.writeheader()
-    writer.writerows(rows)
+    writer.writerows(kept_rows)
 
 print(f'changes applied ({len(changes)}):')
 for c in sorted(changes):
@@ -79,9 +196,13 @@ if skipped:
     print(f'\nskipped (already at target tier, {len(skipped)}):')
     for s in sorted(skipped):
         print(f'  rank {s[0]:>3}: {s[1]}  already={s[2]}')
+if deleted:
+    print(f'\ndeleted ({len(deleted)}):')
+    for d in sorted(deleted):
+        print(f'  rank {d[0]:>3}: {d[1]}  (was tier={d[2]})')
 
 dist = {}
-for r in rows:
+for r in kept_rows:
     t = r['popularity_tier'].strip()
     dist[t] = dist.get(t, 0) + 1
 print('\nnew distribution:')

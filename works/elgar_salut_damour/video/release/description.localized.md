@@ -9,7 +9,7 @@
 
 ### 제목 (Title)
 ```
-エドワード・エルガー - 愛の挨拶 (feat. 初音ミク)
+エルガー - 愛の挨拶 (feat. 初音ミク)
 ```
 
 ### 설명 (Description)
@@ -22,7 +22,7 @@ https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_The_Soul_of_th
 
 —
 
-制作ツール：VOCALOID6
+制作ツール：VOCALOID6 / ボイスバンク：初音ミクV6
 初音ミク © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
 #初音ミク #アカペラ #愛の挨拶 #ボカロ #ボカロカバー #クラシック #ロマン派 #エルガー #AtelierMikuAcappella
@@ -32,7 +32,7 @@ https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_The_Soul_of_th
 
 ### 제목 (Title)
 ```
-에드워드 엘가 - 사랑의 인사 (feat. 初音ミク)
+엘가 - 사랑의 인사 (feat. 初音ミク)
 ```
 
 ### 설명 (Description)
@@ -47,7 +47,7 @@ https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_The_Soul_of_th
 
 —
 
-제작툴: VOCALOID6
+제작툴: VOCALOID6 / 보이스뱅크: 하츠네 미쿠 V6
 하츠네 미쿠 © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
 #하츠네미쿠 #아카펠라 #사랑의인사 #初音ミク #보컬로이드 #클래식 #낭만주의 #엘가 #AtelierMikuAcappella

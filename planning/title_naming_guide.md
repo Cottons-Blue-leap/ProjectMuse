@@ -1,18 +1,23 @@
 # Title Naming Guide
 
 > Canonical rule for Atelier Miku Acappella release titles.
-> Locked s355 (2026-05-25, 코튼 결단). Supersedes the s348 front-bracket format
-> `[Miku Acappella] Composer - Piece`.
+> Locked 2026-05-28 (코튼 결단). Supersedes the s355 full-name format
+> `Composer full name - Piece (feat. 初音ミク)`.
 
 ## The format
 
 ```text
-<Composer full name> - <Piece> (feat. 初音ミク)
+<Composer surname, locale-native> - <Piece> (feat. 初音ミク)
 ```
 
-Minimal. The composer + piece, then the featured-artist credit as a suffix. No "Acappella"
+Minimal. The composer surname + piece, then the featured-artist credit as a suffix. No "Acappella"
 in the title — that lives in the channel name + tags, and the video *reveals* itself as
 acappella. The feat. credit uses `初音ミク` (the canonical Japanese wordmark) in **every locale**.
+
+**Title vs description-body convention** (코튼 2026-05-28 결단): Titles use the surname-only short
+form for identification efficiency. Description body dedications (e.g. `에릭 사티 - 짐노페디 1번
+(1888년)`) keep the full name — body is the formal first-mention surface, title is the recognition
+surface.
 
 ### Why this shape (s355 rationale)
 
@@ -41,9 +46,14 @@ credit is identical in all three.
 
 | field | EN (default) | KO | JA |
 |---|---|---|---|
-| composer | full name, Latin | full name, Hangul | full name, Katakana |
+| composer | surname only, Latin (e.g. `Mozart`) | surname only, Hangul (e.g. `모차르트`) | surname only, Katakana (e.g. `モーツァルト`) |
 | piece | see policy below | see policy below | see policy below |
 | credit | `(feat. 初音ミク)` | `(feat. 初音ミク)` | `(feat. 初音ミク)` |
+
+**Disambiguation family**: when more than one composer shares a surname (Bach family — J.S. / C.P.E. /
+J.C.; Strauss — Johann II vs Richard; Haydn — Joseph vs Michael; Mendelssohn — Felix vs Fanny), attach
+an identifying prefix at the point the first conflict candidate enters the catalog. Prefix form to be
+decided at that moment (코튼 decision). No premature doctrine for hypothetical cases.
 
 ### Piece name policy
 
@@ -56,34 +66,40 @@ Use the name **the local audience actually searches**:
 
 ### Rules
 
-1. `<Composer full name> - <Piece> (feat. 初音ミク)`. The `(feat. 初音ミク)` suffix on every
-   title, every locale (composer + piece localized; credit identical).
+1. `<Composer surname> - <Piece> (feat. 初音ミク)`. The `(feat. 初音ミク)` suffix on every
+   title, every locale (composer surname + piece localized; credit identical).
 2. No "Acappella" / "アカペラ" / "아카펠라" in the title — channel name + tags carry it; the
    video reveals it. (This is the design, not an omission.)
-3. Composer full name + ` - ` + piece. One consistent structure across locales (no surname-only
-   or alternate framing — this was the Vivaldi outlier, fixed s348 and kept).
+3. Composer surname only (locale-native) + ` - ` + piece. One consistent structure across locales.
+   Disambiguation family (Bach, Strauss, etc.) → identifying prefix at point of first conflict
+   (see above). Description body dedications keep the full name — body is the formal first-mention
+   surface, title is the recognition surface (2026-05-28 결단).
 4. `defaultLanguage = en`; set localizations for en/ko/ja on every video.
 5. Never imply an altered title is the historical title; credit the source in the description
-   (`Composer - Piece (year)`).
+   (`Composer full name - Piece (year)`).
 
-## Current catalog (live, s355)
+## Current catalog (live, 2026-05-28)
 
 ```text
-Erik Satie - Gymnopédie No. 1 (feat. 初音ミク)
-  KO  에릭 사티 - 짐노페디 1번 (feat. 初音ミク)
-  JA  エリック・サティ - ジムノペディ第1番 (feat. 初音ミク)
+Satie - Gymnopédie No. 1 (feat. 初音ミク)
+  KO  사티 - 짐노페디 1번 (feat. 初音ミク)
+  JA  サティ - ジムノペディ第1番 (feat. 初音ミク)
 
-Antonio Vivaldi - Spring, Mvt. I (feat. 初音ミク)
-  KO  안토니오 비발디 - 사계 '봄' 1악장 (feat. 初音ミク)
-  JA  アントニオ・ヴィヴァルディ - 四季 春 第1楽章 (feat. 初音ミク)
+Vivaldi - Spring, Mvt. I (feat. 初音ミク)
+  KO  비발디 - 사계 '봄' 1악장 (feat. 初音ミク)
+  JA  ヴィヴァルディ - 四季 春 第1楽章 (feat. 初音ミク)
 
-Scott Joplin - The Entertainer (feat. 初音ミク)
-  KO  스콧 조플린 - 디 엔터테이너 (feat. 初音ミク)
-  JA  スコット・ジョプリン - ジ・エンターテイナー (feat. 初音ミク)
+Joplin - The Entertainer (feat. 初音ミク)
+  KO  조플린 - 디 엔터테이너 (feat. 初音ミク)
+  JA  ジョプリン - ジ・エンターテイナー (feat. 初音ミク)
 
-Edward Elgar - Salut d'Amour (feat. 初音ミク)
-  KO  에드워드 엘가 - 사랑의 인사 (feat. 初音ミク)
-  JA  エドワード・エルガー - 愛の挨拶 (feat. 初音ミク)
+Elgar - Salut d'Amour (feat. 初音ミク)
+  KO  엘가 - 사랑의 인사 (feat. 初音ミク)
+  JA  エルガー - 愛の挨拶 (feat. 初音ミク)
+
+Mozart - Twelve Variations on "Ah, vous dirai-je, maman" K.265 (feat. 初音ミク)
+  KO  모차르트 - '아, 어머니께 말씀드릴게요' 주제에 의한 12개의 변주곡 K.265 (feat. 初音ミク)
+  JA  モーツァルト - 「ああ、お母さん、あなたに申しましょう」による12の変奏曲 K.265 (feat. 初音ミク)
 ```
 
 ## Applying titles
@@ -109,3 +125,8 @@ seconds (read-after-write lag); re-run `get` to confirm. The same tool uploads c
 - **s355 → `Composer - Piece (feat. 初音ミク)`** — reveal/curiosity-gap design + feat.-credit-as-identity;
   data (s352) showed the front-load SEO bet was weak (search ≈ 0, thumbnail drives CTR). Returns to the
   suffix shape of the launch title, with `初音ミク` as the universal credit. All 4 live videos retrofitted.
+- **2026-05-28 → `Surname - Piece (feat. 初音ミク)`** — surname-only short form (코튼 결단:
+  *식별력 높은 부분만 남기자*). Classical-music convention default (Mozart / Chopin / Bach not
+  *Wolfgang Amadeus Mozart*); saves chars (esp. Mozart K.265 ~18 chars), keeps recognition
+  efficiency. Description body dedications keep full name — body is the formal surface. 4 live
+  videos + 1 scheduled (Mozart K.265, 2026-05-28 20:00 KST) retrofitted.
