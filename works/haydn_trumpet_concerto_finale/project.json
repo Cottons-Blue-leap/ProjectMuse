@@ -1,0 +1,17 @@
+{
+  "piece": "Trumpet Concerto in E-flat major, Hob.VIIe:1, 3rd movement (Finale: Allegro) (Joseph Haydn)",
+  "composer": "Joseph Haydn (1732-1809)",
+  "year": 1796,
+  "section": "3악장 Finale: Allegro 통째 (~4:00-4:30 · 론도 형식 · 발췌 없음 · 짐노페디·비발디·조플린·사랑의인사·작은별·쇼팽·캐논 family 정합 = 자연 짧은 단악장 통째 transcription default). ⚠️ 트럼펫 솔로 = 빠른 음계·장식음 다수 = manual transcription 부담 + 금관 articulation→모음(Ah) 충실도가 본 곡 핵심 challenge (코튼 velocity·무드 우선 결단으로 risk 의식적 감수 · 2026-06-02).",
+  "vocal": "Hatsune Miku (모음/humming · Ah·Oo·Mm role · 기악 원곡 = 가사 없음 · 첫 7곡 family 정합). role 분배 axis = 트럼펫 솔로 멜로디 → lead_miku / 오케스트라 반주(현·관) → mid_oo·low_oo·halo_high / air_mm=glue. 팡파르 성격 = staccato·악센트 표현이 모음에서 살아나는지가 게이트.",
+  "music": {
+    "source_score": "music/source_scores/haydn_trumpet_concerto.pdf (✅ 확보 2026-06-02 · 코튼 IMSLP 다운로드 → candidates_opus/요제프 하이든_트럼펫 협주곡.pdf ASCII copy · 35p · 2.0MB · 텍스트레이어 없는 조판 이미지본 = 악장 경계 자동검증 불가 → V6 입력 시 코튼이 3악장 Finale picking + edition_id 자가 점검)",
+    "imslp_path_axis": "https://imslp.org/wiki/Trumpet_Concerto,_Hob.VIIe:1_(Haydn,_Joseph) · PD 강 전세계 · Haydn d.1809 life+70 통과",
+    "transcription": "코튼 V6 editor 직접 입력 (OMR 없음 · manual transcription default 정합)",
+    "master_audio": "music/masters/Miku_haydn_trumpet_concerto_finale_master.wav (path 예약 · 미생성)"
+  },
+  "video": {
+    "brief": "video/video-brief.md (미작성)",
+    "final_video": "video/exports/haydn_trumpet_concerto_finale_final.mp4 (path 예약)"
+  }
+}

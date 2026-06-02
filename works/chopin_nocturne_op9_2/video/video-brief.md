@@ -2,6 +2,12 @@
 
 > 시리즈 시그너처 = [`../../../README.md`](../../../README.md) § *Series Signature* + [`../../../series_history.csv`](../../../series_history.csv) `signature_mark` 컬럼. 캐릭터 anchor = [`../../../planning/classical_miku_anchor.md`](../../../planning/classical_miku_anchor.md).
 > 박힌 날짜: 2026-05-27 (s369) · setup phase · 음악 본격 진입 사전 자료 · 그리그 swap path
+> ⚠️ **UPDATE s385 (2026-05-30)** — 이 brief는 setup phase 시점 자료라 일부 항목 stale. 확정 상태 = `../status.json` 단일 source:
+>   · 명화 = Whistler *Nocturne: Blue and Silver — Chelsea* (1871) **LOCK** (s380) — 아래 swap 후보/Old Battersea Bridge 항목 폐기.
+>   · cover = `video/cover/album_1x1.png` (1254² · 1:1) **DONE** (s384).
+>   · master = `music/masters/Miku_chopin_nocturne_op9_2_master.wav` **DONE** (s385) = -17.5 LUFS / TP -4.2 / 3:39 (219s).
+>   · 청취 게이트 = 코튼 *이대로 결정* **통과** (s385) → video_release 진입.
+>   · 미결 = letterbox 3 hex(커버 블루-실버 실측 base) + ABA' 섹션라벨 채택 여부.
 
 ## Identity
 
@@ -12,7 +18,7 @@
 - Composer: Frédéric Chopin (1810-1849)
 - Arrangement: 코튼 V6 직접 입력 (OMR 없음 · 원곡 solo piano · RH bel canto → lead_miku · LH waltz-like arpeggio → mid_oo+low_oo 분배 axis · 모음/humming layer)
 - Vocal: Hatsune Miku (V6) · 가사 없음 (기악 원곡 family)
-- Duration: 미정 (V6 작업 후 master 자료 정확 분량 확정 · ~4분 base)
+- Duration: **3:39 (219s)** 확정 (s385 master 실측)
 - Release format: YouTube 16:9 + 1:1 album cover still
 
 ## Core Promise

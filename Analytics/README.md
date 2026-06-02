@@ -102,5 +102,6 @@ python Analytics/youtube_analytics.py report --days 7 # 최근 7일
 
 - **신곡 publish 시**: `youtube_analytics.py`의 `VIDEOS` 딕셔너리에 `영상ID: "표시명"` 추가.
 - **데이터 지연**: YouTube Analytics는 2~3일 지연. 오늘 변경은 며칠 뒤부터 반영.
-- **토큰 만료/스코프 변경 시**: `.youtube_oauth_token.json` 삭제 후 재인증.
+- **토큰 만료/스코프 변경 시**: `.youtube_oauth_token.json` 삭제 후 재인증. (단 아래 ⚠️로 코드가 자동 폴백하므로 보통 삭제 불필요 — 그냥 다시 실행하면 브라우저 재인증이 뜬다.)
+- **⚠️ `invalid_grant: Token has been expired or revoked` 반복 시 = OAuth 동의 화면이 "테스트(Testing)" 게시 상태**: 테스트 상태면 refresh token이 **발급 7일 뒤 자동 만료**된다 (주 1회 안 돌리면 매번 죽음). **근본 해결 = GCP 콘솔 → API 및 서비스 → OAuth 동의 화면 → "앱 게시(PUBLISH APP)" → 프로덕션(In production)**. ("미확인 앱" 경고는 본인 앱이라 무방 · 인증 시 "고급→계속"). 게시하면 쓰기용 토큰(`youtube_meta.py`)도 같은 동의화면이라 동시 해결. (s387 디버깅 · `get_credentials`가 갱신 실패 시 브라우저 재인증으로 자동 폴백하도록 수정 완료.)
 - **보안**: `client_secret.json` + `.youtube_oauth_token.json` 둘 다 gitignore됨. 절대 커밋·공유 X.

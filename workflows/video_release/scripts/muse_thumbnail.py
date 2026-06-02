@@ -68,6 +68,13 @@ REGISTRY = {
     "mozart_twinkle_variations": dict(dir="mozart_twinkle_variations_k265",
                        cover="video/cover/album_1x1.png",
                        box=(0.30, 0.40, 1.00, 1.00), composer="W.A. Mozart", piece="Twinkle Twinkle Variations"),
+    "chopin":     dict(dir="chopin_nocturne_op9_2",
+                       cover="video/cover/album_1x1.png",
+                       box=(0.30, 0.40, 1.00, 1.00), composer="Frédéric Chopin", piece="Nocturne Op. 9 No. 2"),
+    "pachelbel":  dict(dir="pachelbel_canon_in_d",
+                       cover="video/cover/album_1x1.png",
+                       # box = v8 노래 커버 (코튼 s389: 우측 이동 + 중앙기준 약간 확대 = 중심 0.52 기준 박스 ~7% 축소)
+                       box=(0.13, 0.13, 0.91, 0.90), composer="Johann Pachelbel", piece="Canon in D"),
 }
 
 _probe = ImageDraw.Draw(Image.new("RGB", (8, 8)))

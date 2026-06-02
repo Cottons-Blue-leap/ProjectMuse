@@ -106,20 +106,27 @@ def get_credentials():
     creds = None
     if TOKEN_FILE.exists():
         creds = Credentials.from_authorized_user_file(str(TOKEN_FILE), SCOPES)
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
+    if creds and creds.valid:
+        return creds
+    # 만료 + refresh_token 있으면 갱신 시도. 단 refresh_token이 revoke/만료(invalid_grant)되면
+    # 예외가 나는데, 여기서 죽지 말고 브라우저 재인증으로 폴백한다 (테스트 게시 상태 7일 만료 대응).
+    if creds and creds.expired and creds.refresh_token:
+        try:
             creds.refresh(Request())
-        else:
-            if not CLIENT_SECRET.exists():
-                sys.exit(
-                    f"client_secret.json 없음:\n  {CLIENT_SECRET}\n"
-                    "GCP에서 OAuth 데스크톱 클라이언트 JSON 받아 위 경로에 두기 (Analytics/README.md 참조)."
-                )
-            flow = InstalledAppFlow.from_client_secrets_file(str(CLIENT_SECRET), SCOPES)
-            print("브라우저가 열립니다. 채널 소유 Google 계정으로 로그인·허용하세요…")
-            creds = flow.run_local_server(port=0)
-        TOKEN_FILE.write_text(creds.to_json(), encoding="utf-8")
-        print(f"토큰 캐시됨: {TOKEN_FILE.name}")
+        except Exception as e:  # noqa: BLE001  (RefreshError 등)
+            print(f"토큰 갱신 실패({type(e).__name__}: {e}) → 브라우저 재인증으로 진행합니다.")
+            creds = None
+    if not creds or not creds.valid:
+        if not CLIENT_SECRET.exists():
+            sys.exit(
+                f"client_secret.json 없음:\n  {CLIENT_SECRET}\n"
+                "GCP에서 OAuth 데스크톱 클라이언트 JSON 받아 위 경로에 두기 (Analytics/README.md 참조)."
+            )
+        flow = InstalledAppFlow.from_client_secrets_file(str(CLIENT_SECRET), SCOPES)
+        print("브라우저가 열립니다. 채널 소유 Google 계정으로 로그인·허용하세요…")
+        creds = flow.run_local_server(port=0)
+    TOKEN_FILE.write_text(creds.to_json(), encoding="utf-8")
+    print(f"토큰 캐시됨: {TOKEN_FILE.name}")
     return creds
 
 

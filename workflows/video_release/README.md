@@ -44,6 +44,7 @@ works/<piece>/video/
 
 - `docs/video_workflow.md`
 - `docs/description_template.md`
+- `docs/localization.md` — **9개 언어 현지화 doctrine** (release 시 제목·설명 9로케일 / 엔진 `Analytics/localize_batch.py`)
 - `docs/post_release_meta_doctrine.md`
 - `templates/video-brief.md`
 - `templates/visualizer-spec.md`
@@ -54,6 +55,12 @@ works/<piece>/video/
 works/<piece>/video/exports/<piece>_final.mp4
 works/<piece>/video/release/title.txt
 works/<piece>/video/release/description.md
+works/<piece>/video/release/title.<lang>.txt          # 7 신규 로케일 (localize_batch write)
+works/<piece>/video/release/description.<lang>.txt    # 7 신규 로케일 (es·pt·de·fr·ru·zh-Hant·zh-Hans)
 works/<piece>/video/release/credits.md
 works/<piece>/video/release/rights-notes.md
 ```
+
+## 현지화 (9개 언어 · s393)
+
+release 메타 적용 단계에서 제목·설명을 9개 언어로 push (publish 전). 신곡 = `localize_batch.py WORKS` 에 항목 추가 → `gate`/`review` → 외부 QA → `push --only <vid>` → `audit --only <vid>`. 정본 = `docs/localization.md`.

@@ -1,7 +1,7 @@
 {
   "_comment": "Project Muse 워크플로우 단일 레지스트리. 워크플로우 추가/수정/삭제 시 이 파일 + 해당 폴더 README front-matter만 갱신. 인간용 인덱스 = workflows/README.md. 정본 양식 = workflows/_TEMPLATE/.",
   "schema_version": "1.0",
-  "updated": "2026-05-30",
+  "updated": "2026-06-03",
   "pipeline_order": [
     "project_setup",
     "rights_clearance",
@@ -78,12 +78,15 @@
         "works/<piece>/video/exports/<piece_id>_final.mp4",
         "works/<piece>/video/release/title.txt",
         "works/<piece>/video/release/description.md",
+        "works/<piece>/video/release/title.<lang>.txt (7 locales · localize_batch)",
+        "works/<piece>/video/release/description.<lang>.txt (es·pt·de·fr·ru·zh-Hant·zh-Hans)",
         "works/<piece>/video/release/credits.md",
         "works/<piece>/video/release/rights-notes.md"
       ],
       "depends_on": ["audio_production"],
       "owner": "Cotton+MOKA",
-      "docs": ["docs/video_workflow.md", "docs/description_template.md", "docs/post_release_meta_doctrine.md", "docs/thumbnail_guide.md"],
+      "docs": ["docs/video_workflow.md", "docs/description_template.md", "docs/localization.md", "docs/post_release_meta_doctrine.md", "docs/thumbnail_guide.md"],
+      "localization": "9개 언어 (release 시 제목·설명 push · 엔진 Analytics/localize_batch.py · 신곡 = WORKS 추가 → gate/review → 외부 QA → push --only <vid> → audit --only <vid> · 정본 docs/localization.md)",
       "subdirs": ["docs", "scripts", "templates"]
     },
     "shorts_first_proof": {

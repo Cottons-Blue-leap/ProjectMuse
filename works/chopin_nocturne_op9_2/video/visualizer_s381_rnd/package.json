@@ -1,0 +1,24 @@
+{
+  "name": "muse-chopin-nocturne-op9-2-visualizer",
+  "version": "0.1.0",
+  "description": "Atelier Miku Acappella — Chopin Nocturne Op. 9 No. 2 visualizer",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts MuseChopinNocturneOp9No2 out/chopin_nocturne_op9_2_final.mp4",
+    "render:still": "remotion still src/index.ts MuseChopinNocturneOp9No2 out/still_check.png --frame=900",
+    "preview": "remotion preview src/index.ts"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.446",
+    "@remotion/media-utils": "^4.0.460",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.446"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.6.0"
+  }
+}

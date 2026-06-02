@@ -17,6 +17,8 @@ youtube_analytics.py 는 읽기 전용(analytics). 본 도구는 **쓰기**(forc
   python Analytics/youtube_meta.py get <video_id>            # 현재 제목/현지화 확인
   python Analytics/youtube_meta.py set-title <video_id> --default "..." --en "..." --ko "..." --ja "..."
   python Analytics/youtube_meta.py set-tags <video_id> "tag1, tag2, ..."   # 백엔드 태그 칸 (--dry-run 권장)
+  python Analytics/youtube_meta.py set-description <video_id> \
+      [--default-file ...] [--en-file ...] [--ja-file ...] [--ko-file ...] [--dry-run]   # 설명 본문 통째 적용
   python Analytics/youtube_meta.py set-thumbnail <video_id> <image.png>
   python Analytics/youtube_meta.py update-description-line <vid> [vid...] \
       --en-find "X" --en-replace "Y" [--ja-find ... --ja-replace ... --ko-find ... --ko-replace ...] [--dry-run]
@@ -35,6 +37,7 @@ try:
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
     from googleapiclient.errors import HttpError
+    from google.auth.exceptions import RefreshError
 except ImportError:
     sys.exit(
         "의존성 미설치. 먼저 실행:\n"
@@ -53,8 +56,12 @@ def get_credentials():
         creds = Credentials.from_authorized_user_file(str(TOKEN_FILE), SCOPES)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
+            try:
+                creds.refresh(Request())
+            except RefreshError:
+                print("기존 토큰 만료/취소됨 → 캐시 폐기 후 새 브라우저 인증으로 진행.")
+                creds = None
+        if not creds or not creds.valid:
             if not CLIENT_SECRET.exists():
                 sys.exit(
                     f"client_secret.json 없음:\n  {CLIENT_SECRET}\n"
@@ -109,6 +116,8 @@ def cmd_get(args):
 
 def cmd_set_title(args):
     provided = {k: v for k, v in (("en", args.en), ("ko", args.ko), ("ja", args.ja)) if v}
+    for lang, title in (getattr(args, "loc", None) or []):
+        provided[lang] = title
     if not provided and not args.default and not args.default_language:
         sys.exit("바꿀 자료를 하나 이상 지정 (--default / --en / --ko / --ja / --default-language).")
 
@@ -308,6 +317,139 @@ def cmd_update_description_line(args):
         _update_description_line_one(svc, vid, pairs, dry_run=args.dry_run)
 
 
+def cmd_set_description(args):
+    """설명 본문 통째 적용 (read-modify-write · 제목/태그/카테고리/언어 보존).
+
+    --default-file = snippet.description (보통 defaultLanguage=en 본문).
+    --en-file / --ja-file / --ko-file = localizations[lang].description (해당 로케일 제목은 보존).
+    defaultLanguage 로케일(보통 en)은 --default-file 과 --en-file 를 동시에 줘서 둘을 일치시킴.
+    한 로케일이라도 localizations 항목이 없으면 새로 만들되 title 은 빈 문자열 placeholder.
+    """
+    def _read(path):
+        return Path(path).read_text(encoding="utf-8").strip("\n") if path else None
+
+    desc_default = _read(args.default_file)
+    desc_locale = {
+        lang: _read(p)
+        for lang, p in (("en", args.en_file), ("ja", args.ja_file), ("ko", args.ko_file))
+        if p
+    }
+    for lang, p in (getattr(args, "loc_file", None) or []):
+        desc_locale[lang] = _read(p)
+    if desc_default is None and not desc_locale:
+        sys.exit("적용할 설명 지정 X (--default-file / --en-file / --ja-file / --ko-file 중 1개 이상).")
+
+    svc = yt()
+    v = _get_video(svc, args.video)
+    old = v["snippet"]
+    locs = dict(v.get("localizations") or {})
+    default_lang = old.get("defaultLanguage")
+
+    # read-modify-write: 쓰기 가능한 snippet 필드만 보존, description 만 교체(있으면).
+    new_snippet = {
+        "title": old.get("title"),
+        "categoryId": old.get("categoryId"),
+        "description": desc_default if desc_default is not None else old.get("description", ""),
+    }
+    if old.get("tags"):
+        new_snippet["tags"] = old["tags"]
+    if default_lang:
+        new_snippet["defaultLanguage"] = default_lang
+    if old.get("defaultAudioLanguage"):
+        new_snippet["defaultAudioLanguage"] = old["defaultAudioLanguage"]
+
+    for lang, text in desc_locale.items():
+        entry = dict(locs.get(lang, {}))
+        entry["description"] = text
+        if "title" not in entry:
+            entry["title"] = ""  # localizations 항목엔 title 필수
+        locs[lang] = entry
+
+    if args.dry_run:
+        print(f"[dry-run] {args.video} 적용 예정:")
+        if desc_default is not None:
+            print(f"  [default] {len(desc_default)}자 · 첫줄 {desc_default.splitlines()[0]!r}")
+        for lang, text in desc_locale.items():
+            print(f"  [{lang}] {len(text)}자 · 첫줄 {text.splitlines()[0]!r}")
+        print("  (제목·태그·카테고리·언어·다른 로케일 보존)")
+        return
+
+    body = {"id": args.video, "snippet": new_snippet, "localizations": locs}
+    try:
+        svc.videos().update(part="snippet,localizations", body=body).execute()
+    except HttpError as e:
+        sys.exit(f"update 실패: {e}")
+    applied = (["default"] if desc_default is not None else []) + list(desc_locale.keys())
+    print(f"✓ 설명 적용 완료: {args.video} ({', '.join(applied)})")
+
+
+def _get_channel(svc):
+    resp = svc.channels().list(part="snippet,brandingSettings,localizations", mine=True).execute()
+    items = resp.get("items", [])
+    if not items:
+        sys.exit("소유 채널을 못 찾음. 채널 소유 계정 토큰인지 확인.")
+    return items[0]
+
+
+def cmd_get_channel(args):
+    ch = _get_channel(yt())
+    sn = ch["snippet"]
+    branding = ch.get("brandingSettings", {}).get("channel", {})
+    print(f"=== channel {ch['id']} ===")
+    print(f"title = {sn.get('title')}")
+    print(f"defaultLanguage = {branding.get('defaultLanguage')}")
+    print(f"\n[default description]\n{branding.get('description', '')}")
+    for lang, loc in (ch.get("localizations") or {}).items():
+        print(f"\n[{lang}] title={loc.get('title')!r}\n{loc.get('description', '')}")
+
+
+def cmd_set_channel(args):
+    """채널 현지화 (channels.update · localizations part).
+
+    채널명(title)은 브랜드 고정 → 전 로케일 동일 title 박고 description 만 현지화.
+    localizations[lang] = {title, description} (둘 다 필수). title 미지정 시 현재 채널명 사용.
+    localizations 가 display 되려면 채널 defaultLanguage 가 설정돼 있어야 함 (--default-language 로 박기 가능).
+    """
+    svc = yt()
+    ch = _get_channel(svc)
+    cid = ch["id"]
+    brand_title = ch["snippet"].get("title")
+    branding = ch.get("brandingSettings", {})
+    locs = dict(ch.get("localizations") or {})
+
+    for lang, path in (args.loc_file or []):
+        text = Path(path).read_text(encoding="utf-8").strip("\n")
+        entry = dict(locs.get(lang, {}))
+        entry["description"] = text
+        entry["title"] = args.title or entry.get("title") or brand_title  # 브랜드명 고정
+        locs[lang] = entry
+
+    if not locs:
+        sys.exit("적용할 로케일 description 지정 X (--loc-file LANG PATH 반복).")
+
+    body = {"id": cid, "localizations": locs}
+    part = "localizations"
+    cur_default = branding.get("channel", {}).get("defaultLanguage")
+    if args.default_language and args.default_language != cur_default:
+        branding.setdefault("channel", {})["defaultLanguage"] = args.default_language
+        body["brandingSettings"] = branding
+        part = "brandingSettings,localizations"
+
+    if args.dry_run:
+        print(f"[dry-run] channel {cid} 적용 예정 (title 브랜드 고정 = {brand_title!r}):")
+        if "brandingSettings" in body:
+            print(f"  defaultLanguage → {args.default_language}")
+        for lang, path in (args.loc_file or []):
+            print(f"  [{lang}] ← {path}")
+        return
+
+    try:
+        svc.channels().update(part=part, body=body).execute()
+    except HttpError as e:
+        sys.exit(f"channel update 실패: {e}")
+    print(f"✓ 채널 현지화 적용: {cid} ({', '.join(l for l, _ in (args.loc_file or []))})")
+
+
 def cmd_set_thumbnail(args):
     img = Path(args.image)
     if not img.exists():
@@ -339,6 +481,8 @@ def main():
     s.add_argument("--en")
     s.add_argument("--ko")
     s.add_argument("--ja")
+    s.add_argument("--loc", nargs=2, action="append", metavar=("LANG", "TITLE"),
+                   help="임의 로케일 제목 (반복 가능): --loc es '...' --loc ru '...' --loc zh-Hant '...'")
     s.add_argument("--default-language", help="snippet.defaultLanguage 박기 (e.g. en) · 제목 안 바꾸고 언어만 set 가능")
     s.add_argument("--dry-run", action="store_true", help="적용 없이 미리보기")
 
@@ -347,6 +491,26 @@ def main():
     st.add_argument("tags", nargs="?", help="콤마 구분 태그 문자열")
     st.add_argument("--from-file", help="태그 문자열을 파일에서 읽기 (콤마/줄바꿈 구분)")
     st.add_argument("--dry-run", action="store_true", help="적용 없이 미리보기")
+
+    sd = sub.add_parser("set-description", help="설명 본문 통째 적용 (per-locale · read-modify-write)")
+    sd.add_argument("video")
+    sd.add_argument("--default-file", help="snippet.description 본문 파일 (보통 EN)")
+    sd.add_argument("--en-file", help="localizations.en.description 본문 파일")
+    sd.add_argument("--ja-file", help="localizations.ja.description 본문 파일")
+    sd.add_argument("--ko-file", help="localizations.ko.description 본문 파일")
+    sd.add_argument("--loc-file", nargs=2, action="append", metavar=("LANG", "PATH"),
+                    help="임의 로케일 설명 파일 (반복 가능): --loc-file es path --loc-file zh-Hant path")
+    sd.add_argument("--dry-run", action="store_true", help="적용 없이 미리보기")
+
+    gc = sub.add_parser("get-channel", help="채널 제목/설명/현지화 + defaultLanguage 확인")
+    gc.set_defaults(_unused=None)
+
+    sc = sub.add_parser("set-channel", help="채널 현지화 (description 만 · title 브랜드 고정)")
+    sc.add_argument("--loc-file", nargs=2, action="append", metavar=("LANG", "PATH"),
+                    help="로케일 채널설명 파일 (반복): --loc-file es path · en 포함 가능")
+    sc.add_argument("--title", help="현지화 title 강제 지정 (기본 = 현재 채널명 = 브랜드 고정)")
+    sc.add_argument("--default-language", help="채널 defaultLanguage 박기 (localizations 표시 전제조건)")
+    sc.add_argument("--dry-run", action="store_true", help="적용 없이 미리보기")
 
     t = sub.add_parser("set-thumbnail", help="커스텀 썸네일 업로드")
     t.add_argument("video")
@@ -371,6 +535,9 @@ def main():
         "get": cmd_get,
         "set-title": cmd_set_title,
         "set-tags": cmd_set_tags,
+        "set-description": cmd_set_description,
+        "get-channel": cmd_get_channel,
+        "set-channel": cmd_set_channel,
         "set-thumbnail": cmd_set_thumbnail,
         "update-description-line": cmd_update_description_line,
     }[args.cmd](args)

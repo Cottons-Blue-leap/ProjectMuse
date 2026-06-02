@@ -48,16 +48,16 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 ### 1. 영상 제목 (YouTube title)
 ```
-{작곡가} - {곡명} (feat. 初音ミク)
+{작곡가 성(姓)} - {곡명} (feat. 初音ミク)
 ```
-예: `Erik Satie - Gymnopédie No. 1 (feat. 初音ミク)`
+예: `Satie - Gymnopédie No. 1 (feat. 初音ミク)`
 
 현지화 제목 (JP/KR · `Analytics/youtube_meta.py set-title --default --en --ko --ja` 한 명령):
-- JP: `{작곡가JP} - {곡명JP} (feat. 初音ミク)` 예: `エリック・サティ - ジムノペディ第1番 (feat. 初音ミク)`
-- KR: `{작곡가KR} - {곡명KR} (feat. 初音ミク)` 예: `에릭 사티 - 짐노페디 1번 (feat. 初音ミク)`
+- JP: `{작곡가 성JP} - {곡명JP} (feat. 初音ミク)` 예: `サティ - ジムノペディ第1番 (feat. 初音ミク)`
+- KR: `{작곡가 성KR} - {곡명KR} (feat. 初音ミク)` 예: `사티 - 짐노페디 1번 (feat. 初音ミク)`
 
 양식 결단 (s355 · 코튼 · v10/s348 앞 브래킷 supersede):
-- `{작곡가 풀네임} - {곡명} (feat. 初音ミク)` 후치 양식. **제목에 "Acappella" 없음** = 채널명+태그가 담고, 영상이 acappella를 *reveal* (curiosity-gap 설계 · 스펙시트 X · 평가 모드 → 발견 모드).
+- `{작곡가 성(姓)} - {곡명} (feat. 初音ミク)` 후치 양식 (**작곡가 = 성만** · 전 로케일 네이티브 · 라이브 convention = [`../../../planning/title_naming_guide.md`](../../../planning/title_naming_guide.md) 2026-05-28 lock · ⚠️ **본문 헌사·썸네일은 풀네임** keep[Mozart 양식]). **제목에 "Acappella" 없음** = 채널명+태그가 담고, 영상이 acappella를 *reveal* (curiosity-gap 설계 · 스펙시트 X · 평가 모드 → 발견 모드).
 - feat. 크레딧 = **전 로케일 `初音ミク`** (정체성 마크 · 검색 키워드 X). 검색≈0 + 썸네일>>제목(s352)이라 제목 키워드 위치는 레버 아님 · 로마자/한글 미쿠는 태그·설명·해시태그가 담당.
 - 곡명 = 시장 canonical (원어가 세계표준이면 원어 [Salut d'Amour·Gymnopédie] · 현지표준 있으면 현지 [四季 春·사계 봄]).
 - defaultLanguage=en + en/ko/ja 현지화 set (한 명령 push).
@@ -70,7 +70,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 예: `Erik Satie - Gymnopédie No. 1 (1888). Seven Mikus sing it now.`
 
 가변 양식:
-- 작품 라벨 양식 = YouTube title의 `{작곡가} - {곡명}` core와 일관 (`(feat. 初音ミク)` 크레딧 suffix 제외 · display label 연속성)
+- 작품 라벨 양식 = 작곡가 **풀네임** + 곡명 (⚠️ title은 성만이나 **본문 헌사는 풀네임** = 정식 first-mention 크레딧 surface · title_naming_guide 2026-05-28 결단)
 - *(연도)* 괄호 = cover art *(명화 연도)* 와 평행 (미술관 라벨 양식 통일)
 - N = 합창 미쿠 수 (Seven / Five / Three 등 영어 단어 양식 keep)
 - N=1 변형: `Hatsune Miku sings it now.` (단수 처리)

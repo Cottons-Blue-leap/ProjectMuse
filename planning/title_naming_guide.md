@@ -14,10 +14,13 @@ Minimal. The composer surname + piece, then the featured-artist credit as a suff
 in the title — that lives in the channel name + tags, and the video *reveals* itself as
 acappella. The feat. credit uses `初音ミク` (the canonical Japanese wordmark) in **every locale**.
 
-**Title vs description-body convention** (코튼 2026-05-28 결단): Titles use the surname-only short
-form for identification efficiency. Description body dedications (e.g. `에릭 사티 - 짐노페디 1번
-(1888년)`) keep the full name — body is the formal first-mention surface, title is the recognition
-surface.
+**Title vs thumbnail vs description-body convention** (코튼 2026-05-28 · thumbnail rule 2026-05-31):
+Surname abbreviation is *allowed* on two surfaces — the **title** (always surname-only, for
+identification efficiency) and the **thumbnail** (full name by default, but abbreviate to surname
+*when space runs short* — e.g. `W.A. Mozart` on the K.265 thumbnail, where the long piece name left
+no room for `Wolfgang Amadeus Mozart`). The **description body** dedication (e.g. `에릭 사티 -
+짐노페디 1번 (1888년)`) *always* keeps the full name — body is the formal first-mention surface.
+So: title = surname; thumbnail = full name with surname space-fallback; body = full name always.
 
 ### Why this shape (s355 rationale)
 

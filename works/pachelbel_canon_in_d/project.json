@@ -1,0 +1,17 @@
+{
+  "piece": "Canon in D major, P.37 (Johann Pachelbel)",
+  "composer": "Johann Pachelbel (1653-1706)",
+  "section": "통째 (~4-5분 · ground bass + 3성 캐논 양식 · 발췌 없음 · 2마디 8음 ground [D-A-B-F#-G-D-G-A] 반복 위에 3성부 캐논 entry · 짐노페디·비발디·조플린·사랑의 인사·쇼팽 family 정합 · 쇼팽 솔로피아노 후 다성 카운터포인트 axis)",
+  "vocal": "Hatsune Miku (모음/humming · Ah·Oo·Mm role · 기악 원곡 = 가사 없음 · 첫 6곡 family 정합 · 원곡 = ground bass + 3 violin 캐논 → 저성부=ground / 상성부=캐논 entry 쌓기 분배 axis)",
+  "music": {
+    "source_score": "music/source_scores/pachelbel_canon_in_d.pdf (candidates_opus ASCII copy · Canon and Gigue P.37 · 1.84MB · V6 진입 시점 edition_id 자가 점검 + Canon만 picking[Gigue 제외] 의제)",
+    "imslp_path_axis": "https://imslp.org/wiki/Canon_and_Gigue_in_D_major,_P.37_(Pachelbel,_Johann) · PD 강 · Pachelbel d.1706 life+70 통과 전세계",
+    "transcription": "코튼 V6 editor 직접 입력 (OMR 없음 · manual transcription default 정합)",
+    "dry_stems_dir": "music/renders/dry_stems",
+    "master_audio": "music/masters/Miku_pachelbel_canon_in_d_master.wav"
+  },
+  "video": {
+    "brief": "video/video-brief.md",
+    "final_video": "video/exports/pachelbel_canon_in_d_final.mp4"
+  }
+}
