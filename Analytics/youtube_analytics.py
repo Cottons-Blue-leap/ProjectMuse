@@ -59,6 +59,8 @@ SCOPES = [
 ]
 
 # 시리즈 발행작 (영상 ID → 표시명). 신곡 publish 시 여기 추가.
+# = post_release_meta_doctrine "신곡 vid 갱신" 대상 (status.json · description.md ·
+#   localize_batch WORKS · 본 VIDEOS) — 미등재 영상은 스냅샷/리포트에서 제외됨.
 VIDEOS = {
     "rRnl8RZ3EjY": "Gymnopédie No. 1",
     "0qXLYmZXAx0": "Vivaldi - Spring I",
@@ -67,6 +69,8 @@ VIDEOS = {
     "PiR9hy6xmGQ": "Mozart - K.265",
     "9EvpHXE3D1s": "Chopin - Nocturne Op.9-2",
     "B9ENEwjgAhc": "Pachelbel - Canon in D",
+    "759VCWOtC2w": "Tchaikovsky - Sugar Plum Fairy",
+    "X9xxOeqi2Sk": "Boccherini - Minuet",
 }
 
 # `report` 명령 산출물 자리 (스크립트와 같은 Analytics/ 폴더에 함께 둠).
@@ -432,8 +436,13 @@ def write_csvs(data, measured_on, window, start, end):
             "subs_gained": ch.get("subscribersGained", ""), "shares": ch.get("shares", ""),
             "like_rate_pct": _pct(ch.get("likes"), ch.get("views")),
         })
+    skipped = []
     for v in data["videos"]:
         vid = v.get("video", "")
+        # 미등재(=미발행) 영상, 시청지속률>100%(공개 전 QC 루프 시청 아티팩트)는 시계열에서 제외
+        if vid not in VIDEOS or _num(v.get("averageViewPercentage")) > 100:
+            skipped.append(vid)
+            continue
         snap_rows.append({
             "measured_on": measured_on, "window_days": window,
             "start_date": start, "end_date": end,
@@ -445,6 +454,8 @@ def write_csvs(data, measured_on, window, start, end):
             "subs_gained": v.get("subscribersGained", ""), "shares": "",
             "like_rate_pct": _pct(v.get("likes"), v.get("views")),
         })
+    if skipped:
+        print(f"  스냅샷 제외 {len(skipped)}건 (VIDEOS 미등재 또는 공개 전 아티팩트): {', '.join(skipped)}")
     _upsert_csv(ANALYTICS_DIR / "snapshots.csv", SNAP_FIELDS, snap_rows, measured_on)
 
     total = sum(_num(t.get("views")) for t in data["traffic"]) or 1.0
@@ -631,12 +642,21 @@ def render_markdown(data, measured_on, window, start, end, prev):
     L.append("")
     L.append("| 영상 | 조회 | 좋아요율 | 평균시청 | 시청지속률 | 댓글 | 구독기여 |")
     L.append("|---|--:|--:|--:|--:|--:|--:|")
+    excluded = []
     for v in data["videos"]:
-        name = VIDEOS.get(v.get("video", ""), v.get("video", ""))
+        vid = v.get("video", "")
+        if vid not in VIDEOS or _num(v.get("averageViewPercentage")) > 100:
+            excluded.append(VIDEOS.get(vid, vid))
+            continue
+        name = VIDEOS[vid]
         L.append(f"| {name} | {fmt_int(v.get('views'))} | {_pct(v.get('likes'), v.get('views'))}% "
                  f"| {int(_num(v.get('averageViewDuration')))}s "
-                 f"| {v.get('averageViewPercentage')}% | {v.get('comments')} | {v.get('subscribersGained')} |")
+                 f"| {round(_num(v.get('averageViewPercentage')), 2)}% | {v.get('comments')} | {v.get('subscribersGained')} |")
     L.append("")
+    if excluded:
+        L.append(f"> 제외 {len(excluded)}건 (VIDEOS 미등재 또는 시청지속률>100% = 공개 전 QC 시청 아티팩트): "
+                 f"{', '.join(excluded)}")
+        L.append("")
 
     # 3. 트래픽 진단
     L.append("## 3. 트래픽 진단")
