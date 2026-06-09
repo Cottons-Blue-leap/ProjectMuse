@@ -65,6 +65,8 @@ VIDEOS = {
     "DVIYl09zX-w": "Joplin - Entertainer",
     "zshjmBhus2I": "Elgar - Salut d'Amour",
     "PiR9hy6xmGQ": "Mozart - K.265",
+    "9EvpHXE3D1s": "Chopin - Nocturne Op.9-2",
+    "B9ENEwjgAhc": "Pachelbel - Canon in D",
 }
 
 # `report` 명령 산출물 자리 (스크립트와 같은 Analytics/ 폴더에 함께 둠).

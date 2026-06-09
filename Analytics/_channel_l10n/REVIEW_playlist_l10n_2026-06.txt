@@ -1,0 +1,88 @@
+PROJECT MUSE — PLAYLIST LOCALIZATION REVIEW FINAL (2026-06 · 3-AI 2회 교차검증 · 배포 가능 수렴)
+playlists: 6 (5 eras + non-stop) · locales: en(default) + ja/ko/es/pt/de/fr/ru/zh-Hant/zh-Hans
+정책: TITLE = 전 로케일 영문 고정 · DESCRIPTION 만 현지화 · 본문 가수 지칭은 현지 표기 · 아카펠라=본문은 자국 문자(zh 阿卡貝拉·ru а капелла), 라틴문자권만 a cappella
+======================================================================
+
+### TITLE (전 로케일 영문 고정 — 검토 불필요, 참고용)
+
+   Miku in the Baroque Era         [baroque]
+   Miku in the Classical Era       [classical]
+   Miku in the Romantic Era        [romantic]
+   Miku in the 20th Century        [20th_century]
+   Miku in the Renaissance Era     [renaissance]
+   Miku Non-Stop A Cappella        [non_stop]
+
+
+### DESCRIPTION (en/ja/ko = 기존 라이브 정본 · es/pt/de/fr/ru/zh-Hant/zh-Hans = FINAL 번역)
+
+■ baroque  (Miku in the Baroque Era)
+   en        Listen to the dynamic music of the Baroque era, pulsing with dramatic contrasts and ornate embellishments, through Miku's acappella.  (정본)
+   ja        劇的な対比と華やかな装飾音が絶え間なく脈打つ、バロック時代のダイナミックな音楽をミクのアカペラでご堪能ください。  (정본)
+   ko        극적인 대비와 화려한 장식음이 쉴 새 없이 박동하는 바로크 시대의 역동적인 음악을 미쿠의 아카펠라로 감상하세요.  (정본)
+   es        Escucha la dinámica música del Barroco, palpitante de contrastes dramáticos y ornamentación elaborada, en la voz a cappella de Miku.  (FINAL)
+   pt        Ouça a dinâmica música do Barroco, pulsante de contrastes dramáticos e ornamentações elaboradas, na voz a cappella de Miku.  (FINAL)
+   de        Erlebe die dynamische Musik des Barock, pulsierend vor dramatischen Kontrasten und kunstvollen Verzierungen, mit Mikus A-cappella-Stimme.  (FINAL)
+   fr        Écoutez la musique dynamique de l'époque baroque, vibrante de contrastes dramatiques et d'ornements raffinés, à travers la voix a cappella de Miku.  (FINAL)
+   ru        Слушайте динамичную музыку барокко, пульсирующую драматическими контрастами и изысканной орнаментикой, в исполнении Мику а капелла.  (FINAL)
+   zh-Hant   聆聽巴洛克時代躍動不息、充滿戲劇性對比與華麗裝飾音的音樂，由初音未來以阿卡貝拉獻聲。  (FINAL)
+   zh-Hans   聆听巴洛克时代跃动不息、充满戏剧性对比与华丽装饰音的音乐，由初音未来以阿卡贝拉献声。  (FINAL)
+
+■ classical  (Miku in the Classical Era)
+   en        Enjoy the music of the Classical era, where strict formal beauty and clear melodies achieve perfect balance, through Miku's transparent voice.  (정본)
+   ja        徹底した形式美と明瞭な旋律が完璧な均衡を保つ、古典派時代の音楽をミクの透明な声でお楽しみください。  (정본)
+   ko        철저한 형식미와 명료한 선율이 완벽한 균형을 이루는 고전주의 시대의 음악을 미쿠의 투명한 목소리로 즐겨보세요.  (정본)
+   es        Disfruta de la música del Clasicismo, donde la rigurosa belleza formal y las melodías nítidas alcanzan un equilibrio perfecto, a través de la voz transparente de Miku.  (FINAL)
+   pt        Aprecie a música do Classicismo, onde a rigorosa beleza formal e as melodias nítidas alcançam um equilíbrio perfeito, através da voz transparente de Miku.  (FINAL)
+   de        Genieße die Musik der Klassik, in der strenge formale Schönheit und klare Melodien vollkommene Ausgewogenheit erreichen, mit Mikus transparenter Stimme.  (FINAL)
+   fr        Savourez la musique de l'époque classique, où une beauté formelle rigoureuse et des mélodies limpides atteignent un équilibre parfait, à travers la voix cristalline de Miku.  (FINAL)
+   ru        Насладитесь музыкой классицизма, где строгая красота формы и ясность мелодий достигают совершенного равновесия, прозрачным голосом Мику.  (FINAL)
+   zh-Hant   欣賞古典樂派時期的音樂——嚴謹的形式美與清晰的旋律達到完美的平衡，由初音未來以澄澈的歌聲詮釋。  (FINAL)
+   zh-Hans   欣赏古典乐派时期的音乐——严谨的形式美与清晰的旋律达到完美的平衡，由初音未来以澄澈的歌声诠释。  (FINAL)
+
+■ romantic  (Miku in the Romantic Era)
+   en        Explore the music of the Romantic era, which broke traditional forms to explode with deep human emotions and dramatic narratives, through Miku's delicate voice.  (정본)
+   ja        形式の枠を越え、人間の濃密な感情と劇的な叙事を爆発させたロマン派時代の音楽を、ミクの繊細な声で探検してみましょう。  (정본)
+   ko        형식의 틀을 벗어나 인간의 짙은 감정과 극적인 서사를 폭발시켰던 낭만주의 시대의 음악을 미쿠의 섬세한 목소리로 탐험하세요.  (정본)
+   es        Explora la música del Romanticismo, que rompió las formas tradicionales para estallar en emociones humanas profundas y narrativas dramáticas, a través de la delicada voz de Miku.  (FINAL)
+   pt        Explore a música do Romantismo, que rompeu com as formas tradicionais, dando vazão a emoções humanas profundas e narrativas dramáticas, através da delicada voz de Miku.  (FINAL)
+   de        Erkunde die Musik der Romantik, die traditionelle Formen sprengte und tiefe menschliche Gefühle sowie dramatische Erzählungen entfesselte, mit Mikus zarter Stimme.  (FINAL)
+   fr        Explorez la musique de l'époque romantique, qui brisa les formes traditionnelles pour faire éclater des émotions humaines profondes et des récits dramatiques, à travers la voix délicate de Miku.  (FINAL)
+   ru        Откройте для себя музыку романтизма, которая разрушила традиционные формы и дала волю глубоким человеческим чувствам и драматическим повествованиям, нежным голосом Мику.  (FINAL)
+   zh-Hant   探索浪漫樂派時期的音樂——它打破傳統形式，迸發出深沉的人類情感與戲劇性的敘事，由初音未來以細膩的嗓音演繹。  (FINAL)
+   zh-Hans   探索浪漫乐派时期的音乐——它打破传统形式，迸发出深沉的人类情感与戏剧性的叙事，由初音未来以细腻的嗓音演绎。  (FINAL)
+
+■ 20th_century  (Miku in the 20th Century)
+   en        Experience the unconventional music of the 20th century, where centuries of rules were deconstructed to welcome diverse rhythms and radical experiments, together with Miku.  (정본)
+   ja        数百年の規則を解体し、多彩なリズムと破格の実験が共存した20世紀の新しい音楽を、ミクと一緒に経験してみてください。  (정본)
+   ko        수백 년의 규칙을 해체하고 다채로운 리듬과 파격적인 실험이 공존했던 20세기의 새로운 음악들을 미쿠와 함께 경험하세요.  (정본)
+   es        Vive la música rompedora del siglo XX, donde siglos de reglas se deconstruyeron para dar paso a ritmos diversos y experimentos radicales, junto a Miku.  (FINAL)
+   pt        Viva a música inovadora do século XX, onde regras de séculos foram desconstruídas para dar lugar a ritmos diversos e experimentos radicais, ao lado de Miku.  (FINAL)
+   de        Erlebe die unkonventionelle Musik des 20. Jahrhunderts, in der jahrhundertealte Regeln dekonstruiert wurden, um vielfältigen Rhythmen und radikalen Experimenten Raum zu geben — gemeinsam mit Miku.  (FINAL)
+   fr        Découvrez la musique non conventionnelle du XXe siècle, où des siècles de règles furent déconstruits pour accueillir des rythmes variés et des expérimentations radicales, aux côtés de Miku.  (FINAL)
+   ru        Откройте для себя нестандартную музыку XX века, где вековые правила были деконструированы, чтобы впустить разнообразные ритмы и смелые эксперименты, вместе с Мику.  (FINAL)
+   zh-Hant   與初音未來一同體驗20世紀的不羈音樂——數百年的規則被解構，迎來多元的節奏與大膽的實驗。  (FINAL)
+   zh-Hans   与初音未来一同体验20世纪的不羁音乐——数百年的规则被解构，迎来多元的节奏与大胆的实验。  (FINAL)
+
+■ renaissance  (Miku in the Renaissance Era)
+   en        Experience the music of the Renaissance era, where independent melodies intricately intertwine, through Miku's pure voice.  (정본)
+   ja        独立した旋律が交差し、精巧な調和をなすルネサンス時代の音楽を、ミクの純粋な歌声でお楽しみください。  (정본)
+   ko        여러 선율이 독립적으로 교차하며 정교한 조화를 이룩한 르네상스 시대의 음악을 미쿠의 순수한 목소리로 만나보세요.  (정본)
+   es        Descubre la música del Renacimiento, donde melodías independientes se entrelazan con delicadeza, a través de la voz pura de Miku.  (FINAL)
+   pt        Descubra a música do Renascimento, onde melodias independentes se entrelaçam com delicadeza, através da voz pura de Miku.  (FINAL)
+   de        Entdecke die Musik der Renaissance, in der eigenständige Melodien sich kunstvoll verflechten, mit Mikus reiner Stimme.  (FINAL)
+   fr        Plongez dans la musique de la Renaissance, où des mélodies indépendantes s'entrelacent avec finesse, à travers la voix pure de Miku.  (FINAL)
+   ru        Откройте для себя музыку эпохи Возрождения, где независимые мелодии искусно переплетаются, чистым голосом Мику.  (FINAL)
+   zh-Hant   探索文藝復興時期的音樂——獨立的旋律交織出精巧的和諧，由初音未來以純淨的歌聲呈現。  (FINAL)
+   zh-Hans   探索文艺复兴时期的音乐——独立的旋律交织出精巧的和谐，由初音未来以纯净的歌声呈现。  (FINAL)
+
+■ non_stop  (Miku Non-Stop A Cappella)
+   en        Experience the complete collection in one non-stop journey across every era, sung purely through Miku's a cappella voice!  (정본)
+   ja        全時代を貫く全コレクションを、ミクのアカペラの歌声でノンストップにお楽しみください！  (정본)
+   ko        모든 시대를 아우르는 전곡 컬렉션을 미쿠의 아카펠라 목소리로 끊김 없이 감상하세요!  (정본)
+   es        ¡Vive la colección completa en un viaje sin pausa a través de todas las épocas, cantada enteramente con la voz a cappella de Miku!  (FINAL)
+   pt        Viva a coleção completa em uma jornada sem pausa por todas as épocas, cantada inteiramente com a voz a cappella de Miku!  (FINAL)
+   de        Erlebe die komplette Sammlung in einer ununterbrochenen Reise durch alle Epochen, ganz mit Mikus A-cappella-Stimme gesungen!  (FINAL)
+   fr        Vivez la collection complète en un voyage sans pause à travers toutes les époques, entièrement chantée a cappella par Miku !  (FINAL)
+   ru        Погрузитесь в полную коллекцию в непрерывном путешествии сквозь все эпохи, целиком исполненную голосом Мику а капелла!  (FINAL)
+   zh-Hant   在一段不間斷的旅程中，聆聽橫跨所有時代的全套作品，全程由初音未來以阿卡貝拉獻唱！  (FINAL)
+   zh-Hans   在一段不间断的旅程中，聆听横跨所有时代的全套作品，全程由初音未来以阿卡贝拉献唱！  (FINAL)

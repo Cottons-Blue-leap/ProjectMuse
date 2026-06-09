@@ -2,70 +2,79 @@ PROJECT MUSE — LOCALIZATION EXPANSION REVIEW (2026-06)
 locales: es / pt / de / fr / ru / zh-Hant / zh-Hans
 ============================================================
 
-### 제목 (Title) — {surname} - {piece} (feat. 初音ミク)
+### 제목 (Title) — {surname} - {piece} 【初音ミク A Cappella】
 
 ■ gymnopedie_1_first_proof  [rRnl8RZ3EjY]
-   es       Satie - Gymnopédie n.º 1 (feat. 初音ミク)
-   pt       Satie - Gymnopédie n.º 1 (feat. 初音ミク)
-   de       Satie - Gymnopédie Nr. 1 (feat. 初音ミク)
-   fr       Satie - Gymnopédie n° 1 (feat. 初音ミク)
-   ru       Сати - Гимнопедия № 1 (feat. 初音ミク)
-   zh-Hant  薩蒂 - 《吉諾佩第》第1號 (feat. 初音ミク)
-   zh-Hans  萨蒂 - 《吉诺佩第》第1号 (feat. 初音ミク)
+   es       Satie - Gymnopédie n.º 1 【初音ミク A Cappella】
+   pt       Satie - Gymnopédie n.º 1 【初音ミク A Cappella】
+   de       Satie - Gymnopédie Nr. 1 【初音ミク A Cappella】
+   fr       Satie - Gymnopédie n° 1 【初音ミク A Cappella】
+   ru       Сати - Гимнопедия № 1 【初音ミク A Cappella】
+   zh-Hant  薩蒂 - 《吉諾佩第》第1號 【初音ミク A Cappella】
+   zh-Hans  萨蒂 - 《吉诺佩第》第1号 【初音ミク A Cappella】
 
 ■ vivaldi_spring_1_allegro  [0qXLYmZXAx0]
-   es       Vivaldi - La primavera, 1.er mov. (feat. 初音ミク)
-   pt       Vivaldi - Primavera, 1.º mov. (feat. 初音ミク)
-   de       Vivaldi - Der Frühling, 1. Satz (feat. 初音ミク)
-   fr       Vivaldi - Le Printemps, 1er mouvement (feat. 初音ミク)
-   ru       Вивальди - «Весна», часть I (feat. 初音ミク)
-   zh-Hant  韋瓦第 - 《春》第一樂章 (feat. 初音ミク)
-   zh-Hans  维瓦尔第 - 《春》第一乐章 (feat. 初音ミク)
+   es       Vivaldi - La primavera, 1.er mov. 【初音ミク A Cappella】
+   pt       Vivaldi - Primavera, 1.º mov. 【初音ミク A Cappella】
+   de       Vivaldi - Der Frühling, 1. Satz 【初音ミク A Cappella】
+   fr       Vivaldi - Le Printemps, 1er mouvement 【初音ミク A Cappella】
+   ru       Вивальди - «Весна», часть I 【初音ミク A Cappella】
+   zh-Hant  韋瓦第 - 《春》第一樂章 【初音ミク A Cappella】
+   zh-Hans  维瓦尔第 - 《春》第一乐章 【初音ミク A Cappella】
 
 ■ joplin_the_entertainer  [DVIYl09zX-w]
-   es       Joplin - The Entertainer (feat. 初音ミク)
-   pt       Joplin - The Entertainer (feat. 初音ミク)
-   de       Joplin - The Entertainer (feat. 初音ミク)
-   fr       Joplin - The Entertainer (feat. 初音ミク)
-   ru       Джоплин - The Entertainer (feat. 初音ミク)
-   zh-Hant  喬普林 - The Entertainer (feat. 初音ミク)
-   zh-Hans  乔普林 - The Entertainer (feat. 初音ミク)
+   es       Joplin - The Entertainer 【初音ミク A Cappella】
+   pt       Joplin - The Entertainer 【初音ミク A Cappella】
+   de       Joplin - The Entertainer 【初音ミク A Cappella】
+   fr       Joplin - The Entertainer 【初音ミク A Cappella】
+   ru       Джоплин - The Entertainer 【初音ミク A Cappella】
+   zh-Hant  喬普林 - The Entertainer 【初音ミク A Cappella】
+   zh-Hans  乔普林 - The Entertainer 【初音ミク A Cappella】
 
 ■ elgar_salut_damour  [zshjmBhus2I]
-   es       Elgar - Salut d'Amour (feat. 初音ミク)
-   pt       Elgar - Salut d'Amour (feat. 初音ミク)
-   de       Elgar - Salut d'Amour (feat. 初音ミク)
-   fr       Elgar - Salut d'Amour (feat. 初音ミク)
-   ru       Элгар - Salut d’Amour («Приветствие любви») (feat. 初音ミク)
-   zh-Hant  艾爾加 - 《愛的禮讚》 (feat. 初音ミク)
-   zh-Hans  埃尔加 - 《爱的礼赞》 (feat. 初音ミク)
+   es       Elgar - Salut d'Amour 【初音ミク A Cappella】
+   pt       Elgar - Salut d'Amour 【初音ミク A Cappella】
+   de       Elgar - Salut d'Amour 【初音ミク A Cappella】
+   fr       Elgar - Salut d'Amour 【初音ミク A Cappella】
+   ru       Элгар - Salut d’Amour («Приветствие любви») 【初音ミク A Cappella】
+   zh-Hant  艾爾加 - 《愛的禮讚》 【初音ミク A Cappella】
+   zh-Hans  埃尔加 - 《爱的礼赞》 【初音ミク A Cappella】
 
 ■ mozart_twinkle_variations_k265  [PiR9hy6xmGQ]
-   es       Mozart - Doce variaciones sobre «Ah, vous dirai-je, maman» K. 265 (feat. 初音ミク)
-   pt       Mozart - Doze variações sobre «Ah, vous dirai-je, maman» K. 265 (feat. 初音ミク)
-   de       Mozart - Zwölf Variationen über „Ah, vous dirai-je, maman“ KV 265 (feat. 初音ミク)
-   fr       Mozart - Douze Variations sur « Ah, vous dirai-je, maman » K. 265 (feat. 初音ミク)
-   ru       Моцарт - 12 вариаций на тему «Ah, vous dirai-je, maman» K. 265 (feat. 初音ミク)
-   zh-Hant  莫札特 - 《小星星變奏曲》K. 265 (feat. 初音ミク)
-   zh-Hans  莫扎特 - 《小星星变奏曲》K. 265 (feat. 初音ミク)
+   es       Mozart - Doce variaciones sobre «Ah, vous dirai-je, maman» K. 265 【A Cappella】
+   pt       Mozart - Doze variações sobre «Ah, vous dirai-je, maman» K. 265 【A Cappella】
+   de       Mozart - Zwölf Variationen über „Ah, vous dirai-je, maman“ KV 265 【A Cappella】
+   fr       Mozart - Douze Variations sur « Ah, vous dirai-je, maman » K. 265 【A Cappella】
+   ru       Моцарт - 12 вариаций на тему «Ah, vous dirai-je, maman» K. 265 【A Cappella】
+   zh-Hant  莫札特 - 《小星星變奏曲》K. 265 【A Cappella】
+   zh-Hans  莫扎特 - 《小星星变奏曲》K. 265 【A Cappella】
 
 ■ chopin_nocturne_op9_2  [9EvpHXE3D1s]
-   es       Chopin - Nocturno op. 9 n.º 2 (feat. 初音ミク)
-   pt       Chopin - Noturno op. 9 n.º 2 (feat. 初音ミク)
-   de       Chopin - Nocturne op. 9 Nr. 2 (feat. 初音ミク)
-   fr       Chopin - Nocturne op. 9 n° 2 (feat. 初音ミク)
-   ru       Шопен - Ноктюрн соч. 9 № 2 (feat. 初音ミク)
-   zh-Hant  蕭邦 - 夜曲 作品9之2 (feat. 初音ミク)
-   zh-Hans  肖邦 - 夜曲 作品9之2 (feat. 初音ミク)
+   es       Chopin - Nocturno op. 9 n.º 2 【初音ミク A Cappella】
+   pt       Chopin - Noturno op. 9 n.º 2 【初音ミク A Cappella】
+   de       Chopin - Nocturne op. 9 Nr. 2 【初音ミク A Cappella】
+   fr       Chopin - Nocturne op. 9 n° 2 【初音ミク A Cappella】
+   ru       Шопен - Ноктюрн соч. 9 № 2 【初音ミク A Cappella】
+   zh-Hant  蕭邦 - 夜曲 作品9之2 【初音ミク A Cappella】
+   zh-Hans  肖邦 - 夜曲 作品9之2 【初音ミク A Cappella】
 
 ■ pachelbel_canon_in_d  [B9ENEwjgAhc]
-   es       Pachelbel - Canon en re mayor (feat. 初音ミク)
-   pt       Pachelbel - Cânone em ré maior (feat. 初音ミク)
-   de       Pachelbel - Kanon in D-Dur (feat. 初音ミク)
-   fr       Pachelbel - Canon en ré majeur (feat. 初音ミク)
-   ru       Пахельбель - Канон в ре мажоре (feat. 初音ミク)
-   zh-Hant  帕海貝爾 - D大調卡農 (feat. 初音ミク)
-   zh-Hans  帕赫贝尔 - D大调卡农 (feat. 初音ミク)
+   es       Pachelbel - Canon en re mayor 【初音ミク A Cappella】
+   pt       Pachelbel - Cânone em ré maior 【初音ミク A Cappella】
+   de       Pachelbel - Kanon in D-Dur 【初音ミク A Cappella】
+   fr       Pachelbel - Canon en ré majeur 【初音ミク A Cappella】
+   ru       Пахельбель - Канон в ре мажоре 【初音ミク A Cappella】
+   zh-Hant  帕海貝爾 - D大調卡農 【初音ミク A Cappella】
+   zh-Hans  帕赫贝尔 - D大调卡农 【初音ミク A Cappella】
+
+■ tchaikovsky_sugar_plum_fairy  [759VCWOtC2w]
+   es       Tchaikovsky - Danza del Hada de Azúcar 【初音ミク A Cappella】
+   pt       Tchaikovsky - Dança da Fada Açucarada 【初音ミク A Cappella】
+   de       Tchaikovsky - Tanz der Zuckerfee 【初音ミク A Cappella】
+   fr       Tchaikovsky - Danse de la Fée Dragée 【初音ミク A Cappella】
+   ru       Чайковский - Танец Феи Драже 【初音ミク A Cappella】
+   zh-Hant  柴可夫斯基 - 糖梅仙子之舞 【初音ミク A Cappella】
+   zh-Hans  柴可夫斯基 - 糖梅仙子之舞 【初音ミク A Cappella】
 
 
 ### 큐레이터 보이스 (Curator voice)
@@ -112,7 +121,7 @@ locales: es / pt / de / fr / ru / zh-Hant / zh-Hans
 ■ chopin_nocturne_op9_2
    es       Un nocturno profundo para la hora de la medianoche
    pt       Um noturno profundo para a hora da meia-noite
-   de       Ein tiefes Nocturne für die Mitternachtsstunde
+   de       Eine tiefe Nocturne für die Mitternachtsstunde
    fr       Un nocturne profond pour l'heure de minuit
    ru       Глубокий ноктюрн для полуночного часа
    zh-Hant  獻給午夜時分的深邃夜曲
@@ -127,9 +136,12 @@ locales: es / pt / de / fr / ru / zh-Hant / zh-Hans
    zh-Hant  聲疊著聲，超越時間的卡農
    zh-Hans  声叠着声，超越时间的卡农
 
+■ tchaikovsky_sugar_plum_fairy
+   (Welcome 블록형 — epithet 없음)
+
 
 ############ FULL RENDERED DESCRIPTIONS ############
-========== [es] Satie - Gymnopédie n.º 1 (feat. 初音ミク) ==========
+========== [es] Satie - Gymnopédie n.º 1 【初音ミク A Cappella】 ==========
 ¡Te damos la bienvenida a Atelier Miku A Cappella!
 
 Este es un proyecto de fans: música clásica, arreglada para la voz de Hatsune Miku, una pieza a la vez.
@@ -151,7 +163,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #Gymnopedie #初音ミク #VOCALOID #MúsicaClásica #Romanticismo #Satie #AtelierMikuAcappella
 
-========== [pt] Satie - Gymnopédie n.º 1 (feat. 初音ミク) ==========
+========== [pt] Satie - Gymnopédie n.º 1 【初音ミク A Cappella】 ==========
 Boas-vindas ao Atelier Miku A Cappella!
 
 Este é um projeto de fãs: música clássica, arranjada para a voz da Hatsune Miku, uma peça de cada vez.
@@ -173,7 +185,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #Gymnopedie #初音ミク #VOCALOID #MúsicaClássica #Romantismo #Satie #AtelierMikuAcappella
 
-========== [de] Satie - Gymnopédie Nr. 1 (feat. 初音ミク) ==========
+========== [de] Satie - Gymnopédie Nr. 1 【初音ミク A Cappella】 ==========
 Willkommen im Atelier Miku A Cappella!
 
 Dies ist ein Fanprojekt: klassische Musik, arrangiert für Hatsune Mikus Stimme, ein Stück nach dem anderen.
@@ -195,7 +207,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #Gymnopedie #初音ミク #VOCALOID #KlassischeMusik #Romantik #Satie #AtelierMikuAcappella
 
-========== [fr] Satie - Gymnopédie n° 1 (feat. 初音ミク) ==========
+========== [fr] Satie - Gymnopédie n° 1 【初音ミク A Cappella】 ==========
 Bienvenue à l'Atelier Miku A Cappella !
 
 Ceci est un projet de fans : de la musique classique, arrangée pour la voix de Hatsune Miku, une pièce à la fois.
@@ -217,7 +229,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #Gymnopedie #初音ミク #VOCALOID #MusiqueClassique #Romantisme #Satie #AtelierMikuAcappella
 
-========== [ru] Сати - Гимнопедия № 1 (feat. 初音ミク) ==========
+========== [ru] Сати - Гимнопедия № 1 【初音ミク A Cappella】 ==========
 Добро пожаловать в Atelier Miku A Cappella!
 
 Это фанатский проект: классическая музыка в аранжировке для голоса Хацунэ Мику, по одной пьесе за раз.
@@ -239,7 +251,7 @@ https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-batters
 
 #ХацунэМику #Акапелла #Гимнопедия #初音ミク #Вокалоид #КлассическаяМузыка #Романтизм #Сати #AtelierMikuAcappella
 
-========== [zh-Hant] 薩蒂 - 《吉諾佩第》第1號 (feat. 初音ミク) ==========
+========== [zh-Hant] 薩蒂 - 《吉諾佩第》第1號 【初音ミク A Cappella】 ==========
 歡迎來到 Atelier Miku A Cappella！
 
 這是一個同人企劃：將古典名曲改編給初音未來的歌聲，一次一首，細細打磨。
@@ -261,7 +273,7 @@ https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-batters
 
 #初音未來 #阿卡貝拉 #吉諾佩第 #初音ミク #VOCALOID #古典音樂 #浪漫樂派 #薩蒂 #AtelierMikuAcappella
 
-========== [zh-Hans] 萨蒂 - 《吉诺佩第》第1号 (feat. 初音ミク) ==========
+========== [zh-Hans] 萨蒂 - 《吉诺佩第》第1号 【初音ミク A Cappella】 ==========
 欢迎来到 Atelier Miku A Cappella！
 
 这是一个同人企划：将古典名曲改编给初音未来的歌声，一次一首，细细打磨。
@@ -283,7 +295,7 @@ https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-batters
 
 #初音未来 #阿卡贝拉 #吉诺佩第 #初音ミク #VOCALOID #古典音乐 #浪漫乐派 #萨蒂 #AtelierMikuAcappella
 
-========== [es] Vivaldi - La primavera, 1.er mov. (feat. 初音ミク) ==========
+========== [es] Vivaldi - La primavera, 1.er mov. 【初音ミク A Cappella】 ==========
 Elegida con la nostalgia de la fresca brisa de la primavera—
 Antonio Vivaldi - La primavera, 1.er mov. (1725). Ahora cantan seis Mikus.
 
@@ -299,7 +311,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #LasCuatroEstaciones #初音ミク #VOCALOID #MúsicaClásica #Barroco #Vivaldi #AtelierMikuAcappella
 
-========== [pt] Vivaldi - Primavera, 1.º mov. (feat. 初音ミク) ==========
+========== [pt] Vivaldi - Primavera, 1.º mov. 【初音ミク A Cappella】 ==========
 Escolhida com a saudade da brisa fresca da primavera—
 Antonio Vivaldi - Primavera, 1.º mov. (1725). Agora cantam seis Mikus.
 
@@ -315,7 +327,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #AsQuatroEstações #初音ミク #VOCALOID #MúsicaClássica #Barroco #Vivaldi #AtelierMikuAcappella
 
-========== [de] Vivaldi - Der Frühling, 1. Satz (feat. 初音ミク) ==========
+========== [de] Vivaldi - Der Frühling, 1. Satz 【初音ミク A Cappella】 ==========
 Gewählt aus Sehnsucht nach der kühlen Frühlingsbrise—
 Antonio Vivaldi - Der Frühling, 1. Satz (1725). Jetzt singen sechs Mikus.
 
@@ -331,7 +343,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #DieVierJahreszeiten #初音ミク #VOCALOID #KlassischeMusik #Barock #Vivaldi #AtelierMikuAcappella
 
-========== [fr] Vivaldi - Le Printemps, 1er mouvement (feat. 初音ミク) ==========
+========== [fr] Vivaldi - Le Printemps, 1er mouvement 【初音ミク A Cappella】 ==========
 Choisie dans le désir de la fraîche brise du printemps—
 Antonio Vivaldi - Le Printemps, 1er mouvement (1725). À présent, six Mikus chantent.
 
@@ -347,7 +359,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #LesQuatreSaisons #初音ミク #VOCALOID #MusiqueClassique #Baroque #Vivaldi #AtelierMikuAcappella
 
-========== [ru] Вивальди - «Весна», часть I (feat. 初音ミク) ==========
+========== [ru] Вивальди - «Весна», часть I 【初音ミク A Cappella】 ==========
 Выбрана с тоской по прохладному дыханию весны—
 Антонио Вивальди - «Весна», часть I (1725). Теперь поют шесть Мику.
 
@@ -363,7 +375,7 @@ https://commons.wikimedia.org/wiki/File:Botticelli-primavera.jpg
 
 #ХацунэМику #Акапелла #ВременаГода #初音ミク #Вокалоид #КлассическаяМузыка #Барокко #Вивальди #AtelierMikuAcappella
 
-========== [zh-Hant] 韋瓦第 - 《春》第一樂章 (feat. 初音ミク) ==========
+========== [zh-Hant] 韋瓦第 - 《春》第一樂章 【初音ミク A Cappella】 ==========
 懷著對春日清風的思念而選——
 安東尼奧·韋瓦第 - 《春》第一樂章（1725）。如今由六位初音未來獻唱。
 
@@ -379,7 +391,7 @@ https://commons.wikimedia.org/wiki/File:Botticelli-primavera.jpg
 
 #初音未來 #阿卡貝拉 #四季 #初音ミク #VOCALOID #古典音樂 #巴洛克 #韋瓦第 #AtelierMikuAcappella
 
-========== [zh-Hans] 维瓦尔第 - 《春》第一乐章 (feat. 初音ミク) ==========
+========== [zh-Hans] 维瓦尔第 - 《春》第一乐章 【初音ミク A Cappella】 ==========
 怀着对春日清风的思念而选——
 安东尼奥·维瓦尔第 - 《春》第一乐章（1725）。如今由六位初音未来献唱。
 
@@ -395,7 +407,7 @@ https://commons.wikimedia.org/wiki/File:Botticelli-primavera.jpg
 
 #初音未来 #阿卡贝拉 #四季 #初音ミク #VOCALOID #古典音乐 #巴洛克 #维瓦尔第 #AtelierMikuAcappella
 
-========== [es] Joplin - The Entertainer (feat. 初音ミク) ==========
+========== [es] Joplin - The Entertainer 【初音ミク A Cappella】 ==========
 Una melodía familiar que se volvió un clásico.
 Scott Joplin - The Entertainer (1902). Ahora cantan nueve Mikus.
 
@@ -411,7 +423,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #TheEntertainer #初音ミク #VOCALOID #MúsicaClásica #Ragtime #Joplin #AtelierMikuAcappella
 
-========== [pt] Joplin - The Entertainer (feat. 初音ミク) ==========
+========== [pt] Joplin - The Entertainer 【初音ミク A Cappella】 ==========
 Uma melodia familiar que virou um clássico.
 Scott Joplin - The Entertainer (1902). Agora cantam nove Mikus.
 
@@ -427,7 +439,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #TheEntertainer #初音ミク #VOCALOID #MúsicaClássica #Ragtime #Joplin #AtelierMikuAcappella
 
-========== [de] Joplin - The Entertainer (feat. 初音ミク) ==========
+========== [de] Joplin - The Entertainer 【初音ミク A Cappella】 ==========
 Eine vertraute Melodie, die zum Klassiker wurde.
 Scott Joplin - The Entertainer (1902). Jetzt singen neun Mikus.
 
@@ -443,7 +455,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #TheEntertainer #初音ミク #VOCALOID #KlassischeMusik #Ragtime #Joplin #AtelierMikuAcappella
 
-========== [fr] Joplin - The Entertainer (feat. 初音ミク) ==========
+========== [fr] Joplin - The Entertainer 【初音ミク A Cappella】 ==========
 Une mélodie familière devenue un classique.
 Scott Joplin - The Entertainer (1902). À présent, neuf Mikus chantent.
 
@@ -459,7 +471,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #TheEntertainer #初音ミク #VOCALOID #MusiqueClassique #Ragtime #Joplin #AtelierMikuAcappella
 
-========== [ru] Джоплин - The Entertainer (feat. 初音ミク) ==========
+========== [ru] Джоплин - The Entertainer 【初音ミク A Cappella】 ==========
 Знакомая мелодия, ставшая классикой.
 Скотт Джоплин - The Entertainer (1902). Теперь поют девять Мику.
 
@@ -475,7 +487,7 @@ https://commons.wikimedia.org/wiki/File:Hammerstein%27s_Roof_Garden,_by_William_
 
 #ХацунэМику #Акапелла #TheEntertainer #初音ミク #Вокалоид #КлассическаяМузыка #Рэгтайм #Джоплин #AtelierMikuAcappella
 
-========== [zh-Hant] 喬普林 - The Entertainer (feat. 初音ミク) ==========
+========== [zh-Hant] 喬普林 - The Entertainer 【初音ミク A Cappella】 ==========
 一段耳熟能詳、終成經典的旋律。
 史考特·喬普林 - The Entertainer（1902）。如今由九位初音未來獻唱。
 
@@ -491,7 +503,7 @@ https://commons.wikimedia.org/wiki/File:Hammerstein%27s_Roof_Garden,_by_William_
 
 #初音未來 #阿卡貝拉 #TheEntertainer #初音ミク #VOCALOID #古典音樂 #拉格泰姆 #喬普林 #AtelierMikuAcappella
 
-========== [zh-Hans] 乔普林 - The Entertainer (feat. 初音ミク) ==========
+========== [zh-Hans] 乔普林 - The Entertainer 【初音ミク A Cappella】 ==========
 一段耳熟能详、终成经典的旋律。
 斯科特·乔普林 - The Entertainer（1902）。如今由九位初音未来献唱。
 
@@ -507,7 +519,7 @@ https://commons.wikimedia.org/wiki/File:Hammerstein%27s_Roof_Garden,_by_William_
 
 #初音未来 #阿卡贝拉 #TheEntertainer #初音ミク #VOCALOID #古典音乐 #拉格泰姆 #乔普林 #AtelierMikuAcappella
 
-========== [es] Elgar - Salut d'Amour (feat. 初音ミク) ==========
+========== [es] Elgar - Salut d'Amour 【初音ミク A Cappella】 ==========
 Un amor tierno que habita en una melodía sencilla.
 Edward Elgar - Salut d'Amour (1888). Ahora cantan nueve Mikus.
 
@@ -521,7 +533,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #SalutDamour #初音ミク #VOCALOID #MúsicaClásica #Romanticismo #Elgar #AtelierMikuAcappella
 
-========== [pt] Elgar - Salut d'Amour (feat. 初音ミク) ==========
+========== [pt] Elgar - Salut d'Amour 【初音ミク A Cappella】 ==========
 Um amor terno que habita numa melodia simples.
 Edward Elgar - Salut d'Amour (1888). Agora cantam nove Mikus.
 
@@ -535,7 +547,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #SalutDamour #初音ミク #VOCALOID #MúsicaClássica #Romantismo #Elgar #AtelierMikuAcappella
 
-========== [de] Elgar - Salut d'Amour (feat. 初音ミク) ==========
+========== [de] Elgar - Salut d'Amour 【初音ミク A Cappella】 ==========
 Eine zärtliche Liebe, die in einer schlichten Melodie wohnt.
 Edward Elgar - Salut d'Amour (1888). Jetzt singen neun Mikus.
 
@@ -549,7 +561,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #SalutDamour #初音ミク #VOCALOID #KlassischeMusik #Romantik #Elgar #AtelierMikuAcappella
 
-========== [fr] Elgar - Salut d'Amour (feat. 初音ミク) ==========
+========== [fr] Elgar - Salut d'Amour 【初音ミク A Cappella】 ==========
 Un amour tendre niché dans une mélodie toute simple.
 Edward Elgar - Salut d'Amour (1888). À présent, neuf Mikus chantent.
 
@@ -563,7 +575,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #SalutDamour #初音ミク #VOCALOID #MusiqueClassique #Romantisme #Elgar #AtelierMikuAcappella
 
-========== [ru] Элгар - Salut d’Amour («Приветствие любви») (feat. 初音ミク) ==========
+========== [ru] Элгар - Salut d’Amour («Приветствие любви») 【初音ミク A Cappella】 ==========
 Нежная любовь, живущая в простой мелодии.
 Эдуард Элгар - Salut d’Amour («Приветствие любви») (1888). Теперь поют девять Мику.
 
@@ -577,7 +589,7 @@ https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_The_Soul_of_th
 
 #ХацунэМику #Акапелла #ПриветствиеЛюбви #初音ミク #Вокалоид #КлассическаяМузыка #Романтизм #Элгар #AtelierMikuAcappella
 
-========== [zh-Hant] 艾爾加 - 《愛的禮讚》 (feat. 初音ミク) ==========
+========== [zh-Hant] 艾爾加 - 《愛的禮讚》 【初音ミク A Cappella】 ==========
 棲息於樸素旋律中的，一份溫柔的愛。
 愛德華·艾爾加 - 《愛的禮讚》（1888）。如今由九位初音未來獻唱。
 
@@ -591,7 +603,7 @@ https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_The_Soul_of_th
 
 #初音未來 #阿卡貝拉 #愛的禮讚 #初音ミク #VOCALOID #古典音樂 #浪漫樂派 #艾爾加 #AtelierMikuAcappella
 
-========== [zh-Hans] 埃尔加 - 《爱的礼赞》 (feat. 初音ミク) ==========
+========== [zh-Hans] 埃尔加 - 《爱的礼赞》 【初音ミク A Cappella】 ==========
 栖息于朴素旋律中的，一份温柔的爱。
 爱德华·埃尔加 - 《爱的礼赞》（1888）。如今由九位初音未来献唱。
 
@@ -605,7 +617,7 @@ https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_The_Soul_of_th
 
 #初音未来 #阿卡贝拉 #爱的礼赞 #初音ミク #VOCALOID #古典音乐 #浪漫乐派 #埃尔加 #AtelierMikuAcappella
 
-========== [es] Mozart - Doce variaciones sobre «Ah, vous dirai-je, maman» K. 265 (feat. 初音ミク) ==========
+========== [es] Mozart - Doce variaciones sobre «Ah, vous dirai-je, maman» K. 265 【A Cappella】 ==========
 La melodía familiar de la infancia.
 Wolfgang Amadeus Mozart - Doce variaciones sobre «Ah, vous dirai-je, maman» K. 265 (1781–82). Ahora cantan nueve Mikus.
 
@@ -636,7 +648,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #VariacionesTwinkle #初音ミク #VOCALOID #MúsicaClásica #Clasicismo #Mozart #AtelierMikuAcappella
 
-========== [pt] Mozart - Doze variações sobre «Ah, vous dirai-je, maman» K. 265 (feat. 初音ミク) ==========
+========== [pt] Mozart - Doze variações sobre «Ah, vous dirai-je, maman» K. 265 【A Cappella】 ==========
 A melodia familiar da infância.
 Wolfgang Amadeus Mozart - Doze variações sobre «Ah, vous dirai-je, maman» K. 265 (1781–82). Agora cantam nove Mikus.
 
@@ -667,7 +679,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #VariaçõesTwinkle #初音ミク #VOCALOID #MúsicaClássica #Classicismo #Mozart #AtelierMikuAcappella
 
-========== [de] Mozart - Zwölf Variationen über „Ah, vous dirai-je, maman“ KV 265 (feat. 初音ミク) ==========
+========== [de] Mozart - Zwölf Variationen über „Ah, vous dirai-je, maman“ KV 265 【A Cappella】 ==========
 Die vertraute Melodie aus Kindertagen.
 Wolfgang Amadeus Mozart - Zwölf Variationen über „Ah, vous dirai-je, maman“ KV 265 (1781–82). Jetzt singen neun Mikus.
 
@@ -698,7 +710,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #TwinkleVariationen #初音ミク #VOCALOID #KlassischeMusik #Klassik #Mozart #AtelierMikuAcappella
 
-========== [fr] Mozart - Douze Variations sur « Ah, vous dirai-je, maman » K. 265 (feat. 初音ミク) ==========
+========== [fr] Mozart - Douze Variations sur « Ah, vous dirai-je, maman » K. 265 【A Cappella】 ==========
 La mélodie familière de l'enfance.
 Wolfgang Amadeus Mozart - Douze Variations sur « Ah, vous dirai-je, maman » K. 265 (1781–82). À présent, neuf Mikus chantent.
 
@@ -729,7 +741,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #VariationsTwinkle #初音ミク #VOCALOID #MusiqueClassique #Classicisme #Mozart #AtelierMikuAcappella
 
-========== [ru] Моцарт - 12 вариаций на тему «Ah, vous dirai-je, maman» K. 265 (feat. 初音ミク) ==========
+========== [ru] Моцарт - 12 вариаций на тему «Ah, vous dirai-je, maman» K. 265 【A Cappella】 ==========
 Знакомая с детства мелодия.
 Вольфганг Амадей Моцарт - 12 вариаций на тему «Ah, vous dirai-je, maman» K. 265 (1781–82). Теперь поют девять Мику.
 
@@ -760,7 +772,7 @@ https://www.musee-orsay.fr/en/artworks/la-nuit-etoilee-87780
 
 #ХацунэМику #Акапелла #ВариацииМоцарта #初音ミク #Вокалоид #КлассическаяМузыка #Классицизм #Моцарт #AtelierMikuAcappella
 
-========== [zh-Hant] 莫札特 - 《小星星變奏曲》K. 265 (feat. 初音ミク) ==========
+========== [zh-Hant] 莫札特 - 《小星星變奏曲》K. 265 【A Cappella】 ==========
 童年裡熟悉的那段旋律。
 沃夫岡·阿瑪迪斯·莫札特 - 《小星星變奏曲》K. 265（1781–82）。如今由九位初音未來獻唱。
 
@@ -791,7 +803,7 @@ https://www.musee-orsay.fr/en/artworks/la-nuit-etoilee-87780
 
 #初音未來 #阿卡貝拉 #小星星變奏曲 #初音ミク #VOCALOID #古典音樂 #古典樂派 #莫札特 #AtelierMikuAcappella
 
-========== [zh-Hans] 莫扎特 - 《小星星变奏曲》K. 265 (feat. 初音ミク) ==========
+========== [zh-Hans] 莫扎特 - 《小星星变奏曲》K. 265 【A Cappella】 ==========
 童年里熟悉的那段旋律。
 沃尔夫冈·阿马德乌斯·莫扎特 - 《小星星变奏曲》K. 265（1781–82）。如今由九位初音未来献唱。
 
@@ -822,7 +834,7 @@ https://www.musee-orsay.fr/en/artworks/la-nuit-etoilee-87780
 
 #初音未来 #阿卡贝拉 #小星星变奏曲 #初音ミク #VOCALOID #古典音乐 #古典乐派 #莫扎特 #AtelierMikuAcappella
 
-========== [es] Chopin - Nocturno op. 9 n.º 2 (feat. 初音ミク) ==========
+========== [es] Chopin - Nocturno op. 9 n.º 2 【初音ミク A Cappella】 ==========
 Un nocturno profundo para la hora de la medianoche
 
 Ahora cantan siete Mikus —
@@ -838,7 +850,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #Nocturno #初音ミク #VOCALOID #MúsicaClásica #Romanticismo #Chopin #AtelierMikuAcappella
 
-========== [pt] Chopin - Noturno op. 9 n.º 2 (feat. 初音ミク) ==========
+========== [pt] Chopin - Noturno op. 9 n.º 2 【初音ミク A Cappella】 ==========
 Um noturno profundo para a hora da meia-noite
 
 Agora cantam sete Mikus —
@@ -854,8 +866,8 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #Noturno #初音ミク #VOCALOID #MúsicaClássica #Romantismo #Chopin #AtelierMikuAcappella
 
-========== [de] Chopin - Nocturne op. 9 Nr. 2 (feat. 初音ミク) ==========
-Ein tiefes Nocturne für die Mitternachtsstunde
+========== [de] Chopin - Nocturne op. 9 Nr. 2 【初音ミク A Cappella】 ==========
+Eine tiefe Nocturne für die Mitternachtsstunde
 
 Jetzt singen sieben Mikus —
 Frédéric Chopin - Nocturne op. 9 Nr. 2 (1830–32).
@@ -870,7 +882,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #Nocturne #初音ミク #VOCALOID #KlassischeMusik #Romantik #Chopin #AtelierMikuAcappella
 
-========== [fr] Chopin - Nocturne op. 9 n° 2 (feat. 初音ミク) ==========
+========== [fr] Chopin - Nocturne op. 9 n° 2 【初音ミク A Cappella】 ==========
 Un nocturne profond pour l'heure de minuit
 
 À présent, sept Mikus chantent —
@@ -886,7 +898,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #Nocturne #初音ミク #VOCALOID #MusiqueClassique #Romantisme #Chopin #AtelierMikuAcappella
 
-========== [ru] Шопен - Ноктюрн соч. 9 № 2 (feat. 初音ミク) ==========
+========== [ru] Шопен - Ноктюрн соч. 9 № 2 【初音ミク A Cappella】 ==========
 Глубокий ноктюрн для полуночного часа
 
 Теперь поют семь Мику —
@@ -902,7 +914,7 @@ https://commons.wikimedia.org/wiki/File:James_Abbott_McNeill_Whistler_-_Nocturne
 
 #ХацунэМику #Акапелла #Ноктюрн #初音ミク #Вокалоид #КлассическаяМузыка #Романтизм #Шопен #AtelierMikuAcappella
 
-========== [zh-Hant] 蕭邦 - 夜曲 作品9之2 (feat. 初音ミク) ==========
+========== [zh-Hant] 蕭邦 - 夜曲 作品9之2 【初音ミク A Cappella】 ==========
 獻給午夜時分的深邃夜曲
 
 如今由七位初音未來獻唱 —
@@ -918,7 +930,7 @@ https://commons.wikimedia.org/wiki/File:James_Abbott_McNeill_Whistler_-_Nocturne
 
 #初音未來 #阿卡貝拉 #夜曲 #初音ミク #VOCALOID #古典音樂 #浪漫樂派 #蕭邦 #AtelierMikuAcappella
 
-========== [zh-Hans] 肖邦 - 夜曲 作品9之2 (feat. 初音ミク) ==========
+========== [zh-Hans] 肖邦 - 夜曲 作品9之2 【初音ミク A Cappella】 ==========
 献给午夜时分的深邃夜曲
 
 如今由七位初音未来献唱 —
@@ -934,7 +946,7 @@ https://commons.wikimedia.org/wiki/File:James_Abbott_McNeill_Whistler_-_Nocturne
 
 #初音未来 #阿卡贝拉 #夜曲 #初音ミク #VOCALOID #古典音乐 #浪漫乐派 #肖邦 #AtelierMikuAcappella
 
-========== [es] Pachelbel - Canon en re mayor (feat. 初音ミク) ==========
+========== [es] Pachelbel - Canon en re mayor 【初音ミク A Cappella】 ==========
 Un canon atemporal, voz sobre voz
 
 Ahora cantan once Mikus —
@@ -950,7 +962,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #Canon #初音ミク #VOCALOID #MúsicaClásica #Barroco #Pachelbel #AtelierMikuAcappella
 
-========== [pt] Pachelbel - Cânone em ré maior (feat. 初音ミク) ==========
+========== [pt] Pachelbel - Cânone em ré maior 【初音ミク A Cappella】 ==========
 Um cânone atemporal, voz sobre voz
 
 Agora cantam onze Mikus —
@@ -966,7 +978,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #Acappella #Cânone #初音ミク #VOCALOID #MúsicaClássica #Barroco #Pachelbel #AtelierMikuAcappella
 
-========== [de] Pachelbel - Kanon in D-Dur (feat. 初音ミク) ==========
+========== [de] Pachelbel - Kanon in D-Dur 【初音ミク A Cappella】 ==========
 Ein zeitloser Kanon, Stimme über Stimme
 
 Jetzt singen elf Mikus —
@@ -982,7 +994,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #Kanon #初音ミク #VOCALOID #KlassischeMusik #Barock #Pachelbel #AtelierMikuAcappella
 
-========== [fr] Pachelbel - Canon en ré majeur (feat. 初音ミク) ==========
+========== [fr] Pachelbel - Canon en ré majeur 【初音ミク A Cappella】 ==========
 Un canon hors du temps, voix sur voix
 
 À présent, onze Mikus chantent —
@@ -998,7 +1010,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 #HatsuneMiku #ACappella #Canon #初音ミク #VOCALOID #MusiqueClassique #Baroque #Pachelbel #AtelierMikuAcappella
 
-========== [ru] Пахельбель - Канон в ре мажоре (feat. 初音ミク) ==========
+========== [ru] Пахельбель - Канон в ре мажоре 【初音ミク A Cappella】 ==========
 Вечный канон, голос за голосом
 
 Теперь поют одиннадцать Мику —
@@ -1014,7 +1026,7 @@ https://commons.wikimedia.org/wiki/File:Jan_Vermeer_van_Delft_-_Jonge_vrouw_aan_
 
 #ХацунэМику #Акапелла #Канон #初音ミク #Вокалоид #КлассическаяМузыка #Барокко #Пахельбель #AtelierMikuAcappella
 
-========== [zh-Hant] 帕海貝爾 - D大調卡農 (feat. 初音ミク) ==========
+========== [zh-Hant] 帕海貝爾 - D大調卡農 【初音ミク A Cappella】 ==========
 聲疊著聲，超越時間的卡農
 
 如今由十一位初音未來獻唱 —
@@ -1030,7 +1042,7 @@ https://commons.wikimedia.org/wiki/File:Jan_Vermeer_van_Delft_-_Jonge_vrouw_aan_
 
 #初音未來 #阿卡貝拉 #卡農 #初音ミク #VOCALOID #古典音樂 #巴洛克 #帕海貝爾 #AtelierMikuAcappella
 
-========== [zh-Hans] 帕赫贝尔 - D大调卡农 (feat. 初音ミク) ==========
+========== [zh-Hans] 帕赫贝尔 - D大调卡农 【初音ミク A Cappella】 ==========
 声叠着声，超越时间的卡农
 
 如今由十一位初音未来献唱 —
@@ -1045,6 +1057,111 @@ https://commons.wikimedia.org/wiki/File:Jan_Vermeer_van_Delft_-_Jonge_vrouw_aan_
 初音未来, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
 
 #初音未来 #阿卡贝拉 #卡农 #初音ミク #VOCALOID #古典音乐 #巴洛克 #帕赫贝尔 #AtelierMikuAcappella
+
+========== [es] Tchaikovsky - Danza del Hada de Azúcar 【初音ミク A Cappella】 ==========
+Nuestro primer arreglo orquestal completo, y una Miku muy sobrecargada de trabajo.
+Treinta y dos Mikus cantan cada parte, hasta la última nota.
+Pyotr Ilyich Tchaikovsky - Danza del Hada de Azúcar (1892)
+
+Portada, a partir de Renoir, 'The Dancer' (1874).
+https://commons.wikimedia.org/wiki/File:Renoir_-_Danseuse_NGA.jpg
+
+—
+
+Herramienta de producción: VOCALOID6 / Banco de voz: Hatsune Miku V6
+Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+
+#HatsuneMiku #Acappella #HadaDeAzúcar #初音ミク #VOCALOID #MúsicaClásica #Romanticismo #Tchaikovsky #AtelierMikuAcappella
+
+========== [pt] Tchaikovsky - Dança da Fada Açucarada 【初音ミク A Cappella】 ==========
+Nosso primeiro arranjo orquestral completo, e uma Miku muito sobrecarregada.
+Trinta e duas Mikus cantam cada parte, até a última nota.
+Pyotr Ilyich Tchaikovsky - Dança da Fada Açucarada (1892)
+
+Capa, a partir de Renoir, 'The Dancer' (1874).
+https://commons.wikimedia.org/wiki/File:Renoir_-_Danseuse_NGA.jpg
+
+—
+
+Ferramenta de produção: VOCALOID6 / Banco de voz: Hatsune Miku V6
+Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+
+#HatsuneMiku #Acappella #FadaAçucarada #初音ミク #VOCALOID #MúsicaClássica #Romantismo #Tchaikovsky #AtelierMikuAcappella
+
+========== [de] Tchaikovsky - Tanz der Zuckerfee 【初音ミク A Cappella】 ==========
+Unser erstes vollständiges Orchesterarrangement — und eine völlig überlastete Miku.
+Zweiunddreißig Mikus singen jede Stimme, bis zur letzten Note.
+Pyotr Ilyich Tchaikovsky - Tanz der Zuckerfee (1892)
+
+Coverbild, nach Renoir, „The Dancer“ (1874).
+https://commons.wikimedia.org/wiki/File:Renoir_-_Danseuse_NGA.jpg
+
+—
+
+Produktionswerkzeug: VOCALOID6 / Stimmbank: Hatsune Miku V6
+Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+
+#HatsuneMiku #ACappella #Zuckerfee #初音ミク #VOCALOID #KlassischeMusik #Romantik #Tchaikovsky #AtelierMikuAcappella
+
+========== [fr] Tchaikovsky - Danse de la Fée Dragée 【初音ミク A Cappella】 ==========
+Notre premier arrangement orchestral complet, et une Miku bien surmenée.
+Trente-deux Mikus chantent chaque voix, jusqu'à la dernière note.
+Pyotr Ilyich Tchaikovsky - Danse de la Fée Dragée (1892)
+
+Illustration, d'après Renoir, « The Dancer » (1874).
+https://commons.wikimedia.org/wiki/File:Renoir_-_Danseuse_NGA.jpg
+
+—
+
+Outil de production : VOCALOID6 / Banque vocale : Hatsune Miku V6
+Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+
+#HatsuneMiku #ACappella #FéeDragée #初音ミク #VOCALOID #MusiqueClassique #Romantisme #Tchaikovsky #AtelierMikuAcappella
+
+========== [ru] Чайковский - Танец Феи Драже 【初音ミク A Cappella】 ==========
+Наша первая полная оркестровая аранжировка — и одна совершенно загнанная Мику.
+Тридцать две Мику поют каждую партию, до последней строчки.
+Пётр Ильич Чайковский - Танец Феи Драже (1892)
+
+Обложка по картине Ренуара «The Dancer» (1874).
+https://commons.wikimedia.org/wiki/File:Renoir_-_Danseuse_NGA.jpg
+
+—
+
+Программа: VOCALOID6 / Голосовой банк: Хацунэ Мику V6
+Хацунэ Мику, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+
+#ХацунэМику #Акапелла #ФеяДраже #初音ミク #Вокалоид #КлассическаяМузыка #Романтизм #Чайковский #AtelierMikuAcappella
+
+========== [zh-Hant] 柴可夫斯基 - 糖梅仙子之舞 【初音ミク A Cappella】 ==========
+我們的第一首完整管弦樂編曲——還有一位被使喚到不行的初音未來。
+三十二位初音未來唱遍每一個聲部，一句都不漏。
+彼得·伊里奇·柴可夫斯基 - 糖梅仙子之舞 (1892)
+
+封面取材自雷諾瓦的畫作〈The Dancer〉（1874）。
+https://commons.wikimedia.org/wiki/File:Renoir_-_Danseuse_NGA.jpg
+
+—
+
+製作工具：VOCALOID6 / 聲庫：初音未來 V6
+初音未來, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+
+#初音未來 #阿卡貝拉 #糖梅仙子 #初音ミク #VOCALOID #古典音樂 #浪漫樂派 #柴可夫斯基 #AtelierMikuAcappella
+
+========== [zh-Hans] 柴可夫斯基 - 糖梅仙子之舞 【初音ミク A Cappella】 ==========
+我们的第一首完整管弦乐编曲——还有一位被使唤到不行的初音未来。
+三十二位初音未来唱遍每一个声部，一句都不落。
+彼得·伊里奇·柴可夫斯基 - 糖梅仙子之舞 (1892)
+
+封面取材自雷诺阿的画作〈The Dancer〉（1874）。
+https://commons.wikimedia.org/wiki/File:Renoir_-_Danseuse_NGA.jpg
+
+—
+
+制作工具：VOCALOID6 / 声库：初音未来 V6
+初音未来, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+
+#初音未来 #阿卡贝拉 #糖梅仙子 #初音ミク #VOCALOID #古典音乐 #浪漫乐派 #柴可夫斯基 #AtelierMikuAcappella
 
 ############ CHANNEL ############
 ----- [es] -----
