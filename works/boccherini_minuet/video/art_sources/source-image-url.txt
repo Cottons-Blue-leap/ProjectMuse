@@ -1,0 +1,17 @@
+Pietro Longhi — The Dancing Lesson (La lezione di ballo), c.1741
+Gallerie dell'Accademia, Venice (cat. 465 / inv. 465)
+
+Downloaded image (image-edit base):
+  file: longhi_dancing_lesson_c1741_wga.jpg
+  source: Web Gallery of Art (wga.hu) — art-historical reproduction DB
+  url: https://www.wga.hu/art/l/longhi/pietro/1/01dancin.jpg
+  page: https://www.wga.hu/html/l/longhi/pietro/1/01dancin.html
+  download date: 2026-06-08
+
+Museum reference pages (provenance):
+  https://www.gallerieaccademia.it/en/dancing-lesson
+  https://www.wikiart.org/en/pietro-longhi/the-dancing-lesson
+
+Note: image-edit (GPT) regenerates from scratch → source serves composition
+recognition only; output resolution determined by generation (family doctrine
+선례 = Pachelbel/Chopin/Sugar Plum). High-res scan not required for this pipeline.

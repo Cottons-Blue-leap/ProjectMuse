@@ -1,0 +1,331 @@
+{
+  "file": "C:\\Users\\user\\Desktop\\myProject\\Project_Muse\\works\\boccherini_minuet\\music\\renders\\Miku_boccherini_minuet_test2.wav",
+  "file_last_write_time": 1780882869.5890465,
+  "sample_rate_hz": 44100,
+  "channels": 2,
+  "duration_sec": 234.0,
+  "duration": "03:54.00",
+  "overall_peak_dbfs": -4.601476497607871,
+  "peak_dbfs_by_channel": [
+    -4.601476497607871,
+    -4.651789600878967
+  ],
+  "peak_time_by_channel": [
+    "02:22.82",
+    "02:22.82"
+  ],
+  "overall_rms_dbfs_full": -23.193511590928082,
+  "rms_dbfs_by_channel_full": [
+    -22.921599654942643,
+    -23.483591788951248
+  ],
+  "clip_counts": {
+    "exact_full_scale": 0,
+    "above_minus_0_1_dbfs": 0,
+    "above_minus_1_dbfs": 0,
+    "above_minus_3_dbfs": 0
+  },
+  "active_region": {
+    "start_sec": 1.15,
+    "end_sec": 232.0,
+    "duration_sec": 230.85,
+    "start": "00:01.15",
+    "end": "03:52.00",
+    "threshold_dbfs": -60
+  },
+  "active_rms_dbfs_overall": -23.134655612591267,
+  "active_rms_dbfs_by_channel": [
+    -22.8627441864869,
+    -23.424735230293763
+  ],
+  "crest_factor_db_active": 18.533179114983398,
+  "short_frame_rms_percentiles_dbfs_active": {
+    "1": -50.66966415751161,
+    "5": -41.701492287493195,
+    "10": -35.143158209375386,
+    "25": -26.889186963746187,
+    "50": -23.48070351231597,
+    "75": -21.500743637394933,
+    "90": -20.317764957427478,
+    "95": -19.70441090024988,
+    "99": -18.858230987774117
+  },
+  "silence_regions_over_250ms_below_minus60": [
+    {
+      "start": "00:00.00",
+      "end": "00:01.20",
+      "duration_sec": 1.2
+    },
+    {
+      "start": "03:51.95",
+      "end": "03:54.00",
+      "duration_sec": 2.0500000000000114
+    }
+  ],
+  "loudest_windows": {
+    "1s": {
+      "center": "01:54.50",
+      "start": "01:54.00",
+      "end": "01:55.00",
+      "rms_dbfs": -20.50689128167169
+    },
+    "3s": {
+      "center": "03:22.25",
+      "start": "03:20.75",
+      "end": "03:23.75",
+      "rms_dbfs": -21.42644931704745
+    },
+    "10s": {
+      "center": "03:44.00",
+      "start": "03:39.00",
+      "end": "03:49.00",
+      "rms_dbfs": -21.889082144629427
+    }
+  },
+  "top_loud_3s_review_spots": [
+    {
+      "center": "01:05.50",
+      "start": "01:04.00",
+      "end": "01:07.00",
+      "rms_dbfs": -21.440716683494724
+    },
+    {
+      "center": "00:44.00",
+      "start": "00:42.50",
+      "end": "00:45.50",
+      "rms_dbfs": -21.515011211874224
+    },
+    {
+      "center": "03:44.00",
+      "start": "03:42.50",
+      "end": "03:45.50",
+      "rms_dbfs": -21.515011217736507
+    },
+    {
+      "center": "03:18.50",
+      "start": "03:17.00",
+      "end": "03:20.00",
+      "rms_dbfs": -21.558056004376592
+    },
+    {
+      "center": "03:22.00",
+      "start": "03:20.50",
+      "end": "03:23.50",
+      "rms_dbfs": -21.608795085767557
+    }
+  ],
+  "stereo": {
+    "correlation_active": 0.9638064632494565,
+    "left_minus_right_rms_db_active": 0.5619910438068593,
+    "side_to_mid_db_active": -17.125190203150012,
+    "mono_fold_vs_stereo_avg_rms_db": -0.08338527335192078
+  },
+  "spectrum": {
+    "centroid_hz": 1119.519568754371,
+    "rolloff_85_hz": 1749.57275390625,
+    "rolloff_95_hz": 1943.37158203125,
+    "bands": [
+      {
+        "name": "20_60",
+        "lo_hz": 20,
+        "hi_hz": 60,
+        "power_pct": 0.00010256448386552882,
+        "db_rel_total": -59.890030011297604
+      },
+      {
+        "name": "60_120",
+        "lo_hz": 60,
+        "hi_hz": 120,
+        "power_pct": 0.0006704575949400823,
+        "db_rel_total": -51.736286851739195
+      },
+      {
+        "name": "120_250",
+        "lo_hz": 120,
+        "hi_hz": 250,
+        "power_pct": 1.0168387656816535,
+        "db_rel_total": -19.9274790521496
+      },
+      {
+        "name": "250_500",
+        "lo_hz": 250,
+        "hi_hz": 500,
+        "power_pct": 12.096230665712895,
+        "db_rel_total": -9.17349940105838
+      },
+      {
+        "name": "500_1k",
+        "lo_hz": 500,
+        "hi_hz": 1000,
+        "power_pct": 34.37447607331306,
+        "db_rel_total": -4.637639125130436
+      },
+      {
+        "name": "1k_2k",
+        "lo_hz": 1000,
+        "hi_hz": 2000,
+        "power_pct": 49.74414187639435,
+        "db_rel_total": -3.0325805663798318
+      },
+      {
+        "name": "2k_4k",
+        "lo_hz": 2000,
+        "hi_hz": 4000,
+        "power_pct": 1.8652485213402226,
+        "db_rel_total": -17.292632956214554
+      },
+      {
+        "name": "4k_8k",
+        "lo_hz": 4000,
+        "hi_hz": 8000,
+        "power_pct": 0.7759449890720979,
+        "db_rel_total": -21.101690671300734
+      },
+      {
+        "name": "8k_12k",
+        "lo_hz": 8000,
+        "hi_hz": 12000,
+        "power_pct": 0.11135312564998065,
+        "db_rel_total": -29.532975879385454
+      },
+      {
+        "name": "12k_20k",
+        "lo_hz": 12000,
+        "hi_hz": 20000,
+        "power_pct": 0.014657116863633917,
+        "db_rel_total": -38.33951449432733
+      }
+    ],
+    "dominant_average_peaks": [
+      {
+        "freq_hz": 662.14599609375,
+        "level_db_rel_max": 0.0
+      },
+      {
+        "freq_hz": 1760.33935546875,
+        "level_db_rel_max": -2.2152156263359046
+      },
+      {
+        "freq_hz": 592.1630859375,
+        "level_db_rel_max": -4.056002269178549
+      },
+      {
+        "freq_hz": 1173.5595703125,
+        "level_db_rel_max": -4.06475695588815
+      },
+      {
+        "freq_hz": 1108.9599609375,
+        "level_db_rel_max": -4.084817456445869
+      },
+      {
+        "freq_hz": 1318.90869140625,
+        "level_db_rel_max": -4.277458925909535
+      },
+      {
+        "freq_hz": 877.47802734375,
+        "level_db_rel_max": -4.676567646714034
+      },
+      {
+        "freq_hz": 328.38134765625,
+        "level_db_rel_max": -5.216773813560522
+      },
+      {
+        "freq_hz": 441.4306640625,
+        "level_db_rel_max": -5.342727992694478
+      },
+      {
+        "freq_hz": 554.47998046875,
+        "level_db_rel_max": -5.434853295100574
+      },
+      {
+        "freq_hz": 985.14404296875,
+        "level_db_rel_max": -6.305907823374078
+      },
+      {
+        "freq_hz": 1663.43994140625,
+        "level_db_rel_max": -7.022081930738651
+      }
+    ],
+    "pitch_class_energy_rough": [
+      {
+        "pitch_class": "E",
+        "power_pct": 20.872384477225847
+      },
+      {
+        "pitch_class": "A",
+        "power_pct": 19.801332831062375
+      },
+      {
+        "pitch_class": "D",
+        "power_pct": 13.085293320674134
+      },
+      {
+        "pitch_class": "C#",
+        "power_pct": 11.034106657386591
+      },
+      {
+        "pitch_class": "B",
+        "power_pct": 9.339605647541346
+      },
+      {
+        "pitch_class": "G#",
+        "power_pct": 7.71313681956395
+      },
+      {
+        "pitch_class": "F#",
+        "power_pct": 4.497915480601698
+      },
+      {
+        "pitch_class": "D#",
+        "power_pct": 3.5567675231723683
+      }
+    ]
+  },
+  "tempo_candidates_autocorrelation": [
+    {
+      "bpm": 99.38401442307692,
+      "period_sec": 0.603718820861678,
+      "score": 1.0
+    },
+    {
+      "bpm": 198.76802884615384,
+      "period_sec": 0.301859410430839,
+      "score": 0.951398491859436
+    },
+    {
+      "bpm": 50.17445388349515,
+      "period_sec": 1.195827664399093,
+      "score": 0.8474379181861877
+    },
+    {
+      "bpm": 67.11647727272727,
+      "period_sec": 0.893968253968254,
+      "score": 0.8449364900588989
+    },
+    {
+      "bpm": 132.51201923076923,
+      "period_sec": 0.4527891156462585,
+      "score": -0.152809277176857
+    },
+    {
+      "bpm": 44.17067307692308,
+      "period_sec": 1.3583673469387756,
+      "score": -0.19873659312725067
+    },
+    {
+      "bpm": 56.79086538461539,
+      "period_sec": 1.0565079365079366,
+      "score": -0.21162007749080658
+    },
+    {
+      "bpm": 80.74951171875,
+      "period_sec": 0.7430385487528345,
+      "score": -0.22616733610630035
+    }
+  ],
+  "plots": {
+    "waveform_rms": "C:\\Users\\user\\Desktop\\myProject\\Project_Muse\\works\\boccherini_minuet\\analysis\\Miku_boccherini_minuet_test2\\waveform_rms.png",
+    "average_spectrum": "C:\\Users\\user\\Desktop\\myProject\\Project_Muse\\works\\boccherini_minuet\\analysis\\Miku_boccherini_minuet_test2\\average_spectrum.png",
+    "band_energy": "C:\\Users\\user\\Desktop\\myProject\\Project_Muse\\works\\boccherini_minuet\\analysis\\Miku_boccherini_minuet_test2\\band_energy.png"
+  }
+}

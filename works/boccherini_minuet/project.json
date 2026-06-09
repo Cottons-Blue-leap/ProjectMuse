@@ -1,0 +1,18 @@
+{
+  "piece": "Minuet (Minuetto) from String Quintet in E major, Op. 11 No. 5, G. 275 — 3rd movement (Luigi Boccherini)",
+  "composer": "Luigi Boccherini (1743-1805)",
+  "year": 1771,
+  "section": "현악 5중주 E장조 Op.11 No.5 (G.275)의 3악장 미뉴에트 통째 (~3분 · 3/4 · Tempo di Minuetto · Minuet-Trio-Minuet da capo 구조 → V6 입력 시 da capo 반복 처리 결단). 세상에서 가장 유명한 미뉴에트 중 하나(영화·광고 다용). 텍스처 = 제1바이올린 그 유명한 우아한 주선율 + 갈랑 양식 스타카토 반주(제2바이올린·비올라·첼로2 = 보케리니 특유의 2첼로 편성). 짐노페디·비발디·조플린·사랑의인사·작은별·쇼팽·캐논·사탕요정 family 정합 = 자연 짧은 단곡 통째 transcription default. 핵심 게이트 = 우아한 레가토 주선율 + 가벼운 스타카토 반주의 궁정적 경쾌함이 미쿠 모음(Ah/Oo)에서 사는지(사탕요정 staccato 축과 사랑의인사 레가토 축의 중간 = 갈랑 우아미).",
+  "vocal": "Hatsune Miku (모음/humming · Ah·Oo·Mm role · 기악 원곡 = 가사 없음 · 첫 8곡 family 정합). role 분배 axis(잠정 · V6 입력 시 악보 분석 후 확정) = 제1바이올린 주선율 → lead_miku / 제2바이올린·비올라 화성 반주 → mid_oo / 첼로2 베이스 → low_oo / air_mm = glue. 게이트 = 갈랑 스타카토 반주의 가벼움과 주선율 레가토 우아미가 모음에서 동시에 살아나는지.",
+  "music": {
+    "source_score": "planning/candidates_opus/보케리니_미뉴에트.pdf (확보 2026-06-06 · CSV row 79 score_file 정합 · V6 진입 시 발췌 필요하면 music/source_scores/로 ASCII path copy)",
+    "imslp_path_axis": "https://imslp.org/wiki/String_Quintet_in_E_major,_Op.11_No.5_(Boccherini,_Luigi) · PD 강 전세계 · Boccherini d.1805 life+70 통과(여유 큼)",
+    "transcription": "코튼 V6 editor 직접 입력 (OMR 없음 · manual transcription default 정합)",
+    "master_audio": "music/masters/Miku_boccherini_minuet_master.wav (path 예약 · 미생성)"
+  },
+  "video": {
+    "brief": "video/video-brief.md (미작성)",
+    "final_video": "video/exports/boccherini_minuet_final.mp4 (path 예약)"
+  },
+  "rights_log": "rights/rights-log.md"
+}
