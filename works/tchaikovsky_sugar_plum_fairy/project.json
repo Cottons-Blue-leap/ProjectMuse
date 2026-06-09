@@ -1,0 +1,19 @@
+{
+  "piece": "The Nutcracker Suite, Op.71a, No.2(b) — Dance of the Sugar Plum Fairy / Danse de la Fée-Dragée (Pyotr Ilyich Tchaikovsky)",
+  "composer": "Pyotr Ilyich Tchaikovsky (1840-1893)",
+  "year": 1892,
+  "section": "모음곡(Suite) Op.71a No.2(b) 사탕요정의 춤 통째 (~1:50-2:00 · Andante non troppo · 2/4 · e단조 · 발췌 없이 곡 전체 · 짐노페디·비발디·조플린·사랑의인사·작은별·쇼팽·캐논 family 정합 = 자연 짧은 단곡 통째 transcription default). 텍스처 = 첼레스타 솔로 멜로디 + 현 전체 pizz.(피치카토) 반주 = 얇고 명료 → 캐논/하이든 빠른악장 대비 채보 부담 낮음(코튼 전환 사유 '리스크 분리' 실측 확인 2026-06-04). 핵심 challenge = 첼레스타 영롱한 어택 + 피치카토 staccato가 미쿠 모음(Ah/Oo) staccato에서 사는지 = 본 곡 게이트(캐논 레가토 성부쌓기와 정반대 축).",
+  "vocal": "Hatsune Miku (모음/humming · Ah·Oo·Mm role · 기악 원곡 = 가사 없음 · 첫 7곡 family 정합). role 분배 axis = 첼레스타 R.H. 주선율 → lead_miku / 첼레스타 L.H.·상단 반짝임 → halo_high / 현 pizz 베이스(C-Bassi·Celli) → low_oo / 현 pizz 화성(Viola·Violini) → mid_oo / air_mm=glue. 게이트 = staccato 어택 명료도(영롱함·건조한 피치카토)가 모음에서 살아나는지.",
+  "music": {
+    "source_score": "music/source_scores/tchaikovsky_sugar_plum_fairy.pdf (확보 2026-06-04 · 원본 candidates_opus/표트르 차이코프스키_호두까기 인형.pdf[Casse-Noisette Suite Op.71a 오케스트라 풀스코어 120p]에서 MOKA가 사탕요정 섹션 p48~54[7p] 발췌 추출 · 텍스트레이어 없는 조판 이미지본 · 곡 경계 시각 검증 완료[p48='b: Danse de la Fée-Dragée' 시작 / p55='c: Danse russe Trépak' 시작])",
+    "source_score_full": "planning/candidates_opus/표트르 차이코프스키_호두까기 인형.pdf (원본 120p 풀스코어 · 발췌 출처 · keep)",
+    "imslp_path_axis": "https://imslp.org/wiki/The_Nutcracker_(suite),_Op.71a_(Tchaikovsky,_Pyotr) · PD 강 전세계 · Tchaikovsky d.1893 life+70(=1963) 통과",
+    "transcription": "코튼 V6 editor 직접 입력 (OMR 없음 · manual transcription default 정합 · 첼레스타 솔로+pizz 얇은 텍스처라 채보 부담 낮음)",
+    "master_audio": "music/masters/Miku_tchaikovsky_sugar_plum_fairy_master.wav (path 예약 · 미생성)"
+  },
+  "video": {
+    "brief": "video/video-brief.md (미작성)",
+    "final_video": "video/exports/tchaikovsky_sugar_plum_fairy_final.mp4 (path 예약)"
+  },
+  "rights_log": "rights/rights-log.md"
+}

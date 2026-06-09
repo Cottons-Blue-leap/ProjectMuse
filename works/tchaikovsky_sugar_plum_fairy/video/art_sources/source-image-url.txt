@@ -1,0 +1,16 @@
+Pierre-Auguste Renoir — The Dancer / La Danseuse (1874)
+
+Source-of-record (PD 검증본 · downloaded 2026-06-06):
+https://commons.wikimedia.org/wiki/File:Renoir_-_Danseuse_NGA.jpg
+(National Gallery of Art, Washington · Widener Collection 1942.9.72 · NGA Open Access)
+
+Direct file (Wikimedia Commons high-res):
+https://commons.wikimedia.org/wiki/Special:FilePath/Renoir%20-%20Danseuse%20NGA.jpg
+
+Local file: renoir_the_dancer_1874_nga.jpg (3840×5812 · ~6.9MB)
+Source: Wikimedia Commons (NGA Open Access scan).
+
+해상도: 충분 (3840×5812 고해상 · NGA Open Access 무료 PD). Hughes 때의 저해상 문제 없음.
+용도: (1) 미쿠 합성 베이스 (GPT image-edit reference) (2) 영상 outro before-after 디졸브용 원작 (1:1 crop 예정 · 코튼 2026-06-06 b방향 결정).
+
+(폐기 Hughes path 자료 = _archive/ 보존)
