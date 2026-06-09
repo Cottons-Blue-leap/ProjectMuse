@@ -14,7 +14,7 @@
     "url": "https://www.youtube.com/@AtelierMikuAcappella",
     "playlist": "Miku in the Baroque Era (비발디 봄 1악장 공유 · 바로크 family 정합)"
   },
-  "release_title": "Pachelbel - Canon in D (feat. 初音ミク) · **성만 양식**(title_naming_guide 2026-05-28 lock 정합 · 라이브 7곡째). 4로케일 적용 = ko 파헬벨 - 캐논 D장조 / ja パッヘルベル - カノン ニ長調 / en=default · defaultLanguage=en. ⚠️ 구 값 'Johann Pachelbel'(s355 풀네임)은 stale였고 성만으로 교정(s390 적용). 본문 헌사·썸네일은 풀네임 keep.",
+  "release_title": "Pachelbel - Canon in D 【初音ミク A Cappella】 · **성만 양식**(title_naming_guide 2026-05-28 lock 정합 · 라이브 7곡째). 4로케일 적용 = ko 파헬벨 - 캐논 D장조 / ja パッヘルベル - カノン ニ長調 / en=default · defaultLanguage=en. ⚠️ 구 값 'Johann Pachelbel'(s355 풀네임)은 stale였고 성만으로 교정(s390 적용). 본문 헌사·썸네일은 풀네임 keep.",
   "cover_art": "LOCK (2026-06-02 · 코튼 결단) = Johannes Vermeer *A Young Woman seated at a Virginal* (c.1670-72 · oil on canvas 51.5×45.5cm · **National Gallery, London · NG2568**). 결단 사유 = 전경의 **viola da gamba(bass viol) + 버지널(건반) = 바로크 basso continuo(통주저음) 편성** ↔ **캐논 in D = 반복 ground bass 위 성부 쌓기** → 그림이 곧 캐논의 통주저음 텍스처를 담음(제네릭 음악화 넘어선 특정 관계 훅) + Vermeer 차분한 블루 = Classical Miku 청록 팔레트 최상 정합 + Dutch Baroque = 파헬벨 동시대 + 화가 미사용(중복0). ⚠️ 동명 Leiden Collection(개인소장 소형 25×20cm)판과 구분 — NG London 큰 확정작 채택(PD-Art 깨끗). 소스 = Wikimedia Commons PD-Art (Vermeer d.1675 PD 강) · NG London 자체 스캔 직접 scrape X. art_sources/source-image-url.txt + source-rights-notes.md 박는 path. cover 합성(Miku faint veiled 배치 · 쇼팽 선례)은 본 LOCK 후 진입. ─── 이전 csv 기본값 = Vermeer *The Music Lesson*(관계사유 공란 placeholder · s388 재선정으로 교체).",
   "source_pdf": "music/source_scores/pachelbel_canon_in_d.pdf (요한 파헬벨_캐논 in D.pdf ASCII copy · 2026-05-30 박힘 · Canon and Gigue P.37 · 1.84MB · V6 진입 시점 Canon만 picking[Gigue 제외] + edition_id 자가 점검 의제)",
   "signature_wordmark_v3_apply": true,

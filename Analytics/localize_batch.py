@@ -10,7 +10,7 @@ Single source of truth for the es / pt / zh-Hant / zh-Hans / ru / de / fr expans
 - 네이티브 스크립트로 완전 현지화 (작곡가명 키릴/중국어 음역, 곡명 시장 canonical).
 - 화가명: ru/zh 음역, latin 4종은 라틴 유지. **명화 제목은 영어 원제 유지** (검증 가능성 보수 선택).
 - "The Entertainer" = 고유 영문 제목 유지 (음역 X). 독일어 Köchel = KV (K. 아님).
-- title suffix "(feat. 初音ミク)" = 전 로케일 불변 (브랜드).
+- title badge "【初音ミク A Cappella】" = 전 로케일 불변 (브랜드 · s402 · 긴 곡 = 【A Cappella】 fallback).
 """
 import sys
 from pathlib import Path
@@ -22,7 +22,9 @@ BASE = Path(__file__).resolve().parent.parent
 LANGS = ["es", "pt", "de", "fr", "ru", "zh-Hant", "zh-Hans"]
 CHANNEL_CODE = {"es": "es_ES", "pt": "pt_BR", "de": "de_DE", "fr": "fr_FR",
                 "ru": "ru_RU", "zh-Hant": "zh_TW", "zh-Hans": "zh_CN"}
-SUFFIX = " (feat. 初音ミク)"
+SUFFIX = " (feat. 初音ミク)"          # legacy (pre-s402) — kept for reference
+BADGE = " 【初音ミク A Cappella】"       # s402 title badge (코튼 2026-06-06 LOCK · title_naming_guide)
+BADGE_ABBR = " 【A Cappella】"          # long-title fallback (per-work "badge_abbrev": True · e.g. Mozart K.265)
 CC = "CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/"
 
 # ── shared localized tokens ────────────────────────────────────────────────
@@ -121,6 +123,7 @@ PAINTER = {
     "Waterhouse": {"ru": "Уотерхауса", "zh-Hant": "沃特豪斯", "zh-Hans": "沃特豪斯"},
     "van Gogh": {"ru": "Ван Гога", "zh-Hant": "梵谷", "zh-Hans": "梵高"},
     "Vermeer": {"ru": "Вермеера", "zh-Hant": "維米爾", "zh-Hans": "维米尔"},
+    "Renoir": {"ru": "Ренуара", "zh-Hant": "雷諾瓦", "zh-Hans": "雷诺阿"},
 }
 def painter_name(lang, en):
     return PAINTER.get(en, {}).get(lang, en)
@@ -271,7 +274,7 @@ WORKS = [
         "curator": {
             "es": "Un nocturno profundo para la hora de la medianoche",
             "pt": "Um noturno profundo para a hora da meia-noite",
-            "de": "Ein tiefes Nocturne für die Mitternachtsstunde",
+            "de": "Eine tiefe Nocturne für die Mitternachtsstunde",
             "fr": "Un nocturne profond pour l'heure de minuit",
             "ru": "Глубокий ноктюрн для полуночного часа",
             "zh-Hant": "獻給午夜時分的深邃夜曲",
@@ -299,6 +302,52 @@ WORKS = [
         },
         "tag_piece": {"es": "#Canon", "pt": "#Cânone", "de": "#Kanon", "fr": "#Canon", "ru": "#Канон", "zh-Hant": "#卡農", "zh-Hans": "#卡农"},
     },
+    {
+        "vid": "759VCWOtC2w", "slug": "tchaikovsky_sugar_plum_fairy", "count": 32, "year": "1892",
+        "style": "lead", "welcome": False, "subscribe": False, "era": "romantic",
+        "surname": L("Tchaikovsky", "Чайковский", "柴可夫斯基", "柴可夫斯基"),
+        "full": L("Pyotr Ilyich Tchaikovsky", "Пётр Ильич Чайковский", "彼得·伊里奇·柴可夫斯基", "彼得·伊里奇·柴可夫斯基"),
+        # s411 enrich: 부모작 발레명 병기 (검색량 압도 · 정식 발레 타이틀)
+        "piece": {"es": "Danza del Hada de Azúcar (El Cascanueces)", "pt": "Dança da Fada Açucarada (O Quebra-Nozes)", "de": "Tanz der Zuckerfee (Der Nussknacker)",
+                  "fr": "Danse de la Fée Dragée (Casse-Noisette)", "ru": "Танец Феи Драже (Щелкунчик)", "zh-Hant": "糖梅仙子之舞（胡桃鉗）", "zh-Hans": "糖梅仙子之舞（胡桃夹子）"},
+        "painter": "Renoir", "painting": "The Dancer", "p_year": "1874",
+        "cover_url": "https://commons.wikimedia.org/wiki/File:Renoir_-_Danseuse_NGA.jpg",
+        "curator": None,
+        # bespoke hook (코튼 LOCK 2026-06-06 · 첫 풀 관현악 편곡 + N=32 혹사 코미디). EN/KO/JA = release/ hand-sidecar 정본.
+        "custom_hook": {
+            "es": "Nuestro primer arreglo orquestal completo, y una Miku muy sobrecargada de trabajo.\nTreinta y dos Mikus cantan cada parte, hasta la última nota.\nPyotr Ilyich Tchaikovsky - Danza del Hada de Azúcar (1892)",
+            "pt": "Nosso primeiro arranjo orquestral completo, e uma Miku muito sobrecarregada.\nTrinta e duas Mikus cantam cada parte, até a última nota.\nPyotr Ilyich Tchaikovsky - Dança da Fada Açucarada (1892)",
+            "de": "Unser erstes vollständiges Orchesterarrangement — und eine völlig überlastete Miku.\nZweiunddreißig Mikus singen jede Stimme, bis zur letzten Note.\nPyotr Ilyich Tchaikovsky - Tanz der Zuckerfee (1892)",
+            "fr": "Notre premier arrangement orchestral complet, et une Miku bien surmenée.\nTrente-deux Mikus chantent chaque voix, jusqu'à la dernière note.\nPyotr Ilyich Tchaikovsky - Danse de la Fée Dragée (1892)",
+            "ru": "Наша первая полная оркестровая аранжировка — и одна совершенно загнанная Мику.\nТридцать две Мику поют каждую партию, до последней строчки.\nПётр Ильич Чайковский - Танец Феи Драже (1892)",
+            "zh-Hant": "我們的第一首完整管弦樂編曲——還有一位被使喚到不行的初音未來。\n三十二位初音未來唱遍每一個聲部，一句都不漏。\n彼得·伊里奇·柴可夫斯基 - 糖梅仙子之舞 (1892)",
+            "zh-Hans": "我们的第一首完整管弦乐编曲——还有一位被使唤到不行的初音未来。\n三十二位初音未来唱遍每一个声部，一句都不落。\n彼得·伊里奇·柴可夫斯基 - 糖梅仙子之舞 (1892)",
+        },
+        "tag_piece": {"es": "#HadaDeAzúcar", "pt": "#FadaAçucarada", "de": "#Zuckerfee", "fr": "#FéeDragée", "ru": "#ФеяДраже", "zh-Hant": "#糖梅仙子", "zh-Hans": "#糖梅仙子"},
+    },
+    {
+        "vid": "X9xxOeqi2Sk", "slug": "boccherini_minuet", "count": 9, "year": "1771",
+        "style": "lead", "welcome": False, "subscribe": False, "era": "classical",
+        "surname": L("Boccherini", "Боккерини", "鮑凱利尼", "博凯里尼"),
+        "full": L("Luigi Boccherini", "Луиджи Боккерини", "路易吉·鮑凱利尼", "路易吉·博凯里尼"),
+        "piece": {"es": "Minueto", "pt": "Minueto", "de": "Menuett", "fr": "Menuet",
+                  "ru": "Менуэт", "zh-Hant": "小步舞曲", "zh-Hans": "小步舞曲"},
+        "painter": "Longhi", "painting": "The Dancing Lesson", "p_year": "c.1741",
+        "cover_url": "https://www.wga.hu/html/l/longhi/pietro/1/01dancin.html",
+        "curator": None,
+        # custom_hook (코튼 LOCK 2026-06-08 · "토막상식+미뉴엣 어원[menu=작다]" 형식 · 표준 "{N} Mikus" 템플릿 벗어남).
+        # EN/KO/JA = release/ hand-sidecar 정본. 7언어 번역 = 외부 QA subagent 게이트 (l10n cross-verification).
+        "custom_hook": {
+            "es": "¿Sabías que el minueto es una elegante danza cortesana francesa en compás ternario? Su nombre viene de los pasos pequeños (menu) y gráciles con que se bailaba.\nNueve Mikus cantan las cinco voces del quinteto de cuerda.\nLuigi Boccherini - Minueto (1771)",
+            "pt": "Você sabia que o minueto é uma elegante dança da corte francesa em compasso ternário? O nome vem dos passos pequenos (menu) e graciosos com que era dançado.\nNove Mikus cantam as cinco vozes do quinteto de cordas.\nLuigi Boccherini - Minueto (1771)",
+            "de": "Schon gewusst? Das Menuett ist ein eleganter französischer Hoftanz im Dreiertakt, benannt nach den kleinen (menu), anmutigen Schritten, mit denen es getanzt wurde.\nNeun Mikus singen alle fünf Stimmen des Streichquintetts.\nLuigi Boccherini - Menuett (1771)",
+            "fr": "Le saviez-vous ? Le menuet est une élégante danse de cour française à trois temps, qui doit son nom aux petits pas menus et gracieux que l'on y dansait.\nNeuf Mikus chantent les cinq voix du quintette à cordes.\nLuigi Boccherini - Menuet (1771)",
+            "ru": "А вы знали? Менуэт — изящный французский придворный танец в трёхдольном размере, названный так за маленькие (menu), грациозные шаги, которыми его танцевали.\nДевять Мику поют все пять голосов струнного квинтета.\nЛуиджи Боккерини - Менуэт (1771)",
+            "zh-Hant": "你知道嗎？小步舞曲是一種優雅的三拍子法國宮廷舞曲，名稱源自跳舞時那細小（menu）而優雅的步伐。\n九位初音未來唱出弦樂五重奏的五個聲部。\n路易吉·鮑凱利尼 - 小步舞曲 (1771)",
+            "zh-Hans": "你知道吗？小步舞曲是一种优雅的三拍子法国宫廷舞曲，名称源自跳舞时那细小（menu）而优雅的步伐。\n九位初音未来唱出弦乐五重奏的五个声部。\n路易吉·博凯里尼 - 小步舞曲 (1771)",
+        },
+        "tag_piece": {"es": "#Minueto", "pt": "#Minueto", "de": "#Menuett", "fr": "#Menuet", "ru": "#Менуэт", "zh-Hant": "#小步舞曲", "zh-Hans": "#小步舞曲"},
+    },
 ]
 
 # ── hashtags ───────────────────────────────────────────────────────────────
@@ -320,6 +369,7 @@ TAG_COMPOSER = {  # composer hashtag (no space) per lang
     "Mozart": {"ru": "#Моцарт", "zh-Hant": "#莫札特", "zh-Hans": "#莫扎特"},
     "Chopin": {"ru": "#Шопен", "zh-Hant": "#蕭邦", "zh-Hans": "#肖邦"},
     "Pachelbel": {"ru": "#Пахельбель", "zh-Hant": "#帕海貝爾", "zh-Hans": "#帕赫贝尔"},
+    "Tchaikovsky": {"ru": "#Чайковский", "zh-Hant": "#柴可夫斯基", "zh-Hans": "#柴可夫斯基"},
 }
 def composer_tag(lang, surname_en):
     return TAG_COMPOSER.get(surname_en, {}).get(lang, "#" + surname_en.replace(" ", ""))
@@ -335,7 +385,8 @@ def hashtags(w, lang):
 
 # ── assembly ───────────────────────────────────────────────────────────────
 def title(w, lang):
-    return f"{w['surname'][lang]} - {w['piece'][lang]}{SUFFIX}"
+    badge = BADGE_ABBR if w.get("badge_abbrev") else BADGE
+    return f"{w['surname'][lang]} - {w['piece'][lang]}{badge}"
 
 def dedication(w, lang):
     full = w["full"][lang]
@@ -366,6 +417,11 @@ def build_description(w, lang):
     if w.get("welcome"):
         major.append(WELCOME[lang])
         block = dedication(w, lang) + "\n\n" + cover(w, lang)
+    elif w.get("custom_hook"):
+        # bespoke hook (표준 "{N} Mikus sing it now" 템플릿 벗어남 · 차이콥스키 사탕요정 s398).
+        # curator+dedication 대신 per-work 3줄 블록 통째 사용 (count/sing/NUM 미사용).
+        head = w["custom_hook"][lang]
+        block = head + "\n\n" + cover(w, lang)
     else:
         cur = w["curator"][lang]
         ded = dedication(w, lang)
@@ -392,7 +448,7 @@ CHANNEL = {
 
 # ── commands ───────────────────────────────────────────────────────────────
 def cmd_gate(_):
-    print("### 제목 (Title) — {surname} - {piece} (feat. 初音ミク)\n")
+    print("### 제목 (Title) — {surname} - {piece} 【初音ミク A Cappella】\n")
     for w in WORKS:
         print(f"■ {w['slug']}  [{w['vid']}]")
         for lang in LANGS:
@@ -439,7 +495,7 @@ def render_review():
         "locales: es / pt / de / fr / ru / zh-Hant / zh-Hans",
         "============================================================",
         "",
-        "### 제목 (Title) — {surname} - {piece} (feat. 初音ミク)",
+        "### 제목 (Title) — {surname} - {piece} 【初音ミク A Cappella】",
         "",
     ]
     for w in WORKS:

@@ -24,16 +24,31 @@
 6. **곡명 정식 vs 별칭** = 제목은 정식(s361) — **단 zh Mozart K.265 = 별칭 `《小星星變奏曲》` 의도적 예외**(중국어 정식명=프랑스 원제 무검색 → 발견성 우선). 별칭이 곡 식별에 사실상 표준인 시장은 곡별 판단.
 7. **채널명** = 브랜드 `Atelier Miku A Cappella` 전 로케일 고정 · 설명만 현지화.
 
-## 품질 게이트 (필수 · 못 읽는 언어 doctrine)
+## 품질 게이트 — 3층 교차검수 (필수 · 코튼 2026-06-06 "당분간 유지")
 
-우리가 검증 못 하는 6개 언어 → **외부/독립 교차검증 1회 이상** (feedback_self_audit_limits 정합). s393 = Gemini + 서브에이전트 2회. 큐레이터 헌사(LOCK 창의문장) + 작곡가 성 음역이 핵심 점검 지점.
+우리가 못 읽는 6개 언어 → **3층 교차검수** (feedback_self_audit_limits + feedback_l10n_cross_verification 정합):
+
+1. **Claude QA subagent** — 저자(MOKA)와 분리된 새 컨텍스트 에이전트로 register·문법·성수일치·음악용어·naming 적대적 1차.
+2. **웹 사실검증 (모델 무관)** — 곡명/인명 표준 표기를 각 언어 Wikipedia 표제어·악보/오케스트라 사이트로 대조 (naming 축 = 모델 의존 0 확정).
+3. **교차모델 (path ㄴ = 수동 paste)** — GPT·Gemini·Claude.ai 각 **새 대화**에 검수 프롬프트+현재 라이브본 붙여넣고 회수. API 미사용(코튼 토큰비용 통제 불가). 목적 = **다른 모델 계열이 Claude+GPT 공유 blind spot 적발**.
+
+**★ adjudication 규칙:** 모델이 지적한 오류는 **모델 투표 집계가 아니라 반드시 라이브 바이트(또는 웹 ground truth)로 대조 후 적용.**
+
+핵심 점검 지점 = 큐레이터 헌사/hook(LOCK 창의문장) + 작곡가 성 음역 + 음악용어 자연성.
+
+### 실측 사례 (s398 · 차이콥스키 사탕요정)
+- **line→note (적용)** — "down to the last line"의 literal 번역(última línea/letzten Zeile/dernière ligne)이 음악 아닌 *텍스트 줄*로 읽힘 → nota/Note/note(음악 자연 + "cada parte…última parte" 반복 회피). **Gemini 단독 적발, Claude+GPT+subagent 셋 다 놓침** = 상관오류 실측+포착.
+- **pt "orquest ral" 유령오타** — 3모델이 다 지적했으나 라이브 바이트는 정상 "orquestral". 원인 = **paste 줄바꿈이 만든 가짜 오타**. ⚠️ **path ㄴ 함정 = 모델은 라이브가 아닌 paste를 검수** → ground-truth 대조 없으면 유령 수정 위험.
+
+### custom_hook (bespoke hook 곡)
+표준 "{N} Mikus sing it now" 템플릿을 벗어난 코튼 LOCK hook(예: 사탕요정 "첫 관현악/혹사 미쿠")은 `WORKS` dict에 **`custom_hook` {lang: 3줄블록}** 키 추가 → `build_description`가 curator/dedication 대신 그 블록 사용(count/sing/NUM 미사용). `curator`=None. EN/KO/JA는 release/ hand-sidecar가 정본, 7언어만 custom_hook 번역.
 
 ## 신곡 절차 (per-song)
 
 1. **로케일 데이터 추가** — `localize_batch.py` `WORKS` 에 새 작품 dict 1건 append:
    `vid` · `slug` · `count`(미쿠 수) · `year` · `style`(`lead`/`inline`/`vivaldi`/`welcome_inline`) · `era` · `surname`/`full`/`piece`(7로케일 · `L()` 헬퍼=라틴4공유) · `painter`/`painting`(영어원제)/`p_year` · `cover_url` · `curator`(7로케일 idiomatic · None이면 Welcome형) · `tag_piece`. 위 Lock 정책 준수.
 2. **검토** — `python Analytics/localize_batch.py gate` (제목·큐레이터 표) + `review`(전수 렌더 → `Analytics/_channel_l10n/REVIEW_l10n_*.txt`).
-3. **외부 QA** — review 파일을 독립 검수(품질 게이트). must-fix 반영.
+3. **3층 교차검수** — 위 「품질 게이트」 절차(Claude subagent → 웹 사실검증 → 교차모델 paste) + ground-truth adjudication. must-fix만 라이브 대조 후 반영.
 4. **sidecar 생성** — `write --only <vid|slug>` → `works/<piece>/video/release/description.<lang>.txt` + `title.<lang>.txt`.
 5. **푸시** — `push --only <vid>` (read-modify-write · en/ja/ko 보존 · 채널 자동 skip). `--dry-run` 먼저 권장.
 6. **audit** — `audit --only <vid>` → 10개 로케일 존재 + 제목 일치 PASS 확인.
