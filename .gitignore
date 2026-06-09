@@ -51,6 +51,8 @@ desktop.ini
 *.flac
 *.vpr
 *.musicxml
+*.mxl
+*.omr
 *.mid
 *.midi
 
