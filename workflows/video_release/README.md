@@ -27,6 +27,11 @@ works/<piece>/project.json
 The master audio is produced by `workflows/audio_production`. The arrangement,
 role, and MIDI decisions come from `workflows/music_acappella`.
 
+> **Prerequisite (WS1 · D1-c):** the master must have cleared the **blending gate**
+> (`docs/blending_gate.md`) — gate accepted + 코튼 listening OK — *before* this
+> workflow renders. The gate sits at the end of `audio_production` so blend defects
+> never reach a committed render. Do not render an un-gated master.
+
 ## Main Work Folder (s310 정합)
 
 ```text

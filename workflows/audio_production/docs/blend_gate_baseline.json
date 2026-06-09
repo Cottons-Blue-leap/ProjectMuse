@@ -1,0 +1,208 @@
+{
+  "source": "live catalog full-mix masters",
+  "n": 6,
+  "works": [
+    "boccherini_minuet",
+    "chopin_nocturne_op9_2",
+    "elgar_salut_damour",
+    "joplin_the_entertainer",
+    "pachelbel_canon_in_d",
+    "tchaikovsky_sugar_plum_fairy"
+  ],
+  "ranges": {
+    "lufs": {
+      "min": -18.0,
+      "max": -15.5,
+      "mean": -17.17
+    },
+    "true_peak_dbtp": {
+      "min": -4.1,
+      "max": -1.2,
+      "mean": -2.67
+    },
+    "lra": {
+      "min": 2.3,
+      "max": 8.3,
+      "mean": 5.8
+    },
+    "side_rms_db": {
+      "min": -34.49,
+      "max": -26.78,
+      "mean": -31.73
+    },
+    "mid_rms_db": {
+      "min": -22.5,
+      "max": -19.71,
+      "mean": -21.57
+    },
+    "lr_correlation": {
+      "min": 0.525,
+      "max": 0.895,
+      "mean": 0.8
+    }
+  },
+  "per_work": [
+    {
+      "file": "Miku_boccherini_minuet_master.wav",
+      "channels": 2,
+      "sample_rate": 44100,
+      "duration_s": 234.0,
+      "lufs": -16.9,
+      "true_peak_dbtp": -2.7,
+      "lra": 4.8,
+      "mid_rms_db": -21.71,
+      "side_rms_db": -26.78,
+      "stereo_width_db": -5.07,
+      "lr_correlation": 0.525,
+      "rms_db": -21.71,
+      "band_energy_mono": {
+        "63": 2.2683797903870627e-09,
+        "125": 3.050999146748174e-07,
+        "250": 0.00014505115054452025,
+        "500": 0.0003605186113277141,
+        "1000": 0.0004111096526441826,
+        "2000": 0.00031872877431739666,
+        "4000": 1.585099850696349e-05,
+        "8000": 2.3110067992061756e-06,
+        "16000": 3.9788590776182323e-07
+      },
+      "ffmpeg_error": null,
+      "work": "boccherini_minuet"
+    },
+    {
+      "file": "Miku_chopin_nocturne_op9_2_master.wav",
+      "channels": 2,
+      "sample_rate": 44100,
+      "duration_s": 262.8,
+      "lufs": -17.1,
+      "true_peak_dbtp": -3.7,
+      "lra": 5.9,
+      "mid_rms_db": -21.18,
+      "side_rms_db": -33.69,
+      "stereo_width_db": -12.51,
+      "lr_correlation": 0.895,
+      "rms_db": -21.18,
+      "band_energy_mono": {
+        "63": 3.897730322899098e-10,
+        "125": 2.66629602768228e-07,
+        "250": 1.805953075756424e-05,
+        "500": 0.000272534545150216,
+        "1000": 0.0007535142336009122,
+        "2000": 0.00036715024548613864,
+        "4000": 5.117371538541456e-06,
+        "8000": 3.1290452787132306e-07,
+        "16000": 4.298269850896919e-08
+      },
+      "ffmpeg_error": null,
+      "work": "chopin_nocturne_op9_2"
+    },
+    {
+      "file": "Miku_elgar_salut_damour_master.wav",
+      "channels": 2,
+      "sample_rate": 44100,
+      "duration_s": 140.0,
+      "lufs": -18.0,
+      "true_peak_dbtp": -2.6,
+      "lra": 6.6,
+      "mid_rms_db": -22.5,
+      "side_rms_db": -34.49,
+      "stereo_width_db": -11.99,
+      "lr_correlation": 0.889,
+      "rms_db": -22.5,
+      "band_energy_mono": {
+        "63": 1.652663006780601e-09,
+        "125": 5.572857450107987e-07,
+        "250": 3.441330183328291e-05,
+        "500": 0.000109913923664635,
+        "1000": 0.0004528324490186877,
+        "2000": 0.0004336617269139351,
+        "4000": 1.3602698452834073e-05,
+        "8000": 2.265751685568421e-07,
+        "16000": 2.394106757063201e-08
+      },
+      "ffmpeg_error": null,
+      "work": "elgar_salut_damour"
+    },
+    {
+      "file": "Miku_joplin_the_entertainer_master.wav",
+      "channels": 2,
+      "sample_rate": 44100,
+      "duration_s": 218.571,
+      "lufs": -15.5,
+      "true_peak_dbtp": -1.2,
+      "lra": 2.3,
+      "mid_rms_db": -19.71,
+      "side_rms_db": -32.01,
+      "stereo_width_db": -12.3,
+      "lr_correlation": 0.889,
+      "rms_db": -19.71,
+      "band_energy_mono": {
+        "63": 2.7597184017301864e-10,
+        "125": 3.735312805582145e-07,
+        "250": 3.703617617696672e-05,
+        "500": 0.00033599941741975953,
+        "1000": 0.0008577289751316314,
+        "2000": 0.0007359685422437944,
+        "4000": 1.9872937021291175e-05,
+        "8000": 1.3217111304131944e-06,
+        "16000": 3.747567871803847e-07
+      },
+      "ffmpeg_error": null,
+      "work": "joplin_the_entertainer"
+    },
+    {
+      "file": "Miku_pachelbel_canon_in_d_master.wav",
+      "channels": 2,
+      "sample_rate": 44100,
+      "duration_s": 348.0,
+      "lufs": -17.9,
+      "true_peak_dbtp": -4.1,
+      "lra": 6.9,
+      "mid_rms_db": -22.1,
+      "side_rms_db": -31.56,
+      "stereo_width_db": -9.46,
+      "lr_correlation": 0.798,
+      "rms_db": -22.1,
+      "band_energy_mono": {
+        "63": 2.8872082018884638e-08,
+        "125": 2.3381814044959384e-06,
+        "250": 0.00012009883027392423,
+        "500": 0.0001340091763097848,
+        "1000": 0.0005062777056819207,
+        "2000": 0.00037523410216297107,
+        "4000": 7.805600418826195e-06,
+        "8000": 7.776029209076423e-07,
+        "16000": 1.5056972710712107e-07
+      },
+      "ffmpeg_error": null,
+      "work": "pachelbel_canon_in_d"
+    },
+    {
+      "file": "Miku_tchaikovsky_sugar_plum_fairy_master.wav",
+      "channels": 2,
+      "sample_rate": 44100,
+      "duration_s": 106.0,
+      "lufs": -17.6,
+      "true_peak_dbtp": -1.7,
+      "lra": 8.3,
+      "mid_rms_db": -22.24,
+      "side_rms_db": -31.85,
+      "stereo_width_db": -9.61,
+      "lr_correlation": 0.803,
+      "rms_db": -22.24,
+      "band_energy_mono": {
+        "63": 3.901535303162311e-09,
+        "125": 4.715295351525441e-07,
+        "250": 9.588281430150267e-05,
+        "500": 0.0002548297777476482,
+        "1000": 0.00048733763689786194,
+        "2000": 0.000257431356154478,
+        "4000": 1.2804280499104609e-05,
+        "8000": 1.5097867073653072e-06,
+        "16000": 3.4366801172674335e-07
+      },
+      "ffmpeg_error": null,
+      "work": "tchaikovsky_sugar_plum_fairy"
+    }
+  ]
+}

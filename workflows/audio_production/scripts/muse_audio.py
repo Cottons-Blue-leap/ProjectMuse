@@ -343,6 +343,14 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def main(argv: list[str] | None = None) -> int:
+    argv = sys.argv[1:] if argv is None else argv
+    # blend-gate / calibrate-baseline live in the heavier blend_gate.py
+    # (ffmpeg + numpy + scipy). Imported lazily so this module stays stdlib-only.
+    if argv and argv[0] in ("blend-gate", "calibrate-baseline"):
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import blend_gate
+        sub = "gate" if argv[0] == "blend-gate" else "calibrate"
+        return blend_gate.main([sub, *argv[1:]])
     parser = build_parser()
     args = parser.parse_args(argv)
     return int(args.func(args))

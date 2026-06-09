@@ -100,12 +100,38 @@ python .\workflows\audio_production\scripts\muse_audio.py assemble-proof `
 This command only level-matches and sums compatible dry stems. It does not add
 reverb, EQ, compression, or limiting.
 
+## Blending Gate (pre-render) — WS1
+
+Before the master goes to render, run the **objective blending gate** so blend
+defects (Lead 튐, voice collision, loudness/stereo drift) are caught *here*, not
+after publish (cf. Chopin Lead spike, Boccherini 4 cycles). Full spec + failure
+modes = `../video_release/docs/blending_gate.md`.
+
+```powershell
+python .\muse.py audio blend-gate `
+  --master .\works\<piece>\music\masters\master.wav `
+  --stems .\works\<piece>\music\renders\dry_stems --lead "<melody track name>" `
+  --baseline .\workflows\audio_production\docs\blend_gate_baseline.json `
+  --out .\works\<piece>\music\mix\blend_gate_report.json
+```
+
+- Track names are free-form (score-following ok: "Miku Violin 1", "Miku Viola left").
+  Identify the sung melody with `--lead <substring>`; everything else = accompaniment.
+- You do **not** need to toggle the master bus on/off per export — the gate
+  self-diagnoses (stem-sum vs full-mix tone) and tells you only if a bus
+  comp/limiter actually skewed the balance.
+- Verdict **FAIL** (hard) = re-export. **REVIEW** (advise) = check intent.
+  **PASS** = measurement-clean. Either way 코튼 listening is the final gate.
+
 ## Decision
 
-Use the listening scorecard and notes to decide:
+Blend gate (measurement) → 코튼 listening (final) → scorecard:
 
 ```text
-Green  -> extend the piece or prepare video release
-Yellow -> revise piece/key/register/syllables/mix
-Red    -> stop this piece or redefine the concept
+Green  -> gate PASS/accepted + 코튼 listening OK -> render commit / video release
+Yellow -> gate advise or listening doubt -> revise piece/key/register/syllables/mix
+Red    -> gate hard FAIL or concept broken -> re-export or stop the piece
 ```
+
+Render commits only after Green. (Previously the master went to render before the
+listening gate; the gate now sits *before* the render commit — D1-c.)
