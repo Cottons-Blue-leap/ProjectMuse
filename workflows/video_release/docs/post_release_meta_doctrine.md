@@ -13,7 +13,7 @@
 ## 절차 (link 확보 시점 진입 + publish 통과 후 마무리)
 
 - **link 확보** = YouTube Studio 안 영상 예약 업로드 또는 즉시 publish → `youtube_url` 생성 시점. Step 1만 본 시점 진입.
-- **publish 통과** = YouTube Studio 안 영상 *공개* 상태 + 첫 view 박힌 시점. Step 2~6은 본 시점 진입.
+- **publish 통과** = YouTube Studio 안 영상 *공개* 상태 + 첫 view 박힌 시점. Step 2~8은 본 시점 진입.
 
 ### Step 1. `series_history.csv` row 박음 (link 확보 시점)
 
@@ -89,6 +89,16 @@ device 정본 (s386 시리즈 첫 박음 · 쇼팽 녹턴 → 캐논 예고 자�
 
 검증: publish 통과 영상에 고정댓글 1건 박혀야 함. 다음 곡 자리 = series_history 다음 row 후보와 정합.
 
+### Step 8. Analytics 도구 레지스트리 등재 (publish 통과 시점)
+
+자리: `Analytics/youtube_analytics.py`의 `VIDEOS` dict (영상 ID → 표시명).
+
+작업: 새 vid 1줄 추가. 미등재 영상은 스냅샷 CSV·헬스 리포트에서 자동 제외되므로(2026-06-10 필터 신축), 등재 전까지 신곡 측정이 시계열에 안 쌓인다.
+
+> 신곡 vid가 박히는 자리 = **4곳**: ① `works/<piece>/status.json` ② `video/release/description.md` ③ `Analytics/localize_batch.py` WORKS ④ 본 `VIDEOS` dict. ④ 누락이 ⑧ 사탕요정에서 적발됨 (2026-06-10 진단) → 본 step 신축.
+
+검증: `python Analytics/youtube_analytics.py report` 실행 시 "스냅샷 제외" 라인에 신곡이 없어야 함.
+
 ## 매 작품 재사용 자료
 
 본 doctrine = 매 작품 publish 통과 후 동일 절차 keep. 작품별 가변 자리:
@@ -123,3 +133,4 @@ doctrine 변경 의제 발현 시:
 - v1 (s292) — 첫 작품 짐노페디 publish 직전 시점에 doctrine 박음. 6 step + 매 작품 재사용 자료 + 첫 작품 specific 자료.
 - v2 (s334) — Step 1 진입 시점 정정. *publish 통과 후 release_date update* → *link 확보 시점 row 통째 박음 + publish 통과 후 release_date만 update*. 시리즈 default 실행 자료 (짐노페디·비발디·조플린 모두 link 확보 시점에 row 박음) 정합. signature_mark 컬럼 신축 반영 (14→15 컬럼). 코튼 결단 path.
 - v3 (s388) — **Step 7 고정댓글(pinned comment) device 신축** (6→7 step). 쇼팽 녹턴 publish(2026-06-01) 자리에서 시리즈 첫 고정댓글 박으며 정본화. `🌙 Thank you for listening! / ⏭: [다음 곡]` 2줄 (테마 이모지 + 감사 + 예고). 코튼 *싸가지* 게이트 = 맨 예고만은 차갑게 읽힘 → 감사 인사 line 1 추가 결단. 코튼 직접 게시(YouTube 권한).
+- v4 (2026-06-10) — **Step 8 Analytics VIDEOS 레지스트리 등재 신축** (7→8 step). ⑧ 사탕요정 publish(6/8) 후 미등재로 헬스 리포트에 raw ID 노출 + 측정 누락 적발 (워크플로우 5축 점검). vid 갱신 자리 3곳→4곳 명문화. youtube_analytics에 미등재/공개 전 아티팩트 필터 동시 신축.

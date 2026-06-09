@@ -24,9 +24,11 @@ shorts_first_proof → 5 · 본 영상 +1달 → 쇼츠 1편               [manu
 | **project_setup** | 0 | cli | `muse_project.py init` | `project.json` + 11폴더 계약 | MOKA |
 | **rights_clearance** | 1 | manual | `rights/rights-log.md` 작성 | 권리 결단 (approved/needs review/rejected) | MOKA |
 | **music_acappella** | 2 | reference | V6 옆 docs 참고 | dry stems (V6 export) | 코튼 |
-| **audio_production** | 3 | cli | `muse_audio.py check-stems / assemble-proof` | `master.wav` + listening 결단 | 코튼+MOKA |
-| **video_release** | 4 | cli+manual | video-brief → visualizer → release/ | `<piece>_final.mp4` + 업로드 패키지 | 코튼+MOKA |
+| **audio_production** | 3 | cli | `muse_audio.py check-stems / assemble-proof / blend-gate` | `master.wav` + blend_gate_report + listening 결단 | 코튼+MOKA |
+| **video_release** | 4 | cli+manual | video-brief → `muse.py render <work_id>` (공유 visualizer) → release/ | `<piece>_final.mp4` + 업로드 패키지 | 코튼+MOKA |
 | **shorts_first_proof** | 5 | manual | master 30초 cut + V6 녹화 | YouTube Short | 코튼+MOKA |
+
+게이트 2종: **rights_clearance**(stage 1 · 권리) + **blend-gate**(stage 3→4 사이 · 렌더 전 객관 블렌딩 측정 · spec = [`video_release/docs/blending_gate.md`](video_release/docs/blending_gate.md) · un-gated master 렌더 금지). 영상 렌더 = 공유 visualizer 단일 프로젝트([`video_release/visualizer/`](video_release/), 양식 B s412 · 설계 = `video_release/docs/shared_visualizer_design.md`).
 
 상세 입출력·의존은 [`registry.json`](registry.json) 참조. 각 워크플로우 폴더 `README.md` 첫머리에 front-matter(name/stage/entry/inputs/outputs/depends_on) 박힘.
 
@@ -54,6 +56,8 @@ shorts_first_proof → 5 · 본 영상 +1달 → 쇼츠 1편               [manu
 5. 순서에 영향 주면 `../USAGE.md` 갱신
 
 **수정**: 해당 폴더 + `registry.json` 항목만 갱신. (s-notation으로 본문에 변경 이력 박음 · 파일명 버전 증식 X)
+
+**기능 신축** (기존 워크플로우에 새 스크립트·docs·CLI 명령·subdir 추가): *같은 커밋*에서 `registry.json` 해당 entry(entry/outputs/docs/subdirs) + 본 인덱스 요약표 갱신. (s412 visualizer·s414 blend-gate 2사이클 연속 누락 → 2026-06-10 점검 적발 교훈)
 
 **삭제**: 폴더 제거 + `registry.json`에서 빼기 + `../USAGE.md`/의존 워크플로우 `depends_on` 정정. 폐기 자료는 `workflows/_archive/`로 (즉시 삭제 X).
 

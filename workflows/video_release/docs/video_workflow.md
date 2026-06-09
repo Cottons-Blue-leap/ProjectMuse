@@ -329,6 +329,7 @@ Checklist:
 - No accidental fade-in unless intended.
 - Video cuts happen under musical phrasing.
 - Final video uses the approved master only.
+- **Master passed the pre-render blending gate** (`muse.py audio blend-gate` · spec = `blending_gate.md` · un-gated master 렌더 금지 · WS1 s414).
 - No limiter or loudness processing is added in the video editor.
 
 ## Phase 9: Export Specs

@@ -311,7 +311,15 @@ def write_json(path: Path, value: dict) -> None:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Project Muse audio production utilities")
+    parser = argparse.ArgumentParser(
+        description="Project Muse audio production utilities",
+        epilog=(
+            "additional commands (delegated to blend_gate.py): "
+            "blend-gate = pre-render objective blending gate (WS1) · "
+            "calibrate-baseline = rebuild baseline JSON from published masters. "
+            "spec = workflows/video_release/docs/blending_gate.md"
+        ),
+    )
     sub = parser.add_subparsers(dest="command", required=True)
 
     stems = sub.add_parser("check-stems", help="Inspect rendered WAV stems")

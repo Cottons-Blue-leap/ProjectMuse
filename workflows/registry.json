@@ -1,7 +1,7 @@
 {
-  "_comment": "Project Muse 워크플로우 단일 레지스트리. 워크플로우 추가/수정/삭제 시 이 파일 + 해당 폴더 README front-matter만 갱신. 인간용 인덱스 = workflows/README.md. 정본 양식 = workflows/_TEMPLATE/.",
+  "_comment": "Project Muse 워크플로우 단일 레지스트리. 워크플로우 추가/수정/삭제뿐 아니라 *기존 워크플로우에 기능 신축*(새 스크립트·새 docs·새 CLI 명령) 시에도 이 파일 + 해당 폴더 README front-matter + workflows/README.md 인덱스를 같은 커밋에서 갱신 (s412 visualizer·s414 blend-gate 2사이클 연속 누락 교훈). 인간용 인덱스 = workflows/README.md. 정본 양식 = workflows/_TEMPLATE/.",
   "schema_version": "1.0",
-  "updated": "2026-06-03",
+  "updated": "2026-06-10",
   "pipeline_order": [
     "project_setup",
     "rights_clearance",
@@ -50,25 +50,27 @@
       "note": "reference-only. config/ 는 미사용 reference (s302 정리 잔여)."
     },
     "audio_production": {
-      "stage": "3 · dry stem 점검 + light assembly + master",
+      "stage": "3 · dry stem 점검 + light assembly + master + 렌더 전 블렌딩 게이트",
       "type": "cli",
-      "entry": "python ./workflows/audio_production/scripts/muse_audio.py check-stems | assemble-proof",
+      "entry": "python ./workflows/audio_production/scripts/muse_audio.py check-stems | assemble-proof | blend-gate | calibrate-baseline",
       "inputs": ["works/<piece>/music/renders/dry_stems/*.wav"],
       "outputs": [
         "works/<piece>/music/mix/stem-report.json",
         "works/<piece>/music/masters/master.wav",
+        "works/<piece>/music/mix/blend_gate_report.json (렌더 전 게이트 · WS1)",
         "works/<piece>/music/mix/listening-scorecard.csv",
         "works/<piece>/notes/listening-notes.md"
       ],
       "depends_on": ["music_acappella"],
       "owner": "Cotton+MOKA",
-      "docs": ["docs/v6_render_workflow.md"],
-      "subdirs": ["docs", "scripts", "templates"]
+      "docs": ["docs/v6_render_workflow.md", "docs/blend_gate_baseline.json", "../video_release/docs/blending_gate.md (게이트 spec)"],
+      "subdirs": ["docs", "scripts", "templates"],
+      "gate": "blend-gate 측정 → MOKA 자가 점검 → 코튼 청취 → 통과 후에만 렌더 (un-gated master 렌더 금지)"
     },
     "video_release": {
       "stage": "4 · 승인된 audio → YouTube package",
       "type": "cli+manual",
-      "entry": "video-brief.md 작성 → Remotion visualizer → export → release/ 패키지. 썸네일: python ./workflows/video_release/scripts/muse_thumbnail.py",
+      "entry": "video-brief.md 작성 → 공유 visualizer 렌더: python muse.py render <work_id> (양식 B · s412) → release/ 패키지. 썸네일: python ./workflows/video_release/scripts/muse_thumbnail.py",
       "inputs": [
         "works/<piece>/music/masters/master.wav",
         "works/<piece>/rights/rights-log.md",
@@ -85,9 +87,9 @@
       ],
       "depends_on": ["audio_production"],
       "owner": "Cotton+MOKA",
-      "docs": ["docs/video_workflow.md", "docs/description_template.md", "docs/localization.md", "docs/post_release_meta_doctrine.md", "docs/thumbnail_guide.md"],
+      "docs": ["docs/video_workflow.md", "docs/description_template.md", "docs/localization.md", "docs/post_release_meta_doctrine.md", "docs/thumbnail_guide.md", "docs/blending_gate.md (렌더 전 게이트 spec · 엔진은 audio_production)", "docs/shared_visualizer_design.md (공유 visualizer 양식 B · s412)"],
       "localization": "9개 언어 (release 시 제목·설명 push · 엔진 Analytics/localize_batch.py · 신곡 = WORKS 추가 → gate/review → 외부 QA → push --only <vid> → audit --only <vid> · 정본 docs/localization.md)",
-      "subdirs": ["docs", "scripts", "templates"]
+      "subdirs": ["docs", "scripts", "templates", "visualizer (공유 Remotion 프로젝트 · work별 props.json+public 주입 · 렌더 = muse.py render)"]
     },
     "shorts_first_proof": {
       "stage": "5 · 본 영상 publish + 1달 → 쇼츠 1편",
@@ -110,6 +112,7 @@
   "conventions": {
     "script_prefix": "muse_*.py",
     "template_placement": "2개 이상 워크플로우 공유 → shared/templates/ · 단일 → 워크플로우-local templates/",
-    "add_workflow": "workflows/_TEMPLATE/ 복사 → README front-matter 채움 → 본 registry.json workflows{} + pipeline_order 등재"
+    "add_workflow": "workflows/_TEMPLATE/ 복사 → README front-matter 채움 → 본 registry.json workflows{} + pipeline_order 등재",
+    "extend_workflow": "기존 워크플로우에 기능 신축(새 스크립트·docs·CLI 명령·subdir) 시 = 같은 커밋에서 본 registry 해당 entry(entry/outputs/docs/subdirs) + workflows/README.md 인덱스 갱신. 누락 사례 = s412 visualizer · s414 blend-gate (2026-06-10 점검 적발)"
   }
 }

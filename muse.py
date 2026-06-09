@@ -11,6 +11,7 @@
   python muse.py status            # = project status (단축)
   python muse.py audio check-stems ...
   python muse.py audio assemble-proof ...
+  python muse.py audio blend-gate --master <wav> [--stems <dir> --lead <name>]  # 렌더 전 블렌딩 게이트 (WS1)
   python muse.py thumbnail --song <name> | --all
   python muse.py render <work_id>  # 통합 공유 visualizer 렌더 (양식 B)
   python muse.py tidy [--archive]
@@ -62,7 +63,7 @@ def cmd_list() -> int:
     for name in data.get("pipeline_order", []):
         wf = data["workflows"][name]
         print(f"  {name:20} [{wf['type']:10}] {wf['stage']}")
-    print("\n상세 = workflows/README.md · CLI = python muse.py <project|audio|thumbnail|tidy|doctor|status|list>")
+    print("\n상세 = workflows/README.md · CLI = python muse.py <project|audio|thumbnail|render|tidy|doctor|status|list>")
     return 0
 
 
