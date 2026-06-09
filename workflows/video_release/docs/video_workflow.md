@@ -282,6 +282,13 @@ Avoid:
 
 ## Phase 7: Visualizer Design
 
+> **★ s412 — 통합 공유 visualizer 양식 (B)**: 더 이상 곡마다 Remotion 프로젝트를
+> 복제하지 않는다. 엔진·의존성은 **단일 공유 프로젝트** `workflows/video_release/visualizer/`
+> 한 곳에 살고(canonical 엔진 = ccf27a · 라이브 검증), work는 입력만 보유한다:
+> `works/<id>/video/visualizer/props.json` + `public/{audio.wav, cover.png, fonts/}`.
+> 렌더 = **`python muse.py render <work_id>`** 한 줄. 설계·시퀀스·리스크 = `docs/shared_visualizer_design.md`.
+> (이전 per-work `npm run render` 양식은 폐기 · 과거 발행작은 forward-only로 재렌더 X.)
+
 Current use (s310 박힘): vertical bars in letterbox area.
 
 ```text
@@ -385,7 +392,7 @@ return (
 );
 ```
 
-렌더 명령 = `remotion render ... <out.mp4>` (✘ `--scale` 옵션 X).
+렌더 명령 = **`python muse.py render <work_id>`** (s412 양식 B · 공유 프로젝트가 `--props`+`--public-dir`로 work 주입). ✘ `--scale` 옵션 X. 치수(2560×1440)·fps는 공유 `Root.tsx`가 고정, 길이는 `props.json`의 `durationSeconds`로 `calculateMetadata` 산출.
 
 **왜 2K (4K 아님)**: 유튜브가 1440p+에 주는 고급 코덱(VP9)으로 1080p(AVC)보다 선명 + 명화
 디테일 품격 + 에버그린 아카이브 가치. 4K 기각 = 커버 소스(현 1254px)가 4K 커버 표시(1920px)

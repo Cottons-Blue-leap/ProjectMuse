@@ -1,3 +1,8 @@
+// ⚠️ SUPERSEDED (s412) — 이 변종은 어느 라이브 곡에도 쓰이지 않은 실험본이다.
+// canonical 엔진은 통합 공유 프로젝트로 이관됨:
+//   workflows/video_release/visualizer/src/VisualizerComposition.tsx (= ccf27a · 라이브 검증)
+// 신곡 시각화는 공유 프로젝트 + `python muse.py render <work_id>` 사용. 이 파일은 히스토리 참고용.
+// 설계 = workflows/video_release/docs/shared_visualizer_design.md
 import {
   AbsoluteFill,
   Audio,

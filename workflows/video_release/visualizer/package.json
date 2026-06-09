@@ -1,0 +1,22 @@
+{
+  "name": "muse-visualizer-shared",
+  "version": "1.0.0",
+  "description": "Atelier Miku Acappella — shared canonical visualizer (engine ccf27a · s412 통합 양식 B)",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts MuseVisualizer out/render.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.446",
+    "@remotion/media-utils": "^4.0.460",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "^4.0.446"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.6.0"
+  }
+}

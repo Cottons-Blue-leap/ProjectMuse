@@ -12,6 +12,7 @@
   python muse.py audio check-stems ...
   python muse.py audio assemble-proof ...
   python muse.py thumbnail --song <name> | --all
+  python muse.py render <work_id>  # 통합 공유 visualizer 렌더 (양식 B)
   python muse.py tidy [--archive]
   python muse.py list              # 등록 워크플로우 목록 (registry.json)
 """
@@ -35,6 +36,7 @@ SCRIPTS = {
     "project":   ROOT / "workflows/project_setup/scripts/muse_project.py",
     "audio":     ROOT / "workflows/audio_production/scripts/muse_audio.py",
     "thumbnail": ROOT / "workflows/video_release/scripts/muse_thumbnail.py",
+    "render":    ROOT / "workflows/video_release/scripts/muse_render.py",
     "tidy":      ROOT / "muse_tidy.py",
 }
 # 단축 alias → (대상, 선행 인자)

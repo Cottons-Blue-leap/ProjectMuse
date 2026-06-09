@@ -1,0 +1,11 @@
+{
+  "durationSeconds": 234.0,
+  "letterboxColors": ["#33241A", "#8A6238", "#D6BC8E"],
+  "composerName": "Luigi Boccherini",
+  "pieceTitle": "Minuet",
+  "pieceSubtitle": "from String Quintet in E · Op. 11 No. 5",
+  "audioPath": "audio.wav",
+  "coverPath": "cover.png",
+  "variationStarts": [0],
+  "variationLabels": [""]
+}

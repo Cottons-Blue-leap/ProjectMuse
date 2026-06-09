@@ -1,0 +1,11 @@
+{
+  "durationSeconds": 106.0,
+  "letterboxColors": ["#22384A", "#4E7E8C", "#9DB9C8"],
+  "composerName": "Pyotr Ilyich Tchaikovsky",
+  "pieceTitle": "Dance of the Sugar Plum Fairy",
+  "pieceSubtitle": "from The Nutcracker · Op. 71a",
+  "audioPath": "audio.wav",
+  "coverPath": "cover.png",
+  "variationStarts": [0],
+  "variationLabels": [""]
+}

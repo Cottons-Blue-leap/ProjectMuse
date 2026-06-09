@@ -1,0 +1,11 @@
+{
+  "durationSeconds": 262.8,
+  "letterboxColors": ["#2e4257", "#5b7d9b", "#93b3cb"],
+  "composerName": "Frédéric Chopin",
+  "pieceTitle": "Nocturne",
+  "pieceSubtitle": "Op. 9 No. 2 · in E-flat major",
+  "audioPath": "audio.wav",
+  "coverPath": "cover.png",
+  "variationStarts": [0],
+  "variationLabels": [""]
+}

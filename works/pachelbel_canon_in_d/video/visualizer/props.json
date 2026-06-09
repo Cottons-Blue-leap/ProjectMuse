@@ -1,0 +1,11 @@
+{
+  "durationSeconds": 348.0,
+  "letterboxColors": ["#1A2A2C", "#262019", "#7E6A42"],
+  "composerName": "Johann Pachelbel",
+  "pieceTitle": "Canon in D",
+  "pieceSubtitle": "P.37 · in D major",
+  "audioPath": "audio.wav",
+  "coverPath": "cover.png",
+  "variationStarts": [0],
+  "variationLabels": [""]
+}
