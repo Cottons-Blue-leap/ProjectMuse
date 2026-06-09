@@ -1,0 +1,4127 @@
+{
+  "locales": {
+    "en": "en",
+    "ja": "ja",
+    "ko": "ko",
+    "es": "es",
+    "pt": "pt",
+    "de": "de",
+    "fr": "fr",
+    "ru": "ru",
+    "zh-Hant": "zh-TW",
+    "zh-Hans": "zh-CN"
+  },
+  "pieces": {
+    "satie_gymnopedie": {
+      "en": {
+        "gymnopedie no 1": [
+          "gymnopedie no 1",
+          "gymnopedie no 1 piano",
+          "gymnopedie no 1 guitar",
+          "gymnopedie no 1 1 hour",
+          "gymnopedie no 1 piano tutorial",
+          "gymnopedie no 1 lofi",
+          "gymnopedie no 1 meme",
+          "gymnopedie no 1 1h",
+          "gymnopedie no 1 kevin macleod",
+          "gymnopedie no 1 live"
+        ],
+        "gymnopédie": [
+          "gymnopédie no. 1",
+          "gymnopédie",
+          "gymnopédie no.1 – erik satie",
+          "gymnopédie no. 1 remix",
+          "gymnopédie no. 1 — erik satie",
+          "gymnopédie no. 3",
+          "gymnopédie no. 1 guitar",
+          "gymnopédie no. 1 1 hour",
+          "gymnopédie no. 1 romi kopelman",
+          "gymnopédie no.1 – erik satie piano"
+        ],
+        "ジムノペディ": [
+          "ジムノペディ",
+          "ジムノペディ 第1番",
+          "ジムノペディ ピアノ",
+          "ジムノペディ ギター",
+          "ジムノペディ睡眠",
+          "ジムノペディック",
+          "ジムノペディ 第2番",
+          "ジムノペディ 第3番",
+          "ジムノペディ 第1番 ピアノ",
+          "ジムノペディ サティ"
+        ],
+        "짐노페디": [
+          "짐노페디",
+          "짐노페디 1번",
+          "짐노페디 에릭사티",
+          "짐노페디 1번 피아노 악보",
+          "짐노페디 3번",
+          "짐노페디 2번",
+          "짐노페디 빗소리",
+          "짐노페디 1번 첼로",
+          "짐노페디 1번 피아노",
+          "짐노페디 피아노"
+        ]
+      },
+      "ja": {
+        "gymnopedie no 1": [
+          "gymnopedie no 1",
+          "gymnopedie no 1 ケヴィン・マクロード",
+          "gymnopedie no 1 piano",
+          "gymnopedie no 1 guitar",
+          "gymnopedie no 1 by kevin macleod",
+          "gymnopedie no 1 - satie",
+          "gymnopedie no 1 clarinet",
+          "gymnopedie no 1 kevin macleod",
+          "gymnopedie no 1 kevin macleod gymnopedie no 1",
+          "gymnopedie no 1 tab"
+        ],
+        "gymnopédie": [
+          "gymnopédie no.1",
+          "gymnopédies",
+          "gymnopédies no.1",
+          "gymnopédie no. 2",
+          "gymnopédie no.1 piano",
+          "gymnopédie no.3",
+          "gymnopédie no. 1 by erik satie",
+          "gymnopédies & gnossiennes",
+          "gymnopédies debussy",
+          "gymnopédies 1"
+        ],
+        "ジムノペディ": [
+          "ジムノペディ",
+          "ジムノペディ 第1番",
+          "ジムノペディ ピアノ",
+          "ジムノペディ ギター",
+          "ジムノペディ睡眠",
+          "ジムノペディック",
+          "ジムノペディ 第2番",
+          "ジムノペディ 第3番",
+          "ジムノペディ 第1番 ピアノ",
+          "ジムノペディ サティ"
+        ],
+        "짐노페디": [
+          "짐노페디",
+          "짐노페디 1번",
+          "짐노페디 1번 피아노",
+          "짐노페디 비",
+          "짐노페디 3",
+          "짐노페디 1번 조성진",
+          "짐노페디 튜토리얼",
+          "짐노페디 2번",
+          "짐노페디 3번",
+          "짐노페디 1번 피아노 악보"
+        ]
+      },
+      "ko": {
+        "gymnopedie no 1": [
+          "gymnopedie no 1",
+          "gymnopedie no 1 by erik satie",
+          "gymnopedie no 1 1 hour",
+          "gymnopedie no 1 1h",
+          "gymnopedie no 1 - kevin macleod",
+          "gymnopedie no 1 slowed",
+          "gymnopedie no 1 piano tutorial",
+          "gymnopedie no 1 live",
+          "gymnopedie no 1 flute",
+          "gymnopedie no 1 hour"
+        ],
+        "gymnopédie": [
+          "gymnopédie no. 1",
+          "gymnopédie",
+          "gymnopédie no.1 – erik satie",
+          "gymnopédie no.3",
+          "gymnopédie no",
+          "gymnopédie no.1 (satie)",
+          "gymnopédie no.1 – 에릭 사티",
+          "gymnopédie no.2",
+          "gymnopédie no.1 lent et douloureux",
+          "gymnopédie no.1 piano"
+        ],
+        "ジムノペディ": [
+          "ジムノペディ",
+          "ジムノペディ第1番",
+          "ジムノペディ 2",
+          "ジムノペディ 映画",
+          "ジムノペディ 第3番",
+          "ジムノペディ1番",
+          "ジムノペディ 第一番",
+          "ジムノペディ ピアノ",
+          "ジムノペディ サティ",
+          "ジムノペディ 第1番 楽譜"
+        ],
+        "짐노페디": [
+          "짐노페디",
+          "짐노페디 1번",
+          "짐노페디 에릭사티",
+          "짐노페디 1번 피아노 악보",
+          "짐노페디 3번",
+          "짐노페디 2번",
+          "짐노페디 빗소리",
+          "짐노페디 1번 첼로",
+          "짐노페디 1번 피아노",
+          "짐노페디 피아노"
+        ]
+      },
+      "es": {
+        "gymnopedie no 1": [
+          "gymnopedie no 1",
+          "gymnopedie no 1 piano",
+          "gymnopedie no 1 guitar",
+          "gymnopedie no 1 kevin macleod",
+          "gymnopedie no 1 1 hour",
+          "gymnopedie no 1 piano tutorial",
+          "gymnopedie no 1 tutorial",
+          "gymnopedie no 1 violin",
+          "gymnopedie no 1 satie",
+          "gymnopedie no 1 roblox piano"
+        ],
+        "gymnopédie": [
+          "gymnopédie no. 1",
+          "gymnopédie 1 de satie",
+          "gymnopédies de erik satie",
+          "gymnopédies",
+          "gymnopédie no 1 piano",
+          "gymnopédie no. 1 romi kopelman",
+          "gymnopédie no. 1 de erik satie piano",
+          "gymnopédie no. 3",
+          "gymnopédie no. 1 penguin piano",
+          "gymnopédie no. 1 philippe entremont"
+        ],
+        "ジムノペディ": [
+          "ジムノペディ",
+          "ジムノペディ 第1番",
+          "ジムノペディ ピアノ",
+          "ジムノペディ ギター",
+          "ジムノペディ睡眠",
+          "ジムノペディック",
+          "ジムノペディ 第2番",
+          "ジムノペディ 第3番",
+          "ジムノペディ 第1番 ピアノ",
+          "ジムノペディ サティ"
+        ],
+        "짐노페디": [
+          "짐노페디",
+          "짐노페디 1번",
+          "짐노페디 에릭사티",
+          "짐노페디 1번 피아노 악보",
+          "짐노페디 3번",
+          "짐노페디 2번",
+          "짐노페디 빗소리",
+          "짐노페디 1번 첼로",
+          "짐노페디 1번 피아노",
+          "짐노페디 피아노"
+        ]
+      },
+      "pt": {
+        "gymnopedie no 1": [
+          "gymnopedie no 1",
+          "gymnopedie no 1 piano",
+          "gymnopedie no 1 kevin macleod",
+          "gymnopédie no 1 erik satie",
+          "gymnopedie no 1 guitar",
+          "gymnopedie no 1 piano tutorial",
+          "gymnopedie no 1 1 hour",
+          "gymnopedie no 1 roblox piano",
+          "gymnopedie no 1 tradução",
+          "gymnopedie no 1 slowed"
+        ],
+        "gymnopédie": [
+          "gymnopédie no.1 do erik satie",
+          "gymnopédie n°1 - erik satie",
+          "gymnopédies",
+          "gymnopédie no 1 piano",
+          "gymnopédie no. 3",
+          "gymnopédie no. 2",
+          "gymnopédie 1",
+          "gymnopédie no.1 orquestra sinfônica nacional checa",
+          "gymnopédies – erik satie",
+          "gymnopédie no 1 piano tutorial"
+        ],
+        "ジムノペディ": [
+          "ジムノペディ",
+          "ジムノペディ 第1番",
+          "ジムノペディ ピアノ",
+          "ジムノペディ ギター",
+          "ジムノペディ睡眠",
+          "ジムノペディック",
+          "ジムノペディ 第2番",
+          "ジムノペディ 第3番",
+          "ジムノペディ 第1番 ピアノ",
+          "ジムノペディ サティ"
+        ],
+        "짐노페디": [
+          "짐노페디",
+          "짐노페디 1번",
+          "짐노페디 에릭사티",
+          "짐노페디 1번 피아노 악보",
+          "짐노페디 3번",
+          "짐노페디 2번",
+          "짐노페디 빗소리",
+          "짐노페디 1번 첼로",
+          "짐노페디 1번 피아노",
+          "짐노페디 피아노"
+        ]
+      },
+      "de": {
+        "gymnopedie no 1": [
+          "gymnopedie no 1",
+          "gymnopedie no 1 piano",
+          "gymnopedie no 1 guitar",
+          "gymnopedie no 1 erik satie",
+          "gymnopedie no 1 piano tutorial",
+          "gymnopedie no 1 tutorial",
+          "gymnopedie no 1 kevin macleod",
+          "gymnopedie no 1 violin",
+          "gymnopedie no 1 cello",
+          "gymnopedie no 1 piano easy"
+        ],
+        "gymnopédie": [
+          "gymnopédie no. 1",
+          "gymnopédie no. 1 von erik satie",
+          "gymnopédie nr. 1",
+          "gymnopédies",
+          "gymnopédie no. 1 piano",
+          "gymnopédie no. 2",
+          "gymnopédie nr. 1 von erik satie",
+          "gymnopédie no. 3",
+          "gymnopédies and gnossiennes",
+          "gymnopédie no. 1. lent et douloureux"
+        ],
+        "ジムノペディ": [
+          "ジムノペディ",
+          "ジムノペディ 第1番",
+          "ジムノペディ ピアノ",
+          "ジムノペディ ギター",
+          "ジムノペディ睡眠",
+          "ジムノペディック",
+          "ジムノペディ 第2番",
+          "ジムノペディ 第3番",
+          "ジムノペディ 第1番 ピアノ",
+          "ジムノペディ サティ"
+        ],
+        "짐노페디": [
+          "짐노페디",
+          "짐노페디 1번",
+          "짐노페디 에릭사티",
+          "짐노페디 1번 피아노 악보",
+          "짐노페디 3번",
+          "짐노페디 2번",
+          "짐노페디 빗소리",
+          "짐노페디 1번 첼로",
+          "짐노페디 1번 피아노",
+          "짐노페디 피아노"
+        ]
+      },
+      "fr": {
+        "gymnopedie no 1": [
+          "gymnopedie no 1",
+          "gymnopedie no 1 piano",
+          "gymnopedie no 1 guitar",
+          "gymnopédie no 1 erik satie",
+          "gymnopedie no 1 kevin macleod",
+          "gymnopedie no 1 piano tutorial",
+          "gymnopedie no 1 1 hour",
+          "gymnopedie no 1 piano tuto",
+          "gymnopedie no 1 remix",
+          "gymnopedie no 1 satie"
+        ],
+        "gymnopédie": [
+          "gymnopédie",
+          "gymnopédie no. 1",
+          "gymnopédie 1",
+          "gymnopédies erik satie",
+          "gymnopédie n°1 – erik satie",
+          "gymnopédie satie",
+          "gymnopédie n°1",
+          "gymnopédie piano",
+          "gymnopédie 3",
+          "gymnopédie 2"
+        ],
+        "ジムノペディ": [
+          "ジムノペディ",
+          "ジムノペディ 第1番",
+          "ジムノペディ ピアノ",
+          "ジムノペディ ギター",
+          "ジムノペディ睡眠",
+          "ジムノペディック",
+          "ジムノペディ 第2番",
+          "ジムノペディ 第3番",
+          "ジムノペディ 第1番 ピアノ",
+          "ジムノペディ サティ"
+        ],
+        "짐노페디": [
+          "짐노페디",
+          "짐노페디 1번",
+          "짐노페디 에릭사티",
+          "짐노페디 1번 피아노 악보",
+          "짐노페디 3번",
+          "짐노페디 2번",
+          "짐노페디 빗소리",
+          "짐노페디 1번 첼로",
+          "짐노페디 1번 피아노",
+          "짐노페디 피아노"
+        ]
+      },
+      "ru": {
+        "gymnopedie no 1": [
+          "gymnopedie no 1",
+          "gymnopedie no 1 piano tutorial",
+          "gymnopedie no 1 piano",
+          "gymnopedie no 1 guitar",
+          "gymnopédie no 1 erik satie",
+          "gymnopedie no 1 kevin macleod",
+          "gymnopedie no 1 roblox piano",
+          "gymnopedie no 1 minecraft",
+          "gymnopedie no 1 easy piano",
+          "gymnopedie no 1 easy"
+        ],
+        "gymnopédie": [
+          "gymnopédie #1",
+          "gymnopédie no. 1",
+          "gymnopédie",
+          "gymnopédie no.1 – erik satie",
+          "gymnopédie no. 1 erik satie",
+          "gymnopédie no. 1 romi kopelman",
+          "gymnopédie no. 3",
+          "gymnopédie no. 2",
+          "gymnopédie no. 1 piano",
+          "gymnopédies no. 1 lent et douloureux от the queen's gambit cast"
+        ],
+        "ジムノペディ": [
+          "ジムノペディ",
+          "ジムノペディ 第1番",
+          "ジムノペディ ピアノ",
+          "ジムノペディ ギター",
+          "ジムノペディ睡眠",
+          "ジムノペディック",
+          "ジムノペディ 第2番",
+          "ジムノペディ 第3番",
+          "ジムノペディ 第1番 ピアノ",
+          "ジムノペディ サティ"
+        ],
+        "짐노페디": [
+          "짐노페디",
+          "짐노페디 1번",
+          "짐노페디 에릭사티",
+          "짐노페디 1번 피아노 악보",
+          "짐노페디 3번",
+          "짐노페디 2번",
+          "짐노페디 빗소리",
+          "짐노페디 1번 첼로",
+          "짐노페디 1번 피아노",
+          "짐노페디 피아노"
+        ]
+      },
+      "zh-Hant": {
+        "gymnopedie no 1": [
+          "gymnopedie no 1",
+          "gymnopedie no 1 - satie",
+          "gymnopedie no 1 piano",
+          "gymnopedie no 1 kevin macleod gymnopedie no 1",
+          "gymnopedie no 1 loop",
+          "gymnopedie no 1 by kevin macleod",
+          "gymnopedie no 1 by erik satie slowed 1 hour",
+          "gymnopedie no 1 sped up",
+          "gymnopedie no 1 kevin macleod",
+          "gymnopedie no 1 kalimba"
+        ],
+        "gymnopédie": [
+          "gymnopédie no.1",
+          "gymnopédie no. 1 romi kopelman",
+          "gymnopédies",
+          "gymnopédie no. 3",
+          "gymnopédie no.1)- erik satie",
+          "gymnopédie no. 1 philippe entremont",
+          "gymnopédie no. 2",
+          "gymnopédie no.1 piano",
+          "gymnopédies no. 1 lent et douloureux",
+          "gymnopédie no. 1 guitar"
+        ],
+        "ジムノペディ": [
+          "ジムノペディ",
+          "ジムノペディ第1番",
+          "ジムノペディ bgm",
+          "ジムノペディ第1番 サティ・えりか",
+          "ジムノペディ第1番 - サティ",
+          "ジムノペディ サティ",
+          "ジムノペディ 第3番",
+          "ジムノペディ ピアノ",
+          "ジムノペディ 第2番",
+          "ジムノペディ 第1番 ギター"
+        ],
+        "짐노페디": [
+          "짐노페디",
+          "짐노페디 1번 피아노",
+          "짐노페디 1번",
+          "짐노페디 1번 피아노 악보",
+          "짐노페디 3번",
+          "짐노페디 2번",
+          "짐노페디 빗소리",
+          "짐노페디 1번 첼로",
+          "짐노페디 피아노",
+          "짐노페디 1번 피아노 배우기"
+        ]
+      },
+      "zh-Hans": {
+        "gymnopedie no 1": [
+          "gymnopedie no 1",
+          "gymnopedie no 1 tutorial",
+          "gymnopedie no 1 1h",
+          "gymnopedie no 1 erik satie",
+          "gymnopedie no 1 guitar",
+          "gymnopedie no 1 guitar tutorial",
+          "gymnopedie no 1 kalimba",
+          "gymnopedie no 1 metal cover",
+          "gymnopedie no 1 1 hour",
+          "gymnopedie no 1 piano"
+        ],
+        "gymnopédie": [
+          "gymnopedie no. 1",
+          "gymnopédies no.1",
+          "gymnopedies",
+          "gymnopedie no.1 – erik satie",
+          "gymnopedie no. 3",
+          "gymnopédies & gnossiennes",
+          "gymnopédies",
+          "gymnopédie no. 1 philippe entremont",
+          "gymnopédie no.1)- erik satie",
+          "gymnopedie no. 1 piano"
+        ],
+        "ジムノペディ": [
+          "ジムノペディ",
+          "ジムノペディ 第1番",
+          "ジムノペディ ピアノ",
+          "ジムノペディ no.1",
+          "ジムノペディ サティ",
+          "ジムノペディ ピアノ 簡単",
+          "ジムノペディ 第1番 楽譜",
+          "ジムノペディ 第3番",
+          "ジムノペディ ギター",
+          "ジムノペディ 楽譜"
+        ],
+        "짐노페디": [
+          "짐노페디 1번",
+          "짐노페디",
+          "짐노페디 1번 피아노",
+          "짐노페디 1번 피아노 악보",
+          "짐노페디 3번",
+          "짐노페디 2번",
+          "짐노페디 1번 피아노 1시간",
+          "짐노페디 빗소리",
+          "짐노페디 1번 첼로",
+          "짐노페디 피아노"
+        ]
+      }
+    },
+    "vivaldi_spring": {
+      "en": {
+        "vivaldi spring": [
+          "vivaldi spring",
+          "vivaldi spring piano",
+          "vivaldi spring violin",
+          "vivaldi spring 1st movement",
+          "vivaldi spring allegro",
+          "vivaldi spring sheet music",
+          "vivaldi spring piano easy",
+          "vivaldi spring 1",
+          "vivaldi spring remix",
+          "vivaldi spring no copyright"
+        ],
+        "four seasons spring": [
+          "four seasons spring",
+          "four seasons spring violin",
+          "four seasons spring 1st movement",
+          "four seasons spring vivaldi",
+          "four seasons spring piano",
+          "four seasons spring 1 hour",
+          "four seasons spring piano tutorial",
+          "four seasons spring antonio vivaldi",
+          "four seasons spring remix",
+          "four seasons spring 1"
+        ],
+        "四季 春": [
+          "四季 春 鋼琴",
+          "四季 春 第三楽章",
+          "四季 春",
+          "四季 春 小提琴",
+          "四季春珍波椰",
+          "四季春夏秋冬",
+          "四季春民谣",
+          "四季春泡法",
+          "四季 春天",
+          "四季 春 第二楽章"
+        ],
+        "비발디 봄": [
+          "비발디 봄",
+          "비발디 봄 1악장",
+          "비발디 봄 피아노",
+          "비발디 봄 바이올린",
+          "비발디 봄 3악장",
+          "비발디 봄 2악장",
+          "비발디 봄 리코더",
+          "비발디 봄 여름 가을 겨울",
+          "비발디 봄 악보",
+          "비발디 봄 사계"
+        ]
+      },
+      "ja": {
+        "vivaldi spring": [
+          "vivaldi spring",
+          "vivaldi spring guitar",
+          "vivaldi spring score",
+          "vivaldi spring accompaniment",
+          "vivaldi spring violin",
+          "vivaldi spring piano",
+          "vivaldi spring 1st movement",
+          "vivaldi spring metal",
+          "vivaldi spring corbin",
+          "vivaldi spring 3rd movement"
+        ],
+        "four seasons spring": [
+          "four seasons spring",
+          "four seasons spring vivaldi piano",
+          "four seasons spring piano karaoke",
+          "four seasons spring piano",
+          "four seasons spring guitar tab",
+          "four seasons spring vivaldi",
+          "four seasons spring violin solo",
+          "four seasons spring piano tiles 2",
+          "four seasons spring violin",
+          "four seasons spring orchestra"
+        ],
+        "四季 春": [
+          "四季 春",
+          "四季 春 ギター",
+          "四季 春 ピアノ",
+          "四季 春 バイオリン",
+          "四季 春 オーケストラ",
+          "四季 春 発車メロディー",
+          "四季 春 第三楽章",
+          "四季 春 ピアノ 簡単",
+          "四季 春 楽譜",
+          "四季 春 吹奏楽"
+        ],
+        "비발디 봄": [
+          "비발디 봄",
+          "비발디 봄 1악장",
+          "비발디 봄 바이올린",
+          "비발디 봄 3악장",
+          "비발디 봄 2악장",
+          "비발디 봄 리코더",
+          "비발디 봄 여름 가을 겨울",
+          "비발디 봄 악보",
+          "비발디 봄 1시간",
+          "비발디 봄 바이올린 악보"
+        ]
+      },
+      "ko": {
+        "vivaldi spring": [
+          "vivaldi spring",
+          "vivaldi spring violin",
+          "vivaldi spring piano",
+          "vivaldi spring 1st movement",
+          "vivaldi spring 3rd movement",
+          "vivaldi spring score",
+          "vivaldi spring guitar",
+          "vivaldi spring corbin",
+          "vivaldi spring remix",
+          "vivaldi spring allegro"
+        ],
+        "four seasons spring": [
+          "four seasons spring",
+          "four seasons spring violin",
+          "four seasons spring piano",
+          "four seasons spring cello",
+          "four seasons spring allegro",
+          "four seasons spring guitar",
+          "four seasons spring 1 hour",
+          "four seasons spring meme",
+          "four seasons spring vivaldi",
+          "four seasons spring (la primavera)"
+        ],
+        "四季 春": [
+          "四季 春 発車メロディー",
+          "四季 春",
+          "四季 春 発車メロディー 耐久",
+          "四季 春 弦楽四重奏",
+          "四季 春 バイオリン",
+          "四季 春 小提琴",
+          "四季 春 バイオリン ソロ",
+          "四季 春 第一楽章",
+          "四季 春 第一乐章",
+          "四季 春 鋼琴"
+        ],
+        "비발디 봄": [
+          "비발디 봄",
+          "비발디 봄 1악장",
+          "비발디 봄 피아노",
+          "비발디 봄 바이올린",
+          "비발디 봄 3악장",
+          "비발디 봄 2악장",
+          "비발디 봄 리코더",
+          "비발디 봄 여름 가을 겨울",
+          "비발디 봄 악보",
+          "비발디 봄 사계"
+        ]
+      },
+      "es": {
+        "vivaldi spring": [
+          "vivaldi spring",
+          "vivaldi spring violin",
+          "vivaldi spring piano",
+          "vivaldi spring 1",
+          "vivaldi spring remix",
+          "vivaldi spring from the four seasons",
+          "vivaldi spring corbin",
+          "vivaldi spring score",
+          "vivaldi spring max richter",
+          "vivaldi spring guitar"
+        ],
+        "four seasons spring": [
+          "four seasons spring violin",
+          "four seasons spring",
+          "four seasons spring vivaldi",
+          "four seasons spring piano",
+          "four seasons spring air",
+          "four seasons spring bridgerton",
+          "four seasons spring 1",
+          "four seasons spring antonio vivaldi",
+          "four seasons spring guitar",
+          "four seasons spring dandys world"
+        ],
+        "四季 春": [
+          "四季 春 鋼琴",
+          "四季 春 第三楽章",
+          "四季 春",
+          "四季 春 小提琴",
+          "四季春珍波椰",
+          "四季春夏秋冬",
+          "四季春民谣",
+          "四季春泡法",
+          "四季 春天",
+          "四季 春 第二楽章"
+        ],
+        "비발디 봄": [
+          "비발디 봄",
+          "비발디 봄 1악장",
+          "비발디 봄 피아노",
+          "비발디 봄 바이올린",
+          "비발디 봄 3악장",
+          "비발디 봄 2악장",
+          "비발디 봄 리코더",
+          "비발디 봄 여름 가을 겨울",
+          "비발디 봄 악보",
+          "비발디 봄 사계"
+        ]
+      },
+      "pt": {
+        "vivaldi spring": [
+          "vivaldi spring",
+          "vivaldi spring piano",
+          "vivaldi spring violin",
+          "vivaldi spring guitar",
+          "vivaldi spring remix",
+          "vivaldi spring 1",
+          "vivaldi spring violin tutorial",
+          "vivaldi spring orquestra",
+          "vivaldi spring from the four seasons",
+          "vivaldi spring piano tutorial"
+        ],
+        "four seasons spring": [
+          "four seasons spring",
+          "four seasons spring piano",
+          "four seasons spring violin",
+          "four seasons spring ballet",
+          "four seasons spring remix",
+          "four seasons spring vivaldi piano",
+          "four seasons spring 1st movement vivaldi explained",
+          "four seasons spring dandys world",
+          "four seasons spring piano easy",
+          "four seasons spring violin tutorial"
+        ],
+        "四季 春": [
+          "四季 春 鋼琴",
+          "四季 春 第三楽章",
+          "四季 春",
+          "四季 春 小提琴",
+          "四季春珍波椰",
+          "四季春夏秋冬",
+          "四季春民谣",
+          "四季春泡法",
+          "四季 春天",
+          "四季 春 第二楽章"
+        ],
+        "비발디 봄": [
+          "비발디 봄",
+          "비발디 봄 1악장",
+          "비발디 봄 피아노",
+          "비발디 봄 바이올린",
+          "비발디 봄 3악장",
+          "비발디 봄 2악장",
+          "비발디 봄 리코더",
+          "비발디 봄 여름 가을 겨울",
+          "비발디 봄 악보",
+          "비발디 봄 사계"
+        ]
+      },
+      "de": {
+        "vivaldi spring": [
+          "vivaldi spring",
+          "vivaldi spring piano",
+          "vivaldi spring violin",
+          "vivaldi spring remix",
+          "vivaldi spring techno",
+          "vivaldi spring max richter",
+          "vivaldi spring 1",
+          "vivaldi spring guitar",
+          "vivaldi spring organ",
+          "vivaldi spring piano tutorial"
+        ],
+        "four seasons spring": [
+          "four seasons spring",
+          "four seasons spring vivaldi",
+          "four seasons spring piano",
+          "four seasons spring recomposed",
+          "four seasons spring 1",
+          "four seasons spring vivaldi piano",
+          "four seasons spring violin",
+          "four seasons spring organ",
+          "four seasons spring allegro",
+          "four seasons spring grow a garden"
+        ],
+        "四季 春": [
+          "四季 春 鋼琴",
+          "四季 春 第三楽章",
+          "四季 春",
+          "四季 春 小提琴",
+          "四季春珍波椰",
+          "四季春夏秋冬",
+          "四季春民谣",
+          "四季春泡法",
+          "四季 春天",
+          "四季 春 第二楽章"
+        ],
+        "비발디 봄": [
+          "비발디 봄",
+          "비발디 봄 1악장",
+          "비발디 봄 피아노",
+          "비발디 봄 바이올린",
+          "비발디 봄 3악장",
+          "비발디 봄 2악장",
+          "비발디 봄 리코더",
+          "비발디 봄 여름 가을 겨울",
+          "비발디 봄 악보",
+          "비발디 봄 사계"
+        ]
+      },
+      "fr": {
+        "vivaldi spring": [
+          "vivaldi spring",
+          "vivaldi spring 1",
+          "vivaldi spring piano",
+          "vivaldi spring remix",
+          "vivaldi spring remix techno",
+          "vivaldi spring orchestra",
+          "vivaldi spring piano tutorial",
+          "vivaldi spring max richter",
+          "vivaldi spring allegro",
+          "vivaldi spring guitar"
+        ],
+        "four seasons spring": [
+          "four seasons spring",
+          "four seasons spring vivaldi",
+          "four seasons spring 1",
+          "four seasons spring max richter",
+          "four seasons spring piano easy",
+          "four seasons spring antonio vivaldi",
+          "four seasons spring 1 hour",
+          "four seasons spring summer autumn winter",
+          "four seasons spring recomposed",
+          "four seasons spring bridgerton"
+        ],
+        "四季 春": [
+          "四季 春 鋼琴",
+          "四季 春 第三楽章",
+          "四季 春",
+          "四季 春 小提琴",
+          "四季春珍波椰",
+          "四季春夏秋冬",
+          "四季春民谣",
+          "四季春泡法",
+          "四季 春天",
+          "四季 春 第二楽章"
+        ],
+        "비발디 봄": [
+          "비발디 봄",
+          "비발디 봄 1악장",
+          "비발디 봄 피아노",
+          "비발디 봄 바이올린",
+          "비발디 봄 3악장",
+          "비발디 봄 2악장",
+          "비발디 봄 리코더",
+          "비발디 봄 여름 가을 겨울",
+          "비발디 봄 악보",
+          "비발디 봄 사계"
+        ]
+      },
+      "ru": {
+        "vivaldi spring": [
+          "vivaldi spring",
+          "vivaldi spring vals",
+          "vivaldi spring piano",
+          "vivaldi spring violin",
+          "vivaldi spring 1",
+          "vivaldi spring remix",
+          "vivaldi spring allegro",
+          "vivaldi spring guitar",
+          "vivaldi spring from the four seasons",
+          "vivaldi spring metal"
+        ],
+        "four seasons spring": [
+          "four seasons spring",
+          "four seasons spring antonio vivaldi",
+          "four seasons spring allegro",
+          "four seasons spring guitar",
+          "four seasons spring dandys world",
+          "four seasons spring violin",
+          "four seasons spring vivaldi piano",
+          "four seasons spring piano easy",
+          "four seasons spring piano",
+          "four seasons spring antonio vivaldi 1 hour"
+        ],
+        "四季 春": [
+          "四季 春 鋼琴",
+          "四季 春 第三楽章",
+          "四季 春",
+          "四季 春 小提琴",
+          "四季春珍波椰",
+          "四季春夏秋冬",
+          "四季春民谣",
+          "四季春泡法",
+          "四季 春天",
+          "四季 春 第二楽章"
+        ],
+        "비발디 봄": [
+          "비발디 봄",
+          "비발디 봄 1악장",
+          "비발디 봄 피아노",
+          "비발디 봄 바이올린",
+          "비발디 봄 3악장",
+          "비발디 봄 2악장",
+          "비발디 봄 리코더",
+          "비발디 봄 여름 가을 겨울",
+          "비발디 봄 악보",
+          "비발디 봄 사계"
+        ]
+      },
+      "zh-Hant": {
+        "vivaldi spring": [
+          "vivaldi spring",
+          "vivaldi spring netherlands bach society",
+          "vivaldi spring violin",
+          "vivaldi spring piano",
+          "vivaldi spring 1st movement",
+          "vivaldi spring piano accompaniment",
+          "vivaldi spring score",
+          "vivaldi spring accompaniment",
+          "vivaldi spring 3rd movement",
+          "vivaldi spring ray chen"
+        ],
+        "four seasons spring": [
+          "four seasons spring",
+          "four seasons spring piano",
+          "four seasons spring violin",
+          "four seasons spring flute",
+          "four seasons spring 1st movement",
+          "four seasons spring cello",
+          "four seasons spring allegro",
+          "four seasons spring song",
+          "four seasons spring solo",
+          "four seasons spring dance"
+        ],
+        "四季 春": [
+          "四季 春",
+          "四季 春 小提琴",
+          "四季 春 鋼琴",
+          "四季 春天",
+          "四季 春 第一樂章",
+          "四季 春夏秋冬",
+          "四季 春 第一楽章",
+          "四季 春 第三楽章",
+          "四季 春 第二楽章",
+          "四季 春 韦瓦第"
+        ],
+        "비발디 봄": [
+          "비발디 봄",
+          "비발디 봄 1악장",
+          "비발디 봄 피아노",
+          "비발디 봄 바이올린",
+          "비발디 봄 3악장",
+          "비발디 봄 2악장",
+          "비발디 봄 리코더",
+          "비발디 봄 여름 가을 겨울",
+          "비발디 봄 악보",
+          "비발디 봄 1시간"
+        ]
+      },
+      "zh-Hans": {
+        "vivaldi spring": [
+          "vivaldi spring",
+          "vivaldi spring 1",
+          "vivaldi spring score",
+          "vivaldi spring violin",
+          "vivaldi spring piano",
+          "vivaldi spring violin piano accompaniment",
+          "vivaldi spring cello",
+          "vivaldi spring orchestra",
+          "vivaldi spring 3rd movement",
+          "vivaldi spring guitar"
+        ],
+        "four seasons spring": [
+          "four seasons spring",
+          "four seasons spring vivaldi",
+          "four seasons spring piano",
+          "four seasons spring max richter",
+          "four seasons spring violin",
+          "four seasons spring orchestra",
+          "four seasons spring flute",
+          "four seasons spring summer autumn winter",
+          "four seasons spring grow a garden",
+          "four seasons spring string quartet"
+        ],
+        "四季 春": [
+          "四季 春 鋼琴",
+          "四季 春 第三楽章",
+          "四季 春",
+          "四季 春 小提琴",
+          "四季春珍波椰",
+          "四季春夏秋冬",
+          "四季春民谣",
+          "四季春泡法",
+          "四季 春天",
+          "四季 春 第二楽章"
+        ],
+        "비발디 봄": [
+          "비발디 봄",
+          "비발디 봄 1악장",
+          "비발디 봄 피아노",
+          "비발디 봄 바이올린",
+          "비발디 봄 3악장",
+          "비발디 봄 2악장",
+          "비발디 봄 리코더",
+          "비발디 봄 여름 가을 겨울",
+          "비발디 봄 악보",
+          "비발디 봄 1시간"
+        ]
+      }
+    },
+    "joplin_entertainer": {
+      "en": {
+        "the entertainer": [
+          "the entertainer",
+          "the entertainer piano",
+          "the entertainer scott joplin",
+          "the entertainer guitar",
+          "the entertainer piano tutorial",
+          "the entertainer violin",
+          "the entertainer orchestra",
+          "the entertainer 피아노",
+          "the entertainer easy piano",
+          "the entertainer sped up"
+        ],
+        "scott joplin entertainer": [
+          "scott joplin entertainer",
+          "scott joplin entertainer piano",
+          "scott joplin entertainer piano tutorial",
+          "scott joplin entertainer guitar",
+          "scott joplin entertainer original",
+          "scott joplin the entertainer original recording",
+          "scott joplin the entertainer orchestra",
+          "scott joplin the entertainer 1902",
+          "scott joplin the entertainer remix",
+          "scott joplin the entertainer piano tutorial easy"
+        ],
+        "エンターテイナー": [
+          "エンターテイナー",
+          "エンターテイナー ピアノ",
+          "エンターテイナー ジャズ",
+          "エンターテイナー 歌",
+          "エンターテイナーあるある",
+          "エンターテイナー モテる",
+          "エンターテイナー 曲",
+          "エンターテイナー オーケストラ",
+          "エンターテイナー 吹奏楽",
+          "エンターテイナー raindrops"
+        ]
+      },
+      "ja": {
+        "the entertainer": [
+          "the entertainer",
+          "the entertainer remix",
+          "the entertainer gt7",
+          "the entertainer lofi",
+          "the entertainer piano",
+          "the entertainer billy joel piano tutorial",
+          "the entertainer electric wendy mix",
+          "the entertainer gran turismo",
+          "the entertainer guitar",
+          "the entertainer ピアノ"
+        ],
+        "scott joplin entertainer": [
+          "scott joplin entertainer",
+          "scott joplin entertainer piano",
+          "scott joplin entertainer piano tutorial",
+          "scott joplin entertainer guitar",
+          "scott joplin entertainer original",
+          "scott joplin playing the entertainer",
+          "scott joplin the entertainer tutorial",
+          "ragtime scott joplin entertainer",
+          "the entertainer scott joplin meme",
+          "the entertainer scott joplin sped up"
+        ],
+        "エンターテイナー": [
+          "エンターテイナー",
+          "エンターテイナー ピアノ",
+          "エンターテイナー ジャズ",
+          "エンターテイナー 歌",
+          "エンターテイナーあるある",
+          "エンターテイナー モテる",
+          "エンターテイナー 曲",
+          "エンターテイナー オーケストラ",
+          "エンターテイナー 吹奏楽",
+          "エンターテイナー raindrops"
+        ]
+      },
+      "ko": {
+        "the entertainer": [
+          "the entertainer",
+          "the entertainer 스콧 조플린",
+          "the entertainer scott joplin",
+          "the entertainer 마빈 햄리시",
+          "the entertainer guitar",
+          "the entertainer 피아노",
+          "the entertainer 피아노 악보",
+          "the entertainer orchestra",
+          "the entertainer 바이올린",
+          "the entertainer jazz"
+        ],
+        "scott joplin entertainer": [
+          "scott joplin entertainer",
+          "scott joplin entertainer piano",
+          "scott joplin entertainer piano tutorial",
+          "scott joplin entertainer guitar",
+          "scott joplin entertainer original",
+          "scott joplin playing the entertainer",
+          "scott joplin the entertainer ragtime kassia",
+          "scott joplin the entertainer orchestra",
+          "ragtime scott joplin entertainer",
+          "the entertainer scott joplin meme"
+        ],
+        "エンターテイナー": [
+          "エンターテイナー",
+          "エンターテイナー カラオケ",
+          "エンターテイナー折原",
+          "エンターテイナー 弾き語り",
+          "エンターテイナー 木曽路",
+          "エンターテイナー ピアノ",
+          "エンターテイナー raindrops",
+          "エンターテイナー オーケストラ",
+          "エンターテイナー ディズニー",
+          "エンターテイナー ギター"
+        ]
+      },
+      "es": {
+        "the entertainer": [
+          "the entertainer",
+          "the entertainer piano",
+          "the entertainer piano tutorial",
+          "the entertainer guitar",
+          "the entertainer marvin hamlisch",
+          "the entertainer piano easy",
+          "the entertainer meme",
+          "the entertainer guitarra",
+          "the entertainer piano facil",
+          "the entertainer billy joel"
+        ],
+        "scott joplin entertainer": [
+          "scott joplin entertainer",
+          "scott joplin entertainer piano",
+          "scott joplin entertainer piano tutorial",
+          "scott joplin entertainer guitar",
+          "scott joplin entertainer original",
+          "scott joplin the entertainer ragtime kassia",
+          "scott joplin the entertainer tutorial",
+          "scott joplin the entertainer guitar tab",
+          "scott joplin the entertainer slow",
+          "scott joplin the entertainer music box"
+        ],
+        "エンターテイナー": [
+          "エンターテイナー",
+          "エンターテイナー ピアノ",
+          "エンターテイナー ジャズ",
+          "エンターテイナー 歌",
+          "エンターテイナーあるある",
+          "エンターテイナー モテる",
+          "エンターテイナー 曲",
+          "エンターテイナー オーケストラ",
+          "エンターテイナー 吹奏楽",
+          "エンターテイナー raindrops"
+        ]
+      },
+      "pt": {
+        "the entertainer": [
+          "the entertainer",
+          "the entertainer piano",
+          "the entertainer piano tutorial",
+          "the entertainer – scott joplin",
+          "the entertainer guitar",
+          "the entertainer marvin hamlisch",
+          "the entertainer piano easy",
+          "the entertainer violao",
+          "the entertainer meme",
+          "the entertainer remix"
+        ],
+        "scott joplin entertainer": [
+          "scott joplin entertainer",
+          "scott joplin entertainer piano tutorial",
+          "scott joplin entertainer guitar",
+          "scott joplin entertainer piano",
+          "scott joplin entertainer original",
+          "scott joplin the entertainer ragtime kassia",
+          "scott joplin the entertainer orchestra",
+          "scott joplin the entertainer 1902",
+          "scott joplin the entertainer piano tutorial easy",
+          "scott joplin the entertainer guitar tab"
+        ],
+        "エンターテイナー": [
+          "エンターテイナー",
+          "エンターテイナー ピアノ",
+          "エンターテイナー ジャズ",
+          "エンターテイナー 歌",
+          "エンターテイナーあるある",
+          "エンターテイナー モテる",
+          "エンターテイナー 曲",
+          "エンターテイナー オーケストラ",
+          "エンターテイナー 吹奏楽",
+          "エンターテイナー raindrops"
+        ]
+      },
+      "de": {
+        "the entertainer": [
+          "the entertainer",
+          "the entertainer kbs",
+          "the entertainer scott joplin",
+          "the entertainer guitar",
+          "the entertainer piano tutorial",
+          "the entertainer piano easy",
+          "the entertainer orchestra",
+          "the entertainer billy joel",
+          "the entertainer akkordeon",
+          "the entertainer remix"
+        ],
+        "scott joplin entertainer": [
+          "scott joplin entertainer",
+          "scott joplin entertainer piano",
+          "scott joplin entertainer original",
+          "scott joplin entertainer piano tutorial",
+          "scott joplin entertainer guitar",
+          "scott joplin the entertainer orchestra",
+          "scott joplin the entertainer remix",
+          "scott joplin the entertainer piano tutorial easy",
+          "scott joplin the entertainer piano easy",
+          "scott joplin the entertainer violin"
+        ],
+        "エンターテイナー": [
+          "エンターテイナー",
+          "エンターテイナー ピアノ",
+          "エンターテイナー ジャズ",
+          "エンターテイナー 歌",
+          "エンターテイナーあるある",
+          "エンターテイナー モテる",
+          "エンターテイナー 曲",
+          "エンターテイナー オーケストラ",
+          "エンターテイナー 吹奏楽",
+          "エンターテイナー raindrops"
+        ]
+      },
+      "fr": {
+        "the entertainer": [
+          "the entertainer piano",
+          "the entertainer bass",
+          "the entertainer",
+          "the entertainer minor",
+          "the entertainer minor key",
+          "the entertainer guitar",
+          "the entertainer 피아노",
+          "the entertainer 스콧 조플린",
+          "the entertainer scott joplin",
+          "the entertainer piano tutorial"
+        ],
+        "scott joplin entertainer": [
+          "scott joplin entertainer",
+          "scott joplin entertainer piano",
+          "scott joplin entertainer piano tutorial",
+          "scott joplin entertainer guitar",
+          "scott joplin entertainer original",
+          "scott joplin entertainment",
+          "scott joplin the entertainer orchestra",
+          "scott joplin the entertainer remix",
+          "scott joplin the entertainer piano tutorial easy",
+          "scott joplin the entertainer piano easy"
+        ],
+        "エンターテイナー": [
+          "エンターテイナー",
+          "エンターテイナー ピアノ",
+          "エンターテイナー ジャズ",
+          "エンターテイナー 歌",
+          "エンターテイナーあるある",
+          "エンターテイナー モテる",
+          "エンターテイナー 曲",
+          "エンターテイナー オーケストラ",
+          "エンターテイナー 吹奏楽",
+          "エンターテイナー raindrops"
+        ]
+      },
+      "ru": {
+        "the entertainer": [
+          "the entertainer",
+          "the entertainer piano",
+          "the entertainer lou pizzuti & scott joplin",
+          "the entertainer scott joplin",
+          "the entertainer piano tutorial",
+          "the entertainer guitar",
+          "the entertainer piano easy",
+          "the entertainer марвин хэмлиш",
+          "the entertainer meme",
+          "the entertainer speed up"
+        ],
+        "scott joplin entertainer": [
+          "scott joplin entertainer",
+          "scott joplin entertainer piano",
+          "scott joplin entertainer guitar",
+          "scott joplin entertainer piano tutorial",
+          "scott joplin entertainer original",
+          "scott joplin the entertainer ragtime kassia",
+          "scott joplin the entertainer orchestra",
+          "scott joplin the entertainer tutorial",
+          "scott joplin the entertainer 1902",
+          "scott joplin the entertainer remix"
+        ],
+        "エンターテイナー": [
+          "エンターテイナー",
+          "エンターテイナー ピアノ",
+          "エンターテイナー ジャズ",
+          "エンターテイナー 歌",
+          "エンターテイナーあるある",
+          "エンターテイナー モテる",
+          "エンターテイナー 曲",
+          "エンターテイナー オーケストラ",
+          "エンターテイナー 吹奏楽",
+          "エンターテイナー raindrops"
+        ]
+      },
+      "zh-Hant": {
+        "the entertainer": [
+          "the entertainer",
+          "the entertainer piano",
+          "the entertainer scott joplin",
+          "the entertainer guitar",
+          "the entertainer violin",
+          "the entertainer piano grade 3",
+          "the entertainer flute",
+          "the entertainer saxophone",
+          "the entertainer piano easy",
+          "the entertainer orchestra"
+        ],
+        "scott joplin entertainer": [
+          "scott joplin entertainer",
+          "scott joplin entertainer piano",
+          "scott joplin entertainer original",
+          "scott joplin entertainer guitar",
+          "scott joplin entertainer piano tutorial",
+          "scott joplin the entertainer tutorial",
+          "scott joplin the entertainer orchestra",
+          "ragtime scott joplin entertainer",
+          "the entertainer scott joplin sped up",
+          "the entertainer scott joplin remix"
+        ],
+        "エンターテイナー": [
+          "エンターテイナー",
+          "エンターテイナーウクレレ",
+          "エンターテイナー mdj",
+          "エンターテイナー はいだしょうこ",
+          "エンターテイナー 歌ってみた",
+          "エンターテイナー イナズマイレブン",
+          "エンターテイナー ピアノ",
+          "エンターテイナー mbti",
+          "エンターテイナー 恋愛",
+          "エンターテイナー 曲"
+        ]
+      },
+      "zh-Hans": {
+        "the entertainer": [
+          "the entertainer",
+          "the entertainer bassoon",
+          "the entertainer piano violin",
+          "the entertainer game music",
+          "the entertainer guitar",
+          "the entertainer piano easy",
+          "the entertainer violin",
+          "the entertainer flute",
+          "the entertainer guitar tab",
+          "the entertainer remix"
+        ],
+        "scott joplin entertainer": [
+          "scott joplin entertainer piano",
+          "scott joplin entertainer guitar",
+          "scott joplin entertainer piano tutorial",
+          "scott joplin the entertainer tutorial",
+          "scott joplin the entertainer orchestra",
+          "scott joplin – the entertainer (1902)",
+          "ragtime scott joplin entertainer",
+          "the entertainer scott joplin remix",
+          "the entertainer scott joplin piano cover",
+          "the entertainer scott joplin meme"
+        ],
+        "エンターテイナー": [
+          "エンターテイナー ピアノ",
+          "エンターテイナー",
+          "エンターテイナー 吹奏楽",
+          "エンターテイナー曲",
+          "エンターテイナー アームド",
+          "エンターテイナー ピアノ 初級",
+          "エンターテイナー ピアノ(連弾)",
+          "エンターテイナー ピアノ 中級",
+          "エンターテイナー mbti",
+          "エンターテイナー ピアノ 上級"
+        ]
+      }
+    },
+    "elgar_salut": {
+      "en": {
+        "salut d'amour": [
+          "salut d'amour",
+          "salut d'amour piano",
+          "salut d'amour violin",
+          "salut d'amour cello",
+          "salut d'amour op.12",
+          "salut d'amour elgar",
+          "salut d'amour guitar",
+          "salut d'amour orchestra",
+          "salut d'amour piano accompaniment",
+          "salut d'amour violin solo"
+        ],
+        "elgar salut d'amour": [
+          "elgar salut d'amour",
+          "elgar salut d'amour piano",
+          "elgar salut d'amour cello",
+          "elgar salut d'amour flute",
+          "elgar salut d'amour orchestra",
+          "elgar salut d'amour piano accompaniment",
+          "elgar salut d'amour piano solo",
+          "elgar salut d'amour clarinet",
+          "elgar salut d'amour oboe",
+          "elgar salut d'amour viola"
+        ],
+        "愛の挨拶": [
+          "愛の挨拶",
+          "愛の挨拶 フルート",
+          "愛の挨拶 オーケストラ",
+          "愛の挨拶 ドラマ",
+          "愛の挨拶 バイオリン",
+          "愛の挨拶 ピアノ",
+          "愛の挨拶 チェロ",
+          "愛の挨拶 楽譜",
+          "愛の挨拶 保留音",
+          "愛の挨拶 伴奏"
+        ],
+        "사랑의 인사": [
+          "사랑의 인사",
+          "사랑의 인사 엘가",
+          "사랑의 인사 씨야",
+          "사랑의 인사 적재",
+          "사랑의 인사 노래방",
+          "사랑의 인사 남자",
+          "사랑의 인사 바이올린",
+          "사랑의 인사 피아노",
+          "사랑의 인사 기타",
+          "사랑의 인사 커버"
+        ]
+      },
+      "ja": {
+        "salut d'amour": [
+          "salut d'amour",
+          "salut d'amour piano",
+          "salut d'amour violin",
+          "salut d'amour cello",
+          "salut d'amour flute",
+          "salut d'amour piano accompaniment",
+          "salut d'amour op. 12",
+          "salut d'amour guitar",
+          "salut d'amour 吹奏楽",
+          "salut d'amour score"
+        ],
+        "elgar salut d'amour": [
+          "elgar salut d'amour",
+          "elgar salut d'amour op. 12",
+          "elgar salut d'amour piano",
+          "elgar salut d'amour cello",
+          "elgar salut d'amour violin",
+          "elgar salut d'amour score",
+          "elgar salut d'amour quartet",
+          "elgar salut d'amour flute",
+          "elgar salut d'amour op. 12 piano",
+          "elgar salut d'amour trio"
+        ],
+        "愛の挨拶": [
+          "愛の挨拶",
+          "愛の挨拶 フルート",
+          "愛の挨拶 オーケストラ",
+          "愛の挨拶 ドラマ",
+          "愛の挨拶 バイオリン",
+          "愛の挨拶 ピアノ",
+          "愛の挨拶 チェロ",
+          "愛の挨拶 楽譜",
+          "愛の挨拶 保留音",
+          "愛の挨拶 伴奏"
+        ],
+        "사랑의 인사": [
+          "사랑의 인사",
+          "사랑의 인사 엘가",
+          "사랑의 인사 씨야",
+          "사랑의 인사 피아노",
+          "사랑의 인사 노래방 남자키",
+          "사랑의 인사 가사",
+          "사랑의 인사 김연지",
+          "사랑의 인사 기타",
+          "사랑의 인사 라이브",
+          "사랑의 인사입니다"
+        ]
+      },
+      "ko": {
+        "salut d'amour": [
+          "salut d'amour",
+          "salut d'amour cello",
+          "salut d'amour op.12",
+          "salut d'amour orchestra",
+          "salut d'amour guitar",
+          "salut d'amour elgar",
+          "salut d'amour in e major op.12",
+          "salut d'amour string quartet",
+          "salut d'amour accompaniment",
+          "salut d'amour flute"
+        ],
+        "elgar salut d'amour": [
+          "elgar salut d'amour",
+          "elgar salut d'amour piano",
+          "elgar salut d'amour violin",
+          "elgar salut d'amour cello",
+          "elgar salut d'amour op. 12 다니엘 호프",
+          "elgar salut d'amour op. 12 정경화",
+          "elgar salut d'amour op.12",
+          "elgar salut d'amour orchestra",
+          "elgar salut d'amour viola",
+          "elgar salut d'amour string quartet"
+        ],
+        "愛の挨拶": [
+          "愛の挨拶",
+          "愛の挨拶アルトサックス",
+          "愛の挨拶 オルゴール",
+          "愛の挨拶 チェロ",
+          "愛の挨拶 midi",
+          "愛の挨拶(エルガー)",
+          "愛の挨拶 バイオリン",
+          "愛の挨拶 マンドリン",
+          "愛の挨拶 響けユーフォニアム",
+          "愛の挨拶 響け"
+        ],
+        "사랑의 인사": [
+          "사랑의 인사",
+          "사랑의 인사 엘가",
+          "사랑의 인사 씨야",
+          "사랑의 인사 적재",
+          "사랑의 인사 노래방",
+          "사랑의 인사 남자",
+          "사랑의 인사 바이올린",
+          "사랑의 인사 피아노",
+          "사랑의 인사 기타",
+          "사랑의 인사 커버"
+        ]
+      },
+      "es": {
+        "salut d'amour": [
+          "salut d'amour",
+          "salut d'amour orchestra",
+          "salut d'amour violin",
+          "salut d'amour piano",
+          "salut d'amour elgar",
+          "salut d'amour cello",
+          "salut d'amour piano y violin",
+          "salut d'amour op 12",
+          "salut d'amour violin tutorial",
+          "salut d'amour elgar violin"
+        ],
+        "elgar salut d'amour": [
+          "elgar salut d'amour score",
+          "elgar salut d'amour",
+          "elgar salut d'amour piano",
+          "elgar salut d'amour violin",
+          "elgar salut d'amour cello",
+          "elgar salut d'amour orchestra",
+          "elgar salut d'amour piano accompaniment",
+          "elgar salut d'amour piano violin",
+          "elgar salut d'amour flute",
+          "elgar salut d'amour cello piano"
+        ],
+        "愛の挨拶": [
+          "愛の挨拶",
+          "愛の挨拶 フルート",
+          "愛の挨拶 オーケストラ",
+          "愛の挨拶 ドラマ",
+          "愛の挨拶 バイオリン",
+          "愛の挨拶 ピアノ",
+          "愛の挨拶 チェロ",
+          "愛の挨拶 楽譜",
+          "愛の挨拶 保留音",
+          "愛の挨拶 伴奏"
+        ],
+        "사랑의 인사": [
+          "사랑의 인사",
+          "사랑의 인사 엘가",
+          "사랑의 인사 씨야",
+          "사랑의 인사 적재",
+          "사랑의 인사 노래방",
+          "사랑의 인사 남자",
+          "사랑의 인사 바이올린",
+          "사랑의 인사 피아노",
+          "사랑의 인사 기타",
+          "사랑의 인사 커버"
+        ]
+      },
+      "pt": {
+        "salut d'amour": [
+          "salut d'amour",
+          "salut d'amour piano",
+          "salut d'amour violin",
+          "salut d'amour elgar",
+          "salut d'amour edward elgar",
+          "salut d'amour cello",
+          "salut d'amour elgar piano accompaniment",
+          "salut d'amour violin tutorial",
+          "salut d'amour guitar",
+          "salut d'amour op 12"
+        ],
+        "elgar salut d'amour": [
+          "elgar salut d'amour",
+          "elgar salut d'amour piano",
+          "elgar salut d'amour violin",
+          "elgar salut d'amour op. 12 daniel hope",
+          "elgar salut d'amour piano tutorial",
+          "elgar salut d'amour sheet music",
+          "elgar salut d'amour op. 12 kyung-wha chung",
+          "elgar salut d'amour score",
+          "elgar salut d'amour guitar",
+          "elgar salut d'amour piano 4 hands"
+        ],
+        "愛の挨拶": [
+          "愛の挨拶",
+          "愛の挨拶 フルート",
+          "愛の挨拶 オーケストラ",
+          "愛の挨拶 ドラマ",
+          "愛の挨拶 バイオリン",
+          "愛の挨拶 ピアノ",
+          "愛の挨拶 チェロ",
+          "愛の挨拶 楽譜",
+          "愛の挨拶 保留音",
+          "愛の挨拶 伴奏"
+        ],
+        "사랑의 인사": [
+          "사랑의 인사",
+          "사랑의 인사 엘가",
+          "사랑의 인사 씨야",
+          "사랑의 인사 적재",
+          "사랑의 인사 노래방",
+          "사랑의 인사 남자",
+          "사랑의 인사 바이올린",
+          "사랑의 인사 피아노",
+          "사랑의 인사 기타",
+          "사랑의 인사 커버"
+        ]
+      },
+      "de": {
+        "salut d'amour": [
+          "salut d'amour elgar",
+          "salut d'amour",
+          "salut d'amour piano",
+          "salut d'amour cello",
+          "salut d'amour edward elgar",
+          "salut d'amour violin",
+          "salut d'amour orchestra",
+          "salut d'amour violin piano",
+          "salut d'amour flute",
+          "salut d'amour op 12"
+        ],
+        "elgar salut d'amour": [
+          "elgar salut d'amour",
+          "elgar salut d'amour piano",
+          "elgar salut d'amour violin",
+          "elgar salut d'amour cello",
+          "elgar salut d'amour orchestra",
+          "elgar salut d'amour cello piano",
+          "elgar salut d'amour clarinet",
+          "elgar salut d'amour violin and piano",
+          "elgar salut d'amour op. 12",
+          "elgar salut d'amour oboe"
+        ],
+        "愛の挨拶": [
+          "愛の挨拶",
+          "愛の挨拶 フルート",
+          "愛の挨拶 オーケストラ",
+          "愛の挨拶 ドラマ",
+          "愛の挨拶 バイオリン",
+          "愛の挨拶 ピアノ",
+          "愛の挨拶 チェロ",
+          "愛の挨拶 楽譜",
+          "愛の挨拶 保留音",
+          "愛の挨拶 伴奏"
+        ],
+        "사랑의 인사": [
+          "사랑의 인사",
+          "사랑의 인사 엘가",
+          "사랑의 인사 씨야",
+          "사랑의 인사 적재",
+          "사랑의 인사 노래방",
+          "사랑의 인사 남자",
+          "사랑의 인사 바이올린",
+          "사랑의 인사 피아노",
+          "사랑의 인사 기타",
+          "사랑의 인사 커버"
+        ]
+      },
+      "fr": {
+        "salut d'amour": [
+          "salut d'amour – edward elgar",
+          "salut d'amour",
+          "salut d'amour piano",
+          "salut d'amour cello",
+          "salut d'amour elgar cello",
+          "salut d'amour elgar piano",
+          "salut d'amour op 12",
+          "salut d'amour piano accompaniment",
+          "salut d'amour edward elgar piano",
+          "salut d'amour elgar orchestra"
+        ],
+        "elgar salut d'amour": [
+          "elgar salut d'amour",
+          "elgar salut d'amour piano",
+          "elgar salut d'amour cello",
+          "elgar salut d'amour yo yo ma",
+          "elgar salut d'amour gitlis",
+          "elgar salut d'amour piano 4 hands",
+          "elgar salut d'amour piano accompaniment d major",
+          "elgar salut d'amour flute",
+          "elgar salut d'amour in e major op. 12",
+          "elgar salut d'amour oboe"
+        ],
+        "愛の挨拶": [
+          "愛の挨拶",
+          "愛の挨拶 フルート",
+          "愛の挨拶 オーケストラ",
+          "愛の挨拶 ドラマ",
+          "愛の挨拶 バイオリン",
+          "愛の挨拶 ピアノ",
+          "愛の挨拶 チェロ",
+          "愛の挨拶 楽譜",
+          "愛の挨拶 保留音",
+          "愛の挨拶 伴奏"
+        ],
+        "사랑의 인사": [
+          "사랑의 인사",
+          "사랑의 인사 엘가",
+          "사랑의 인사 씨야",
+          "사랑의 인사 적재",
+          "사랑의 인사 노래방",
+          "사랑의 인사 남자",
+          "사랑의 인사 바이올린",
+          "사랑의 인사 피아노",
+          "사랑의 인사 기타",
+          "사랑의 인사 커버"
+        ]
+      },
+      "ru": {
+        "salut d'amour": [
+          "salut d'amour",
+          "salut d'amour piano",
+          "salut d'amour violin",
+          "salut d'amour cello",
+          "salut d'amour op. 12",
+          "salut d'amour string quartet",
+          "salut d'amour piano and violin",
+          "salut d'amour song",
+          "salut d'amour viola",
+          "salut d'amour oboe"
+        ],
+        "elgar salut d'amour": [
+          "elgar salut d'amour",
+          "elgar salut d'amour piano",
+          "elgar salut d'amour piano accompaniment",
+          "elgar salut d'amour cello",
+          "elgar salut d'amour op. 12",
+          "elgar salut d'amour oboe",
+          "elgar salut d'amour guitar",
+          "elgar salut d'amour viola",
+          "elgar salut d'amour flute",
+          "elgar salut d'amour violin"
+        ],
+        "愛の挨拶": [
+          "愛の挨拶",
+          "愛の挨拶 フルート",
+          "愛の挨拶 オーケストラ",
+          "愛の挨拶 ドラマ",
+          "愛の挨拶 バイオリン",
+          "愛の挨拶 ピアノ",
+          "愛の挨拶 チェロ",
+          "愛の挨拶 楽譜",
+          "愛の挨拶 保留音",
+          "愛の挨拶 伴奏"
+        ],
+        "사랑의 인사": [
+          "사랑의 인사",
+          "사랑의 인사 엘가",
+          "사랑의 인사 씨야",
+          "사랑의 인사 적재",
+          "사랑의 인사 노래방",
+          "사랑의 인사 남자",
+          "사랑의 인사 바이올린",
+          "사랑의 인사 피아노",
+          "사랑의 인사 기타",
+          "사랑의 인사 커버"
+        ]
+      },
+      "zh-Hant": {
+        "salut d'amour": [
+          "salut d'amour violin",
+          "salut d'amour piano accompaniment",
+          "salut d'amour",
+          "salut d'amour piano",
+          "salut d'amour cello",
+          "salut d'amour op. 12",
+          "salut d'amour flute",
+          "salut d'amour orchestra",
+          "salut d'amour guitar",
+          "salut d'amour accompaniment"
+        ],
+        "elgar salut d'amour": [
+          "elgar salut d'amour",
+          "elgar salut d'amour piano",
+          "elgar salut d'amour violin",
+          "elgar salut d'amour cello",
+          "elgar salut d'amour flute",
+          "elgar salut d'amour orchestra",
+          "elgar salut d'amour op. 12",
+          "elgar salut d'amour four hands",
+          "elgar salut d'amour saxophone",
+          "elgar salut d'amour sheet"
+        ],
+        "愛の挨拶": [
+          "愛の挨拶",
+          "愛の挨拶 ピアノ",
+          "愛の挨拶 フルート",
+          "愛の挨拶(エルガー)",
+          "愛の挨拶 カラオケ",
+          "愛の挨拶 ヴァイオリン",
+          "愛の挨拶 d",
+          "愛の挨拶 オカリナ",
+          "愛の挨拶 チェロ",
+          "愛の挨拶 サックス四重奏"
+        ],
+        "사랑의 인사": [
+          "사랑의 인사",
+          "사랑의 인사 cover",
+          "사랑의 인사 피아노",
+          "사랑의 인사 가사",
+          "사랑의 인사 piano",
+          "사랑의 인사 노래방",
+          "사랑의 인사 엘가",
+          "사랑의 인사 바이올린",
+          "사랑의 인사 기타",
+          "사랑의 인사 1시간"
+        ]
+      },
+      "zh-Hans": {
+        "salut d'amour": [
+          "salut d'amour",
+          "salut d'amour piano",
+          "salut d'amour quartet",
+          "salut d'amour op 12",
+          "salut d'amour guitar",
+          "salut d'amour flute",
+          "salut d'amour orchestra",
+          "salut d'amour viola",
+          "salut d'amour violin solo",
+          "salut d'amour violin sheet"
+        ],
+        "elgar salut d'amour": [
+          "elgar salut d'amour",
+          "elgar salut d'amour piano",
+          "edward elgar salut d'amour"
+        ],
+        "愛の挨拶": [
+          "愛の挨拶",
+          "愛の挨拶 ピアノ",
+          "愛の挨拶連弾",
+          "愛の挨拶 スーツ",
+          "愛の挨拶フルート",
+          "愛の挨拶 バイオリン",
+          "愛の挨拶 エルガー",
+          "愛の挨拶 サックス四重奏",
+          "愛の挨拶 オーケストラ",
+          "愛の挨拶 吹奏楽"
+        ],
+        "사랑의 인사": [
+          "사랑의 인사",
+          "사랑의 인사 엘가",
+          "사랑의 인사 적재",
+          "사랑의인사1시간",
+          "사랑의 인사 피아노 1시간",
+          "사랑의 인사 씨야",
+          "사랑의 인사 동요",
+          "사랑의인사드라마",
+          "사랑의 인사 김지호",
+          "사랑의 인사 자장가"
+        ]
+      }
+    },
+    "mozart_k265": {
+      "en": {
+        "twinkle twinkle variations": [
+          "twinkle twinkle variations",
+          "twinkle twinkle little star",
+          "twinkle variations",
+          "twinkle twinkle little star variations"
+        ],
+        "ah vous dirai-je maman": [
+          "ah vous dirai-je maman",
+          "ah vous dirai-je maman piano",
+          "ah vous dirai-je maman 조수미",
+          "ah vous dirai-je maman mozart",
+          "ah vous dirai-je maman sumi jo",
+          "ah vous dirai-je maman k. 265",
+          "ah vous dirai-je maman lyrics",
+          "ah vous dirai-je maman bach",
+          "ah vous dirai-je maman violin",
+          "ah vous dirai-je maman guitar"
+        ],
+        "mozart k265": [
+          "mozart k265",
+          "mozart k265 piano",
+          "mozart variations k265",
+          "mozart piano variations k265",
+          "mozart 265",
+          "mozart maman variations",
+          "mozart twinkle",
+          "mozart 12 variations"
+        ],
+        "きらきら星変奏曲": [
+          "きらきら星変奏曲",
+          "きらきら星変奏曲 楽譜",
+          "きらきら星変奏曲 かてぃん",
+          "きらきら星変奏曲 ピアノ",
+          "きらきら星変奏曲 吹奏楽",
+          "きらきら星変奏曲 のだめ",
+          "きらきら星変奏曲 バイオリン",
+          "きらきら星変奏曲 連弾",
+          "きらきら星変奏曲 ゆっくり",
+          "きらきら星変奏曲 フルート"
+        ]
+      },
+      "ja": {
+        "ah vous dirai-je maman": [
+          "ah vous dirai-je maman",
+          "ah vous dirai-je maman mozart",
+          "ah vous dirai-je maman adam",
+          "ah vous dirai-je maman piano",
+          "ah vous dirai-je maman chanson",
+          "ah vous dirai-je maman flute",
+          "ah vous dirai-je maman orchestra",
+          "ah vous dirai-je maman dancla",
+          "ah vous dirai-je maman song",
+          "ah vous dirai-je maman score"
+        ],
+        "mozart k265": [
+          "mozart k265",
+          "mozart k265 piano",
+          "mozart variations k265",
+          "mozart 12 variations k265",
+          "mozart piano variations k265",
+          "mozart maman variations",
+          "mozart 265"
+        ],
+        "きらきら星変奏曲": [
+          "きらきら星変奏曲",
+          "きらきら星変奏曲 楽譜",
+          "きらきら星変奏曲 かてぃん",
+          "きらきら星変奏曲 ピアノ",
+          "きらきら星変奏曲 吹奏楽",
+          "きらきら星変奏曲 のだめ",
+          "きらきら星変奏曲 バイオリン",
+          "きらきら星変奏曲 連弾",
+          "きらきら星変奏曲 ゆっくり",
+          "きらきら星変奏曲 フルート"
+        ]
+      },
+      "ko": {
+        "ah vous dirai-je maman": [
+          "ah vous dirai-je maman",
+          "ah vous dirai-je maman soprano",
+          "ah vous dirai-je maman piano",
+          "ah vous dirai-je maman flute",
+          "ah vous dirai-je maman violin",
+          "ah vous dirai-je maman mozart",
+          "ah vous dirai-je maman k.265",
+          "ah vous dirai-je maman 반주",
+          "ah vous dirai-je maman 조수미",
+          "ah vous dirai-je maman orchestra"
+        ],
+        "mozart k265": [
+          "mozart k265",
+          "mozart k265 piano",
+          "mozart piano variations k265",
+          "mozart 12 variations k 265",
+          "mozart 265",
+          "mozart maman"
+        ],
+        "きらきら星変奏曲": [
+          "きらきら星変奏曲",
+          "きらきら星変奏曲 ピアノ",
+          "きらきら星変奏曲 発車メロディー",
+          "きらきら星変奏曲 ゆっくり",
+          "きらきら星変奏曲 四月は君の嘘",
+          "きらきら星変奏曲 楽譜",
+          "きらきら星変奏曲 のだめ",
+          "きらきら星変奏曲 コウノドリ",
+          "きらきら星変奏曲 ピアノ 連弾",
+          "きらきら星変奏曲 簡単"
+        ]
+      },
+      "es": {
+        "mozart k265": [
+          "mozart k 265",
+          "mozart k 265 piano",
+          "mozart piano variations k265",
+          "mozart 12 variations k265"
+        ],
+        "きらきら星変奏曲": [
+          "きらきら星変奏曲",
+          "きらきら星変奏曲 楽譜",
+          "きらきら星変奏曲 かてぃん",
+          "きらきら星変奏曲 ピアノ",
+          "きらきら星変奏曲 吹奏楽",
+          "きらきら星変奏曲 のだめ",
+          "きらきら星変奏曲 バイオリン",
+          "きらきら星変奏曲 連弾",
+          "きらきら星変奏曲 ゆっくり",
+          "きらきら星変奏曲 フルート"
+        ]
+      },
+      "pt": {
+        "ah vous dirai-je maman": [
+          "ah vous dirai-je maman",
+          "ah vous dirai-je maman mozart",
+          "ah vous dirai-je maman original",
+          "ah vous dirai-je maman guitar",
+          "ah vous dirai-je maman piano",
+          "ah vous dirai-je maman monde des titounis",
+          "ah vous dirai-je maman violon",
+          "ah vous dirai-je maman mozart piano tutorial",
+          "ah vous dirai-je maman chanson",
+          "ah vous dirai-je maman kv 265"
+        ],
+        "mozart k265": [
+          "mozart k265",
+          "mozart k265 piano",
+          "mozart variations k265",
+          "mozart piano variations k265"
+        ],
+        "きらきら星変奏曲": [
+          "きらきら星変奏曲",
+          "きらきら星変奏曲 楽譜",
+          "きらきら星変奏曲 かてぃん",
+          "きらきら星変奏曲 ピアノ",
+          "きらきら星変奏曲 吹奏楽",
+          "きらきら星変奏曲 のだめ",
+          "きらきら星変奏曲 バイオリン",
+          "きらきら星変奏曲 連弾",
+          "きらきら星変奏曲 ゆっくり",
+          "きらきら星変奏曲 フルート"
+        ]
+      },
+      "de": {
+        "ah vous dirai-je maman": [
+          "ah vous dirai-je maman",
+          "ah vous dirai-je maman mozart",
+          "ah vous dirai-je maman piano",
+          "ah vous dirai-je maman lang lang",
+          "ah vous dirai-je maman lyrics",
+          "ah vous dirai-je maman kv 265",
+          "ah vous dirai-je maman bach",
+          "ah vous dirai-je maman variations",
+          "ah vous dirai-je maman piano tutorial",
+          "ah vous dirai-je maman dancla"
+        ],
+        "mozart k265": [
+          "mozart k 265",
+          "mozart k265 piano",
+          "mozart variations k265",
+          "mozart 12 variations k265",
+          "mozart piano variations k265",
+          "mozart 265",
+          "mozart 455",
+          "mozart kv 526",
+          "mozart kv 339"
+        ],
+        "きらきら星変奏曲": [
+          "きらきら星変奏曲",
+          "きらきら星変奏曲 楽譜",
+          "きらきら星変奏曲 かてぃん",
+          "きらきら星変奏曲 ピアノ",
+          "きらきら星変奏曲 吹奏楽",
+          "きらきら星変奏曲 のだめ",
+          "きらきら星変奏曲 バイオリン",
+          "きらきら星変奏曲 連弾",
+          "きらきら星変奏曲 ゆっくり",
+          "きらきら星変奏曲 フルート"
+        ]
+      },
+      "fr": {
+        "ah vous dirai-je maman": [
+          "ah vous dirai-je maman",
+          "ah vous dirai-je maman mozart",
+          "ah vous dirai-je maman mozart fazil say",
+          "ah vous dirai-je maman piano",
+          "ah vous dirai-je maman monde des titounis",
+          "ah vous dirai-je maman mozart piano",
+          "ah vous dirai-je maman remix",
+          "ah vous dirai-je maman 12 variations",
+          "ah vous dirai-je maman karaoke",
+          "ah vous dirai-je maman paroles"
+        ],
+        "mozart k265": [
+          "mozart k265",
+          "mozart k265 piano",
+          "mozart variations k265",
+          "mozart piano variations k265",
+          "mozart k 618"
+        ],
+        "きらきら星変奏曲": [
+          "きらきら星変奏曲",
+          "きらきら星変奏曲 楽譜",
+          "きらきら星変奏曲 かてぃん",
+          "きらきら星変奏曲 ピアノ",
+          "きらきら星変奏曲 吹奏楽",
+          "きらきら星変奏曲 のだめ",
+          "きらきら星変奏曲 バイオリン",
+          "きらきら星変奏曲 連弾",
+          "きらきら星変奏曲 ゆっくり",
+          "きらきら星変奏曲 フルート"
+        ]
+      },
+      "ru": {
+        "ah vous dirai-je maman": [
+          "ah vous dirai-je maman",
+          "ah vous dirai-je maman mozart",
+          "ah vous dirai-je maman monde des titounis",
+          "ah vous dirai-je maman k.265",
+          "ah vous dirai-je maman baby petons",
+          "ah vous dirai-je maman piano",
+          "ah vous dirai-je maman guitar",
+          "ah vous dirai-je maman accordion",
+          "ah vous dirai-je maman 12 variations piano",
+          "ah vous dirai-je maman score"
+        ],
+        "mozart k265": [
+          "mozart k265",
+          "mozart k265 piano",
+          "mozart variations k265",
+          "mozart piano variations k265",
+          "моцарт соната 13"
+        ],
+        "きらきら星変奏曲": [
+          "きらきら星変奏曲",
+          "きらきら星変奏曲 楽譜",
+          "きらきら星変奏曲 かてぃん",
+          "きらきら星変奏曲 ピアノ",
+          "きらきら星変奏曲 吹奏楽",
+          "きらきら星変奏曲 のだめ",
+          "きらきら星変奏曲 バイオリン",
+          "きらきら星変奏曲 連弾",
+          "きらきら星変奏曲 ゆっくり",
+          "きらきら星変奏曲 フルート"
+        ]
+      },
+      "zh-Hant": {
+        "ah vous dirai-je maman": [
+          "ah vous dirai-je maman",
+          "ah vous dirai-je maman piano",
+          "ah vous dirai-je maman soprano",
+          "ah vous dirai-je maman original",
+          "ah vous dirai-je maman guitar",
+          "ah vous dirai-je maman adam",
+          "ah vous dirai-je maman variation 5",
+          "ah vous dirai-je maman jazz",
+          "ah vous dirai-je maman k.265",
+          "ah vous dirai-je maman flute"
+        ],
+        "mozart k265": [
+          "mozart k265",
+          "mozart k265 piano",
+          "mozart piano variations k265",
+          "mozart 12 variations k265",
+          "mozart variations k265"
+        ],
+        "きらきら星変奏曲": [
+          "きらきら星変奏曲",
+          "きらきら星変奏曲 まらしぃ",
+          "きらきら星変奏曲 木管五重奏",
+          "きらきら星変奏曲より",
+          "きらきら星変奏曲 ピアノ楽譜",
+          "きらきら星変奏曲 ピアノ",
+          "きらきら星変奏曲 辻井伸行",
+          "きらきら星変奏曲 天野正道",
+          "きらきら星変奏曲 モーツァルト",
+          "きらきら星変奏曲 四月は君の嘘"
+        ]
+      },
+      "zh-Hans": {
+        "ah vous dirai-je maman": [
+          "ah vous dirai-je maman",
+          "ah vous dirai-je maman kv 265",
+          "ah vous dirai-je maman 조수미",
+          "ah vous dirai-je maman mozart",
+          "ah vous dirai-je maman soprano",
+          "ah vous dirai-je maman dancla",
+          "ah vous dirai-je maman flute",
+          "ah vous dirai-je maman mozart piano",
+          "ah vous dirai-je maman adam",
+          "ah vous dirai-je maman k.265"
+        ],
+        "mozart k265": [
+          "mozart k265",
+          "mozart k265 piano",
+          "mozart piano variations k265",
+          "mozart variations k 265",
+          "mozart 12 variations k265"
+        ],
+        "きらきら星変奏曲": [
+          "きらきら星変奏曲",
+          "きらきら星変奏曲 フルート",
+          "きらきら星変奏曲 ピアノ",
+          "きらきら星変奏曲 のだめ",
+          "きらきら星変奏曲 ピアノ 初級",
+          "きらきら星変奏曲 ピアノ ゆっくり",
+          "きらきら星変奏曲 ピアノ 連弾",
+          "きらきら星変奏曲 かてぃん",
+          "きらきら星変奏曲 吹奏楽",
+          "きらきら星変奏曲 連弾"
+        ]
+      }
+    },
+    "chopin_nocturne": {
+      "en": {
+        "chopin nocturne op 9 no 2": [
+          "chopin nocturne op 9 no 2",
+          "chopin nocturne op 9 no 2 guitar",
+          "chopin nocturne op 9 no 2 tutorial",
+          "chopin nocturne op 9 no 2 piano tutorial",
+          "chopin nocturne op 9 no 2 piano",
+          "chopin nocturne op 9 no 2 meme",
+          "chopin nocturne op 9 no 2 violin",
+          "chopin nocturne op 9 no 2 rubinstein",
+          "chopin nocturne op 9 no 2 guitar tutorial",
+          "chopin nocturne op 9 no 2 sheet music"
+        ],
+        "nocturne op 9 no 2": [
+          "nocturne op 9 no 2",
+          "nocturne op 9 no 2 piano",
+          "nocturne op 9 no 2 piano tutorial",
+          "nocturne op 9 no 2 meme",
+          "nocturne op 9 no 2 violin",
+          "nocturne op 9 no 2 flute",
+          "nocturne op 9 no 2 guitar",
+          "nocturne op 9 no 2 rubinstein",
+          "nocturne op 9 no 2 in c major",
+          "nocturne op 9 no 2 tutorial"
+        ],
+        "ノクターン 9-2": [
+          "ノクターン 9-2 楽譜",
+          "ノクターン 9-2 弾き方",
+          "ノクターン 9-2 ピアノ",
+          "ノクターン 9-2 ギター",
+          "ノクターン 9-2 耐久",
+          "ノクターン 9-2 フルート"
+        ],
+        "쇼팽 녹턴": [
+          "쇼팽 녹턴",
+          "쇼팽 녹턴 2번",
+          "쇼팽 녹턴 20번",
+          "쇼팽 녹턴 전곡",
+          "쇼팽 녹턴 1번",
+          "쇼팽 녹턴 9번",
+          "쇼팽 녹턴 13번",
+          "쇼팽 녹턴 3번",
+          "쇼팽 녹턴 악보",
+          "쇼팽 녹턴 2번 1시간"
+        ]
+      },
+      "ja": {
+        "chopin nocturne op 9 no 2": [
+          "chopin nocturne op 9 no 2",
+          "chopin nocturne op 9 no 2 rubinstein",
+          "chopin nocturne op 9 no 2 tab",
+          "chopin nocturne op. 9 no. 2 guitar",
+          "chopin nocturne op. 9 no. 2 1 hour",
+          "chopin nocturne op. 9 no. 2 piano tutorial",
+          "chopin nocturne op. 9 no. 2 guitar tab",
+          "chopin nocturne op. 9 no. 2 cello",
+          "chopin nocturne op. 9 no. 2 slowed",
+          "chopin nocturne op. 9 no. 2 remix"
+        ],
+        "nocturne op 9 no 2": [
+          "nocturne op 9 no 2 piano tutorial easy",
+          "nocturne op 9 no 2",
+          "nocturne op 9 no 2 piano",
+          "nocturne op 9 no 2 classical guitar",
+          "nocturne op 9 no 2 remix",
+          "nocturne op 9 no 2 in c major",
+          "nocturne op 9 no 2 saxophone",
+          "nocturne op 9 no 2 de chopin au piano",
+          "nocturne op 9 no 2 tab",
+          "nocturne op 9 no 2 guitar"
+        ],
+        "ノクターン 9-2": [
+          "ノクターン 9-2 楽譜",
+          "ノクターン 9-2 弾き方",
+          "ノクターン 9-2 ピアノ",
+          "ノクターン 9-2 ギター",
+          "ノクターン 9-2 耐久",
+          "ノクターン 9-2 フルート"
+        ],
+        "쇼팽 녹턴": [
+          "쇼팽 녹턴",
+          "쇼팽 녹턴 2번",
+          "쇼팽 녹턴 1번",
+          "쇼팽 녹턴 21번",
+          "쇼팽 녹턴 20번",
+          "쇼팽 녹턴 9-2",
+          "쇼팽 녹턴 2번 카덴차",
+          "쇼팽 녹턴 c# minor",
+          "쇼팽 녹턴 3번",
+          "쇼팽 녹턴 op9 no2"
+        ]
+      },
+      "ko": {
+        "chopin nocturne op 9 no 2": [
+          "chopin nocturne op 9 no 2",
+          "chopin nocturne op 9 no 2 piano",
+          "chopin nocturne op 9 no 2 violin",
+          "chopin nocturne op 9 no 2 sheet music",
+          "chopin nocturne op 9 no 2 - piano tutorial",
+          "chopin nocturne op 9 no 2 arthur rubinstein",
+          "chopin nocturne op 9 no 2 meme",
+          "chopin nocturne op 9 no 2 e flat major",
+          "chopin nocturne op. 9 no. 2 guitar",
+          "chopin nocturne op. 9 no. 2 1 hour"
+        ],
+        "nocturne op 9 no 2": [
+          "nocturne op 9 no 2",
+          "nocturne op 9 no 2 electric guitar",
+          "nocturne op 9 no 2 clarinet",
+          "nocturne op 9 no 2 guitar",
+          "nocturne op 9 no 2 cello",
+          "nocturne op 9 no 2 piano",
+          "nocturne op 9 no 2 horowitz",
+          "nocturne op 9 no 2 sheet",
+          "nocturne op 9 no 2 by chopin",
+          "nocturne op 9 no 2 classical guitar"
+        ],
+        "ノクターン 9-2": [
+          "ノクターン 9-2 楽譜",
+          "ノクターン 9-2 弾き方",
+          "ノクターン 9-2 ピアノ",
+          "ノクターン 9-2 ギター",
+          "ノクターン ショパン 9-2 弾き方"
+        ],
+        "쇼팽 녹턴": [
+          "쇼팽 녹턴",
+          "쇼팽 녹턴 2번",
+          "쇼팽 녹턴 20번",
+          "쇼팽 녹턴 전곡",
+          "쇼팽 녹턴 1번",
+          "쇼팽 녹턴 9번",
+          "쇼팽 녹턴 13번",
+          "쇼팽 녹턴 3번",
+          "쇼팽 녹턴 악보",
+          "쇼팽 녹턴 2번 1시간"
+        ]
+      },
+      "es": {
+        "chopin nocturne op 9 no 2": [
+          "chopin nocturne op 9 no 2",
+          "chopin nocturne op 9 no 2 piano",
+          "chopin nocturne op 9 no 2 violin",
+          "chopin nocturne op 9 no 2 piano tutorial",
+          "chopin nocturne op 9 no 2 guitar",
+          "chopin nocturne op 9 no 2 tutorial",
+          "chopin nocturne op 9 no 2 guitarra",
+          "chopin nocturne op 9 no 2 violin tutorial",
+          "chopin nocturne op 9 no 20",
+          "chopin nocturne op 9 no 2 meme"
+        ],
+        "nocturne op 9 no 2": [
+          "nocturne op 9 no 2",
+          "nocturne op 9 no 2 de chopin",
+          "nocturne op 9 no 2 piano",
+          "nocturne op 9 no 2 piano tutorial",
+          "nocturne op 9 no 2 violin",
+          "nocturne op 9 no 2 guitarra",
+          "nocturne op 9 no 2 tutorial",
+          "nocturne op 9 no 2 piano tutorial easy",
+          "nocturne op 9 no 2 violin tutorial",
+          "nocturne op 9 no 2 guitar"
+        ],
+        "ノクターン 9-2": [
+          "ノクターン 9-2 楽譜",
+          "ノクターン 9-2 弾き方",
+          "ノクターン 9-2 ピアノ",
+          "ノクターン 9-2 ギター",
+          "ノクターン 9-2 耐久",
+          "ノクターン 9-2 フルート"
+        ],
+        "쇼팽 녹턴": [
+          "쇼팽 녹턴",
+          "쇼팽 녹턴 2번",
+          "쇼팽 녹턴 20번",
+          "쇼팽 녹턴 전곡",
+          "쇼팽 녹턴 1번",
+          "쇼팽 녹턴 9번",
+          "쇼팽 녹턴 13번",
+          "쇼팽 녹턴 3번",
+          "쇼팽 녹턴 악보",
+          "쇼팽 녹턴 2번 1시간"
+        ]
+      },
+      "pt": {
+        "chopin nocturne op 9 no 2": [
+          "chopin nocturne op 9 no 2",
+          "chopin nocturne op 9 no 2 piano tutorial",
+          "chopin nocturne op 9 no 2 violin",
+          "chopin nocturne op 9 no 2 piano",
+          "chopin nocturne op 9 no 2 guitar",
+          "chopin nocturne op 9 no 2 1 hour",
+          "chopin nocturne op 9 no 2 violao",
+          "chopin nocturne op 9 no 2 tutorial",
+          "chopin nocturne op 9 no 2 meme",
+          "chopin nocturne op 9 no 2 slowed"
+        ],
+        "nocturne op 9 no 2": [
+          "nocturne op 9 no 2",
+          "nocturne op 9 no 2 de chopin",
+          "nocturne op 9 no 2 piano",
+          "nocturne op 9 no 2 guitar",
+          "nocturne op 9 no 2 violin",
+          "nocturne op 9 no 2 tutorial",
+          "nocturne op 9 no 2 piano tutorial",
+          "nocturne op 9 no 2 chopin piano tutorial",
+          "nocturne op 9 no 2 orchestra",
+          "nocturne op 9 no 2 chopin guitar"
+        ],
+        "ノクターン 9-2": [
+          "ノクターン 9-2 楽譜",
+          "ノクターン 9-2 弾き方",
+          "ノクターン 9-2 ピアノ",
+          "ノクターン 9-2 ギター",
+          "ノクターン 9-2 耐久",
+          "ノクターン 9-2 フルート"
+        ],
+        "쇼팽 녹턴": [
+          "쇼팽 녹턴",
+          "쇼팽 녹턴 2번",
+          "쇼팽 녹턴 20번",
+          "쇼팽 녹턴 전곡",
+          "쇼팽 녹턴 1번",
+          "쇼팽 녹턴 9번",
+          "쇼팽 녹턴 13번",
+          "쇼팽 녹턴 3번",
+          "쇼팽 녹턴 악보",
+          "쇼팽 녹턴 2번 1시간"
+        ]
+      },
+      "de": {
+        "chopin nocturne op 9 no 2": [
+          "chopin nocturne op 9 no 2",
+          "chopin nocturne op 9 no 2 piano tutorial",
+          "chopin nocturne op 9 no 2 piano",
+          "chopin nocturne op 9 no 2 tutorial",
+          "chopin nocturne op 9 no 2 violin",
+          "chopin nocturne op 9 no 2 rubinstein",
+          "chopin nocturne op 9 no 2 guitar",
+          "chopin nocturne op 9 no 2 easy",
+          "chopin nocturne op 9 no 2 live",
+          "chopin nocturne op 9 no 2 cello"
+        ],
+        "nocturne op 9 no 2": [
+          "nocturne op 9 no 2",
+          "nocturne op 9 no 2 piano tutorial",
+          "nocturne op 9 no 2 piano",
+          "nocturne op 9 no 2 tutorial",
+          "nocturne op 9 no 2 chopin",
+          "nocturne op 9 no 2 chopin piano tutorial",
+          "nocturne op 9 no 2 guitar",
+          "nocturne op 9 no 2 kassia",
+          "nocturne op 9 no 2 chopin tutorial",
+          "nocturne op 9 no 2 rubinstein"
+        ],
+        "ノクターン 9-2": [
+          "ノクターン 9-2 楽譜",
+          "ノクターン 9-2 弾き方",
+          "ノクターン 9-2 ピアノ",
+          "ノクターン 9-2 ギター",
+          "ノクターン 9-2 耐久",
+          "ノクターン 9-2 フルート"
+        ],
+        "쇼팽 녹턴": [
+          "쇼팽 녹턴",
+          "쇼팽 녹턴 2번",
+          "쇼팽 녹턴 20번",
+          "쇼팽 녹턴 전곡",
+          "쇼팽 녹턴 1번",
+          "쇼팽 녹턴 9번",
+          "쇼팽 녹턴 13번",
+          "쇼팽 녹턴 3번",
+          "쇼팽 녹턴 악보",
+          "쇼팽 녹턴 2번 1시간"
+        ]
+      },
+      "fr": {
+        "chopin nocturne op 9 no 2": [
+          "chopin nocturne op 9 no 20",
+          "chopin nocturne op 9 no 2",
+          "chopin nocturne op 9 no 2 piano",
+          "chopin nocturne op 9 no 2 piano tutorial",
+          "chopin nocturne op 9 no 2 guitar",
+          "chopin nocturne op 9 no 2 tutorial",
+          "chopin nocturne op 9 no 2 tuto",
+          "chopin nocturne op 9 no 2 arthur rubinstein",
+          "chopin nocturne op 9 no 2 flute",
+          "chopin nocturne op 9 no 2 rubinstein"
+        ],
+        "nocturne op 9 no 2": [
+          "nocturne op 9 no 2",
+          "nocturne op 9 no 2 piano tutorial",
+          "nocturne op 9 no 2 chopin",
+          "nocturne op 9 no 2 piano",
+          "nocturne op 9 no 2 tutorial",
+          "nocturne op 9 no 2 tuto",
+          "nocturne op 9 no 2 guitar",
+          "nocturne op 9 no 2 but with soundfonts super mario 64",
+          "nocturne op 9 no 2 live",
+          "nocturne op 9 no 2 orchestra"
+        ],
+        "ノクターン 9-2": [
+          "ノクターン 9-2 楽譜",
+          "ノクターン 9-2 弾き方",
+          "ノクターン 9-2 ピアノ",
+          "ノクターン 9-2 ギター",
+          "ノクターン 9-2 耐久",
+          "ノクターン 9-2 フルート"
+        ],
+        "쇼팽 녹턴": [
+          "쇼팽 녹턴",
+          "쇼팽 녹턴 2번",
+          "쇼팽 녹턴 20번",
+          "쇼팽 녹턴 전곡",
+          "쇼팽 녹턴 1번",
+          "쇼팽 녹턴 9번",
+          "쇼팽 녹턴 13번",
+          "쇼팽 녹턴 3번",
+          "쇼팽 녹턴 악보",
+          "쇼팽 녹턴 2번 1시간"
+        ]
+      },
+      "ru": {
+        "chopin nocturne op 9 no 2": [
+          "chopin nocturne op 9 no 2",
+          "chopin nocturne op 9 no 2 guitar",
+          "chopin nocturne op 9 no 2 piano",
+          "chopin nocturne op 9 no 2 violin",
+          "chopin nocturne op 9 no 2 meme",
+          "chopin nocturne op 9 no 2 easy",
+          "chopin nocturne op 9 no 2 piano easy",
+          "chopin nocturne op 9 no 2 remix",
+          "chopin nocturne op 9 no 2 piano tutorial",
+          "chopin nocturne op 9 no 2 tutorial"
+        ],
+        "nocturne op 9 no 2": [
+          "nocturne op 9 no 2",
+          "nocturne op 9 no 2 chopin",
+          "nocturne op 9 no 2 piano",
+          "nocturne op 9 no 2 tutorial",
+          "nocturne op 9 no 2 guitar tab",
+          "nocturne op 9 no 2 easy piano",
+          "nocturne op 9 no 2 10 hours",
+          "nocturne op 9 no 2 tab",
+          "nocturne op 9 no 20",
+          "nocturne op 9 no 2 e flat major"
+        ],
+        "ノクターン 9-2": [
+          "ノクターン 9-2 楽譜",
+          "ノクターン 9-2 弾き方",
+          "ノクターン 9-2 ピアノ",
+          "ノクターン 9-2 ギター",
+          "ノクターン 9-2 耐久",
+          "ノクターン 9-2 フルート"
+        ],
+        "쇼팽 녹턴": [
+          "쇼팽 녹턴",
+          "쇼팽 녹턴 2번",
+          "쇼팽 녹턴 20번",
+          "쇼팽 녹턴 전곡",
+          "쇼팽 녹턴 1번",
+          "쇼팽 녹턴 9번",
+          "쇼팽 녹턴 13번",
+          "쇼팽 녹턴 3번",
+          "쇼팽 녹턴 악보",
+          "쇼팽 녹턴 2번 1시간"
+        ]
+      },
+      "zh-Hant": {
+        "chopin nocturne op 9 no 2": [
+          "chopin nocturne op 9 no 2",
+          "chopin nocturne op 9 no 2 violin",
+          "chopin nocturne op 9 no 2 e flat major",
+          "chopin nocturne op 9 no 2 piano",
+          "chopin nocturne op 9 no 2 tutorial",
+          "chopin nocturne op 9 no 2 (arthur rubinstein 1965)",
+          "chopin nocturne op 9 no 2 lang lang",
+          "chopin nocturne op 9 no 2 meme",
+          "chopin nocturne op 9 no 2 orchestra",
+          "chopin nocturne op. 9 no. 2 guitar"
+        ],
+        "nocturne op 9 no 2": [
+          "nocturne op 9 no 2",
+          "nocturne op 9 no 2 by chopin",
+          "nocturne op 9 no 2 piano",
+          "nocturne op 9 no 20",
+          "nocturne op 9 no 2 easy",
+          "nocturne op 9 no 2 piano tutorial",
+          "nocturne op 9 no 2 saxophone",
+          "nocturne op 9 no 2 de chopin au piano",
+          "nocturne op 9 no 2 guitar",
+          "nocturne op 9 no 2 ukulele"
+        ],
+        "ノクターン 9-2": [
+          "ノクターン 9-2 楽譜",
+          "ノクターン 9-2 弾き方",
+          "ノクターン 9-2 ギター",
+          "ノクターン 第2番 op.9-2",
+          "ノクターン 9-2 楽谱",
+          "反田恭平 ノクターン 9-2",
+          "ショパン ノクターン 9-2 ゆっくり",
+          "ショパン ノクターン 9-2 楽譜",
+          "ショパン ノクターン 9-2 楽谱"
+        ],
+        "쇼팽 녹턴": [
+          "쇼팽 녹턴",
+          "쇼팽 녹턴 전곡",
+          "쇼팽 녹턴2번",
+          "쇼팽 녹턴9-2",
+          "쇼팽 녹턴 2번 e flat 장조 op. 9 no. 2",
+          "쇼팽 녹턴 20번",
+          "쇼팽 녹턴 8번 악보",
+          "쇼팽 녹턴 1번",
+          "쇼팽 녹턴 13번",
+          "쇼팽 녹턴 3번"
+        ]
+      },
+      "zh-Hans": {
+        "chopin nocturne op 9 no 2": [
+          "chopin nocturne op 9 no 2",
+          "chopin nocturne op 9 no 2 e flat major",
+          "chopin nocturne op 9 no 2 guitar tab",
+          "chopin nocturne op 9 no 2 1 hour",
+          "chopin nocturne op. 9 no. 2 guitar",
+          "chopin nocturne op. 9 no. 2 tutorial",
+          "chopin nocturne op. 9 no. 2 lang lang",
+          "chopin nocturne op. 9 no. 2 piano tutorial",
+          "chopin nocturne op. 9 no. 2 rubinstein",
+          "chopin nocturne op. 9 no. 20"
+        ],
+        "nocturne op 9 no 2": [
+          "nocturne op 9 no 2",
+          "nocturne op 9 no 2 piano",
+          "nocturne op 9 no 2 easy",
+          "nocturne op 9 no 2 tutorial",
+          "nocturne op 9 no 20",
+          "nocturne op 9 no 2 1 hour",
+          "nocturne op 9 no 2 chopin",
+          "nocturne op 9 no 2 analysis",
+          "nocturne op 9 no 2 violin",
+          "nocturne op 9 no 2 easy piano"
+        ],
+        "ノクターン 9-2": [
+          "ノクターン9-2 ピアノ",
+          "ノクターン 9-2 楽譜",
+          "ノクターン9-2 ピアノゆっくり",
+          "ノクターン9-2 ピアノ 左手",
+          "ノクターン 9-2 弾き方",
+          "ノクターン9-2 ピアノ フジコ・ヘミング",
+          "ノクターン 9-2 ギター",
+          "ノクターン9-2 ピアノ 耐久",
+          "ノクターン9-2 ピアノ 簡単",
+          "ノクターン9-2 解説"
+        ],
+        "쇼팽 녹턴": [
+          "쇼팽 녹턴",
+          "쇼팽 녹턴 2번",
+          "쇼팽 녹턴 20번 악보",
+          "쇼팽 녹턴 20번",
+          "쇼팽 녹턴 op.9 no.2 피아노",
+          "쇼팽 녹턴19번",
+          "쇼팽 녹턴27-2",
+          "쇼팽 녹턴 op.48 no.2",
+          "쇼팽 녹턴 op.9 no.1",
+          "쇼팽 녹턴 op.37 no.2"
+        ]
+      }
+    },
+    "pachelbel_canon": {
+      "en": {
+        "pachelbel canon": [
+          "pachelbel canon in d",
+          "pachelbel canon",
+          "pachelbel canon in d piano",
+          "pachelbel canon in d guitar",
+          "pachelbel canon piano",
+          "pachelbel canon in d violin",
+          "pachelbel canon in d cello",
+          "pachelbel canon in d organ",
+          "pachelbel canon recorder",
+          "pachelbel canon in d ukulele"
+        ],
+        "canon in d": [
+          "canon in d",
+          "canon in d piano",
+          "canon in d violin",
+          "canon in d guitar",
+          "canon in d pachelbel",
+          "canon in d piano tutorial",
+          "canon in d orchestra",
+          "canon in d 1 hour",
+          "canon in d major",
+          "canon in d rock"
+        ],
+        "パッヘルベル カノン": [
+          "パッヘルベル カノン アレンジ",
+          "パッヘルベル カノン オルガン",
+          "パッヘルベル カノン",
+          "パッヘルベル カノン ピアノ",
+          "パッヘルベル カノン バイオリン",
+          "パッヘルベル カノンとジーグ",
+          "パッヘルベル カノン ニ長調",
+          "パッヘルベル カノン オーケストラ",
+          "パッヘルベル カノン ギター",
+          "パッヘルベル カノン エヴァ"
+        ],
+        "캐논": [
+          "캐논변주곡",
+          "캐논",
+          "캐논락",
+          "캐논 피아노",
+          "캐논 v1",
+          "캐논변주곡 기타",
+          "캐논락 기타",
+          "캐논 기타",
+          "캐논변주곡 피아노",
+          "캐논 파워샷 v1"
+        ]
+      },
+      "ja": {
+        "pachelbel canon": [
+          "pachelbel canon in d",
+          "pachelbel canon",
+          "pachelbel canon in d sheet",
+          "pachelbel canon and gigue in d",
+          "pachelbel canon in d kalimba",
+          "pachelbel canon in d quartet",
+          "pachelbel canon in d klarinette",
+          "pachelbel canon in c piano",
+          "pachelbel canon in c ukulele",
+          "pachelbel canon in d katherine jenkins"
+        ],
+        "canon in d": [
+          "canon in d",
+          "canon in d piano",
+          "canon in d guitar",
+          "canon in d major",
+          "canon in d by johann pachelbel",
+          "canon in d (pachelbel’s canon)",
+          "canon in d pachelbel",
+          "canon in d violin",
+          "canon in d electric guitar",
+          "canon in d best version"
+        ],
+        "パッヘルベル カノン": [
+          "パッヘルベル カノン アレンジ",
+          "パッヘルベル カノン オルガン",
+          "パッヘルベル カノン",
+          "パッヘルベル カノン ピアノ",
+          "パッヘルベル カノン バイオリン",
+          "パッヘルベル カノンとジーグ",
+          "パッヘルベル カノン ニ長調",
+          "パッヘルベル カノン オーケストラ",
+          "パッヘルベル カノン ギター",
+          "パッヘルベル カノン エヴァ"
+        ],
+        "캐논": [
+          "캐논",
+          "캐논변주곡",
+          "캐논락",
+          "캐논 v1",
+          "캐논락 기타",
+          "캐논 피아노",
+          "캐논 기타",
+          "캐논 바이올린",
+          "캐논 r50v",
+          "캐논변주곡 피아노"
+        ]
+      },
+      "ko": {
+        "pachelbel canon": [
+          "pachelbel canon",
+          "pachelbel canon in d major",
+          "pachelbel canon in d piano",
+          "pachelbel canon piano",
+          "pachelbel canon orchestra",
+          "pachelbel canon and gigue in d major",
+          "pachelbel canon remix",
+          "pachelbel canon in d orchestra",
+          "pachelbel canon d",
+          "pachelbel canon in d major - the original and best version"
+        ],
+        "canon in d": [
+          "canon in d",
+          "canon in d guitar",
+          "canon in d pachelbel",
+          "canon in d major",
+          "canon in d violin",
+          "canon in d brooklyn duo",
+          "canon in d remix",
+          "canon in d orchestra",
+          "canon in d 기타",
+          "canon in d minor"
+        ],
+        "パッヘルベル カノン": [
+          "パッヘルベル カノン",
+          "パッヘルベル カノン 合唱",
+          "パッヘルベル カノン nhk",
+          "パッヘルベル カノン オーケストラ",
+          "パッヘルベル カノンとジーグ",
+          "パッヘルベル カノン バイオリン",
+          "パッヘルベル カノン ニ長調",
+          "パッヘルベル カノン ギター",
+          "パッヘルベル カノン 耐久",
+          "パッヘルベル カノン エヴァ"
+        ],
+        "캐논": [
+          "캐논변주곡",
+          "캐논",
+          "캐논락",
+          "캐논 피아노",
+          "캐논 v1",
+          "캐논변주곡 기타",
+          "캐논락 기타",
+          "캐논 기타",
+          "캐논변주곡 피아노",
+          "캐논 파워샷 v1"
+        ]
+      },
+      "es": {
+        "pachelbel canon": [
+          "pachelbel canon in d",
+          "pachelbel canon",
+          "pachelbel canon in d piano",
+          "pachelbel canon en re mayor",
+          "pachelbel canon in d violin",
+          "pachelbel canon in d major",
+          "pachelbel canon original version",
+          "pachelbel canon in d guitar",
+          "pachelbel canon remix",
+          "pachelbel canon in d entrada del novio"
+        ],
+        "canon in d": [
+          "canon in d",
+          "canon in d violin",
+          "canon in d violin piano",
+          "canon in d classical guitar",
+          "canon in d piano orchestra",
+          "canon in d guitar",
+          "canon in d piano",
+          "canon in d saxophone",
+          "canon in d yngwie malmsteen",
+          "canon in d pachelbel"
+        ],
+        "パッヘルベル カノン": [
+          "パッヘルベル カノン アレンジ",
+          "パッヘルベル カノン オルガン",
+          "パッヘルベル カノン",
+          "パッヘルベル カノン ピアノ",
+          "パッヘルベル カノン バイオリン",
+          "パッヘルベル カノンとジーグ",
+          "パッヘルベル カノン ニ長調",
+          "パッヘルベル カノン オーケストラ",
+          "パッヘルベル カノン ギター",
+          "パッヘルベル カノン エヴァ"
+        ],
+        "캐논": [
+          "캐논변주곡",
+          "캐논",
+          "캐논락",
+          "캐논 피아노",
+          "캐논 v1",
+          "캐논변주곡 기타",
+          "캐논락 기타",
+          "캐논 기타",
+          "캐논변주곡 피아노",
+          "캐논 파워샷 v1"
+        ]
+      },
+      "pt": {
+        "pachelbel canon": [
+          "pachelbel canon in d",
+          "pachelbel canon",
+          "pachelbel canon in d piano",
+          "pachelbel canon in d major",
+          "pachelbel canone em re",
+          "pachelbel canon in d violin",
+          "pachelbel canon in d guitar",
+          "pachelbel canon in d organ",
+          "pachelbel canon in d violão",
+          "pachelbel canon in d major - the original and best version"
+        ],
+        "canon in d": [
+          "canon in d",
+          "canon in d piano",
+          "canon in d based songs",
+          "canon in d pachelbel",
+          "canon in d violin",
+          "canon in d – johann pachelbel",
+          "canon in d guitar",
+          "canon in d major",
+          "canon in d violao",
+          "canon in d piano tutorial"
+        ],
+        "パッヘルベル カノン": [
+          "パッヘルベル カノン アレンジ",
+          "パッヘルベル カノン オルガン",
+          "パッヘルベル カノン",
+          "パッヘルベル カノン ピアノ",
+          "パッヘルベル カノン バイオリン",
+          "パッヘルベル カノンとジーグ",
+          "パッヘルベル カノン ニ長調",
+          "パッヘルベル カノン オーケストラ",
+          "パッヘルベル カノン ギター",
+          "パッヘルベル カノン エヴァ"
+        ],
+        "캐논": [
+          "캐논변주곡",
+          "캐논",
+          "캐논락",
+          "캐논 피아노",
+          "캐논 v1",
+          "캐논변주곡 기타",
+          "캐논락 기타",
+          "캐논 기타",
+          "캐논변주곡 피아노",
+          "캐논 파워샷 v1"
+        ]
+      },
+      "de": {
+        "pachelbel canon": [
+          "pachelbel canon",
+          "pachelbel canon in d piano",
+          "pachelbel canon in d orgel",
+          "pachelbel canon remix",
+          "pachelbel canon in d orchestra",
+          "pachelbel canon piano",
+          "pachelbel canon in d violin",
+          "pachelbel canon in d guitar",
+          "pachelbel canon in d piano tutorial",
+          "pachelbel canon in d cello"
+        ],
+        "canon in d": [
+          "canon in d",
+          "canon in d piano",
+          "canon in d used in modern songs",
+          "canon in d two steps from hell",
+          "canon in d minor two steps from hell",
+          "canon in d pachelbel",
+          "canon in d guitar",
+          "canon in d violin",
+          "canon in d piano tutorial",
+          "canon in d remix"
+        ],
+        "パッヘルベル カノン": [
+          "パッヘルベル カノン アレンジ",
+          "パッヘルベル カノン オルガン",
+          "パッヘルベル カノン",
+          "パッヘルベル カノン ピアノ",
+          "パッヘルベル カノン バイオリン",
+          "パッヘルベル カノンとジーグ",
+          "パッヘルベル カノン ニ長調",
+          "パッヘルベル カノン オーケストラ",
+          "パッヘルベル カノン ギター",
+          "パッヘルベル カノン エヴァ"
+        ],
+        "캐논": [
+          "캐논변주곡",
+          "캐논",
+          "캐논락",
+          "캐논 피아노",
+          "캐논 v1",
+          "캐논변주곡 기타",
+          "캐논락 기타",
+          "캐논 기타",
+          "캐논변주곡 피아노",
+          "캐논 파워샷 v1"
+        ]
+      },
+      "fr": {
+        "pachelbel canon": [
+          "pachelbel canon",
+          "pachelbel canon movie",
+          "pachelbel canon in d rant",
+          "pachelbel canon variation",
+          "pachelbel canon piano",
+          "pachelbel canon 432 hz",
+          "pachelbel canon in re",
+          "pachelbel canon remix",
+          "pachelbel canon guitar",
+          "pachelbel canon en ré majeur"
+        ],
+        "canon in d": [
+          "canon in d",
+          "canon in d piano tutorial",
+          "canon in d pachelbel",
+          "canon in d guitar",
+          "canon in d piano",
+          "canon in d major",
+          "canon in d remix",
+          "canon in d pachelbel piano",
+          "canon in d brooklyn duo",
+          "canon in d rock"
+        ],
+        "パッヘルベル カノン": [
+          "パッヘルベル カノン アレンジ",
+          "パッヘルベル カノン オルガン",
+          "パッヘルベル カノン",
+          "パッヘルベル カノン ピアノ",
+          "パッヘルベル カノン バイオリン",
+          "パッヘルベル カノンとジーグ",
+          "パッヘルベル カノン ニ長調",
+          "パッヘルベル カノン オーケストラ",
+          "パッヘルベル カノン ギター",
+          "パッヘルベル カノン エヴァ"
+        ],
+        "캐논": [
+          "캐논변주곡",
+          "캐논",
+          "캐논락",
+          "캐논 피아노",
+          "캐논 v1",
+          "캐논변주곡 기타",
+          "캐논락 기타",
+          "캐논 기타",
+          "캐논변주곡 피아노",
+          "캐논 파워샷 v1"
+        ]
+      },
+      "ru": {
+        "pachelbel canon": [
+          "pachelbel canon in d",
+          "pachelbel canon in d piano",
+          "pachelbel canon piano",
+          "pachelbel canon in d evangelion",
+          "pachelbel canon in d guitar",
+          "pachelbel canon in d organ",
+          "pachelbel canon in d violin",
+          "pachelbel canon remix",
+          "pachelbel canon in d orchestra",
+          "pachelbel canon in d electric guitar"
+        ],
+        "canon in d": [
+          "canon in d",
+          "canon in d piano",
+          "canon in d guitar",
+          "canon in d remix",
+          "canon in d rap",
+          "canon in d tab sheet music",
+          "canon in d guitar tab",
+          "canon in d original",
+          "canon in d johann pachelbel",
+          "canon in d на гитаре"
+        ],
+        "パッヘルベル カノン": [
+          "パッヘルベル カノン アレンジ",
+          "パッヘルベル カノン オルガン",
+          "パッヘルベル カノン",
+          "パッヘルベル カノン ピアノ",
+          "パッヘルベル カノン バイオリン",
+          "パッヘルベル カノンとジーグ",
+          "パッヘルベル カノン ニ長調",
+          "パッヘルベル カノン オーケストラ",
+          "パッヘルベル カノン ギター",
+          "パッヘルベル カノン エヴァ"
+        ],
+        "캐논": [
+          "캐논변주곡",
+          "캐논",
+          "캐논락",
+          "캐논 피아노",
+          "캐논 v1",
+          "캐논변주곡 기타",
+          "캐논락 기타",
+          "캐논 기타",
+          "캐논변주곡 피아노",
+          "캐논 파워샷 v1"
+        ]
+      },
+      "zh-Hant": {
+        "pachelbel canon": [
+          "pachelbel canon in d noten",
+          "pachelbel canon in d",
+          "pachelbel canon in d piano",
+          "pachelbel canon in d major",
+          "pachelbel canon in d violin",
+          "pachelbel canon remix",
+          "pachelbel canon in c",
+          "pachelbel canon in d score",
+          "pachelbel canon guitar",
+          "pachelbel canon cello"
+        ],
+        "canon in d": [
+          "canon in d",
+          "canon in d piano",
+          "canon in d rock",
+          "canon in d violin",
+          "canon in d piano and cello",
+          "canon in d recorder",
+          "canon in d guitar",
+          "canon in d entrance",
+          "canon in d beautiful in white",
+          "canon in d happy version"
+        ],
+        "パッヘルベル カノン": [
+          "パッヘルベル カノン",
+          "パッヘルベル カノン ピアノ",
+          "パッヘルベル カノンとジーグ",
+          "パッヘルベル カノン バイオリン",
+          "パッヘルベル カノン ニ長調",
+          "パッヘルベル カノン オーケストラ",
+          "パッヘルベル カノン ギター",
+          "パッヘルベル カノン 耐久",
+          "パッヘルベル カノン エヴァ",
+          "パッヘルベル カノン パイプオルガン"
+        ],
+        "캐논": [
+          "캐논",
+          "캐논 피아노",
+          "캐논 추천",
+          "캐논 소니 니콘",
+          "캐논 eos r6 mark iii",
+          "캐논리코더",
+          "캐논 r7 r10",
+          "캐논 색감",
+          "캐논 (canon) (drama ver.)",
+          "캐논코리아"
+        ]
+      },
+      "zh-Hans": {
+        "pachelbel canon": [
+          "pachelbel canon in d",
+          "pachelbel canon",
+          "pachelbel canon piano",
+          "pachelbel canon in d piano",
+          "pachelbel canon in d major - the original and best version",
+          "pachelbel canon violin",
+          "pachelbel canon in d major",
+          "pachelbel canon in d violin",
+          "pachelbel canon in c",
+          "pachelbel canon remix"
+        ],
+        "canon in d": [
+          "canon in d",
+          "canon in d violin",
+          "canon in d piano",
+          "canon in d trio",
+          "canon in d brooklyn duo",
+          "canon in d minecraft",
+          "canon in d piano guys",
+          "canon in d - pachelbel violin cover best wedding version",
+          "canon in d orchestra",
+          "canon in d violin tutorial"
+        ],
+        "パッヘルベル カノン": [
+          "パッヘルベル カノン",
+          "パッヘルベル カノンとジーグ",
+          "パッヘルベルカノン リコーダー",
+          "パッヘルベルカノン ピアノ",
+          "パッヘルベル カノン バイオリン",
+          "パッヘルベル カノン ニ長調",
+          "パッヘルベル カノン オーケストラ",
+          "パッヘルベル カノン ギター",
+          "パッヘルベル カノン 耐久",
+          "パッヘルベル カノン エヴァ"
+        ],
+        "캐논": [
+          "캐논",
+          "캐논 피아노",
+          "캐논 r6 mark2",
+          "캐논 카메라",
+          "캐논 광고",
+          "캐논 v1",
+          "캐논 v10",
+          "캐논락 피아노",
+          "캐논 파워샷 v1",
+          "캐논 리코더 반주"
+        ]
+      }
+    },
+    "tchaikovsky_sugarplum": {
+      "en": {
+        "dance of the sugar plum fairy": [
+          "dance of the sugar plum fairy",
+          "dance of the sugar plum fairy piano",
+          "dance of the sugar plum fairy remix",
+          "dance of the sugar plum fairy music",
+          "dance of the sugar plum fairy pentatonix live",
+          "dance of the sugar plum fairy ballet",
+          "dance of the sugar plum fairy celesta",
+          "dance of the sugar plum fairy violin",
+          "dance of the sugar plum fairy guitar",
+          "dance of the sugar plum fairy music box"
+        ],
+        "sugar plum fairy": [
+          "sugar plum fairy",
+          "sugar plum fairy ballet",
+          "sugar plum fairy variation",
+          "sugar plum fairy song",
+          "sugar plum fairy piano",
+          "sugar plum fairy pas de deux",
+          "sugar plum fairy mariinsky",
+          "sugar plum fairy bolshoi",
+          "sugar plum fairy barbie",
+          "sugar plum fairy handbells"
+        ],
+        "金平糖の踊り": [
+          "金平糖の踊り",
+          "金平糖の踊り ピアノ",
+          "金平糖の踊り バレエ",
+          "金平糖の踊り ピアノ 連弾",
+          "金平糖の踊り オルゴール",
+          "金平糖の踊り オーケストラ",
+          "金平糖の踊り チェレスタ",
+          "金平糖の踊り アレンジ",
+          "金平糖の踊り ロイヤル",
+          "金平糖の踊り 吉田都"
+        ],
+        "사탕요정": [
+          "사탕요정의 춤",
+          "사탕요정의 춤 피아노",
+          "사탕요정의 춤 발레",
+          "사탕요정",
+          "사탕요정의 춤 첼레스타",
+          "사탕요정의 춤 피아노 악보",
+          "사탕요정의 춤 오케스트라",
+          "사탕요정의 춤 1시간",
+          "사탕요정 발레",
+          "사탕요정의 춤 바이올린"
+        ]
+      },
+      "ja": {
+        "dance of the sugar plum fairy": [
+          "dance of the sugar plum fairy",
+          "dance of the sugar plum fairy piano",
+          "dance of the sugar plum fairy remix",
+          "dance of the sugar plum fairy ballet",
+          "dance of the sugar plum fairy guitar",
+          "dance of the sugar plum fairy tchaikovsky",
+          "dance of the sugar plum fairy disney",
+          "dance of the sugar plum fairy anomalie",
+          "dance of the sugar plum fairy lindsey stirling",
+          "dance of the sugar plum fairy rock"
+        ],
+        "sugar plum fairy": [
+          "sugar plum fairy",
+          "sugar plum fairy variation",
+          "sugar plum fairy ballet mariinsky",
+          "sugar plum fairy mariinsky",
+          "sugar plum fairy pas de deux",
+          "sugar plum fairy remix",
+          "sugar plum fairy piano",
+          "sugar plum fairy miyako yoshida",
+          "sugar plum fairy paris opera ballet",
+          "sugar plum fairy variation mariinsky"
+        ],
+        "金平糖の踊り": [
+          "金平糖の踊り",
+          "金平糖の踊り ピアノ",
+          "金平糖の踊り バレエ",
+          "金平糖の踊り ピアノ 連弾",
+          "金平糖の踊り オルゴール",
+          "金平糖の踊り オーケストラ",
+          "金平糖の踊り チェレスタ",
+          "金平糖の踊り アレンジ",
+          "金平糖の踊り ロイヤル",
+          "金平糖の踊り 吉田都"
+        ],
+        "사탕요정": [
+          "사탕요정의 춤",
+          "사탕요정의 춤 발레",
+          "사탕요정의 춤 피아노",
+          "사탕요정",
+          "사탕요정의 춤 첼레스타",
+          "사탕요정의 춤 1시간",
+          "사탕요정의 춤 오케스트라",
+          "사탕요정의 춤 피아노 악보",
+          "사탕요정 발레",
+          "사탕요정의 춤 바이올린"
+        ]
+      },
+      "ko": {
+        "dance of the sugar plum fairy": [
+          "dance of the sugar plum fairy",
+          "dance of the sugar plum fairy pentatonix",
+          "dance of the sugar plum fairy remix",
+          "dance of the sugar plum fairy anomalie",
+          "dance of the sugar plum fairy orchestra",
+          "dance of the sugar plum fairy - tchaikovsky",
+          "dance of the sugar plum fairy guitar",
+          "dance of the sugar plum fairy violin",
+          "dance of the sugar plum fairy 1 hour",
+          "dance of the sugar plum fairy ballet"
+        ],
+        "sugar plum fairy": [
+          "sugar plum fairy ballet",
+          "sugar plum fairy variation",
+          "sugar plum fairy piano",
+          "sugar plum fairy song",
+          "sugar plum fairy bolshoi",
+          "sugar plum fairy remix",
+          "sugar plum fairy mariinsky",
+          "sugar plum fairy and cavalier pas de deux",
+          "sugar plum fairy music",
+          "sugar plum fairy abt"
+        ],
+        "金平糖の踊り": [
+          "金平糖の踊り",
+          "金平糖の踊り 簡単",
+          "金平糖の踊り バレエ",
+          "金平糖の踊り ピアノ",
+          "金平糖の踊り ピアノ 連弾",
+          "金平糖の踊り オーケストラ",
+          "金平糖の踊り バレエ パ・ド・ドゥ",
+          "金平糖の踊り オルゴール",
+          "金平糖の踊り チェレスタ",
+          "金平糖の踊り アレンジ"
+        ],
+        "사탕요정": [
+          "사탕요정의 춤",
+          "사탕요정의 춤 피아노",
+          "사탕요정의 춤 발레",
+          "사탕요정",
+          "사탕요정의 춤 첼레스타",
+          "사탕요정의 춤 피아노 악보",
+          "사탕요정의 춤 오케스트라",
+          "사탕요정의 춤 1시간",
+          "사탕요정 발레",
+          "사탕요정의 춤 바이올린"
+        ]
+      },
+      "es": {
+        "dance of the sugar plum fairy": [
+          "dance of the sugar plum fairy",
+          "dance of the sugar plum fairy piano",
+          "dance of the sugar plum fairy tchaikovsky",
+          "dance of the sugar plum fairy from the nutcracker – tchaikovsky",
+          "dance of the sugar plum fairy lindsey stirling",
+          "dance of the sugar plum fairy remix",
+          "dance of the sugar plum fairy pentatonix",
+          "dance of the sugar plum fairy piano tutorial",
+          "dance of the sugar plum fairy kevin macleod",
+          "dance of the sugar plum fairy pyotr ilyich tchaikovsky"
+        ],
+        "sugar plum fairy": [
+          "sugar plum fairy",
+          "sugar plum fairy variation",
+          "sugar plum fairy piano",
+          "sugar plum fairy song",
+          "sugar plum fairy remix",
+          "sugar plum fairy pas de deux",
+          "sugar plum fairy tchaikovsky",
+          "sugar plum fairy music",
+          "sugar plum fairy mariah carey",
+          "sugar plum fairy lindsey stirling"
+        ],
+        "金平糖の踊り": [
+          "金平糖の踊り",
+          "金平糖の踊り ピアノ",
+          "金平糖の踊り バレエ",
+          "金平糖の踊り ピアノ 連弾",
+          "金平糖の踊り オルゴール",
+          "金平糖の踊り オーケストラ",
+          "金平糖の踊り チェレスタ",
+          "金平糖の踊り アレンジ",
+          "金平糖の踊り ロイヤル",
+          "金平糖の踊り 吉田都"
+        ],
+        "사탕요정": [
+          "사탕요정의 춤",
+          "사탕요정의 춤 피아노",
+          "사탕요정의 춤 발레",
+          "사탕요정",
+          "사탕요정의 춤 첼레스타",
+          "사탕요정의 춤 피아노 악보",
+          "사탕요정의 춤 오케스트라",
+          "사탕요정의 춤 1시간",
+          "사탕요정 발레",
+          "사탕요정의 춤 바이올린"
+        ]
+      },
+      "pt": {
+        "dance of the sugar plum fairy": [
+          "dance of the sugar plum fairy",
+          "dance of the sugar plum fairy piano",
+          "dance of the sugar plum fairy tchaikovsky",
+          "dance of the sugar plum fairy remix",
+          "dance of the sugar plum fairy guitar",
+          "dance of the sugar plum fairy pentatonix",
+          "dance of the sugar plum fairy from the nutcracker – tchaikovsky",
+          "dance of the sugar plum fairy piano tutorial",
+          "dance of the sugar plum fairy from the nutcracker",
+          "dance of the sugar plum fairy violin"
+        ],
+        "sugar plum fairy": [
+          "sugar plum fairy",
+          "sugar plum fairy score",
+          "sugar plum fairy instrument",
+          "sugar plum fairy variation",
+          "sugar plum fairy piano",
+          "sugar plum fairy pas de deux",
+          "sugar plum fairy song",
+          "sugar plum fairy tchaikovsky",
+          "sugar plum fairy remix",
+          "sugar plum fairy mariah carey"
+        ],
+        "金平糖の踊り": [
+          "金平糖の踊り",
+          "金平糖の踊り ピアノ",
+          "金平糖の踊り バレエ",
+          "金平糖の踊り ピアノ 連弾",
+          "金平糖の踊り オルゴール",
+          "金平糖の踊り オーケストラ",
+          "金平糖の踊り チェレスタ",
+          "金平糖の踊り アレンジ",
+          "金平糖の踊り ロイヤル",
+          "金平糖の踊り 吉田都"
+        ],
+        "사탕요정": [
+          "사탕요정의 춤",
+          "사탕요정의 춤 피아노",
+          "사탕요정의 춤 발레",
+          "사탕요정",
+          "사탕요정의 춤 첼레스타",
+          "사탕요정의 춤 피아노 악보",
+          "사탕요정의 춤 오케스트라",
+          "사탕요정의 춤 1시간",
+          "사탕요정 발레",
+          "사탕요정의 춤 바이올린"
+        ]
+      },
+      "de": {
+        "dance of the sugar plum fairy": [
+          "dance of the sugar plum fairy piano",
+          "dance of the sugar plum fairy",
+          "dance of the sugar plum fairy remix",
+          "dance of the sugar plum fairy pentatonix",
+          "dance of the sugar plum fairy lindsey stirling",
+          "dance of the sugar plum fairy piano tutorial",
+          "dance of the sugar plum fairy from the nutcracker – tchaikovsky",
+          "dance of the sugar plum fairy guitar",
+          "dance of the sugar plum fairy ballet",
+          "dance of the sugar plum fairy orchestra"
+        ],
+        "sugar plum fairy": [
+          "sugar plum fairy",
+          "sugar plum fairy piano",
+          "sugar plum fairy pas de deux",
+          "sugar plum fairy song",
+          "sugar plum fairy remix",
+          "sugar plum fairy pentatonix",
+          "sugar plum fairy tchaikovsky",
+          "sugar plum fairy makeup",
+          "sugar plum fairy tutorial",
+          "sugar plum fairy body percussion"
+        ],
+        "金平糖の踊り": [
+          "金平糖の踊り",
+          "金平糖の踊り ピアノ",
+          "金平糖の踊り バレエ",
+          "金平糖の踊り ピアノ 連弾",
+          "金平糖の踊り オルゴール",
+          "金平糖の踊り オーケストラ",
+          "金平糖の踊り チェレスタ",
+          "金平糖の踊り アレンジ",
+          "金平糖の踊り ロイヤル",
+          "金平糖の踊り 吉田都"
+        ],
+        "사탕요정": [
+          "사탕요정의 춤",
+          "사탕요정의 춤 피아노",
+          "사탕요정의 춤 발레",
+          "사탕요정",
+          "사탕요정의 춤 첼레스타",
+          "사탕요정의 춤 피아노 악보",
+          "사탕요정의 춤 오케스트라",
+          "사탕요정의 춤 1시간",
+          "사탕요정 발레",
+          "사탕요정의 춤 바이올린"
+        ]
+      },
+      "fr": {
+        "dance of the sugar plum fairy": [
+          "dance of the sugar plum fairy",
+          "dance of the sugar plum fairy sound",
+          "dance of the sugar plum fairy harp",
+          "dance of the sugar plum fairy piano",
+          "dance of the sugar plum fairy remix",
+          "dance of the sugar plum fairy tchaikovsky",
+          "dance of the sugar plum fairy lindsey stirling",
+          "dance of the sugar plum fairy pentatonix",
+          "dance of the sugar plum fairy (casse-noisette) - tchaïkovsky",
+          "dance of the sugar plum fairy from the nutcracker – tchaikovsky"
+        ],
+        "sugar plum fairy": [
+          "sugar plum fairy",
+          "sugar plum fairy guitar tab",
+          "sugar plum fairy piano",
+          "sugar plum fairy variation",
+          "sugar plum fairy remix",
+          "sugar plum fairy song",
+          "sugar plum fairy pas de deux",
+          "sugar plum fairy music",
+          "sugar plum fairy mariah carey",
+          "sugar plum fairy body percussion"
+        ],
+        "金平糖の踊り": [
+          "金平糖の踊り",
+          "金平糖の踊り ピアノ",
+          "金平糖の踊り バレエ",
+          "金平糖の踊り ピアノ 連弾",
+          "金平糖の踊り オルゴール",
+          "金平糖の踊り オーケストラ",
+          "金平糖の踊り チェレスタ",
+          "金平糖の踊り アレンジ",
+          "金平糖の踊り ロイヤル",
+          "金平糖の踊り 吉田都"
+        ],
+        "사탕요정": [
+          "사탕요정의 춤",
+          "사탕요정의 춤 피아노",
+          "사탕요정의 춤 발레",
+          "사탕요정",
+          "사탕요정의 춤 첼레스타",
+          "사탕요정의 춤 피아노 악보",
+          "사탕요정의 춤 오케스트라",
+          "사탕요정의 춤 1시간",
+          "사탕요정 발레",
+          "사탕요정의 춤 바이올린"
+        ]
+      },
+      "ru": {
+        "dance of the sugar plum fairy": [
+          "dance of the sugar plum fairy",
+          "dance of the sugar plum fairy pentatonix",
+          "dance of the sugar plum fairy piano",
+          "dance of the sugar plum fairy remix",
+          "dance of the sugar plum fairy tchaikovsky",
+          "dance of the sugar plum fairy lindsey stirling",
+          "dance of the sugar plum fairy guitar",
+          "dance of the sugar plum fairy piano tutorial",
+          "dance of the sugar plum fairy kevin macleod",
+          "dance of the sugar plum fairy music box"
+        ],
+        "sugar plum fairy": [
+          "sugar plum fairy",
+          "sugar plum fairy flute sheet music",
+          "sugar plum fairy piano",
+          "sugar plum fairy ballet",
+          "sugar plum fairy song",
+          "sugar plum fairy remix",
+          "sugar plum fairy tchaikovsky",
+          "sugar plum fairy makeup",
+          "sugar plum fairy guitar",
+          "sugar plum fairy music"
+        ],
+        "金平糖の踊り": [
+          "金平糖の踊り",
+          "金平糖の踊り ピアノ",
+          "金平糖の踊り バレエ",
+          "金平糖の踊り ピアノ 連弾",
+          "金平糖の踊り オルゴール",
+          "金平糖の踊り オーケストラ",
+          "金平糖の踊り チェレスタ",
+          "金平糖の踊り アレンジ",
+          "金平糖の踊り ロイヤル",
+          "金平糖の踊り 吉田都"
+        ],
+        "사탕요정": [
+          "사탕요정의 춤",
+          "사탕요정의 춤 피아노",
+          "사탕요정의 춤 발레",
+          "사탕요정",
+          "사탕요정의 춤 첼레스타",
+          "사탕요정의 춤 피아노 악보",
+          "사탕요정의 춤 오케스트라",
+          "사탕요정의 춤 1시간",
+          "사탕요정 발레",
+          "사탕요정의 춤 바이올린"
+        ]
+      },
+      "zh-Hant": {
+        "dance of the sugar plum fairy": [
+          "dance of the sugar plum fairy",
+          "dance of the sugar plum fairy piano",
+          "dance of the sugar plum fairy remix",
+          "dance of the sugar plum fairy from the nutcracker",
+          "dance of the sugar plum fairy violin",
+          "dance of the sugar plum fairy – tchaikovsky",
+          "dance of the sugar plum fairy music",
+          "dance of the sugar plum fairy piano duet",
+          "dance of the sugar plum fairy flute",
+          "dance of the sugar plum fairy nutcracker"
+        ],
+        "sugar plum fairy": [
+          "sugar plum fairy",
+          "sugar plum fairy ballet",
+          "sugar plum fairy piano",
+          "sugar plum fairy variation",
+          "sugar plum fairy music",
+          "sugar plum fairy song",
+          "sugar plum fairy remix",
+          "sugar plum fairy dance",
+          "sugar plum fairy from the nutcracker",
+          "sugar plum fairy tchaikovsky"
+        ],
+        "金平糖の踊り": [
+          "金平糖の踊り",
+          "金平糖の踊り ピアノ",
+          "金平糖の踊り バレエ",
+          "金平糖の踊り ピアノ 連弾",
+          "金平糖の踊り オーケストラ",
+          "金平糖の踊り バレエ パ・ド・ドゥ",
+          "金平糖の踊り オルゴール",
+          "金平糖の踊り チェレスタ",
+          "金平糖の踊り アレンジ",
+          "金平糖の踊り ロイヤル"
+        ],
+        "사탕요정": [
+          "사탕요정의 춤 피아노",
+          "사탕요정의 춤",
+          "사탕요정의 춤 발레",
+          "사탕요정의 춤 첼레스타",
+          "사탕요정의 춤 1시간",
+          "사탕요정의 춤 오케스트라",
+          "사탕요정의 춤 피아노 악보",
+          "사탕요정 발레",
+          "사탕요정의 춤 바이올린",
+          "사탕요정의 춤 피아노 쉬운버전"
+        ]
+      },
+      "zh-Hans": {
+        "dance of the sugar plum fairy": [
+          "dance of the sugar plum fairy",
+          "dance of the sugar plum fairy piano tutorial",
+          "dance of the sugar plum fairy piano",
+          "dance of the sugar plum fairy violin",
+          "dance of the sugar plum fairy music",
+          "dance of the sugar plum fairy piano duet",
+          "dance of the sugar plum fairy tchaikovsky",
+          "dance of the sugar plum fairy song",
+          "dance of the sugar plum fairy orchestra",
+          "dance of the sugar plum fairy flute"
+        ],
+        "sugar plum fairy": [
+          "sugar plum fairy",
+          "sugar plum fairy piano",
+          "sugar plum fairy song",
+          "sugar plum fairy ballet",
+          "sugar plum fairy pas de deux",
+          "sugar plum fairy dance",
+          "sugar plum fairy from the nutcracker",
+          "sugar plum fairy orchestra",
+          "sugar plum fairy violin",
+          "sugar plum fairy celesta"
+        ],
+        "金平糖の踊り": [
+          "金平糖の踊り",
+          "金平糖の踊り ピアノ 連弾",
+          "金平糖の踊り ピアノ",
+          "金平糖の踊り アレンジ",
+          "金平糖の踊り オーケストラ",
+          "金平糖の踊り バレエ パ・ド・ドゥ",
+          "金平糖の踊り オルゴール",
+          "金平糖の踊り チェレスタ",
+          "金平糖の踊り ロイヤル",
+          "金平糖の踊り 吉田都"
+        ],
+        "사탕요정": [
+          "사탕 요정의 춤",
+          "사탕요정의 춤 (호두까기 인형 모음곡)",
+          "사탕요정의 노래",
+          "사탕요정의 춤 리믹스",
+          "사탕요정의 춤 첼레스타",
+          "사탕요정의 춤 1시간",
+          "사탕요정의 춤 오케스트라",
+          "사탕요정의 춤 피아노 악보",
+          "사탕요정 발레",
+          "사탕요정의 춤 바이올린"
+        ]
+      }
+    },
+    "boccherini_minuet": {
+      "en": {
+        "boccherini minuet": [
+          "boccherini minuet",
+          "boccherini minuet violin",
+          "boccherini minuet piano",
+          "boccherini minuetto",
+          "boccherini minuet cello",
+          "boccherini minuet orchestra",
+          "boccherini minuet noel chamber orchestra",
+          "boccherini minuet piano tutorial",
+          "boccherini minuet tutorial",
+          "boccherini minuet violin tutorial"
+        ],
+        "minuet boccherini": [
+          "minuet boccherini",
+          "minuet boccherini guitar",
+          "minuet boccherini suzuki book 2 violin",
+          "minuet boccherini piano accompaniment",
+          "minuet boccherini cello",
+          "minuetto boccherini piano",
+          "minuet boccherini viola",
+          "minuet boccherini suzuki book 2 violin piano accompaniment",
+          "minuet boccherini string quartet",
+          "minuet boccherini piano accompaniment cello"
+        ],
+        "ボッケリーニ メヌエット": [
+          "ボッケリーニ メヌエット ピアノ伴奏",
+          "ボッケリーニ メヌエット",
+          "ボッケリーニ メヌエット ピアノ",
+          "ボッケリーニ メヌエット ヴァイオリン",
+          "ボッケリーニ メヌエット チェロ",
+          "ボッケリーニ メヌエット フルート",
+          "ボッケリーニ メヌエット 伴奏",
+          "ボッケリーニ メヌエット 楽譜",
+          "ボッケリーニ メヌエット クラリネット",
+          "ボッケリーニ メヌエット 弦楽四重奏"
+        ],
+        "보케리니 미뉴엣": [
+          "보케리니 미뉴엣",
+          "미뉴엣 보케리니 수도미디어"
+        ]
+      },
+      "ja": {
+        "boccherini minuet": [
+          "boccherini minuet",
+          "boccherini minuet cello suzuki",
+          "boccherini minuetto",
+          "boccherini minuet piano",
+          "boccherini minuet violin",
+          "boccherini minuet string quartet",
+          "boccherini minuet guitar",
+          "boccherini minuet no. 6",
+          "boccherini minuetto - original",
+          "boccherini minuet cello"
+        ],
+        "minuet boccherini": [
+          "minuet boccherini",
+          "minuet boccherini flute",
+          "minuet boccherini suzuki book 2",
+          "minuet boccherini suzuki book 2 violin piano accompaniment slow",
+          "minuet boccherini suzuki book 2 violin piano accompaniment",
+          "minuet boccherini suzuki book 2 violin piano accompaniment no repeat",
+          "minuet boccherini suzuki book 2 violin",
+          "minuet boccherini piano accompaniment",
+          "minuetto boccherini piano",
+          "minuet boccherini quartet"
+        ],
+        "ボッケリーニ メヌエット": [
+          "ボッケリーニ メヌエット ピアノ伴奏",
+          "ボッケリーニ メヌエット",
+          "ボッケリーニ メヌエット ピアノ",
+          "ボッケリーニ メヌエット ヴァイオリン",
+          "ボッケリーニ メヌエット チェロ",
+          "ボッケリーニ メヌエット フルート",
+          "ボッケリーニ メヌエット 伴奏",
+          "ボッケリーニ メヌエット 楽譜",
+          "ボッケリーニ メヌエット クラリネット",
+          "ボッケリーニ メヌエット 弦楽四重奏"
+        ],
+        "보케리니 미뉴엣": [
+          "보케리니 미뉴엣",
+          "보케리니 미뉴에트",
+          "미뉴엣 보케리니 수도미디어"
+        ]
+      },
+      "ko": {
+        "boccherini minuet": [
+          "boccherini minuet",
+          "boccherini minuet piano",
+          "boccherini minuetto",
+          "boccherini minuet violin",
+          "boccherini minuet piano accompaniment",
+          "boccherini minuet score",
+          "boccherini minuet from string quintet in e major op. 13 no. 5",
+          "boccherini minuetto - original",
+          "boccherini minuet cello",
+          "boccherini minuet string quintet"
+        ],
+        "minuet boccherini": [
+          "minuet boccherini",
+          "minuet boccherini violin",
+          "minuet boccherini piano",
+          "minuet boccherini clarinet",
+          "minuet boccherini guitar",
+          "minuet boccherini piano accompaniment",
+          "minuet boccherini flute",
+          "minuet boccherini suzuki book 3 cello piano accompaniment",
+          "minuet boccherini cello suzuki book 3",
+          "minuet boccherini orchestra"
+        ],
+        "ボッケリーニ メヌエット": [
+          "ボッケリーニ メヌエット",
+          "ボッケリーニ メヌエット ピアノ",
+          "ボッケリーニ メヌエット ヴァイオリン",
+          "ボッケリーニ メヌエット フルート",
+          "ボッケリーニ メヌエット チェロ",
+          "ボッケリーニ メヌエット 弦楽四重奏",
+          "ボッケリーニ メヌエット 伴奏",
+          "ボッケリーニ メヌエット 楽譜",
+          "ボッケリーニ メヌエット クラリネット",
+          "ボッケリーニ メヌエット ヴァイオリン 伴奏"
+        ],
+        "보케리니 미뉴엣": [
+          "보케리니 미뉴엣",
+          "미뉴엣 보케리니 수도미디어"
+        ]
+      },
+      "es": {
+        "boccherini minuet": [
+          "boccherini minuet",
+          "boccherini minuet violin",
+          "boccherini minuet piano",
+          "boccherini minueto del quinteto para cuerda",
+          "boccherini minuet violin tutorial",
+          "boccherini minuet piano accompaniment",
+          "boccherini minuet cello",
+          "boccherini minuet guitar",
+          "boccherini minuet 6",
+          "boccherini minuet string quartet"
+        ],
+        "minuet boccherini": [
+          "minuet boccherini",
+          "minuet boccherini violin",
+          "minuet boccherini suzuki book 2 violin piano accompaniment",
+          "minuet boccherini cello",
+          "minuet boccherini suzuki book 3 cello piano accompaniment",
+          "minuet boccherini violin tutorial",
+          "minuet boccherini accompaniment",
+          "minuet boccherini piano accompaniment",
+          "minuet boccherini viola",
+          "minuet boccherini suzuki book 2 violin tutorial"
+        ],
+        "ボッケリーニ メヌエット": [
+          "ボッケリーニ メヌエット ピアノ伴奏",
+          "ボッケリーニ メヌエット",
+          "ボッケリーニ メヌエット ピアノ",
+          "ボッケリーニ メヌエット ヴァイオリン",
+          "ボッケリーニ メヌエット チェロ",
+          "ボッケリーニ メヌエット フルート",
+          "ボッケリーニ メヌエット 伴奏",
+          "ボッケリーニ メヌエット 楽譜",
+          "ボッケリーニ メヌエット クラリネット",
+          "ボッケリーニ メヌエット 弦楽四重奏"
+        ],
+        "보케리니 미뉴엣": [
+          "보케리니 미뉴엣",
+          "미뉴엣 보케리니 수도미디어"
+        ]
+      },
+      "pt": {
+        "boccherini minuet": [
+          "boccherini minuet",
+          "boccherini minuet piano",
+          "boccherini minuet violin",
+          "boccherini minuetto",
+          "boccherini minuet cello",
+          "boccherini minuet string quintet",
+          "boccherini minuet violin tutorial",
+          "boccherini minuet score",
+          "boccherini minuet tutorial",
+          "boccherini minuet trio"
+        ],
+        "minuet boccherini": [
+          "minueto boccherini",
+          "minuet boccherini accompaniment",
+          "minuetto boccherini piano",
+          "minuetto boccherini violino",
+          "minuet boccherini orchestra",
+          "minuet boccherini violin solo",
+          "minueto boccherini suzuki book 2 violin",
+          "minuet boccherini cello piano accompaniment",
+          "minuet boccherini suzuki book 2 violin piano accompaniment",
+          "minuet in g boccherini"
+        ],
+        "ボッケリーニ メヌエット": [
+          "ボッケリーニ メヌエット ピアノ伴奏",
+          "ボッケリーニ メヌエット",
+          "ボッケリーニ メヌエット ピアノ",
+          "ボッケリーニ メヌエット ヴァイオリン",
+          "ボッケリーニ メヌエット チェロ",
+          "ボッケリーニ メヌエット フルート",
+          "ボッケリーニ メヌエット 伴奏",
+          "ボッケリーニ メヌエット 楽譜",
+          "ボッケリーニ メヌエット クラリネット",
+          "ボッケリーニ メヌエット 弦楽四重奏"
+        ],
+        "보케리니 미뉴엣": [
+          "보케리니 미뉴엣",
+          "미뉴엣 보케리니 수도미디어"
+        ]
+      },
+      "de": {
+        "boccherini minuet": [
+          "boccherini minuet",
+          "boccherini minuet piano",
+          "boccherini minuet violin",
+          "boccherini minuet cello",
+          "boccherini minuet remix",
+          "boccherini minuet piano tutorial",
+          "boccherini minuet master and commander",
+          "boccherini menuett klavier",
+          "boccherini minuet guitar",
+          "boccherini minuet quintet"
+        ],
+        "minuet boccherini": [
+          "minuet boccherini",
+          "minuet boccherini suzuki book 2 violin",
+          "minuet boccherini cello",
+          "minuet boccherini meme",
+          "minuet boccherini suzuki book 2 violin piano accompaniment",
+          "minuet boccherini cello suzuki book 3",
+          "minuet boccherini suzuki book 3 cello piano accompaniment",
+          "minuet boccherini piano",
+          "minuet boccherini accompaniment",
+          "minuet boccherini guitar"
+        ],
+        "ボッケリーニ メヌエット": [
+          "ボッケリーニ メヌエット ピアノ伴奏",
+          "ボッケリーニ メヌエット",
+          "ボッケリーニ メヌエット ピアノ",
+          "ボッケリーニ メヌエット ヴァイオリン",
+          "ボッケリーニ メヌエット チェロ",
+          "ボッケリーニ メヌエット フルート",
+          "ボッケリーニ メヌエット 伴奏",
+          "ボッケリーニ メヌエット 楽譜",
+          "ボッケリーニ メヌエット クラリネット",
+          "ボッケリーニ メヌエット 弦楽四重奏"
+        ],
+        "보케리니 미뉴엣": [
+          "보케리니 미뉴엣",
+          "미뉴엣 보케리니 수도미디어"
+        ]
+      },
+      "fr": {
+        "boccherini minuet": [
+          "boccherini minuet",
+          "boccherini minuet piano",
+          "boccherini minuet cello",
+          "boccherini minuet suzuki book 2",
+          "boccherini minuet slowed",
+          "boccherini minuet flute",
+          "boccherini minuet remix",
+          "boccherini minuet trio",
+          "boccherini minuet baby music experience",
+          "boccherini minuetto piano"
+        ],
+        "minuet boccherini": [
+          "menuet boccherini",
+          "menuet boccherini piano",
+          "minuetto boccherini piano",
+          "menuet boccherini flute",
+          "minuet boccherini suzuki book 3 cello",
+          "minuet boccherini quartet",
+          "menuet boccherini piano accompaniment",
+          "minuet boccherini suzuki book 3 cello piano accompaniment",
+          "minuet boccherini piano tutorial"
+        ],
+        "ボッケリーニ メヌエット": [
+          "ボッケリーニ メヌエット ピアノ伴奏",
+          "ボッケリーニ メヌエット",
+          "ボッケリーニ メヌエット ピアノ",
+          "ボッケリーニ メヌエット ヴァイオリン",
+          "ボッケリーニ メヌエット チェロ",
+          "ボッケリーニ メヌエット フルート",
+          "ボッケリーニ メヌエット 伴奏",
+          "ボッケリーニ メヌエット 楽譜",
+          "ボッケリーニ メヌエット クラリネット",
+          "ボッケリーニ メヌエット 弦楽四重奏"
+        ],
+        "보케리니 미뉴엣": [
+          "보케리니 미뉴엣",
+          "미뉴엣 보케리니 수도미디어"
+        ]
+      },
+      "ru": {
+        "boccherini minuet": [
+          "boccherini minuet",
+          "boccherini minuet piano",
+          "boccherini minuet 1 hour",
+          "boccherini minuet trio",
+          "boccherini minuet 6",
+          "boccherini minuet violin",
+          "boccherini minuet cello",
+          "boccherini minuet remix",
+          "boccherini minuet meme",
+          "boccherini minuet flute"
+        ],
+        "minuet boccherini": [
+          "minuet boccherini",
+          "minuet boccherini suzuki book 2 violin",
+          "minuet boccherini piano",
+          "minuet boccherini meme",
+          "minuet boccherini violin",
+          "minuet boccherini piano accompaniment",
+          "minuet boccherini guitar",
+          "minuet boccherini piano tutorial",
+          "minuet boccherini violin tutorial",
+          "minuet boccherini accompaniment"
+        ],
+        "ボッケリーニ メヌエット": [
+          "ボッケリーニ メヌエット ピアノ伴奏",
+          "ボッケリーニ メヌエット",
+          "ボッケリーニ メヌエット ピアノ",
+          "ボッケリーニ メヌエット ヴァイオリン",
+          "ボッケリーニ メヌエット チェロ",
+          "ボッケリーニ メヌエット フルート",
+          "ボッケリーニ メヌエット 伴奏",
+          "ボッケリーニ メヌエット 楽譜",
+          "ボッケリーニ メヌエット クラリネット",
+          "ボッケリーニ メヌエット 弦楽四重奏"
+        ],
+        "보케리니 미뉴엣": [
+          "보케리니 미뉴엣",
+          "미뉴엣 보케리니 수도미디어"
+        ]
+      },
+      "zh-Hant": {
+        "boccherini minuet": [
+          "boccherini minuet",
+          "boccherini minuet cello",
+          "boccherini minuet violin",
+          "boccherini minuet piano",
+          "boccherini minuet string quintet",
+          "boccherini minuet cello piano accompaniment",
+          "boccherini minuet flute",
+          "boccherini minuet (classical)",
+          "boccherini minuet no. 6",
+          "boccherini minuet orchestra"
+        ],
+        "minuet boccherini": [
+          "minuet boccherini",
+          "minuet boccherini suzuki book 2 violin",
+          "minuet boccherini violin",
+          "minuet boccherini cello",
+          "minuet boccherini suzuki book 2 violin piano accompaniment",
+          "minuetto boccherini",
+          "minuet boccherini piano accompaniment cello",
+          "minuet boccherini suzuki book 2 violin piano accompaniment no repeat",
+          "minuet boccherini violin piano",
+          "minuet boccherini piano"
+        ],
+        "ボッケリーニ メヌエット": [
+          "ボッケリーニ メヌエット",
+          "ボッケリーニ メヌエット ピアノ",
+          "ボッケリーニ メヌエット ヴァイオリン",
+          "ボッケリーニ メヌエット フルート",
+          "ボッケリーニ メヌエット チェロ",
+          "ボッケリーニ メヌエット 弦楽四重奏",
+          "ボッケリーニ メヌエット 伴奏",
+          "ボッケリーニ メヌエット 楽譜",
+          "ボッケリーニ メヌエット クラリネット",
+          "ボッケリーニ メヌエット ヴァイオリン 伴奏"
+        ],
+        "보케리니 미뉴엣": [
+          "보케리니 미뉴엣",
+          "미뉴엣 (보케리니) srb project",
+          "미뉴엣 보케리니 수도미디어"
+        ]
+      },
+      "zh-Hans": {
+        "boccherini minuet": [
+          "boccherini minuet",
+          "boccherini minuet cello piano accompaniment",
+          "boccherini minuet flute",
+          "boccherini minuet piano",
+          "boccherini minuet violin",
+          "boccherini minuet cello",
+          "boccherini minuet slow",
+          "boccherini minuet quartet",
+          "boccherini minuet quintet",
+          "boccherini minuet tutorial"
+        ],
+        "minuet boccherini": [
+          "minuet boccherini",
+          "minuet boccherini cello",
+          "minuet boccherini dance",
+          "minuet boccherini violin",
+          "minuet boccherini suzuki book 2 violin",
+          "minuet boccherini suzuki book 2 violin piano accompaniment slow",
+          "minuet boccherini suzuki book 3 cello piano accompaniment",
+          "minuet boccherini piano accompaniment",
+          "minuet boccherini cello piano accompaniment",
+          "minuet boccherini cello suzuki book 3"
+        ],
+        "ボッケリーニ メヌエット": [
+          "ボッケリーニ メヌエット",
+          "ボッケリーニ メヌエット バイオリン",
+          "ボッケリーニ メヌエット フルート",
+          "ボッケリーニ メヌエット チェロ",
+          "ボッケリーニ メヌエット ヴァイオリン",
+          "ボッケリーニ メヌエット 弦楽四重奏",
+          "ボッケリーニ メヌエット 伴奏",
+          "ボッケリーニ メヌエット 楽譜",
+          "ボッケリーニ メヌエット クラリネット",
+          "ボッケリーニ メヌエット ヴァイオリン 伴奏"
+        ],
+        "보케리니 미뉴엣": [
+          "보케리니 미뉴엣",
+          "미뉴엣 (보케리니) srb project",
+          "미뉴엣 보케리니 수도미디어"
+        ]
+      }
+    }
+  }
+}

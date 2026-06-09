@@ -1,0 +1,174 @@
+{
+  "pieces": {
+    "satie_gymnopedie": {
+      "n_unique_suggestions": 140,
+      "identity_term_hits": [
+        "gymnopedie no 1 metal cover"
+      ],
+      "has_live_tags": true,
+      "tag_covered": 128,
+      "tag_uncovered": 12,
+      "uncovered_sample": [
+        "gymnopedies",
+        "gymnopédies",
+        "gymnopédies & gnossiennes",
+        "gymnopédies 1",
+        "gymnopédies and gnossiennes",
+        "gymnopédies debussy",
+        "gymnopédies no.1",
+        "ジムノペディ1番",
+        "ジムノペディック",
+        "ジムノペディ睡眠",
+        "ジムノペディ第1番",
+        "ジムノペディ第1番 サティ・えりか"
+      ]
+    },
+    "vivaldi_spring": {
+      "n_unique_suggestions": 108,
+      "identity_term_hits": [],
+      "has_live_tags": true,
+      "tag_covered": 82,
+      "tag_uncovered": 22,
+      "uncovered_sample": [
+        "四季 春 オーケストラ",
+        "四季 春 ギター",
+        "四季 春 バイオリン",
+        "四季 春 バイオリン ソロ",
+        "四季 春 ピアノ",
+        "四季 春 ピアノ 簡単",
+        "四季 春 吹奏楽",
+        "四季 春 小提琴",
+        "四季 春 弦楽四重奏",
+        "四季 春 発車メロディー",
+        "四季 春 発車メロディー 耐久",
+        "四季 春 第一乐章"
+      ]
+    },
+    "joplin_entertainer": {
+      "n_unique_suggestions": 99,
+      "identity_term_hits": [
+        "the entertainer scott joplin piano cover"
+      ],
+      "has_live_tags": true,
+      "tag_covered": 95,
+      "tag_uncovered": 4,
+      "uncovered_sample": [
+        "エンターテイナーあるある",
+        "エンターテイナーウクレレ",
+        "エンターテイナー折原",
+        "エンターテイナー曲"
+      ]
+    },
+    "elgar_salut": {
+      "n_unique_suggestions": 123,
+      "identity_term_hits": [
+        "사랑의 인사 cover"
+      ],
+      "has_live_tags": true,
+      "tag_covered": 117,
+      "tag_uncovered": 6,
+      "uncovered_sample": [
+        "愛の挨拶(エルガー)",
+        "愛の挨拶アルトサックス",
+        "愛の挨拶フルート",
+        "愛の挨拶連弾",
+        "사랑의인사1시간",
+        "사랑의인사드라마"
+      ]
+    },
+    "mozart_k265": {
+      "n_unique_suggestions": 86,
+      "identity_term_hits": [],
+      "has_live_tags": true,
+      "tag_covered": 62,
+      "tag_uncovered": 24,
+      "uncovered_sample": [
+        "моцарт соната 13",
+        "きらきら星変奏曲",
+        "きらきら星変奏曲 かてぃん",
+        "きらきら星変奏曲 のだめ",
+        "きらきら星変奏曲 まらしぃ",
+        "きらきら星変奏曲 ゆっくり",
+        "きらきら星変奏曲 コウノドリ",
+        "きらきら星変奏曲 バイオリン",
+        "きらきら星変奏曲 ピアノ",
+        "きらきら星変奏曲 ピアノ ゆっくり",
+        "きらきら星変奏曲 ピアノ 初級",
+        "きらきら星変奏曲 ピアノ 連弾"
+      ]
+    },
+    "chopin_nocturne": {
+      "n_unique_suggestions": 131,
+      "identity_term_hits": [],
+      "has_live_tags": true,
+      "tag_covered": 104,
+      "tag_uncovered": 19,
+      "uncovered_sample": [
+        "ノクターン9-2 ピアノ",
+        "ノクターン9-2 ピアノ フジコ・ヘミング",
+        "ノクターン9-2 ピアノ 左手",
+        "ノクターン9-2 ピアノ 簡単",
+        "ノクターン9-2 ピアノ 耐久",
+        "ノクターン9-2 ピアノゆっくり",
+        "ノクターン9-2 解説",
+        "쇼팽 녹턴 13번",
+        "쇼팽 녹턴 20번",
+        "쇼팽 녹턴 20번 악보",
+        "쇼팽 녹턴 21번",
+        "쇼팽 녹턴 2번 1시간"
+      ]
+    },
+    "pachelbel_canon": {
+      "n_unique_suggestions": 134,
+      "identity_term_hits": [
+        "canon in d - pachelbel violin cover best wedding version"
+      ],
+      "has_live_tags": true,
+      "tag_covered": 106,
+      "tag_uncovered": 21,
+      "uncovered_sample": [
+        "パッヘルベルカノン ピアノ",
+        "パッヘルベルカノン リコーダー",
+        "캐논 (canon) (drama ver.)",
+        "캐논 eos r6 mark iii",
+        "캐논 r50v",
+        "캐논 r6 mark2",
+        "캐논 r7 r10",
+        "캐논 v10",
+        "캐논 리코더 반주",
+        "캐논 바이올린",
+        "캐논 카메라",
+        "캐논 파워샷 v1"
+      ]
+    },
+    "tchaikovsky_sugarplum": {
+      "n_unique_suggestions": 94,
+      "identity_term_hits": [],
+      "has_live_tags": true,
+      "tag_covered": 82,
+      "tag_uncovered": 12,
+      "uncovered_sample": [
+        "金平糖の踊り",
+        "金平糖の踊り アレンジ",
+        "金平糖の踊り オルゴール",
+        "金平糖の踊り オーケストラ",
+        "金平糖の踊り チェレスタ",
+        "金平糖の踊り バレエ",
+        "金平糖の踊り バレエ パ・ド・ドゥ",
+        "金平糖の踊り ピアノ",
+        "金平糖の踊り ピアノ 連弾",
+        "金平糖の踊り ロイヤル",
+        "金平糖の踊り 吉田都",
+        "金平糖の踊り 簡単"
+      ]
+    },
+    "boccherini_minuet": {
+      "n_unique_suggestions": 93,
+      "identity_term_hits": [],
+      "has_live_tags": true,
+      "tag_covered": 93,
+      "tag_uncovered": 0,
+      "uncovered_sample": []
+    }
+  }
+}

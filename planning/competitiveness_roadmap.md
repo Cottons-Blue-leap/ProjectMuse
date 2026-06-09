@@ -81,7 +81,8 @@
 ## 진행 (s414 · 2026-06-10)
 
 - **WS1 ✅ spec+엔진 완성** — `blend_gate.py`(풀믹스 d + stem a/b/c + 버스 자동진단) · baseline 6곡 캘리브레이션(`docs/blend_gate_baseline.json` · 메모리 실측 일치 검증) · spec `docs/blending_gate.md`(D1-a) · 워크플로우 삽입(D1-c) · CLI `muse.py audio blend-gate`. 검증 = Lead+9dB→hard FAIL 정확/보케리니 실곡 PASS. **남은 = 헨델 stem 첫 라이브 가동(코튼 V6 export 대기) + (b)(c) 임계 헨델+수곡 청취 대조 캘리브레이션.** stem 요건 합의 = 트랙명 자유+`--lead`+버스 토글 불필요.
-- **WS2 ✅ 완료(검증)** — `planning/competitor_teardown.md`(D2-a) + 검색갭 shortlist(D2-b) · raw `Analytics/competitor_raw.json`(quota 0 재현). EMM 5280/889/1.8M · pikabonT 306휴면 · hamofanjoe 434(애니OP 1편 57%) · gnagre3 77종료 · **Bocaro Choir=전용채널 아님(코튼 확인要)**. 핵심=①다국어 0=우리만 ②낭만 워홀스 선배 공급 0=검색갭 ③케이던스가 구독 견인. **남은 = candidate_master `search_gap` 축 반영(코튼 검수).**
+- **WS2 ✅ 완료(검증)** — `planning/competitor_teardown.md`(D2-a) + 검색갭 shortlist(D2-b) · raw `Analytics/competitor_raw.json`(quota 0 재현). EMM 5280/889/1.8M · pikabonT 306휴면 · hamofanjoe 434(애니OP 1편 57%) · gnagre3 77종료 · **Bocaro Choir=전용채널 아님**. 핵심=①다국어 0=우리만 ②낭만 워홀스 선배 공급 0=검색갭 ③케이던스가 구독 견인. **candidate_master `search_gap` 축 반영 = 코튼 보류(teardown는 선곡 참고자료로만).**
+- **WS3 ✅ audit → 종결(손댈 부분 없음 · 코튼 판단)** — `Analytics/search_gap_audit.py`(검색 자동완성 수집 + 라이브 태그 커버리지) · 곡×10로케일 ~1000표현 수집(`search_audit_raw.json`/`search_audit_report.json`). 결론: ① 곡명+미쿠 검색 ≈ 0(구조적 차가운 트래픽) · 빈 표현(uncovered)은 거의 전부 다른악기/수면/카메라Canon = 박으면 기만 → 곡명 태그 이미 적절 ② 카테고리 검색(miku classical music·vocaloid classical·ボカロ クラシック·미쿠 클래식)은 수요 있으나 우리 태그가 구성토큰+로케일어를 이미 커버. 유일 미세여지=정확 연결구문 phrase(한계효용 낮음). **메타 이미 적절 → retrofit X. 검색=성장 주레버 아님(=추천/구독/케이던스 · CTR↔노출 메모 정합).**
 
 ## 실행 순서 (의존성)
 
