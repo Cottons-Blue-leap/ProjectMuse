@@ -1,0 +1,16 @@
+{
+  "piece": "Lascia ch'io pianga",
+  "composer": "George Frideric Handel",
+  "section": "from Rinaldo, HWV 7b, Act II (1711)",
+  "vocal": "Hatsune Miku",
+  "music": {
+    "source_score_planning": "planning/candidates_opus/게오르크 프리드리히 헨델_울게 하소서.pdf",
+    "dry_stems_dir": "music/renders/dry_stems",
+    "master_audio": "music/masters/master.wav"
+  },
+  "video": {
+    "brief": "video/video-brief.md",
+    "final_video": "video/exports/final_4k.mp4"
+  },
+  "rights_log": "rights/rights-log.md"
+}
