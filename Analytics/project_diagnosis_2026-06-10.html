@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Muse 진단 리포트 · 2026-06-10</title>
+<style>
+  :root {
+    --ink: #2a2520; --paper: #faf7f2; --card: #ffffff;
+    --gold: #8a6238; --teal: #4E7E8C; --slate: #22384A;
+    --line: #e4ddd2; --muted: #8a8276;
+    --fix: #b0413e; --change: #8a6238; --ok: #4a7c59;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    background: var(--paper); color: var(--ink);
+    line-height: 1.7; font-size: 15px;
+    max-width: 880px; margin: 0 auto; padding: 48px 28px 80px;
+  }
+  header { border-bottom: 3px solid var(--slate); padding-bottom: 20px; margin-bottom: 36px; }
+  h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; color: var(--slate); }
+  .sub { color: var(--muted); margin-top: 6px; font-size: 13.5px; }
+  h2 {
+    font-size: 19px; margin: 44px 0 16px; padding: 8px 14px;
+    background: var(--slate); color: #fff; border-radius: 6px; font-weight: 700;
+  }
+  h3 { font-size: 16px; margin: 26px 0 10px; color: var(--gold); }
+  p { margin: 10px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 20px; background: var(--card); font-size: 13.5px; }
+  th { background: #efe9df; text-align: left; padding: 8px 10px; border-bottom: 2px solid var(--line); white-space: nowrap; }
+  td { padding: 7px 10px; border-bottom: 1px solid var(--line); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .badge {
+    display: inline-block; font-size: 11.5px; font-weight: 700; padding: 2px 9px;
+    border-radius: 99px; color: #fff; vertical-align: middle; margin-right: 7px;
+  }
+  .b-fix { background: var(--fix); } .b-change { background: var(--change); } .b-ok { background: var(--ok); }
+  .b-wait { background: var(--teal); }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+    padding: 16px 20px; margin: 14px 0;
+  }
+  .card h4 { font-size: 14.5px; margin-bottom: 6px; }
+  .card .why { color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .lede {
+    background: linear-gradient(135deg, #f2ede4, #faf7f2);
+    border-left: 5px solid var(--gold); padding: 18px 22px; border-radius: 0 10px 10px 0;
+    font-size: 15.5px; margin: 18px 0;
+  }
+  code { background: #f0ebe2; padding: 1px 6px; border-radius: 4px; font-size: 12.5px; font-family: Consolas, monospace; }
+  ul { padding-left: 22px; margin: 8px 0; }
+  li { margin: 5px 0; }
+  .src { color: var(--muted); font-size: 12px; margin-top: 30px; border-top: 1px solid var(--line); padding-top: 14px; }
+  .up { color: var(--ok); font-weight: 700; } .down { color: var(--fix); font-weight: 700; }
+  .note { font-size: 13px; color: var(--muted); }
+  a { color: var(--teal); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Project Muse 진단 리포트</h1>
+  <div class="sub">Atelier Miku A Cappella · 측정일 <b>2026-06-10</b> · 작성 MOKA ·
+  전 수치 실측 (YouTube Analytics API 28일 윈도우 + Data API 누적 실시간 + 로컬 인프라 점검)</div>
+</header>
+
+<div class="lede">
+  <b>한 줄 진단.</b> 제품(좋아요율 9.6% · 시청지속 우상향), 인프라(블렌딩 게이트 · 공유 비주얼라이저 · l10n 9언어), 로드맵(WS1~3 완수)은 <b>건강</b>하다.
+  이번 점검에서 나온 것은 <b>즉시 수정 대상 8건</b>(운영 갭 4 + 도구 버그 3 + 위생 1)과
+  <b>변경 검토 대상 5건</b>(코튼 결단 자리)이다. 구조적 진단(병목=발견·차가운 트래픽 바닥)은 기존 결론 유지 — 재론하지 않는다.
+</div>
+
+<h2>1 · 현황 스냅샷 (2026-06-10 실측)</h2>
+
+<table>
+  <tr><th>축</th><th>값</th><th>비고</th></tr>
+  <tr><td>라이브 영상</td><td class="num"><b>8곡</b></td><td>⑧ 사탕요정 <b>2026-06-08 18:45 KST 공개 확인</b> (API privacy=public)</td></tr>
+  <tr><td>예약</td><td class="num">1곡</td><td>⑨ 보케리니 — <b>6/11(목) 18:45 KST</b> 자동공개, API로 검증 완료 (private · publishAt 정상)</td></tr>
+  <tr><td>구독 / 누적 조회</td><td class="num">11 / 620</td><td>28일 구독 +12 · 28일 조회 586 (<span class="up">+45</span> vs 6/8 측정)</td></tr>
+  <tr><td>좋아요율 (28일)</td><td class="num">9.6%</td><td>YouTube 평균 2~4% 대비 높음 = fit 검증 유지</td></tr>
+  <tr><td>평균 시청률 (28일)</td><td class="num">30.0%</td><td>6/8 측정 26.8% → <span class="up">상승</span></td></tr>
+  <tr><td>유입 구조</td><td class="num">추천 37% · 구독/홈 31%</td><td>재생목록 유입 52뷰 · 평균 <b>182초</b> = 전 표면 중 최장 체류</td></tr>
+</table>
+
+<h3>⑧ 사탕요정 초기 신호 — 시리즈 최속 스타트</h3>
+<p>공개 후 약 48시간 누적 <b>36뷰 · 좋아요 4 · 댓글 3</b>. 같은 시점 비교가 가능한 직전 곡들 대비 뚜렷이 빠르다
+(캐논: 6일 26뷰 · 쇼팽: 9일 43뷰). S tier 인지도(base_rank 17) 효과가 초기 데이터로 처음 확인된 사례 —
+R&amp;D ②(곡 선택=최대 레버) 가설과 정합하는 <b>첫 실측 근거</b>다.</p>
+
+<table>
+  <tr><th>영상</th><th class="num">발행일</th><th class="num">누적 조회</th><th class="num">좋아요</th><th class="num">댓글</th><th class="num">28일 시청지속</th></tr>
+  <tr><td>Satie - Gymnopédie No. 1</td><td class="num">05-14</td><td class="num">172</td><td class="num">15</td><td class="num">0</td><td class="num">20.9%</td></tr>
+  <tr><td>Joplin - The Entertainer</td><td class="num">05-21</td><td class="num">131</td><td class="num">9</td><td class="num">2</td><td class="num">41.8%</td></tr>
+  <tr><td>Mozart - K.265</td><td class="num">05-28</td><td class="num">121</td><td class="num">11</td><td class="num">1</td><td class="num">22.0%</td></tr>
+  <tr><td>Vivaldi - Spring I</td><td class="num">05-18</td><td class="num">65</td><td class="num">7</td><td class="num">1</td><td class="num">35.9%</td></tr>
+  <tr><td>Elgar - Salut d'Amour</td><td class="num">05-25</td><td class="num">64</td><td class="num">2</td><td class="num">0</td><td class="num">30.9%</td></tr>
+  <tr><td>Chopin - Nocturne Op.9-2</td><td class="num">06-01</td><td class="num">43</td><td class="num">3</td><td class="num">1</td><td class="num">46.8%</td></tr>
+  <tr><td>Tchaikovsky - Sugar Plum Fairy</td><td class="num"><b>06-08</b></td><td class="num">36</td><td class="num">4</td><td class="num">3</td><td class="num note">측정 초기</td></tr>
+  <tr><td>Pachelbel - Canon in D</td><td class="num">06-04</td><td class="num">26</td><td class="num">4</td><td class="num">2</td><td class="num">39.3%</td></tr>
+</table>
+<p class="note">시청지속 저조 2곡(짐노페디 20.9% · 모차르트 22.0%)은 노출 최다 = 차가운 트래픽 깔때기 효과로, 결함이 아니다
+(<code>reference_muse_ctr_impression_floor</code> 정본과 정합 · 재론 X).</p>
+
+<h2>2 · 잘 작동 — 손대지 말 것</h2>
+<ul>
+  <li><span class="badge b-ok">KEEP</span><b>발행 케이던스 ~3.5일/곡</b> — WS2 teardown 결론(케이던스=구독 견인)과 정합. 흔들지 않는다.</li>
+  <li><span class="badge b-ok">KEEP</span><b>좋아요율 9.6% · 평균시청률 30%</b> — 제품 fit 검증 유지. retention 평균치는 쫓지 않음(기존 결단).</li>
+  <li><span class="badge b-ok">KEEP</span><b>인프라 4종 가동</b> — 블렌딩 게이트(WS1) · 공유 비주얼라이저(~6.6GB 회수) · <code>muse.py doctor</code>(works 전수 OK/LEGACY 정상) · l10n 9언어 엔진.</li>
+  <li><span class="badge b-ok">KEEP</span><b>SEO 종결 유지</b> — WS3 audit 결론(메타 이미 적절 · 검색≠주레버). 재작업 금지.</li>
+  <li><span class="badge b-ok">KEEP</span><b>git 백로그 해소 상태</b> — 128건 push 완료 확인. 현재 미커밋은 오늘 분석 산출물뿐.</li>
+</ul>
+
+<h2>3 · 수정해야 할 부분 — 즉시 · 기계적 (8건)</h2>
+
+<h3>운영 갭 (4)</h3>
+
+<div class="card">
+  <h4><span class="badge b-fix">FIX 1</span>초기 5곡에 운영자 고정댓글이 없다</h4>
+  API 실측: <b>짐노페디 · 비발디 · 조플린 · 엘가 · 모차르트 = 채널 댓글 0건</b>. 최근 3곡(쇼팽·캐논·사탕요정)에는 있음.
+  <div class="why"><b>왜:</b> 헬스 리포트의 전환 레버(§4 진성팬 전환 = 구독·재생목록·고정댓글)가 정작 조회수 상위 1·2·3위 영상(짐노페디 172 · 조플린 131 · 모차르트 121)에 빠져 있다. 트래픽이 가장 많이 흐르는 자리부터 비어 있는 셈.</div>
+</div>
+
+<div class="card">
+  <h4><span class="badge b-fix">FIX 2</span>⑧ 사탕요정 post-release 정리 미실행 (6/8 공개 후 2일 경과)</h4>
+  <ul>
+    <li><code>series_history.csv</code> ⑧행 release_date <b>공란</b> · notes "예약 발행 대기" = stale</li>
+    <li><code>status.json</code> current_phase가 커버 LOCK 시점(6/6)에 멈춰 있음</li>
+    <li>발행 시점 측정 기준점(스냅샷 기록) 미생성 — post_release doctrine 6步 미가동</li>
+    <li>고정댓글은 있음(확인) — 단 ⑨ 예고 포함 여부는 코튼 확인 필요</li>
+  </ul>
+  <div class="why"><b>왜:</b> status.json은 단일 source 원칙인데 live 상태와 2일째 drift — E42(snapshot↔live drift) 재발 패턴이다.</div>
+</div>
+
+<div class="card">
+  <h4><span class="badge b-fix">FIX 3</span><code>youtube_analytics.py</code> VIDEOS 레지스트리에 ⑧ 미등재</h4>
+  오늘 리포트에 사탕요정이 제목 대신 raw ID(<code>759VCWOtC2w</code>)로 출력됨. ⑨도 6/11 발행 후 같은 문제 예정.
+  <div class="why"><b>왜:</b> 신곡 발행 시 vid 갱신 지점이 "3곳"(status/desc.md/localize registry)으로 박혀 있는데 실제로는 <b>4곳</b>이다.
+  post_release doctrine에 이 레지스트리를 추가해야 재발이 끊긴다 — E43(cross-tool 흡수 부재) 유형.</div>
+</div>
+
+<div class="card">
+  <h4><span class="badge b-fix">FIX 4</span>Studio 도달범위 재측정 기한 도래 (최신 6/5)</h4>
+  <code>studio_reach.csv</code> 마지막 측정 6/5. 특히 <b>캐논 행은 노출 1·CTR 0%로 기록</b>되어 있는데 이는 발행 직전 측정값이라 사실상 무의미 — 재측정으로 교체 필요. 사탕요정은 첫 측정 자체가 없다.
+  <div class="why"><b>왜:</b> 노출·CTR은 API 밖(Studio 전용)이라 측정 행이 안 쌓이면 §7 비교축이 통째로 끊긴다. 코튼 수동 1회(도달범위 탭 → CSV 1행).</div>
+</div>
+
+<h3>도구 버그 (3)</h3>
+
+<div class="card">
+  <h4><span class="badge b-fix">FIX 5</span>헬스 리포트 float 포맷 누락</h4>
+  §2 표에 <code>30.870000000000005%</code> 그대로 출력 (엘가 행). 시청지속률 컬럼 반올림 누락 — 1줄 수정.
+</div>
+
+<div class="card">
+  <h4><span class="badge b-fix">FIX 6</span>비공개·예약 영상이 스냅샷 표를 오염</h4>
+  오늘 §2에 사탕요정(당시 비공개 QC 시청)이 <b>"시청지속률 291.63%"</b> 행으로 출력됨(106초 영상을 평균 312초 = 내부 루프 재생 아티팩트).
+  발행 전 영상은 스냅샷에서 제외하거나 "(미공개)" 표기 필요.
+  <div class="why"><b>왜:</b> 이대로 두면 측정 시계열 CSV에 가짜 행이 누적된다 — 측정 기반 의사결정의 입력이 오염됨.</div>
+</div>
+
+<div class="card">
+  <h4><span class="badge b-fix">FIX 7</span>Python 3.9 EOL — google 라이브러리 지원 종료 경고</h4>
+  모든 Analytics 실행마다 FutureWarning 3종. 당장 동작엔 문제없으나 google-auth/api-core가 버그픽스만 best-effort로 전환됨. <b>중장기</b>: 3.10+ 업그레이드 자리 한 번 잡기 (Remotion·V6 파이프와 무관, Analytics만 영향).
+</div>
+
+<h3>위생 (1)</h3>
+
+<div class="card">
+  <h4><span class="badge b-fix">FIX 8</span>루트 잡파일 + 오늘 산출물 커밋</h4>
+  <ul>
+    <li><code>Project_Muse/메모장.txt</code> untracked 방치 — foldering hygiene 5분류 기준 분류 or 폐기 (내용 확인 후 코튼 판단)</li>
+    <li>오늘 갱신된 <code>Analytics/*.csv</code> + 헬스 리포트 + 본 진단 리포트 → 논리분할 커밋</li>
+  </ul>
+</div>
+
+<h2>4 · 변경 검토할 부분 — 코튼 결단 자리 (5건)</h2>
+<p class="note">아래는 실행 강요가 아니라 검토 큐다. 곡 선택·전략 변경은 코튼 고유 권한 (R&amp;D 문서 원칙 유지).</p>
+
+<div class="card">
+  <h4><span class="badge b-wait">대기</span>① ⑨ 보케리니 발행(6/11 18:45) 직후 루틴</h4>
+  고정댓글(⑩ 헨델 예고 포함) + 발행 측정 시작 + VIDEOS 레지스트리 등재(FIX 3과 한 묶음). 이미 합의된 남은 일 — 6/11 저녁~6/12 자리.
+</div>
+
+<div class="card">
+  <h4><span class="badge b-wait">대기</span>② 블렌딩 게이트 (b)(c) 임계 캘리브레이션 = ⑩ 헨델 첫 라이브 가동</h4>
+  코튼 V6 export(이탈리아어 발음 입력) 대기 중. 성부충돌(b)·멜리스마 왜곡(c) 임계는 헨델 stem + 기존곡 청취 대조로 잡기로 한 상태. 로드맵 잔여분 중 유일한 미완.
+</div>
+
+<div class="card">
+  <h4><span class="badge b-change">검토</span>③ 재생목록 정돈 + 종료화면 표준화 — R&amp;D "즉시·저비용" A급</h4>
+  오늘 데이터가 근거를 보강: 재생목록 유입 평균 체류 <b>182초</b>(추천 54초의 3.4배). 시대 재생목록 첫곡 고인지도순 정렬 + 전 영상 종료화면 2~3요소 표준화. 손대면 손해 없는 축 — s402 R&amp;D 그대로, 결단만 남음.
+</div>
+
+<div class="card">
+  <h4><span class="badge b-change">검토</span>④ 사탕요정 12월 시즌 리프트 — 모니터링 예약</h4>
+  에버그린 결단(코튼)은 유지. 다만 11월 말 메타 리프레시(고정댓글 갱신 · 시즌 재생목록 노출 자리)를 달력에 박아둘지. 지금 결정할 필요는 없고, 잊지 않는 장치만.
+</div>
+
+<div class="card">
+  <h4><span class="badge b-change">검토</span>⑤ 레퍼토리 "인지도 웨이브" — ⑧이 첫 실측 근거를 만들었다</h4>
+  사탕요정 최속 스타트(48h 36뷰)는 R&amp;D ②(곡 선택=최대 레버) 가설의 첫 라이브 데이터다. ⑩ 헨델 이후 선곡에서
+  미사용 초유명곡 풀(환희의 송가 · G선상의 아리아 · 엘리제 · 월광 등)을 웨이브로 탈지 — 자료는 <code>exploration/channel_growth_rnd/02</code>에 준비됨. 선곡은 코튼 권한.
+</div>
+
+<h2>5 · 재현 출처</h2>
+<div class="src">
+  <ul>
+    <li>28일 채널/영상 지표: <code>python Analytics/youtube_analytics.py report</code> (2026-06-10 실행 · API 2~3일 지연 감안) → <code>Analytics/channel_health_report.md</code> · <code>snapshots.csv</code></li>
+    <li>누적 실시간 조회/좋아요/댓글 · 발행상태: YouTube Data API v3 <code>videos.list(status,statistics)</code> (2026-06-10 직접 조회 · ⑧ public 6/8 09:45Z · ⑨ private publishAt 6/11 09:45Z 검증)</li>
+    <li>고정댓글 실측: <code>commentThreads.list</code> — 채널 본인 top-level 댓글 유무 (최근 3곡 ○ / 초기 5곡 ×)</li>
+    <li>노출·CTR: <code>Analytics/studio_reach.csv</code> (최신 측정 2026-06-05 · Studio 수동)</li>
+    <li>인프라·로드맵: <code>planning/competitiveness_roadmap.md</code> (WS1~3 완수) · <code>muse.py doctor</code> 전수 통과 · <code>git log/status</code></li>
+  </ul>
+  Project Muse 진단 리포트 · MOKA · 2026-06-10 · 이 파일: <code>Analytics/project_diagnosis_2026-06-10.html</code>
+</div>
+
+</body>
+</html>
