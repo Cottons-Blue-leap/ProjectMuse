@@ -75,6 +75,17 @@ REGISTRY = {
                        cover="video/cover/album_1x1.png",
                        # box = v8 노래 커버 (코튼 s389: 우측 이동 + 중앙기준 약간 확대 = 중심 0.52 기준 박스 ~7% 축소)
                        box=(0.13, 0.13, 0.91, 0.90), composer="Johann Pachelbel", piece="Canon in D"),
+    "sugar_plum": dict(dir="tchaikovsky_sugar_plum_fairy",
+                       cover="video/cover/album_1x1.png",
+                       # box = gentle 우측 이동 (코튼 2026-06-06: 정중앙 미쿠 → 좌하단 텍스트 균형 위해 우측 12% 크롭 →
+                       # 미쿠 얼굴 ~0.57 우측 배치). piece=hook 단축형 "Sugar Plum Fairy" · 풀네임 Tchaikovsky 풀사이즈 정합.
+                       box=(0.0, 0.05, 0.88, 0.545), composer="Pyotr Ilyich Tchaikovsky", piece="Sugar Plum Fairy"),
+    "boccherini_minuet": dict(dir="boccherini_minuet",
+                       cover="video/cover/Miku_longhi_dancing_lesson_c1741_wga.png",
+                       # box = 중앙 댄서 미쿠를 hero로 줌 (Longhi 다인 장면 → 미쿠 얼굴·상반신 확대 + 좌하단 텍스트
+                       # 균형 위해 우측 배치). 코튼 헤드룸 미세조정 (2026-06-08): 0.05 과함→0.025 → "조금만 더 올려"
+                       # → 0.0125 시프트 (y 0.10→0.0875·0.70→0.6875) = 리본 위 최소 여백. piece="Minuet" · 풀네임 Luigi Boccherini.
+                       box=(0.12, 0.0875, 0.74, 0.6875), composer="Luigi Boccherini", piece="Minuet"),
 }
 
 _probe = ImageDraw.Draw(Image.new("RGB", (8, 8)))
