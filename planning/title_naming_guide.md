@@ -189,6 +189,11 @@ seconds (read-after-write lag); re-run `get` to confirm. The same tool uploads c
 - **s355 → `Composer - Piece (feat. 初音ミク)`** — reveal/curiosity-gap design + feat.-credit-as-identity;
   data (s352) showed the front-load SEO bet was weak (search ≈ 0, thumbnail drives CTR). Returns to the
   suffix shape of the launch title, with `初音ミク` as the universal credit. All 4 live videos retrofitted.
+- **2026-06-11 (s418) — front-badge 재제안 → 재기각 (코튼 · back-badge 재확정).** "타겟 = 클래식에
+  관심 있는 보컬로이드 팬" 논거로 `【初音ミク A Cappella】 Composer - Piece` 전량 retrofit 직전까지
+  갔으나, 적용 게이트에서 s402 rationale 재대조 (좌측 슬롯=가변 정보 · v10 front-bracket 운영→s355
+  데이터 회귀 이력 · s352 검색≈0 = "미쿠 검색어" 논거 반박) → 코튼 "기존대로 유지. 보기가 더 깔끔해
+  보이는 건 기존 안" 재확정. 차기 재논의 시 본 항 먼저 read.
 - **2026-05-28 → `Surname - Piece (feat. 初音ミク)`** — surname-only short form (코튼 결단:
   *식별력 높은 부분만 남기자*). Classical-music convention default (Mozart / Chopin / Bach not
   *Wolfgang Amadeus Mozart*); saves chars (esp. Mozart K.265 ~18 chars), keeps recognition

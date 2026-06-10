@@ -1,0 +1,12 @@
+Dante Gabriel Rossetti - Proserpine (1874) - Google Art Project reproduction
+
+Commons file page:
+https://commons.wikimedia.org/wiki/File:Dante_Gabriel_Rossetti_-_Proserpine_-_Google_Art_Project.jpg
+
+Direct re-download (Special:FilePath):
+https://commons.wikimedia.org/wiki/Special:FilePath/Dante_Gabriel_Rossetti_-_Proserpine_-_Google_Art_Project.jpg
+
+Holding institution: Tate Britain, London (N05064)
+https://www.tate.org.uk/art/artworks/rossetti-proserpine-n05064
+
+Local copy: rossetti_proserpine_1874_gap.jpg (1041x2300 · *.jpg는 .gitignore라 repo 미포함 · 위 FilePath로 재다운 가능)

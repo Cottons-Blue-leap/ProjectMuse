@@ -1,0 +1,11 @@
+{
+  "durationSeconds": 225.0,
+  "letterboxColors": ["#181614", "#6F6A60", "#D8D2C4"],
+  "composerName": "George Frideric Handel",
+  "pieceTitle": "Lascia ch'io pianga",
+  "pieceSubtitle": "from Rinaldo · HWV 7b",
+  "audioPath": "audio.wav",
+  "coverPath": "cover.png",
+  "variationStarts": [0],
+  "variationLabels": [""]
+}

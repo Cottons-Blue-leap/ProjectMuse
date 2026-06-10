@@ -7,9 +7,9 @@
 
 ## Concept
 
-- Visualizer name:
-- Relationship to music:
-- Relationship to cover image:
+- Visualizer name: 시리즈 공통 양식 (B 공유 엔진 · ★ 신곡 첫 적용 = props.json + public 주입 + `python muse.py render handel_lascia_chio_pianga`)
+- Relationship to music: 단악장 아리아 (A–B–A' da capo · 225.0s) → variationStarts=[0], variationLabels=[""] (챕터 라벨 미표시)
+- Relationship to cover image: 커버 = Rossetti Proserpine 미쿠 치환 (1254×1254). 레터박스 = **D_farinelli_ivory `#181614 #6F6A60 #D8D2C4`** (코튼 최종 LOCK 2026-06-11 round 2 · 무채=파리넬리 흰색 상징[카스트라토 순수·텅 빈 마음] · 시리즈 첫 무채 = 첫 원곡 성악 예외 면허 · 갤러리 액자 효과 · bar 근백색='하얀 목소리' · round 1 C 브론즈는 superseded · 상세 = art_sources/letterbox_candidates/README.md). bar 색 = #D8D2C4 자동.
 
 ## 시리즈 공통 양식 (변경 X)
 
@@ -58,9 +58,9 @@ bar color는 `letterboxColors[2]` (마지막 stop) 자동 변환 → 명화별 �
 
 ### Audio Inputs
 
-- Master audio path:
-- Audio duration:
-- Audio sample rate / bit depth:
+- Master audio path: `music/masters/Miku_handel_lascia_chio_pianga_master.wav` (→ `video/visualizer/public/audio.wav` 복사 주입)
+- Audio duration: 225.0s (224.998957 · 6750 frames @ 30fps)
+- Audio sample rate / bit depth: 44.1kHz / 24-bit stereo
 
 ### Motion / Amplitude 자료
 
