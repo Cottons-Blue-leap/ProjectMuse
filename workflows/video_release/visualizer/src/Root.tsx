@@ -1,5 +1,6 @@
 import { Composition } from "remotion";
 import { VisualizerComposition, VisualizerProps } from "./VisualizerComposition";
+import { ShortsComposition, ShortsProps } from "./ShortsComposition";
 
 // ──────────────────────────────────────────────────────────────────────────
 // GENERIC shared visualizer root — work-agnostic (s412 통합 양식 B).
@@ -30,19 +31,49 @@ const FALLBACK_PROPS: VisualizerProps = {
   durationSeconds: 60,
 };
 
+// Shorts (9:16) — 본편과 같은 props 주입 양식. works/<id>/shorts/<slug>/props.json
+const FALLBACK_SHORTS_PROPS: ShortsProps = {
+  letterboxColors: ["#1f2c3d", "#4a5a6e", "#b8a673"],
+  audioPath: "audio.wav",
+  coverPath: "cover.png",
+  revealLine1: "This is not an instrument.",
+  revealLine2: "Sung entirely by Hatsune Miku.",
+  revealAccent: "Hatsune Miku",
+  reveal1Sec: 12,
+  reveal2Sec: 15.5,
+  endCardSec: 27,
+  endCredit: "Erik Satie — Gymnopédie No. 1",
+  endCta: "Full version on the channel",
+  durationSeconds: 30,
+};
+
 export const RemotionRoot: React.FC = () => {
   return (
-    <Composition
-      id="MuseVisualizer"
-      component={VisualizerComposition}
-      fps={FPS}
-      width={WIDTH}
-      height={HEIGHT}
-      durationInFrames={Math.round(FPS * 60)}
-      defaultProps={FALLBACK_PROPS}
-      calculateMetadata={async ({ props }) => ({
-        durationInFrames: Math.round(FPS * Number(props.durationSeconds ?? 60)),
-      })}
-    />
+    <>
+      <Composition
+        id="MuseVisualizer"
+        component={VisualizerComposition}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+        durationInFrames={Math.round(FPS * 60)}
+        defaultProps={FALLBACK_PROPS}
+        calculateMetadata={async ({ props }) => ({
+          durationInFrames: Math.round(FPS * Number(props.durationSeconds ?? 60)),
+        })}
+      />
+      <Composition
+        id="MuseShort"
+        component={ShortsComposition}
+        fps={FPS}
+        width={1080}
+        height={1920}
+        durationInFrames={Math.round(FPS * 30)}
+        defaultProps={FALLBACK_SHORTS_PROPS}
+        calculateMetadata={async ({ props }) => ({
+          durationInFrames: Math.round(FPS * Number(props.durationSeconds ?? 30)),
+        })}
+      />
+    </>
   );
 };

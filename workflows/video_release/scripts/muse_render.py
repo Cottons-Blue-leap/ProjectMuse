@@ -11,11 +11,16 @@ props.json + public(audio/cover/fonts)을 주입해 렌더한다. work마다 nod
   python muse.py render <work_id> --still 3500   # 특정 프레임 still png (빠른 시각 점검)
   python muse.py render <work_id> --out <path>   # 출력 경로 지정
   python muse.py render <work_id> --concurrency 4  # 렌더 동시성 (기본 = config의 1)
+  python muse.py render <work_id> --short <slug>   # 9:16 Shorts 렌더 (MuseShort 컴포지션)
 
 전제: 공유 프로젝트에 `npm install` 1회 완료.
 입력 규약 (work별):
   works/<id>/video/visualizer/props.json   — VisualizerProps + durationSeconds
   works/<id>/video/visualizer/public/      — audio.wav · cover.png · fonts/
+입력 규약 (Shorts · --short <slug>):
+  works/<id>/shorts/<slug>/props.json      — ShortsProps + durationSeconds
+  works/<id>/shorts/<slug>/public/         — audio.wav(컷) · cover.png · fonts/
+  출력 기본 = works/<id>/shorts/<slug>/exports/<id>_<slug>.mp4
 설계: workflows/video_release/docs/shared_visualizer_design.md
 """
 from __future__ import annotations
@@ -54,6 +59,8 @@ def main(argv: list[str]) -> int:
     ap.add_argument("--still", type=int, metavar="FRAME", help="특정 프레임 still png")
     ap.add_argument("--out", help="출력 경로 (기본 = exports/<id>_final.mp4)")
     ap.add_argument("--concurrency", type=int, help="렌더 동시성 (기본 = config)")
+    ap.add_argument("--short", metavar="SLUG",
+                    help="9:16 Shorts 렌더 (works/<id>/shorts/<slug>/ 입력 · MuseShort)")
     args = ap.parse_args(argv)
 
     work = ROOT / "works" / args.work_id
@@ -61,8 +68,15 @@ def main(argv: list[str]) -> int:
         print(f"work 없음: {work}", file=sys.stderr)
         return 2
 
-    props = vis_work(args.work_id) / "props.json"
-    public = vis_work(args.work_id) / "public"
+    if args.short:
+        base = work / "shorts" / args.short
+        composition = "MuseShort"
+    else:
+        base = vis_work(args.work_id)
+        composition = COMPOSITION
+
+    props = base / "props.json"
+    public = base / "public"
     for p in (props, public):
         if not p.exists():
             print(f"입력 없음: {p}", file=sys.stderr)
@@ -71,7 +85,7 @@ def main(argv: list[str]) -> int:
         print(f"공유 프로젝트 미설치 — 먼저 `npm install` (in {VIS})", file=sys.stderr)
         return 2
 
-    gate_out = vis_work(args.work_id) / "out"
+    gate_out = base / "out"
     common = [f"--props={props}", f"--public-dir={public}"]
     if args.concurrency:
         common.append(f"--concurrency={args.concurrency}")
@@ -79,17 +93,19 @@ def main(argv: list[str]) -> int:
     if args.still is not None:
         out = Path(args.out) if args.out else gate_out / f"still_{args.still}.png"
         out.parent.mkdir(parents=True, exist_ok=True)
-        cmd = [npx(), "remotion", "still", "src/index.ts", COMPOSITION, str(out),
+        cmd = [npx(), "remotion", "still", "src/index.ts", composition, str(out),
                f"--frame={args.still}", *common]
     else:
         if args.out:
             out = Path(args.out)
         elif args.gate:
             out = gate_out / "gate_check.mp4"
+        elif args.short:
+            out = base / "exports" / f"{args.work_id}_{args.short}.mp4"
         else:
             out = work / "video" / "exports" / f"{args.work_id}_final.mp4"
         out.parent.mkdir(parents=True, exist_ok=True)
-        cmd = [npx(), "remotion", "render", "src/index.ts", COMPOSITION, str(out), *common]
+        cmd = [npx(), "remotion", "render", "src/index.ts", composition, str(out), *common]
 
     print(f"[muse render] {args.work_id} → {out}")
     print(f"  props={props.name}  public={public}")
