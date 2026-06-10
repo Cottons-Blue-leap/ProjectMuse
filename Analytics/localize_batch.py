@@ -124,6 +124,7 @@ PAINTER = {
     "van Gogh": {"ru": "Ван Гога", "zh-Hant": "梵谷", "zh-Hans": "梵高"},
     "Vermeer": {"ru": "Вермеера", "zh-Hant": "維米爾", "zh-Hans": "维米尔"},
     "Renoir": {"ru": "Ренуара", "zh-Hant": "雷諾瓦", "zh-Hans": "雷诺阿"},
+    "Rossetti": {"ru": "Россетти", "zh-Hant": "羅塞蒂", "zh-Hans": "罗塞蒂"},
 }
 def painter_name(lang, en):
     return PAINTER.get(en, {}).get(lang, en)
@@ -348,6 +349,36 @@ WORKS = [
         },
         "tag_piece": {"es": "#Minueto", "pt": "#Minueto", "de": "#Menuett", "fr": "#Menuet", "ru": "#Менуэт", "zh-Hant": "#小步舞曲", "zh-Hans": "#小步舞曲"},
     },
+    {
+        "vid": "sExC_ygSrSk", "slug": "handel_lascia_chio_pianga", "count": 13, "year": "1711",
+        "style": "lead", "welcome": False, "subscribe": False, "era": "baroque",
+        # 작곡가 표기 = 로케일 정본: de/es/pt 'Händel' · fr 'Haendel' · EN 귀화 철자는 en sidecar 전용
+        "surname": {"es": "Händel", "pt": "Händel", "de": "Händel", "fr": "Haendel",
+                    "ru": "Гендель", "zh-Hant": "韓德爾", "zh-Hans": "亨德尔"},
+        "full": {"es": "Georg Friedrich Händel", "pt": "Georg Friedrich Händel", "de": "Georg Friedrich Händel",
+                 "fr": "Georg Friedrich Haendel", "ru": "Георг Фридрих Гендель",
+                 "zh-Hant": "格奧爾格·弗里德里希·韓德爾", "zh-Hans": "格奥尔格·弗里德里希·亨德尔"},
+        # 곡명 = 코튼 원칙 (세계 표준 = 이탈리아어 원제 · 익숙 통용명 있는 로케일만 번역명)
+        "piece": {"es": "Lascia ch'io pianga", "pt": "Lascia ch'io pianga", "de": "Lascia ch'io pianga",
+                  "fr": "Lascia ch'io pianga", "ru": "Lascia ch'io pianga",
+                  "zh-Hant": "讓我哭泣吧", "zh-Hans": "让我痛哭吧"},  # zh-Hant=讓我哭泣吧 (TW 통용·zh위키 표제 · QA 게이트 수정) / zh-Hans=让我痛哭吧 (대륙 통용·百度百科)
+        "painter": "Rossetti", "painting": "Proserpine", "p_year": "1874",
+        "cover_url": "https://www.tate.org.uk/art/artworks/rossetti-proserpine-n05064",
+        "curator": None,
+        # custom_hook (코튼 LOCK 2026-06-11 · 1행 epithet "울지 마 미쿠야" + 간결 미쿠 라인 · 시리즈 첫 가사 곡).
+        # EN/KO/JA = release/ hand-sidecar 정본. 7언어 번역 = 외부 QA subagent 게이트 (l10n cross-verification).
+        "custom_hook": {
+            "es": "No llores, Miku.\n\nAhora cantan trece Mikus —\nGeorg Friedrich Händel - Lascia ch'io pianga, de la ópera Rinaldo (1711).",
+            "pt": "Não chore, Miku.\n\nAgora cantam treze Mikus —\nGeorg Friedrich Händel - Lascia ch'io pianga, da ópera Rinaldo (1711).",
+            "de": "Wein nicht, Miku.\n\nJetzt singen dreizehn Mikus —\nGeorg Friedrich Händel - Lascia ch'io pianga, aus der Oper Rinaldo (1711).",
+            "fr": "Ne pleure pas, Miku.\n\nÀ présent, treize Mikus chantent —\nGeorg Friedrich Haendel - Lascia ch'io pianga, de l'opéra Rinaldo (1711).",
+            "ru": "Не плачь, Мику.\n\nТеперь поют тринадцать Мику —\nГеорг Фридрих Гендель - Lascia ch'io pianga, из оперы «Ринальдо» (1711).",
+            "zh-Hant": "別哭，初音未來。\n\n如今由十三位初音未來獻唱——\n格奧爾格·弗里德里希·韓德爾 - 讓我哭泣吧（歌劇《里納爾多》，1711）。",
+            "zh-Hans": "别哭，初音未来。\n\n如今由十三位初音未来献唱——\n格奥尔格·弗里德里希·亨德尔 - 让我痛哭吧（歌剧《里纳尔多》，1711）。",
+        },
+        "tag_piece": {"es": "#LasciaChIoPianga", "pt": "#LasciaChIoPianga", "de": "#LasciaChIoPianga", "fr": "#LasciaChIoPianga",
+                      "ru": "#LasciaChIoPianga", "zh-Hant": "#讓我哭泣吧", "zh-Hans": "#让我痛哭吧"},
+    },
 ]
 
 # ── hashtags ───────────────────────────────────────────────────────────────
@@ -370,6 +401,8 @@ TAG_COMPOSER = {  # composer hashtag (no space) per lang
     "Chopin": {"ru": "#Шопен", "zh-Hant": "#蕭邦", "zh-Hans": "#肖邦"},
     "Pachelbel": {"ru": "#Пахельбель", "zh-Hant": "#帕海貝爾", "zh-Hans": "#帕赫贝尔"},
     "Tchaikovsky": {"ru": "#Чайковский", "zh-Hant": "#柴可夫斯基", "zh-Hans": "#柴可夫斯基"},
+    # es-key surname = latin 정본 키 (Handel = es/pt/de 'Händel' · fr 표기는 명시 오버라이드)
+    "Händel": {"fr": "#Haendel", "ru": "#Гендель", "zh-Hant": "#韓德爾", "zh-Hans": "#亨德尔"},
 }
 def composer_tag(lang, surname_en):
     return TAG_COMPOSER.get(surname_en, {}).get(lang, "#" + surname_en.replace(" ", ""))
