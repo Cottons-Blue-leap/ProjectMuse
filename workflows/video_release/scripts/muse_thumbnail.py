@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
-"""Atelier Miku Acappella 썸네일 생성기 — v5 양식 (코튼 LOCK s357).
+"""Atelier Miku Acappella 썸네일 생성기 — v5 양식 (코튼 LOCK s357) + v5.2 텍스트 헤일로 (코튼 LOCK 2026-06-11).
+
+v5.2 (2026-06-11): 텍스트 렌더만 변경 — 4px 하드섀도 → 소프트 헤일로(blur7×3겹) + 2px 크리스프 섀도.
+  사유 = 배경 명화에 따라 시인성 들쭉날쭉 (스크림이 텍스트 최상단에서 알파 ~10-30) → 글자 주변
+  local 대비로 균일화. 스크림·사이즈·레이아웃·색 = v5 LOCK 그대로 (커버 불침범 — v5.1 적응형
+  스크림 밴드는 '커버 잘리는 느낌'으로 코튼 반려). 라이브 8편 + ⑨ 일괄 재생성·스왑 (2026-06-11).
 
 v5 양식 (3-정보 · 좌하단 단일 블록):
   ① 명화 커버 배경 (커버 속 미쿠를 box로 줌)
@@ -25,7 +30,7 @@ per-song 가변값 = `box`(커버 안 미쿠 crop 0~1) + composer + piece. 신�
 import sys
 import argparse
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -86,6 +91,12 @@ REGISTRY = {
                        # 균형 위해 우측 배치). 코튼 헤드룸 미세조정 (2026-06-08): 0.05 과함→0.025 → "조금만 더 올려"
                        # → 0.0125 시프트 (y 0.10→0.0875·0.70→0.6875) = 리본 위 최소 여백. piece="Minuet" · 풀네임 Luigi Boccherini.
                        box=(0.12, 0.0875, 0.74, 0.6875), composer="Luigi Boccherini", piece="Minuet"),
+    "handel_lascia": dict(dir="handel_lascia_chio_pianga",
+                       cover="video/cover/Miku_rossetti_proserpine_1874_gap.png",
+                       # box = B_wide (코튼 2026-06-11 · B2 얼굴우측 후보와 비교 후 확정): 얼굴 + 석류(서사 소품) +
+                       # 담쟁이 + PROSERPINA 명문 패널 동시 생존. B2(우측 줌·box 0.0,0.14,0.76,0.5675)는 석류가
+                       # 곡명 줄에 가려 반려 — 석류가 얼굴 바로 아래라 '얼굴 우측+석류' 양립 불가 구도.
+                       box=(0.0, 0.04, 1.0, 0.72), composer="George Frideric Handel", piece="Lascia ch'io pianga"),
 }
 
 _probe = ImageDraw.Draw(Image.new("RGB", (8, 8)))
@@ -112,18 +123,36 @@ def scrim(bg, start, amax=226):
     return Image.alpha_composite(bg.convert("RGBA"), ov).convert("RGB")
 
 
-def sh(d, x, y, t, f, fill, off=4):
-    """드롭섀도 + 본 텍스트."""
-    d.text((x+off, y+off), t, font=f, fill=(0, 0, 0))
-    d.text((x, y), t, font=f, fill=fill)
+def _draw_run(d, x, y, t, f, fill, track=None):
+    """자간(track) 옵션 텍스트 1줄."""
+    if track is None:
+        d.text((x, y), t, font=f, fill=fill)
+    else:
+        for ch in t:
+            d.text((x, y), ch, font=f, fill=fill)
+            x += tw(ch, f) + track
 
 
-def sh_sp(d, x, y, t, f, fill, sp, off=4):
-    """자간 적용 드롭섀도 텍스트."""
-    for ch in t:
-        d.text((x+off, y+off), ch, font=f, fill=(0, 0, 0))
-        d.text((x, y), ch, font=f, fill=fill)
-        x += tw(ch, f) + sp
+def halo_text(base, items, blur=7, layers=3, alpha=200, off=2):
+    """v5.2 텍스트 파이프라인 (코튼 LOCK 2026-06-11): 소프트 헤일로 + 미세 크리스프 섀도 + 본문.
+
+    구 4px 하드섀도 대체. 헤일로 = 글자 주변 ~10px만 은은하게 어두워지는 local 대비
+    → 배경(명화) 불침범 + 어떤 커버에서도 최소 가독 보장 (배경 의존 들쭉날쭉 해소).
+    items = [(x, y, text, font, fill, track|None), ...]
+    """
+    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    gd = ImageDraw.Draw(glow)
+    for x, y, t, f, _fill, track in items:
+        _draw_run(gd, x + 1, y + 2, t, f, (0, 0, 0, alpha), track)
+    glow = glow.filter(ImageFilter.GaussianBlur(blur))
+    out = base.convert("RGBA")
+    for _ in range(layers):
+        out = Image.alpha_composite(out, glow)
+    d = ImageDraw.Draw(out)
+    for x, y, t, f, fill, track in items:
+        _draw_run(d, x + off, y + off, t, f, (0, 0, 0, 255), track)
+        _draw_run(d, x, y, t, f, fill, track)
+    return out.convert("RGB")
 
 
 def render(cover_path, box, composer, piece, out_path):
@@ -157,19 +186,17 @@ def render(cover_path, box, composer, piece, out_path):
     piece_y, aca_y, miku_y = B_piece - asc_p, B_aca - asc_a, B_miku - asc_m
 
     bg = scrim(bg, miku_y - 46)
-    d = ImageDraw.Draw(bg)
 
-    # 좌측 시각 정렬: x = LEFT - 좌 side-bearing
-    sh(d, LEFT - mb[0], miku_y, "初音ミク", mf, IVORY)
-    sh_sp(d, LEFT - ab[0], aca_y, "A CAPPELLA", af, MINT, ACA_TRACK)
-
-    # 인라인 타이틀 (곡명 · 작곡가 — 같은 baseline)
-    x = LEFT - pb[0]
-    sh(d, x, piece_y, piece, pf, WHITE)
-    x += tw(piece, pf) + 20
-    sh(d, x, B_piece - asc_d, "·", df, DIM)
-    x += tw("·", df) + 20
-    sh(d, x, B_piece - asc_c, composer, cf, DIM)
+    # 좌측 시각 정렬: x = LEFT - 좌 side-bearing · 인라인(곡명·작곡가)은 같은 baseline
+    x_inline = LEFT - pb[0]
+    items = [
+        (LEFT - mb[0], miku_y, "初音ミク", mf, IVORY, None),
+        (LEFT - ab[0], aca_y, "A CAPPELLA", af, MINT, ACA_TRACK),
+        (x_inline, piece_y, piece, pf, WHITE, None),
+        (x_inline + tw(piece, pf) + 20, B_piece - asc_d, "·", df, DIM, None),
+        (x_inline + tw(piece, pf) + 20 + tw("·", df) + 20, B_piece - asc_c, composer, cf, DIM, None),
+    ]
+    bg = halo_text(bg, items)
 
     Path(out_path).parent.mkdir(parents=True, exist_ok=True)
     bg.save(out_path, quality=92)

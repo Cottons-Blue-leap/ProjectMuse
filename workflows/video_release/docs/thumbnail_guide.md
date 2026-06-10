@@ -3,6 +3,22 @@
 > Locked s357 (2026-05-25, 코튼). The thumbnail is a **separate marketing surface** from the
 > in-video visualizer — optimized for *recognition at feed scale*, not a copy of the video frame.
 > Supersedes v4 (wordmark / mint two-line / top badge). v4 files kept for rollback (not overwritten).
+> **+ v5.2 text halo (2026-06-11, 코튼 LOCK)** — see §v5.2 below. 신곡 default.
+
+## v5.2 — 텍스트 소프트 헤일로 (2026-06-11 코튼 LOCK)
+
+**변경 = 텍스트 렌더만**: 구 4px 하드 드롭섀도 → **소프트 헤일로 (black blur7 × 3겹) + 2px 크리스프
+섀도 + 본문**. 스크림·사이즈·레이아웃·색 = v5 LOCK 전부 불변.
+
+- **사유**: 배경 명화에 따라 텍스트 시인성 들쭉날쭉 (코튼 지적) — 근인 = 그라데이션 스크림이 텍스트
+  최상단(初音ミク 줄)에서 알파 ~10-30으로 거의 투명 → 그 줄이 그림 맨몸 위에 떠서 배경 복불복.
+- **해법 원리**: 헤일로는 글자 주변 ~10px만 은은하게 어두워지는 *local* 대비 → 어떤 커버에서도 최소
+  가독 보장 + **커버(명화) 불침범**.
+- **반려 경로 (기록)**: v5.1 적응형 스크림(텍스트 존 휘도 실측 → 목표 휘도까지 알파 자동 + 숄더
+  프로파일)은 균일화는 더 강했으나 밝은 커버 하단이 밴드로 어두워짐 → 코튼 "커버가 잘리는 느낌이라
+  불쾌" 반려. **커버 존중 > 최대 대비** = 이 채널의 우선순위 (정제미 정합).
+- **적용**: 2026-06-11 라이브 8편 + ⑨ 보케리니(예약) 일괄 재생성 + `set-thumbnail` 스왑 완료.
+  구판 로컬 백업 = `works/*/video/thumbnail_v5_prehalo.bak.jpg` (사이드카 보존). 신곡 = 자동 (생성기 default).
 
 ## Why v5 (the recognition diagnosis)
 
