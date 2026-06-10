@@ -1,0 +1,14 @@
+{
+  "durationSeconds": 30.0,
+  "letterboxColors": ["#1f2c3d", "#4a5a6e", "#b8a673"],
+  "audioPath": "audio.wav",
+  "coverPath": "cover.png",
+  "revealLine1": "This is not an instrument.",
+  "revealLine2": "Sung entirely by Hatsune Miku.",
+  "revealAccent": "Hatsune Miku",
+  "reveal1Sec": 12.0,
+  "reveal2Sec": 15.5,
+  "endCardSec": 27.0,
+  "endCredit": "Erik Satie — Gymnopédie No. 1",
+  "endCta": "Full version on the channel"
+}
