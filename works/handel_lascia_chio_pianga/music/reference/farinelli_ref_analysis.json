@@ -1,0 +1,212 @@
+﻿{
+ "file": "farinelli_lascia_ref.wav",
+ "register": {
+  "f0_median_Hz": 472.8,
+  "f0_p5_Hz": 210.6,
+  "f0_p95_Hz": 912.0
+ },
+ "n_sustained_notes": 46,
+ "vibrato_summary": {
+  "rate_Hz_median": 6.07,
+  "halfdepth_cents_median": 68.2,
+  "onset_delay_s_median": 0.01,
+  "attack_scoop_cents_median": -7.9
+ },
+ "breath_gaps": {
+  "count": 114,
+  "dur_s_median": 0.28
+ },
+ "phrase_dyn_span_dB_median": 14.9,
+ "longest_notes": [
+  {
+   "t": 45.82,
+   "dur_s": 2.32,
+   "f0_Hz": 479.4,
+   "vib_rate_Hz": 5.6,
+   "vib_halfdepth_cents": 81.4,
+   "vib_onset_delay_s": 0.04,
+   "attack_scoop_cents": -56.1
+  },
+  {
+   "t": 115.72,
+   "dur_s": 2.26,
+   "f0_Hz": 652.0,
+   "vib_rate_Hz": 6.19,
+   "vib_halfdepth_cents": 55.8,
+   "vib_onset_delay_s": 0.0,
+   "attack_scoop_cents": -190.8
+  },
+  {
+   "t": 177.92,
+   "dur_s": 1.92,
+   "f0_Hz": 479.3,
+   "vib_rate_Hz": 6.23,
+   "vib_halfdepth_cents": 45.7,
+   "vib_onset_delay_s": 0.04,
+   "attack_scoop_cents": 240.2
+  },
+  {
+   "t": 72.36,
+   "dur_s": 1.88,
+   "f0_Hz": 482.6,
+   "vib_rate_Hz": 5.87,
+   "vib_halfdepth_cents": 82.5,
+   "vib_onset_delay_s": 0.0,
+   "attack_scoop_cents": 2.8
+  },
+  {
+   "t": 124.47,
+   "dur_s": 1.84,
+   "f0_Hz": 567.4,
+   "vib_rate_Hz": 7.63,
+   "vib_halfdepth_cents": 49.2,
+   "vib_onset_delay_s": 0.3,
+   "attack_scoop_cents": 120.4
+  },
+  {
+   "t": 223.44,
+   "dur_s": 1.8,
+   "f0_Hz": 651.7,
+   "vib_rate_Hz": 5.57,
+   "vib_halfdepth_cents": 97.6,
+   "vib_onset_delay_s": 0.04,
+   "attack_scoop_cents": -132.4
+  },
+  {
+   "t": 148.74,
+   "dur_s": 1.65,
+   "f0_Hz": 739.5,
+   "vib_rate_Hz": 6.06,
+   "vib_halfdepth_cents": 78.6,
+   "vib_onset_delay_s": 0.0,
+   "attack_scoop_cents": -346.2
+  },
+  {
+   "t": 69.31,
+   "dur_s": 1.36,
+   "f0_Hz": 549.8,
+   "vib_rate_Hz": 6.62,
+   "vib_halfdepth_cents": 82.6,
+   "vib_onset_delay_s": 0.0,
+   "attack_scoop_cents": 30.0
+  },
+  {
+   "t": 152.34,
+   "dur_s": 1.32,
+   "f0_Hz": 408.1,
+   "vib_rate_Hz": 6.04,
+   "vib_halfdepth_cents": 80.5,
+   "vib_onset_delay_s": 0.17,
+   "attack_scoop_cents": 30.8
+  },
+  {
+   "t": 136.13,
+   "dur_s": 1.29,
+   "f0_Hz": 472.9,
+   "vib_rate_Hz": 6.98,
+   "vib_halfdepth_cents": 67.5,
+   "vib_onset_delay_s": 0.46,
+   "attack_scoop_cents": -10.7
+  },
+  {
+   "t": 127.16,
+   "dur_s": 1.27,
+   "f0_Hz": 406.1,
+   "vib_rate_Hz": 5.53,
+   "vib_halfdepth_cents": 94.2,
+   "vib_onset_delay_s": 0.0,
+   "attack_scoop_cents": -63.6
+  },
+  {
+   "t": 18.42,
+   "dur_s": 1.24,
+   "f0_Hz": 486.4,
+   "vib_rate_Hz": 6.45,
+   "vib_halfdepth_cents": 79.9,
+   "vib_onset_delay_s": 0.21,
+   "attack_scoop_cents": -64.5
+  }
+ ],
+ "breath_gap_list_first20": [
+  {
+   "t": 11.12,
+   "dur_s": 0.26
+  },
+  {
+   "t": 13.98,
+   "dur_s": 0.24
+  },
+  {
+   "t": 16.21,
+   "dur_s": 0.21
+  },
+  {
+   "t": 16.46,
+   "dur_s": 0.3
+  },
+  {
+   "t": 17.25,
+   "dur_s": 0.73
+  },
+  {
+   "t": 18.03,
+   "dur_s": 0.21
+  },
+  {
+   "t": 18.29,
+   "dur_s": 0.14
+  },
+  {
+   "t": 20.03,
+   "dur_s": 0.41
+  },
+  {
+   "t": 20.85,
+   "dur_s": 0.43
+  },
+  {
+   "t": 23.75,
+   "dur_s": 0.12
+  },
+  {
+   "t": 26.48,
+   "dur_s": 0.35
+  },
+  {
+   "t": 28.96,
+   "dur_s": 0.21
+  },
+  {
+   "t": 29.22,
+   "dur_s": 0.23
+  },
+  {
+   "t": 30.52,
+   "dur_s": 0.35
+  },
+  {
+   "t": 32.65,
+   "dur_s": 0.51
+  },
+  {
+   "t": 34.68,
+   "dur_s": 0.63
+  },
+  {
+   "t": 35.34,
+   "dur_s": 0.4
+  },
+  {
+   "t": 36.05,
+   "dur_s": 0.21
+  },
+  {
+   "t": 38.74,
+   "dur_s": 0.32
+  },
+  {
+   "t": 39.15,
+   "dur_s": 0.48
+  }
+ ]
+}
