@@ -327,7 +327,7 @@ WORKS = [
         "tag_piece": {"es": "#HadaDeAzúcar", "pt": "#FadaAçucarada", "de": "#Zuckerfee", "fr": "#FéeDragée", "ru": "#ФеяДраже", "zh-Hant": "#糖梅仙子", "zh-Hans": "#糖梅仙子"},
     },
     {
-        "vid": "X9xxOeqi2Sk", "slug": "boccherini_minuet", "count": 9, "year": "1771",
+        "vid": "10ZSa-TPOC4", "slug": "boccherini_minuet", "count": 9, "year": "1771",
         "style": "lead", "welcome": False, "subscribe": False, "era": "classical",
         "surname": L("Boccherini", "Боккерини", "鮑凱利尼", "博凯里尼"),
         "full": L("Luigi Boccherini", "Луиджи Боккерини", "路易吉·鮑凱利尼", "路易吉·博凯里尼"),
@@ -350,7 +350,7 @@ WORKS = [
         "tag_piece": {"es": "#Minueto", "pt": "#Minueto", "de": "#Menuett", "fr": "#Menuet", "ru": "#Менуэт", "zh-Hant": "#小步舞曲", "zh-Hans": "#小步舞曲"},
     },
     {
-        "vid": "sExC_ygSrSk", "slug": "handel_lascia_chio_pianga", "count": 13, "year": "1711",
+        "vid": "xHzbkP_Wcm0", "slug": "handel_lascia_chio_pianga", "count": 13, "year": "1711",
         "style": "lead", "welcome": False, "subscribe": False, "era": "baroque",
         # 작곡가 표기 = 로케일 정본: de/es/pt 'Händel' · fr 'Haendel' · EN 귀화 철자는 en sidecar 전용
         "surname": {"es": "Händel", "pt": "Händel", "de": "Händel", "fr": "Haendel",
