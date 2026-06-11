@@ -89,7 +89,15 @@ python Analytics/youtube_analytics.py report --days 7 # 최근 7일
 | `snapshots.csv` 외 3종 | **시계열 CSV** (채널+영상별 / 트래픽 / 지역 / 검색어) · 측정할 때마다 한 줄씩 누적 |
 | `channel_analysis.xlsx` | **Excel 분석 워크북** (개요·영상별·추이[차트]·트래픽[차트]·지역검색·원자료) · CSV에서 재생성 |
 
-- **운영 방식**: 주 1회 같은 요일에 `report` 실행 → CSV에 측정 row 누적 → md/xlsx 자동 재생성. 측정이 쌓일수록 리포트 '한 줄 현황'에 **지난주 대비 증감**이 뜨고, Excel '추이' 차트가 자란다.
+- **운영 방식 — 주간 수집 의례 (매주 일요일 · 2026-06-12 확정)**: CSV에 측정 row 누적 → md/xlsx 자동 재생성. 측정이 쌓일수록 리포트 '한 줄 현황'에 **지난주 대비 증감**이 뜨고, Excel '추이' 차트가 자란다.
+  1. **(코튼)** Studio → 분석 → **도달범위** 탭 → 기간 **28일** → 채널 + 영상별 **노출·노출 CTR·조회** 숫자를 MOKA에게 전달 (이 셋은 API 밖이라 사람 손이 유일 경로).
+  2. **(MOKA)** `python Analytics/youtube_analytics.py report` 실행 — **`--days` 주지 말 것** = 28일 default 고정(윈도우 일관성 = delta 비교의 전제. `load_prev_channel`이 같은 `window_days`끼리만 비교함).
+  3. **(MOKA)** 받은 Studio 숫자를 `studio_reach.csv`에 행 추가 (`measured_on`=그 일요일 · `window_days`=28 · `thumbnail_era`=현 썸네일 버전 태그).
+  4. **(MOKA)** `report` 재실행 → §7(노출/CTR)·xlsx 자동 갱신.
+  5. **(MOKA)** 지난주 대비 **핵심 변화만 3줄 브리핑** (**누적 성장[총 구독자 추이]** · 노출/CTR era 효과 · 신규 표면[예: 일본]). 단순 숫자 나열 X = Studio 중복.
+  - **수집 지표 2층**: ⓐ **누적 성장**(총 구독자·총 조회수·영상수 = lifetime · Data API `channels.list(mine=True)` · OAuth `youtube.readonly`) = 채널 성장의 절대 곡선 → 리포트 §1 최상단 + xlsx "추이" 시트 곡선. ⓑ **28일 윈도우 활동량**(그 기간 조회·신규구독·시청) = 최근 활성도. 둘은 별개 — 혼동 금지(예: 윈도우 "신규구독 +9"는 총 구독자 증감이 아님).
+  - **28일 고정**: 7일 윈도우는 신곡 직후 스팟체크 전용 — 추세선엔 안 섞는다(섞으면 가짜 delta).
+  - **OAuth = 프로덕션 게시 상태** (2026-06-12 코튼 확인) → refresh token 안정. testing 시절의 7일 만료 리스크 해소 = 주1회 못 지켜도 토큰 안 죽음.
 - 같은 날 두 번 돌리면 그날 측정은 **갈아끼움**(중복 없음).
 - ⚠️ **노출수·CTR은 여전히 API 밖** → Studio **'도달범위'** 탭 측정값을 `studio_reach.csv`에 **행으로 추가**하면 md **§7이 자동 렌더**(측정 2회 이상이면 pre/post era 비교 표까지). 더 이상 md를 손으로 안 채워도 됨(휘발 방지). (xlsx '개요'의 노란 칸은 아직 수동.)
   - `studio_reach.csv` 양식: `measured_on,window_days,start_date,end_date,scope,video_id,impressions,ctr_pct,views,thumbnail_era` · scope=`CHANNEL` 또는 영상 표시명 · era=썸네일 버전 태그(`pre_v4`/`post_v4` 등). report가 생성하는 게 아니라 **손으로 관리하는 입력 파일**.

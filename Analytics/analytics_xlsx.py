@@ -281,6 +281,39 @@ def build(analytics_dir):
     chart.set_categories(cats)
     ws3.add_chart(chart, f"A{last + 3}")
 
+    # ---- 누적 성장 추이 (lifetime · 채널 성장의 절대 곡선) ----
+    grow_rows = [r for r in snaps
+                 if r.get("scope") == "CHANNEL" and r.get("total_subscribers")]
+    gtop = last + 20  # 조회수 차트 아래
+    _set(ws3, gtop, 1, "누적 성장 추이 (lifetime · 측정 회차별)", font=TITLE_F, border=False)
+    _set(ws3, gtop + 1, 1,
+         "총 구독자·총 조회수·영상수 = 채널 성장의 절대 곡선 (28일 윈도우 활동량과 별개).",
+         font=SUB_F, border=False)
+    ghtop = gtop + 3
+    for j, c in enumerate(["측정일", "총 구독자", "총 조회수", "영상수"]):
+        _set(ws3, ghtop, 1 + j, c, font=H_F, fill=H_FILL, align=LEFT if j == 0 else CENTER)
+    for i, row in enumerate(grow_rows):
+        rr = ghtop + 1 + i
+        fill = ALT_FILL if i % 2 else None
+        _set(ws3, rr, 1, row["measured_on"], font=BODY, fill=fill)
+        _set(ws3, rr, 2, _num(row.get("total_subscribers")), font=BODY, fmt=INT_FMT, align=RIGHT, fill=fill)
+        _set(ws3, rr, 3, _num(row.get("total_views")), font=BODY, fmt=INT_FMT, align=RIGHT, fill=fill)
+        _set(ws3, rr, 4, _num(row.get("total_videos")), font=BODY, fmt=INT_FMT, align=RIGHT, fill=fill)
+    glast = ghtop + len(grow_rows)
+    if grow_rows:
+        gchart = LineChart()
+        gchart.title = "누적 총 구독자 추이"
+        gchart.style = 12
+        gchart.y_axis.title = "총 구독자"
+        gchart.x_axis.title = "측정일"
+        gchart.height = 8
+        gchart.width = 18
+        gdata = Reference(ws3, min_col=2, max_col=2, min_row=ghtop, max_row=glast)
+        gcats = Reference(ws3, min_col=1, min_row=ghtop + 1, max_row=glast)
+        gchart.add_data(gdata, titles_from_data=True)
+        gchart.set_categories(gcats)
+        ws3.add_chart(gchart, f"A{glast + 3}")
+
     # ================= 4) 트래픽 =================
     ws4 = wb.create_sheet("트래픽")
     ws4.sheet_view.showGridLines = False

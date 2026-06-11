@@ -70,7 +70,7 @@ VIDEOS = {
     "9EvpHXE3D1s": "Chopin - Nocturne Op.9-2",
     "B9ENEwjgAhc": "Pachelbel - Canon in D",
     "759VCWOtC2w": "Tchaikovsky - Sugar Plum Fairy",
-    "X9xxOeqi2Sk": "Boccherini - Minuet",
+    "10ZSa-TPOC4": "Boccherini - Minuet",
 }
 
 # `report` 명령 산출물 자리 (스크립트와 같은 Analytics/ 폴더에 함께 둠).
@@ -348,12 +348,39 @@ SNAP_FIELDS = [
     "measured_on", "window_days", "start_date", "end_date",
     "scope", "video_id", "views", "watch_minutes", "avg_view_sec",
     "avg_view_pct", "likes", "comments", "subs_gained", "shares", "like_rate_pct",
+    # 누적 성장 (CHANNEL 행에만 · lifetime · Data API) — 영상행은 공란
+    "total_subscribers", "total_views", "total_videos",
 ]
 TRAFFIC_FIELDS = ["measured_on", "window_days", "source_type", "source_label",
                   "views", "watch_minutes", "avg_view_sec", "share_pct"]
 GEO_FIELDS = ["measured_on", "window_days", "country", "country_label",
               "views", "avg_view_pct"]
 SEARCH_FIELDS = ["measured_on", "window_days", "query", "views"]
+
+
+def fetch_channel_totals(creds):
+    """채널 lifetime 누적 통계 (총 구독자·총 조회수·영상수) — YouTube Data API.
+
+    Analytics API의 윈도우 활동량(그 28일간 신규구독·조회)과 **별개** =
+    채널 성장의 절대 곡선(계속 우상향이 정상). 성장 모니터링의 본체.
+    `youtube.readonly` 스코프로 OAuth 호출 → API key·채널ID 불필요(mine=True).
+    실패해도 측정 전체를 죽이지 않게 빈 dict 폴백(성장지표만 공란)."""
+    try:
+        yt = build("youtube", "v3", credentials=creds)
+        resp = yt.channels().list(part="statistics", mine=True).execute()
+        items = resp.get("items", [])
+        if not items:
+            print("  ⚠️ 채널 통계 응답 비어 있음 (성장지표 공란)")
+            return {}
+        s = items[0].get("statistics", {})
+        return {
+            "total_subscribers": s.get("subscriberCount", ""),
+            "total_views": s.get("viewCount", ""),
+            "total_videos": s.get("videoCount", ""),
+        }
+    except Exception as e:  # noqa: BLE001 — 어떤 API 오류든 측정은 계속
+        print(f"  ⚠️ 채널 lifetime 통계 fetch 실패 (성장지표 공란): {e}")
+        return {}
 
 
 def collect_snapshot(yta, start, end, top=25):
@@ -408,15 +435,22 @@ def _upsert_csv(path, fieldnames, new_rows, measured_on):
             w.writerow(row)
 
 
-def load_prev_channel(measured_on):
-    """오늘 이전 가장 최근 CHANNEL 스냅샷 (delta 계산용)."""
+def load_prev_channel(measured_on, window=None):
+    """오늘 이전 가장 최근 CHANNEL 스냅샷 (delta 계산용).
+
+    window 지정 시 **같은 window_days끼리만** 비교한다 — 28일↔7일 윈도우가
+    섞이면 델타가 깨지므로(예: 28일 586 vs 7일 122 = 가짜 -464) 동일 창만 본다.
+    같은 창의 이전 측정이 없으면 None (리포트는 '비교 대상 없음'으로 표시)."""
     path = ANALYTICS_DIR / "snapshots.csv"
     if not path.exists():
         return None
     prev = None
+    win = str(window) if window is not None else None
     with path.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
             if row.get("scope") == "CHANNEL" and row.get("measured_on") != measured_on:
+                if win is not None and row.get("window_days") != win:
+                    continue
                 if prev is None or row["measured_on"] > prev["measured_on"]:
                     prev = row
     return prev
@@ -424,6 +458,7 @@ def load_prev_channel(measured_on):
 
 def write_csvs(data, measured_on, window, start, end):
     ch = data["channel"]
+    totals = data.get("channel_totals", {})
     snap_rows = []
     if ch:
         snap_rows.append({
@@ -435,6 +470,9 @@ def write_csvs(data, measured_on, window, start, end):
             "likes": ch.get("likes", ""), "comments": ch.get("comments", ""),
             "subs_gained": ch.get("subscribersGained", ""), "shares": ch.get("shares", ""),
             "like_rate_pct": _pct(ch.get("likes"), ch.get("views")),
+            "total_subscribers": totals.get("total_subscribers", ""),
+            "total_views": totals.get("total_views", ""),
+            "total_videos": totals.get("total_videos", ""),
         })
     skipped = []
     for v in data["videos"]:
@@ -626,13 +664,20 @@ def render_markdown(data, measured_on, window, start, end, prev):
 
     # 1. 한 줄 현황
     L.append("## 1. 한 줄 현황")
+    totals = data.get("channel_totals", {})
+    if totals.get("total_subscribers"):
+        tsub = totals.get("total_subscribers")
+        dsub = _delta(tsub, prev.get("total_subscribers")) if prev else ""
+        grow = f" (지난 측정 대비 {dsub})" if dsub else ""
+        L.append(f"- 📈 **누적 성장 (lifetime)**: 총 구독자 **{fmt_int(tsub)}**{grow} · "
+                 f"총 조회수 {fmt_int(totals.get('total_views'))} · 영상 {totals.get('total_videos','?')}편")
     if prev:
         dv = _delta(views, prev.get("views"))
         ds = _delta(subs, prev.get("subs_gained"))
-        cmp_line = f"지난 측정({prev.get('measured_on')}) 대비 — 조회 {dv} · 구독 {ds}"
+        cmp_line = f"지난 측정({prev.get('measured_on')}) 대비 — 조회 {dv} · 신규구독 {ds}"
     else:
         cmp_line = "첫 측정 — 비교 대상 없음 (다음 주부터 증감 표시)"
-    L.append(f"- **조회 {views}** · 좋아요율 {like_rate}% · 평균 시청률 {avg_pct}% · 구독 +{subs}")
+    L.append(f"- **조회 {views}** · 좋아요율 {like_rate}% · 평균 시청률 {avg_pct}% · 신규구독 +{subs}  ⟨최근 {window}일 활동⟩")
     L.append(f"- {cmp_line}")
     L.append(f"- 유입 구조: **추천 영상 {suggested}%** 주력 · 검색 {search_sh}% · 일본 유입 **{jp_line}**")
     L.append("")
@@ -717,11 +762,12 @@ def render_markdown(data, measured_on, window, start, end, prev):
     return path
 
 
-def report(yta, start, end, window, top=25):
+def report(yta, start, end, window, top=25, creds=None):
     measured_on = dt.date.today().isoformat()
     print(f"\n[report] 스냅샷 수집 중 … 기간 {start} ~ {end}")
     data = collect_snapshot(yta, start, end, top=top)
-    prev = load_prev_channel(measured_on)
+    data["channel_totals"] = fetch_channel_totals(creds) if creds else {}
+    prev = load_prev_channel(measured_on, window)
     write_csvs(data, measured_on, window, start, end)
     md = render_markdown(data, measured_on, window, start, end, prev)
     print(f"  CSV:      {(ANALYTICS_DIR / 'snapshots.csv')}")
@@ -758,7 +804,7 @@ def main():
 
     cmd = args.command
     if cmd == "report":
-        report(yta, start, end, args.days, args.top)
+        report(yta, start, end, args.days, args.top, creds=creds)
         return
 
     scope = f"video {args.video}" if args.video else "채널 전체"
