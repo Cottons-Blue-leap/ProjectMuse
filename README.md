@@ -3,6 +3,8 @@
 Project Muse is organized as a chain of small workflows around shared work
 projects.
 
+> **운영 메타 단일 진입점** (흩어진 문서 종합): 전체 실행 흐름 = [`WORKFLOW.md`](WORKFLOW.md) · 성장 단계·마일스톤·의제 = [`ROADMAP.md`](ROADMAP.md). 아래는 디렉토리/인프라 인덱스.
+
 ```text
 Project_Muse/
   muse.py                        # 단일 CLI 디스패처
