@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face { font-family: "GFSDidotLocal"; src: url("GFSDidot-Regular.ttf") format("truetype"); }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #101216; font-family: "GFSDidotLocal", serif; display: flex; flex-direction: row;
+         gap: 60px; padding: 60px; align-items: flex-start; }
+  .col { display: flex; flex-direction: column; align-items: center; }
+  .cap { width: 1080px; font-family: -apple-system,"Segoe UI",sans-serif; margin-bottom: 20px; }
+  .cap .t { font-size: 30px; font-weight: 700; color: #5dcaa5; margin-bottom: 6px; }
+  .cap .d { font-size: 32px; color: #e4e7ea; line-height: 1.3; }
+  .cap .d b { color: #8fd9c4; }
+
+  .frame { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+           background: radial-gradient(130% 90% at 50% 30%, #1a1e25 0%, #0f1115 72%); }
+  .didot { font-family: "GFSDidotLocal", serif; }
+  .teal { color: rgb(40,180,175); }
+  .cream { color: #e8e0c8; }
+
+  .title { position: absolute; top: 150px; left: 60px; right: 60px; text-align: center; }
+  .title .big { font-size: 96px; color: #f0ead8; letter-spacing: 0.06em; }
+  .title .sub { font-size: 40px; color: #5dcaa5; letter-spacing: 0.22em; margin-top: 14px; }
+
+  .stage { position: absolute; top: 470px; left: 60px; right: 60px; height: 980px; }
+  .lane { position: absolute; left: 0; right: 0; height: 280px; border-radius: 18px;
+          background: rgba(255,255,255,0.025); }
+  .lane.l1 { top: 0; }   .lane.l2 { top: 340px; }   .lane.l3 { top: 680px; }
+  .lane .badge { position: absolute; left: 24px; top: 50%; transform: translateY(-50%);
+                 width: 96px; height: 96px; border-radius: 50%; display: flex; align-items: center;
+                 justify-content: center; font-size: 60px; font-family:"GFSDidotLocal",serif;
+                 border: 3px solid rgba(120,200,190,0.6); color: #e8e0c8; background: rgba(40,180,175,0.10); }
+  .roll { position: absolute; left: 150px; right: 0; top: 0; bottom: 0; overflow: hidden; }
+  .note { position: absolute; height: 26px; border-radius: 13px; }
+  .playhead { position: absolute; top: -6px; bottom: -6px; width: 4px; background: rgba(245,240,220,0.55); }
+  .dim { opacity: 0.12; }
+
+  .harm { position: absolute; width: 3px; background: rgba(93,202,165,0.5); }
+
+  .foot { position: absolute; left: 60px; right: 60px; bottom: 360px; text-align: center;
+          font-size: 56px; color: #e8e0c8; letter-spacing: 0.04em; }
+  .foot .n { color: rgb(40,180,175); }
+</style>
+</head>
+<body>
+
+  <!-- state 1: voice 1 -->
+  <div class="col">
+    <div class="cap">
+      <div class="t">~0:00 – 0:06 · VOICE 1</div>
+      <div class="d">한 성부가 멜로디를 그림. <b>그림으로</b> 시작</div>
+    </div>
+    <div class="frame" id="f1">
+      <div class="title"><div class="big didot">CANON</div><div class="sub didot">HOW A ROUND WORKS</div></div>
+      <div class="stage">
+        <div class="lane l1"><div class="badge">1</div><div class="roll" data-roll="1"></div></div>
+        <div class="lane l2 dim"><div class="badge">2</div><div class="roll dim"></div></div>
+        <div class="lane l3 dim"><div class="badge">3</div><div class="roll dim"></div></div>
+      </div>
+      <div class="foot didot"><span class="n">1</span> voice</div>
+    </div>
+  </div>
+
+  <!-- state 2: voice 2 enters, +2 bars -->
+  <div class="col">
+    <div class="cap">
+      <div class="t">~0:08 · VOICE 2 enters (+2 bars)</div>
+      <div class="d"><b>같은 선율</b>이 2마디 늦게 = 똑같은 모양이 어긋나 쌓임 (눈에 보임)</div>
+    </div>
+    <div class="frame" id="f2">
+      <div class="title"><div class="big didot">CANON</div><div class="sub didot">SAME LINE &middot; 2 BARS LATER</div></div>
+      <div class="stage">
+        <div class="lane l1"><div class="badge">1</div><div class="roll" data-roll="1"></div></div>
+        <div class="lane l2"><div class="badge">2</div><div class="roll" data-roll="2"></div></div>
+        <div class="lane l3 dim"><div class="badge">3</div><div class="roll dim"></div></div>
+      </div>
+      <div class="foot didot"><span class="n">2</span> voices &middot; one line</div>
+    </div>
+  </div>
+
+  <!-- state 3: all 3, harmony -->
+  <div class="col">
+    <div class="cap">
+      <div class="t">~0:20 – 0:60 · 3 VOICES · HARMONY</div>
+      <div class="d">세 성부가 겹치며 화음 형성. <b>"=a round"</b> 페이오프 + 미쿠 목소리</div>
+    </div>
+    <div class="frame" id="f3">
+      <div class="title"><div class="big didot">CANON</div><div class="sub didot">THREE VOICES, ONE MELODY</div></div>
+      <div class="stage">
+        <div class="lane l1"><div class="badge">1</div><div class="roll" data-roll="1"></div></div>
+        <div class="lane l2"><div class="badge">2</div><div class="roll" data-roll="2"></div></div>
+        <div class="lane l3"><div class="badge">3</div><div class="roll" data-roll="3"></div></div>
+      </div>
+      <div class="foot didot">sung by <span class="n">Hatsune Miku</span></div>
+    </div>
+  </div>
+
+<script>
+  // melodic contour (pitch index, higher = higher on lane). Canon-ish gentle arc, repeated.
+  const phrase = [5,4,3,4,5,6,5,4, 3,4,5,4,3,2,3,4];
+  const NOTE_W = 40, GAP = 14, STEP = NOTE_W + GAP;
+  const PITCHES = 8, LANE_H = 280, PAD = 28;
+  const pitchY = p => PAD + (PITCHES-1-p) * ((LANE_H - 2*PAD - 26) / (PITCHES-1));
+  const OFFSET = 4 * STEP; // "2 bars" visual offset per later voice
+
+  function fill(roll, voice){
+    const rollW = 930 - 150; // approx inner width
+    const off = (voice-1) * OFFSET;
+    const teal = ['rgb(60,200,190)','rgb(120,210,170)','rgb(150,200,140)'][voice-1];
+    for(let i=0;i<28;i++){
+      const x = i*STEP - off;
+      if(x < -NOTE_W || x > 950) continue;
+      const p = phrase[((i % phrase.length)+phrase.length)%phrase.length];
+      const n = document.createElement('div');
+      n.className='note';
+      n.style.left = x+'px';
+      n.style.top = pitchY(p)+'px';
+      n.style.width = NOTE_W+'px';
+      n.style.background = teal;
+      n.style.boxShadow = '0 0 14px '+teal.replace('rgb','rgba').replace(')',',0.5)');
+      roll.appendChild(n);
+    }
+  }
+  document.querySelectorAll('.roll[data-roll]').forEach(r=>fill(r, +r.dataset.roll));
+
+  // harmony connectors in f3: vertical lines where the 3 lanes align (every STEP)
+  const f3 = document.getElementById('f3');
+  const stage3 = f3.querySelector('.stage');
+  for(let i=2;i<20;i+=3){
+    const x = 150 + i*STEP + NOTE_W/2;
+    const h = document.createElement('div');
+    h.className='harm';
+    h.style.left = x+'px'; h.style.top = '20px'; h.style.height = '940px';
+    stage3.appendChild(h);
+  }
+</script>
+</body>
+</html>

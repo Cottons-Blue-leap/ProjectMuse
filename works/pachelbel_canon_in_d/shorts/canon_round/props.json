@@ -1,0 +1,26 @@
+{
+  "audioPath": "audio.wav",
+  "bpm": 56,
+  "beatsPerBar": 4,
+  "scoreStartSec": 0.5,
+  "barsVisible": 6,
+  "voices": [
+    { "entryBar": 1, "waitPath": "miku_wait.png", "singPath": "miku_sing.png" },
+    { "entryBar": 3, "waitPath": "miku_wait.png", "singPath": "miku_sing.png" },
+    { "entryBar": 5, "waitPath": "miku_wait.png", "singPath": "miku_sing.png" }
+  ],
+  "bgStops": ["#181d24", "#0c0e12"],
+  "tealActive": "rgb(60,200,190)",
+  "tealDim": "#7fb8b2",
+  "cream": "#f0ead8",
+  "title": "CANON",
+  "subtitle": "A ROUND, 2 BARS APART",
+  "gapLabel": "2 bars",
+  "footText": "sung by Hatsune Miku",
+  "mikuWidth": 200,
+  "scoreScroll": true,
+  "barsTotal": 16,
+  "playheadFrac": 0.3,
+  "entryFromRight": true,
+  "durationSeconds": 24
+}

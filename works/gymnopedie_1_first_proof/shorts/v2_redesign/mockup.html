@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @font-face {
+    font-family: "GFSDidotLocal";
+    src: url("../h2_cold_open/public/fonts/GFSDidot-Regular.ttf") format("truetype");
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #15171b;
+    font-family: "GFSDidotLocal", serif;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    padding: 70px;
+    align-items: flex-start;
+  }
+  .col { display: flex; flex-direction: column; align-items: center; }
+  .caption {
+    width: 1080px;
+    color: #cfd6dc;
+    font-family: -apple-system, "Segoe UI", sans-serif;
+    margin-bottom: 22px;
+  }
+  .caption .tag {
+    font-size: 30px; font-weight: 700; letter-spacing: 0.04em;
+    color: #5dcaa5; text-transform: uppercase; margin-bottom: 8px;
+  }
+  .caption .name { font-size: 46px; font-weight: 700; color: #f2efe6; margin-bottom: 6px; }
+  .caption .stop { font-size: 30px; color: #9aa6b0; }
+  .caption .stop b { color: #e8e0c8; font-weight: 600; }
+
+  /* ---- 9:16 frame ---- */
+  .frame {
+    position: relative;
+    width: 1080px;
+    height: 1920px;
+    overflow: hidden;
+    background: #0c1014;
+  }
+  .hero {
+    position: absolute; inset: 0;
+    background-image: url("hero_miku_crop.png");
+    background-size: cover;
+    background-position: 50% 26%;
+  }
+  /* YT UI safe-zone reference (rendered only in overview, hidden in clean frames) */
+  .safezone .ui-bottom {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 480px;
+    background: repeating-linear-gradient(45deg, rgba(255,80,80,0.05) 0 18px, transparent 18px 36px);
+    border-top: 1px dashed rgba(255,120,120,0.35);
+  }
+  .safezone .ui-right {
+    position: absolute; right: 0; top: 0; bottom: 0; width: 200px;
+    background: rgba(255,80,80,0.04);
+    border-left: 1px dashed rgba(255,120,120,0.25);
+  }
+
+  .didot { font-family: "GFSDidotLocal", serif; color: #e8e0c8; }
+  .teal { color: rgb(40,180,175); }
+  .mint { color: #5dcaa5; }
+  .shadow { text-shadow: 0 3px 22px rgba(0,0,0,0.85); }
+
+  /* ============ A — IMAGE-FORWARD (cold-open, honored) ============ */
+  .A .scrim-top {
+    position: absolute; top: 0; left: 0; right: 0; height: 520px;
+    background: linear-gradient(180deg, rgba(8,12,16,0.72) 0%, rgba(8,12,16,0) 100%);
+  }
+  .A .scrim-bot {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 820px;
+    background: linear-gradient(0deg, rgba(8,12,16,0.86) 18%, rgba(8,12,16,0) 100%);
+  }
+  .A .kicker {
+    position: absolute; top: 285px; left: 60px; right: 60px;
+    text-align: center; font-size: 42px; letter-spacing: 0.22em;
+  }
+  .A .hook {
+    position: absolute; left: 60px; right: 60px; bottom: 560px;
+    text-align: center; font-size: 88px; line-height: 1.08;
+  }
+  .A .sub {
+    position: absolute; left: 60px; right: 60px; bottom: 470px;
+    text-align: center; font-size: 52px;
+  }
+
+  /* ============ B — TEXT-FORWARD (general curiosity) ============ */
+  .B .scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(6,9,12,0.62) 0%, rgba(6,9,12,0.30) 42%, rgba(6,9,12,0.86) 100%);
+  }
+  .B .label {
+    position: absolute; top: 300px; left: 60px; right: 60px;
+    text-align: center; font-size: 40px; letter-spacing: 0.14em; opacity: 0.82;
+  }
+  .B .big {
+    position: absolute; left: 60px; right: 60px; top: 620px;
+    text-align: center; font-size: 104px; line-height: 1.04;
+  }
+  .B .sub {
+    position: absolute; left: 70px; right: 70px; top: 1040px;
+    text-align: center; font-size: 54px; line-height: 1.32;
+  }
+
+  /* ============ C — FAN-SIGNAL FORWARD (vocaloid) ============ */
+  .C .scrim-top {
+    position: absolute; top: 0; left: 0; right: 0; height: 700px;
+    background: linear-gradient(180deg, rgba(8,12,16,0.80) 0%, rgba(8,12,16,0) 100%);
+  }
+  .C .scrim-bot {
+    position: absolute; bottom: 0; left: 0; right: 0; height: 700px;
+    background: linear-gradient(0deg, rgba(8,12,16,0.84) 20%, rgba(8,12,16,0) 100%);
+  }
+  .C .wordmark {
+    position: absolute; top: 300px; left: 60px; right: 60px;
+    text-align: center; font-size: 150px; line-height: 1; letter-spacing: 0.04em;
+  }
+  .C .sings {
+    position: absolute; top: 478px; left: 60px; right: 60px;
+    text-align: center; font-size: 50px; letter-spacing: 0.20em; opacity: 0.9;
+  }
+  .C .piece {
+    position: absolute; left: 60px; right: 60px; bottom: 605px;
+    text-align: center; font-size: 72px; line-height: 1.1;
+  }
+  .C .acap {
+    position: absolute; left: 60px; right: 60px; bottom: 510px;
+    text-align: center; font-size: 44px; letter-spacing: 0.10em; opacity: 0.88;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+  <!-- =================== A =================== -->
+  <div class="col">
+    <div class="caption">
+      <div class="tag">v2 — A · Image-forward</div>
+      <div class="name">"콜드오픈 유지, 캔버스만 수리"</div>
+      <div class="stop">멈춤 트리거 = <b>이미지(미쿠가 0초부터 화면)</b> · 네가 고른 H2 그대로, 명화 미니어처만 풀블리드로</div>
+    </div>
+    <div class="frame A safezone">
+      <div class="hero"></div>
+      <div class="scrim-top"></div>
+      <div class="scrim-bot"></div>
+      <div class="kicker didot"><span class="teal">初音ミク</span> &nbsp;·&nbsp; A CAPPELLA</div>
+      <div class="hook didot shadow">This is not<br>an instrument.</div>
+      <div class="sub didot shadow">Every note is <span class="teal">Hatsune Miku</span>.</div>
+      <div class="ui-right"></div>
+      <div class="ui-bottom"></div>
+    </div>
+  </div>
+
+  <!-- =================== B =================== -->
+  <div class="col">
+    <div class="caption">
+      <div class="tag">v2 — B · Text-forward</div>
+      <div class="name">"훅 한 줄로 멈춰 세우기"</div>
+      <div class="stop">멈춤 트리거 = <b>텍스트(호기심)</b> · 무음 스크롤·일반인 대상. 음악은 보상</div>
+    </div>
+    <div class="frame B safezone">
+      <div class="hero"></div>
+      <div class="scrim"></div>
+      <div class="label didot shadow">Erik Satie &nbsp;·&nbsp; Gymnopédie No. 1</div>
+      <div class="big didot shadow">This is not<br>an instrument.</div>
+      <div class="sub didot shadow">No backing track. No synth.<br>One voice — <span class="teal">Hatsune Miku</span>.</div>
+      <div class="ui-right"></div>
+      <div class="ui-bottom"></div>
+    </div>
+  </div>
+
+  <!-- =================== C =================== -->
+  <div class="col">
+    <div class="caption">
+      <div class="tag">v2 — C · Fan-signal forward</div>
+      <div class="name">"初音ミク 워드마크로 잡기"</div>
+      <div class="stop">멈춤 트리거 = <b>팬덤 신호(보카로/JP)</b> · 미쿠 이름값으로 직격</div>
+    </div>
+    <div class="frame C safezone">
+      <div class="hero"></div>
+      <div class="scrim-top"></div>
+      <div class="scrim-bot"></div>
+      <div class="wordmark didot shadow"><span class="teal">初音ミク</span></div>
+      <div class="sings didot shadow">SINGS ERIK SATIE</div>
+      <div class="piece didot shadow">Gymnopédie No. 1</div>
+      <div class="acap didot shadow">a cappella &nbsp;—&nbsp; just her voice</div>
+      <div class="ui-right"></div>
+      <div class="ui-bottom"></div>
+    </div>
+  </div>
+
+</body>
+</html>

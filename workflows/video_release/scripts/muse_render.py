@@ -61,6 +61,8 @@ def main(argv: list[str]) -> int:
     ap.add_argument("--concurrency", type=int, help="렌더 동시성 (기본 = config)")
     ap.add_argument("--short", metavar="SLUG",
                     help="9:16 Shorts 렌더 (works/<id>/shorts/<slug>/ 입력 · MuseShort)")
+    ap.add_argument("--comp", metavar="ID",
+                    help="컴포지션 id 오버라이드 (예: MikuDiscovery · --short와 함께)")
     args = ap.parse_args(argv)
 
     work = ROOT / "works" / args.work_id
@@ -70,10 +72,10 @@ def main(argv: list[str]) -> int:
 
     if args.short:
         base = work / "shorts" / args.short
-        composition = "MuseShort"
+        composition = args.comp or "MuseShort"
     else:
         base = vis_work(args.work_id)
-        composition = COMPOSITION
+        composition = args.comp or COMPOSITION
 
     props = base / "props.json"
     public = base / "public"
@@ -91,13 +93,14 @@ def main(argv: list[str]) -> int:
         common.append(f"--concurrency={args.concurrency}")
 
     if args.still is not None:
-        out = Path(args.out) if args.out else gate_out / f"still_{args.still}.png"
+        # --out은 절대경로로 해석 (remotion은 VIS cwd에서 돌아 상대경로면 엉뚱한 자리에 씀)
+        out = Path(args.out).resolve() if args.out else gate_out / f"still_{args.still}.png"
         out.parent.mkdir(parents=True, exist_ok=True)
         cmd = [npx(), "remotion", "still", "src/index.ts", composition, str(out),
                f"--frame={args.still}", *common]
     else:
         if args.out:
-            out = Path(args.out)
+            out = Path(args.out).resolve()
         elif args.gate:
             out = gate_out / "gate_check.mp4"
         elif args.short:
