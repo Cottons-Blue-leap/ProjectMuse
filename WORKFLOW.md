@@ -37,7 +37,7 @@
 | 5 | **영상 렌더** | 레터박스 + B 공유 visualizer + QC 5축 | MOKA | [`workflows/video_release/docs/video_workflow.md`](workflows/video_release/docs/video_workflow.md) · [`docs/shared_visualizer_design.md`](workflows/video_release/docs/shared_visualizer_design.md) · `templates/visualizer-spec.md` |
 | 6 | **메타** | 썸네일 + 설명(curator voice) + l10n 10언어 + 태그 + 제목 | MOKA | [`docs/thumbnail_guide.md`](workflows/video_release/docs/thumbnail_guide.md) · [`docs/description_template.md`](workflows/video_release/docs/description_template.md) · [`docs/localization.md`](workflows/video_release/docs/localization.md) · [`planning/title_naming_guide.md`](planning/title_naming_guide.md) |
 | 7 | **발행** | 코튼 업로드/예약 → audit → publish → 고정댓글 | 코튼업로드 + MOKA | [`workflows/video_release/docs/post_release_meta_doctrine.md`](workflows/video_release/docs/post_release_meta_doctrine.md) |
-| 8 | **측정** | 24h~7d(Data API) + 주간 Studio 도달범위 | MOKA | [`Analytics/README.md`](Analytics/README.md) |
+| 8 | **측정** | 발행 직후 publish/고정댓글 **검증**만 · 성과 분석은 ③ **주간 의례로 통합**(영상별 7d 측정 폐기) | MOKA | [`Analytics/README.md`](Analytics/README.md) |
 
 엔진 = 단일 CLI `python muse.py <project|audio|thumbnail|render|tidy|doctor|status|list>` · 사용 흐름 = [`USAGE.md`](USAGE.md).
 
