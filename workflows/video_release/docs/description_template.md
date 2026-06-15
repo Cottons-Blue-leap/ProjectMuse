@@ -2,7 +2,7 @@
 
 > Atelier Miku Acappella 시리즈 YouTube 영상 description 정본 템플릿.
 > 매 작품 description 박을 때 본 template 따라 가변 자리 4건만 채움.
-> 박힌 날짜: 2026-05-14 (s292) · v2 update (s295) · v3 update (s303 — Crypton 라이선스 정합 강화) · v4 update (s303 — Block 3 압축) · v5 update (s303 — Block 3·4 swap, 면책 footer 격리) · v6 update (s310 — 일본 청중 유입 해시태그 4건 추가) · v7·v8 update (s339 — No-AI 줄 제거 + 제작툴 라벨) · v9 update (s340 — 영상 제목 Acappella 키워드 양식) · v10 update (s348 — 제목 앞 브래킷 양식 `[Miku Acappella] 작곡가 - 곡명`) · v11 update (s351 — 해시태그 로케일-퓨어 재설계: 공유 이중언어 블록 폐기 → 로케일별 네이티브 라인 + 네이티브 미쿠 front + 다이어트) · v12 update (s355 — 영상 제목 `(feat. 初音ミク)` 후치 양식 · 브래킷/Acappella 폐기 · reveal 설계) · v13 update (s374 — Production tool 줄에 Voicebank 명시: 양식 (A) 두 필드 한 줄 `VOCALOID6 / Voicebank: Hatsune Miku V6` · 에디터·보이스뱅크 layer 분리)
+> 박힌 날짜: 2026-05-14 (s292) · v2 update (s295) · v3 update (s303 — Crypton 라이선스 정합 강화) · v4 update (s303 — Block 3 압축) · v5 update (s303 — Block 3·4 swap, 면책 footer 격리) · v6 update (s310 — 일본 청중 유입 해시태그 4건 추가) · v7·v8 update (s339 — No-AI 줄 제거 + 제작툴 라벨) · v9 update (s340 — 영상 제목 Acappella 키워드 양식) · v10 update (s348 — 제목 앞 브래킷 양식 `[Miku Acappella] 작곡가 - 곡명`) · v11 update (s351 — 해시태그 로케일-퓨어 재설계: 공유 이중언어 블록 폐기 → 로케일별 네이티브 라인 + 네이티브 미쿠 front + 다이어트) · v12 update (s355 — 영상 제목 `(feat. 初音ミク)` 후치 양식 · 브래킷/Acappella 폐기 · reveal 설계) · v13 update (s374 — Production tool 줄에 Voicebank 명시: 양식 (A) 두 필드 한 줄 `VOCALOID6 / Voicebank: Hatsune Miku V6` · 에디터·보이스뱅크 layer 분리) · **v14 update (s434 — §1 제목 양식 s402 badge `【初音ミク A Cappella】` 정합화 = §1이 v12 feat. 양식에 stale로 남아있던 drift 정정 + title_naming_guide 우선 가드노트)**
 > 첫 작품 자료: [`works/gymnopedie_1_first_proof/video/release/description.md`](../../../works/gymnopedie_1_first_proof/video/release/description.md)
 
 ## 4 블록 양식
@@ -47,21 +47,26 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 매 작품 description 박을 때 채울 자리 4건만:
 
 ### 1. 영상 제목 (YouTube title)
-```
-{작곡가 성(姓)} - {곡명} (feat. 初音ミク)
-```
-예: `Satie - Gymnopédie No. 1 (feat. 初音ミク)`
 
-현지화 제목 (JP/KR · `Analytics/youtube_meta.py set-title --default --en --ko --ja` 한 명령):
-- JP: `{작곡가 성JP} - {곡명JP} (feat. 初音ミク)` 예: `サティ - ジムノペディ第1番 (feat. 初音ミク)`
-- KR: `{작곡가 성KR} - {곡명KR} (feat. 初音ミク)` 예: `사티 - 짐노페디 1번 (feat. 初音ミク)`
+> ⚠️ **정본 = [`../../../planning/title_naming_guide.md`](../../../planning/title_naming_guide.md) (s402 · 2026-06-06 코튼 LOCK).** 본 §1은 그 요약. **양식 변경 시 가이드를 1차 source로 보고, 본 문서가 아니라 가이드를 먼저 확인할 것** (s434 하이든에서 본 §1의 stale feat. 양식을 따라가 en/ko/ja 제목 오적용 → audit 교차대조로 적발·정정. 그 재발 방지로 §1을 s402 정합화).
 
-양식 결단 (s355 · 코튼 · v10/s348 앞 브래킷 supersede):
-- `{작곡가 성(姓)} - {곡명} (feat. 初音ミク)` 후치 양식 (**작곡가 = 성만** · 전 로케일 네이티브 · 라이브 convention = [`../../../planning/title_naming_guide.md`](../../../planning/title_naming_guide.md) 2026-05-28 lock · ⚠️ **본문 헌사·썸네일은 풀네임** keep[Mozart 양식]). **제목에 "Acappella" 없음** = 채널명+태그가 담고, 영상이 acappella를 *reveal* (curiosity-gap 설계 · 스펙시트 X · 평가 모드 → 발견 모드).
-- feat. 크레딧 = **전 로케일 `初音ミク`** (정체성 마크 · 검색 키워드 X). 검색≈0 + 썸네일>>제목(s352)이라 제목 키워드 위치는 레버 아님 · 로마자/한글 미쿠는 태그·설명·해시태그가 담당.
+```
+{작곡가 성(姓)} - {곡명} 【初音ミク A Cappella】
+```
+예: `Satie - Gymnopédie No. 1 【初音ミク A Cappella】` · `Haydn - Trumpet Concerto, Finale 【初音ミク A Cappella】`
+
+현지화 제목 (JP/KR + default/en · `Analytics/youtube_meta.py set-title --default --en --ko --ja` 한 명령 · 7언어 es/pt/de/fr/ru/zh는 `localize_batch.py push`):
+- JP: `{작곡가 성JP} - {곡명JP} 【初音ミク A Cappella】` 예: `サティ - ジムノペディ第1番 【初音ミク A Cappella】`
+- KR: `{작곡가 성KR} - {곡명KR} 【初音ミク A Cappella】` 예: `사티 - 짐노페디 1번 【初音ミク A Cappella】`
+
+양식 결단 (s402 · 코튼 · s355 후치 `(feat. 初音ミク)` 양식 **supersede**):
+- `{작곡가 성(姓)} - {곡명} 【初音ミク A Cappella】` **back bracket-badge 양식** (**작곡가 = 성만** · 곡명은 로케일 네이티브 · **badge `【初音ミク A Cappella】`는 전 로케일·전 제목 동일 = universal wordmark** · en/ko/ja 포함 예외 없음). badge가 옛 `(feat. 初音ミク)` 크레딧을 흡수 + `A Cappella` 차별자 추가.
+- **길이**: badge 포함 100자 hard cap 초과 시에만 `【A Cappella】`로 축약 (per-work `"badge_abbrev": True` · `初音ミク` 마크는 채널명이 담보). 코튼 2026-06-06: 一貫性 우선 — Mozart도 풀 badge 통일.
+- badge는 **back-load** (좌측 = 작곡가/곡명 = 가장 값진 차별 정보 노출 · badge는 상수라 우측). `初音ミク` = 정체성 마크(검색 키워드 X) · `A Cappella`는 Latin-universal wordmark(로케일 철자 アカペラ/아카펠라 안 씀).
+- s402는 s355의 *reveal/curiosity-gap* 룰을 의도적으로 reverse (CTR/identity on recommendation surface 우선 · search SEO는 태그+설명이 담당 · ⚠️ **본문 헌사·썸네일은 풀네임** keep[Mozart 양식]).
 - 곡명 = 시장 canonical (원어가 세계표준이면 원어 [Salut d'Amour·Gymnopédie] · 현지표준 있으면 현지 [四季 春·사계 봄]).
 - defaultLanguage=en + en/ko/ja 현지화 set (한 명령 push).
-- **정본 규칙 = `planning/title_naming_guide.md` (s355 재작성 · 근거 3축 + 포맷 history).**
+- **정본 규칙 = `planning/title_naming_guide.md` (s402 재작성 · 근거 + 포맷 history). 본 §1과 충돌 시 가이드 우선.**
 
 ### 2. 작품 헌사 (Block 2 첫 줄)
 ```
@@ -266,3 +271,7 @@ v5 swap 본질 = 면책 wording을 가장 마지막 *footer 자리*로 격리 (�
   - (2) 이유 = v8 `Production tool: VOCALOID6`만 박혀서 *에디터*(Yamaha VOCALOID6)만 크레딧 · *보이스뱅크*(Crypton Hatsune Miku V6) 미표기 → "어느 미쿠 보이스뱅크"(V5/NT/V6) 누락 = craft 정밀도 ↓ + vocaloid 커뮤 청중 정보 결핍. © Crypton 줄이 "Hatsune Miku"는 박지만 V6 product는 미표기. V6 명시 = 사용 제품 정확 크레딧 + Crypton 의무 정합 강화.
   - (3) KR 라벨 = `보이스뱅크` (직역·명확) 선택. 후보 = `보컬` (짧음·범용) · `음원` (한국 "녹음물" 어감 risk라 폐기). JP `音源` = vocaloid 표준 용어 keep.
   - (4) 적용 = v8-정합 파일 12 슬롯 즉시 동기 (Elgar EN + Mozart EN + 5 localized.md × JP+KR). 라이브 5 영상 × 3 로케일 = 코튼 Studio 수동 교체 (`youtube_meta.py set-description` 미구현 · 라이브↔repo drift doctrine s351 = 태그만 바꾸는 surgical 변경 = 수동 안전). 짐노/비발디/조플린 EN description.md = stale v6/v7 drift (Production tool 줄 부재 + 옛 *No AI for music — every note placed by hand in Vocaloid6 Editor.* 잔존) → 별 scope 의제(코튼 결단 자리: reconcile vs drift keep).
+- v14 (s434 · 2026-06-15) — §1 제목 양식을 s402 badge `【初音ミク A Cappella】`로 정합화 (코튼 디스코드 결단). 변경 자리:
+  - (1) 근본 = 제목 양식 정본은 **s402(2026-06-06 코튼 LOCK · title_naming_guide)** 가 s355 `(feat. 初音ミク)` 후치 양식을 supersede 했는데, 본 템플릿 §1만 v12(feat.) 상태로 stale drift 잔존. localize_batch BADGE 상수·라이브 영상(헨델 등)·title_naming_guide는 전부 s402 badge로 이미 정합이었음 → §1만 외딴 drift.
+  - (2) 트리거 = s434 하이든 발행 작업 중 §1을 1차 source로 보고 en/ko/ja 제목을 feat. 양식으로 오적용 → audit 교차대조(라이브 헨델 제목과 불일치)로 적발 → title_naming_guide 확인 후 badge로 정정. **input-side audit gate 교훈(E41) = 양식 정본은 §1(요약본) 아니라 title_naming_guide(1차 source)를 먼저 볼 것.**
+  - (3) 변경 = §1 본문을 badge 양식으로 재작성 + 상단에 "정본=title_naming_guide · 충돌 시 가이드 우선" 가드노트 박음 (재발 차단). v9/v12 history entry는 변경 history로 keep.
