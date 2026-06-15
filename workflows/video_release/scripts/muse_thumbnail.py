@@ -97,6 +97,12 @@ REGISTRY = {
                        # 담쟁이 + PROSERPINA 명문 패널 동시 생존. B2(우측 줌·box 0.0,0.14,0.76,0.5675)는 석류가
                        # 곡명 줄에 가려 반려 — 석류가 얼굴 바로 아래라 '얼굴 우측+석류' 양립 불가 구도.
                        box=(0.0, 0.04, 1.0, 0.72), composer="George Frideric Handel", piece="Lascia ch'io pianga"),
+    "haydn_trumpet": dict(dir="haydn_trumpet_concerto_finale",
+                       cover="video/cover/Miku_strozzi_personification_of_fame_wga.png",
+                       # box = T1_wide (코튼 2026-06-15 · T2 face-tight 후보와 비교 후 확정): 얼굴 大 + 트럼펫이
+                       # 프레임 가로지르는 히어로 대각선(벨까지 온전) + 날개. T2(0.16,0.03,0.90,0.50)는 트럼펫 벨이
+                       # 잘려 반려. piece="Trumpet Concerto"(Finale는 영상 제목에 · 썸네일 간결) · 풀네임 Joseph Haydn.
+                       box=(0.10, 0.02, 1.0, 0.56), composer="Joseph Haydn", piece="Trumpet Concerto"),
 }
 
 _probe = ImageDraw.Draw(Image.new("RGB", (8, 8)))

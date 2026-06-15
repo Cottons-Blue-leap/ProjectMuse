@@ -1,0 +1,15 @@
+Bernardo Strozzi - A Personification of Fame (c.1635-36) - National Gallery London NG6321
+
+Commons file page (WGA reproduction):
+https://commons.wikimedia.org/wiki/File:Bernardo_Strozzi_-_A_Personification_of_Fame_-_WGA21920.jpg
+
+Direct re-download (Special:FilePath):
+https://commons.wikimedia.org/wiki/Special:FilePath/Bernardo_Strozzi_-_A_Personification_of_Fame_-_WGA21920.jpg
+
+Alt high-res (Italian Wikipedia upload):
+https://commons.wikimedia.org/wiki/File:Bernardo_strozzi,_personificazione_della_fama,_1635-36_ca.jpg
+
+Holding institution: The National Gallery, London (NG6321)
+https://www.nationalgallery.org.uk/paintings/bernardo-strozzi-a-personification-of-fame
+
+Local copy: strozzi_personification_of_fame_wga.jpg (downloaded 2026-06-15 · 1300x901 source, embedded 800x554 baseline · *.jpg는 .gitignore라 repo 미포함 · 위 FilePath로 재다운 가능)

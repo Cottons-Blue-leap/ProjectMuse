@@ -1,0 +1,19 @@
+{
+  "durationSeconds": 266.667,
+  "letterboxColors": [
+    "#2B2008",
+    "#E6C24E",
+    "#705418"
+  ],
+  "composerName": "Joseph Haydn",
+  "pieceTitle": "Trumpet Concerto, Finale",
+  "pieceSubtitle": "in E-flat major · Hob. VIIe:1",
+  "audioPath": "audio.wav",
+  "coverPath": "cover.png",
+  "variationStarts": [
+    0
+  ],
+  "variationLabels": [
+    ""
+  ]
+}

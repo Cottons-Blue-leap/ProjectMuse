@@ -125,6 +125,7 @@ PAINTER = {
     "Vermeer": {"ru": "Вермеера", "zh-Hant": "維米爾", "zh-Hans": "维米尔"},
     "Renoir": {"ru": "Ренуара", "zh-Hant": "雷諾瓦", "zh-Hans": "雷诺阿"},
     "Rossetti": {"ru": "Россетти", "zh-Hant": "羅塞蒂", "zh-Hans": "罗塞蒂"},
+    "Strozzi": {"ru": "Строцци", "zh-Hant": "斯特羅齊", "zh-Hans": "斯特罗齐"},
 }
 def painter_name(lang, en):
     return PAINTER.get(en, {}).get(lang, en)
@@ -379,6 +380,30 @@ WORKS = [
         "tag_piece": {"es": "#LasciaChIoPianga", "pt": "#LasciaChIoPianga", "de": "#LasciaChIoPianga", "fr": "#LasciaChIoPianga",
                       "ru": "#LasciaChIoPianga", "zh-Hant": "#讓我哭泣吧", "zh-Hans": "#让我痛哭吧"},
     },
+    {
+        "vid": "BCCENPR1k6E", "slug": "haydn_trumpet_concerto_finale", "count": 22, "year": "1796",
+        "style": "lead", "welcome": False, "subscribe": False, "era": "classical",
+        "surname": L("Haydn", "Гайдн", "海頓", "海顿"),
+        "full": L("Joseph Haydn", "Йозеф Гайдн", "約瑟夫·海頓", "约瑟夫·海顿"),
+        # 곡명(title용) = 간결형 "트럼펫 협주곡, 피날레" (조성은 본문 work-line에) · title_naming_guide 정합
+        "piece": {"es": "Concierto para trompeta, Final", "pt": "Concerto para Trompete, Final", "de": "Trompetenkonzert, Finale",
+                  "fr": "Concerto pour trompette, Finale", "ru": "Концерт для трубы, финал", "zh-Hant": "小號協奏曲，終樂章", "zh-Hans": "小号协奏曲，终乐章"},
+        "painter": "Strozzi", "painting": "A Personification of Fame", "p_year": "c.1635",
+        "cover_url": "https://www.nationalgallery.org.uk/paintings/bernardo-strozzi-a-personification-of-fame",
+        "curator": None,
+        # custom_hook (코튼 LOCK 2026-06-15 · epithet 3행 "울려퍼지는 팡파르" · 표준 "{N} Mikus" 템플릿 벗어남 · 보케리니식 연속 3행·work-line 무마침표).
+        # EN/KO/JA = release/ hand-sidecar 정본. 7언어 = 외부 QA subagent 게이트 (l10n cross-verification).
+        "custom_hook": {
+            "es": "Una fanfarria que resuena.\nAhora la cantan veintidós Mikus —\nJoseph Haydn - Concierto para trompeta en mi bemol mayor, Final (1796)",
+            "pt": "Uma fanfarra que ressoa.\nAgora cantada por vinte e duas Mikus —\nJoseph Haydn - Concerto para Trompete em mi bemol maior, Final (1796)",
+            "de": "Eine schmetternde Fanfare.\nNun gesungen von zweiundzwanzig Mikus —\nJoseph Haydn - Trompetenkonzert in Es-Dur, Finale (1796)",
+            "fr": "Une fanfare qui résonne.\nÀ présent chantée par vingt-deux Mikus —\nJoseph Haydn - Concerto pour trompette en mi bémol majeur, Finale (1796)",
+            "ru": "Гремящая фанфара.\nТеперь её поют двадцать две Мику —\nЙозеф Гайдн - Концерт для трубы ми-бемоль мажор, финал (1796)",
+            "zh-Hant": "嘹亮迴盪的號角齊鳴。\n如今由二十二位初音未來獻唱——\n約瑟夫·海頓 - 降E大調小號協奏曲，終樂章（1796）",
+            "zh-Hans": "嘹亮回荡的号角齐鸣。\n如今由二十二位初音未来献唱——\n约瑟夫·海顿 - 降E大调小号协奏曲，终乐章（1796）",
+        },
+        "tag_piece": {"es": "#ConciertoParaTrompeta", "pt": "#ConcertoParaTrompete", "de": "#Trompetenkonzert", "fr": "#ConcertoPourTrompette", "ru": "#КонцертДляТрубы", "zh-Hant": "#小號協奏曲", "zh-Hans": "#小号协奏曲"},
+    },
 ]
 
 # ── hashtags ───────────────────────────────────────────────────────────────
@@ -401,6 +426,7 @@ TAG_COMPOSER = {  # composer hashtag (no space) per lang
     "Chopin": {"ru": "#Шопен", "zh-Hant": "#蕭邦", "zh-Hans": "#肖邦"},
     "Pachelbel": {"ru": "#Пахельбель", "zh-Hant": "#帕海貝爾", "zh-Hans": "#帕赫贝尔"},
     "Tchaikovsky": {"ru": "#Чайковский", "zh-Hant": "#柴可夫斯基", "zh-Hans": "#柴可夫斯基"},
+    "Haydn": {"ru": "#Гайдн", "zh-Hant": "#海頓", "zh-Hans": "#海顿"},
     # es-key surname = latin 정본 키 (Handel = es/pt/de 'Händel' · fr 표기는 명시 오버라이드)
     "Händel": {"fr": "#Haendel", "ru": "#Гендель", "zh-Hant": "#韓德爾", "zh-Hans": "#亨德尔"},
 }
