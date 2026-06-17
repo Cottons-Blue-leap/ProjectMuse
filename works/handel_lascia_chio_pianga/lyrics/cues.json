@@ -1,0 +1,269 @@
+{
+  "work_id": "handel_lascia_chio_pianga",
+  "vpr": "music/renders/Miku_handel_lascia_chio_pianga.vpr",
+  "sync_offset_sec": 0.0,
+  "note": "Timed line cues from .vpr note onsets. sync_offset_sec is a global shift applied at VTT build (cotton listen-gate). end of last cue must be <= audio duration.",
+  "cue_count": 26,
+  "cues": [
+    {
+      "start": 1.0,
+      "end": 7.0,
+      "line": 1,
+      "region": "A",
+      "track": "Miku Soprano",
+      "idx": 1,
+      "original": "Lascia ch'io pianga",
+      "section": "A"
+    },
+    {
+      "start": 7.0,
+      "end": 13.0,
+      "line": 2,
+      "region": "A",
+      "track": "Miku Soprano",
+      "idx": 2,
+      "original": "mia cruda sorte,",
+      "section": "A"
+    },
+    {
+      "start": 13.0,
+      "end": 18.5,
+      "line": 3,
+      "region": "A",
+      "track": "Miku Soprano",
+      "idx": 3,
+      "original": "e che sospiri",
+      "section": "A"
+    },
+    {
+      "start": 18.5,
+      "end": 25.0,
+      "line": 4,
+      "region": "A",
+      "track": "Miku Soprano",
+      "idx": 4,
+      "original": "la libertà.",
+      "section": "A"
+    },
+    {
+      "start": 25.0,
+      "end": 36.5,
+      "line": 3,
+      "region": "A",
+      "track": "Miku Soprano",
+      "idx": 5,
+      "original": "e che sospiri",
+      "section": "A"
+    },
+    {
+      "start": 36.5,
+      "end": 43.001,
+      "line": 4,
+      "region": "A",
+      "track": "Miku Soprano",
+      "idx": 6,
+      "original": "la libertà.",
+      "section": "A"
+    },
+    {
+      "start": 43.001,
+      "end": 49.001,
+      "line": 1,
+      "region": "A",
+      "track": "Miku Soprano",
+      "idx": 7,
+      "original": "Lascia ch'io pianga",
+      "section": "A"
+    },
+    {
+      "start": 49.001,
+      "end": 55.0,
+      "line": 2,
+      "region": "A",
+      "track": "Miku Soprano",
+      "idx": 8,
+      "original": "mia cruda sorte,",
+      "section": "A"
+    },
+    {
+      "start": 55.0,
+      "end": 60.5,
+      "line": 3,
+      "region": "A",
+      "track": "Miku Soprano",
+      "idx": 9,
+      "original": "e che sospiri",
+      "section": "A"
+    },
+    {
+      "start": 60.5,
+      "end": 67.0,
+      "line": 4,
+      "region": "A",
+      "track": "Miku Soprano",
+      "idx": 10,
+      "original": "la libertà.",
+      "section": "A"
+    },
+    {
+      "start": 93.999,
+      "end": 99.999,
+      "line": 5,
+      "region": "B",
+      "track": "Miku Soprano",
+      "idx": 11,
+      "original": "Il duolo infranga",
+      "section": "B"
+    },
+    {
+      "start": 99.999,
+      "end": 105.999,
+      "line": 6,
+      "region": "B",
+      "track": "Miku Soprano",
+      "idx": 12,
+      "original": "queste ritorte",
+      "section": "B"
+    },
+    {
+      "start": 105.999,
+      "end": 111.499,
+      "line": 7,
+      "region": "B",
+      "track": "Miku Soprano",
+      "idx": 13,
+      "original": "de' miei martiri,",
+      "section": "B"
+    },
+    {
+      "start": 111.499,
+      "end": 117.999,
+      "line": 8,
+      "region": "B",
+      "track": "Miku Soprano",
+      "idx": 14,
+      "original": "sol per pietà.",
+      "section": "B"
+    },
+    {
+      "start": 117.999,
+      "end": 123.499,
+      "line": 7,
+      "region": "B",
+      "track": "Miku Soprano",
+      "idx": 15,
+      "original": "de' miei martiri,",
+      "section": "B"
+    },
+    {
+      "start": 123.499,
+      "end": 129.749,
+      "line": 8,
+      "region": "B",
+      "track": "Miku Soprano",
+      "idx": 16,
+      "original": "sol per pietà.",
+      "section": "B"
+    },
+    {
+      "start": 129.999,
+      "end": 135.999,
+      "line": 1,
+      "region": "A",
+      "track": "Miku Soprano left",
+      "idx": 17,
+      "original": "Lascia ch'io pianga",
+      "section": "A"
+    },
+    {
+      "start": 135.999,
+      "end": 141.999,
+      "line": 2,
+      "region": "A",
+      "track": "Miku Soprano left",
+      "idx": 18,
+      "original": "mia cruda sorte,",
+      "section": "A"
+    },
+    {
+      "start": 141.999,
+      "end": 147.499,
+      "line": 3,
+      "region": "A",
+      "track": "Miku Soprano left",
+      "idx": 19,
+      "original": "e che sospiri",
+      "section": "A"
+    },
+    {
+      "start": 147.499,
+      "end": 153.999,
+      "line": 4,
+      "region": "A",
+      "track": "Miku Soprano left",
+      "idx": 20,
+      "original": "la libertà.",
+      "section": "A"
+    },
+    {
+      "start": 153.999,
+      "end": 165.499,
+      "line": 3,
+      "region": "A",
+      "track": "Miku Soprano left",
+      "idx": 21,
+      "original": "e che sospiri",
+      "section": "A"
+    },
+    {
+      "start": 165.499,
+      "end": 172.0,
+      "line": 4,
+      "region": "A",
+      "track": "Miku Soprano left",
+      "idx": 22,
+      "original": "la libertà.",
+      "section": "A"
+    },
+    {
+      "start": 172.0,
+      "end": 178.0,
+      "line": 1,
+      "region": "A",
+      "track": "Miku Soprano left",
+      "idx": 23,
+      "original": "Lascia ch'io pianga",
+      "section": "A"
+    },
+    {
+      "start": 178.0,
+      "end": 183.999,
+      "line": 2,
+      "region": "A",
+      "track": "Miku Soprano left",
+      "idx": 24,
+      "original": "mia cruda sorte,",
+      "section": "A"
+    },
+    {
+      "start": 183.999,
+      "end": 189.499,
+      "line": 3,
+      "region": "A",
+      "track": "Miku Soprano left",
+      "idx": 25,
+      "original": "e che sospiri",
+      "section": "A"
+    },
+    {
+      "start": 189.499,
+      "end": 195.999,
+      "line": 4,
+      "region": "A",
+      "track": "Miku Soprano left",
+      "idx": 26,
+      "original": "la libertà.",
+      "section": "A"
+    }
+  ]
+}

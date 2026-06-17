@@ -14,6 +14,9 @@
   python muse.py audio blend-gate --master <wav> [--stems <dir> --lead <name>]  # 렌더 전 블렌딩 게이트 (WS1)
   python muse.py thumbnail --song <name> | --all
   python muse.py render <work_id>  # 통합 공유 visualizer 렌더 (양식 B)
+  python muse.py captions cues <work_id>   # .vpr → lyrics/cues.json (가사 곡 자막 타이밍)
+  python muse.py captions vtt  <work_id>   # cues + lyrics → captions.<lang>.vtt ×N
+  python muse.py short init <work_id> <slug> [--start --dur --n --bpm]  # 쇼츠 스핀업 (v3 MikuPile)
   python muse.py tidy [--archive]
   python muse.py list              # 등록 워크플로우 목록 (registry.json)
 """
@@ -38,6 +41,8 @@ SCRIPTS = {
     "audio":     ROOT / "workflows/audio_production/scripts/muse_audio.py",
     "thumbnail": ROOT / "workflows/video_release/scripts/muse_thumbnail.py",
     "render":    ROOT / "workflows/video_release/scripts/muse_render.py",
+    "captions":  ROOT / "workflows/video_release/scripts/muse_captions.py",
+    "short":     ROOT / "workflows/shorts_first_proof/scripts/muse_shorts.py",
     "tidy":      ROOT / "muse_tidy.py",
 }
 # 단축 alias → (대상, 선행 인자)

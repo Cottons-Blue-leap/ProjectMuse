@@ -1,0 +1,11 @@
+{
+  "work_id": "handel_lascia_chio_pianga",
+  "video_id": "xHzbkP_Wcm0",
+  "uploaded": "2026-06-18",
+  "sync_offset_sec": 0.0,
+  "cue_count": 26,
+  "locales": ["en", "ko", "ja", "es", "pt", "de", "fr", "ru", "zh-Hant", "zh-Hans"],
+  "format": "2-line [original Italian + locale translation], standard track, isDraft=false",
+  "note": "Series-first CC caption track set (pilot). Covers A(1-67s)+B(94-130s)+da capo A'(130-196s); wordless hum 196-222s uncaptioned. Tracks served live; cotton listen-gate confirmed sync (offset 0). Track IDs are re-fetchable via `youtube_captions.py list`. Re-upload = `insert --replace`.",
+  "audit": "PASS (10/10 serving · 2026-06-18)"
+}

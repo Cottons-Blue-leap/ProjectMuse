@@ -1,0 +1,22 @@
+{
+  "work_id": "handel_lascia_chio_pianga",
+  "note": "Per-work segmentation map derived from the .vpr Lead/Soprano phoneme dump (verified against notes/lyrics_and_arrangement.md). Indices are PART-LOCAL note indices. line = lyrics.json line idx (1..8). The A material and A' (da capo) share identical notes, so the 'A' map applies to both A-type regions. Wordless regions (all phoneme 'N\\') are auto-skipped.",
+  "vpr": "music/renders/Miku_handel_lascia_chio_pianga.vpr",
+  "vocal_track_name_contains": "opran",
+  "merge_consecutive_same_line": true,
+  "region_signatures": {
+    "A": ["j a"],
+    "B": ["@U"]
+  },
+  "maps": {
+    "A": [
+      [0, 9, 1], [10, 19, 2], [20, 27, 3], [28, 35, 4],
+      [36, 42, 3], [43, 49, 3], [50, 57, 4],
+      [58, 67, 1], [68, 77, 2], [78, 85, 3], [86, 93, 4]
+    ],
+    "B": [
+      [0, 13, 5], [14, 22, 6], [23, 32, 7], [33, 53, 8],
+      [54, 63, 7], [64, 70, 8]
+    ]
+  }
+}
