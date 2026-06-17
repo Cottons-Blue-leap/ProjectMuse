@@ -483,20 +483,20 @@ def cover(w, lang):
 def build_description(w, lang):
     """주요 블록은 '—' 로 구분 · 해시태그는 크레딧 블록에 빈 줄로 부착 (live EN 정합)."""
     major = []
-    if w.get("lyrics"):  # 가사곡 = CC(자막) 안내를 최상단 배너 블록으로 (코튼 LOCK 2026-06-17)
-        major.append(CC_LYRICS[lang])
+    # 가사곡 = CC(자막) 안내를 hook 바로 위 같은 블록에 붙임 (디바이더 X · [더보기] 전 hook 노출 · 코튼 2026-06-17 update)
+    cc = (CC_LYRICS[lang] + "\n\n") if w.get("lyrics") else ""
     if w.get("welcome"):
-        major.append(WELCOME[lang])
+        major.append(cc + WELCOME[lang])
         block = dedication(w, lang) + "\n\n" + cover(w, lang)
     elif w.get("custom_hook"):
         # bespoke hook (표준 "{N} Mikus sing it now" 템플릿 벗어남 · 차이콥스키 사탕요정 s398).
         # curator+dedication 대신 per-work 3줄 블록 통째 사용 (count/sing/NUM 미사용).
-        head = w["custom_hook"][lang]
+        head = cc + w["custom_hook"][lang]
         block = head + "\n\n" + cover(w, lang)
     else:
         cur = w["curator"][lang]
         ded = dedication(w, lang)
-        head = (cur + "\n\n" + ded) if w["style"] == "lead" else (cur + "\n" + ded)
+        head = cc + ((cur + "\n\n" + ded) if w["style"] == "lead" else (cur + "\n" + ded))
         block = head + "\n\n" + cover(w, lang)
     if w.get("subscribe"):
         block += "\n\n" + SUBSCRIBE[lang]

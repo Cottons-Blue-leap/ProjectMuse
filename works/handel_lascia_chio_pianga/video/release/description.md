@@ -28,7 +28,7 @@
 
 ## CC(자막) 안내 (가사곡 전용 · 코튼 LOCK 2026-06-17)
 
-- **위치 = 설명란 최상단** (hook "울지 마 미쿠야" 위 · `—` 디바이더로 분리된 배너 블록). 코튼 "즉시 인지" 우선 결정.
+- **위치 = 설명란 최상단** (hook "울지 마 미쿠야" 바로 위 · 빈 줄 1개 · **디바이더 X**). 코튼 "즉시 인지" + **[더보기] 누르기 전에 hook까지 노출** 우선 (2026-06-17 update: 초안의 `—` 디바이더 제거 = 디바이더가 hook을 fold 아래로 밀어냄).
 - **카피 (짧은 지시형)**: EN `📃 For lyrics, turn on CC (captions).` / KO `📃 가사 보기 → CC(자막)을 켜 주세요.` / JA `📃 歌詞はCC（字幕）をオンに。`
 - 구현 = en/ja/ko는 hand-sidecar 최상단 직접 삽입 · 7언어는 `localize_batch.py` `CC_LYRICS` dict + work `"lyrics": True` 플래그 → `build_description` 최상단 주입. **가사곡에 `"lyrics": True`만 켜면 자동 적용** (시리즈 가사곡 재사용 메커니즘).
 
