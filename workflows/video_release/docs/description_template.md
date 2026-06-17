@@ -215,6 +215,15 @@ v5 swap 본질 = 면책 wording을 가장 마지막 *footer 자리*로 격리 (�
 
 본 template = 라이브 서비스 (다음 곡들) 진입 시 그대로 keep. anchor 블록 (1·3·4) 변경 시 *시리즈 통째 정정* 본질이라 신중 결단 자리. 가변 자리 4건만 매 작품 채움.
 
+## CC(자막) 안내 — 가사곡 전용 (코튼 LOCK 2026-06-17)
+
+가사가 있는 곡(성악/아리아 등)은 CC 자막에 가사가 깔리므로, **설명란 최상단**에 짧은 지시형 안내 배너를 박는다 (코튼 "즉시 인지" 우선 · hook 위 · `—` 디바이더 분리 블록).
+
+- 카피 (10로케일): EN `📃 For lyrics, turn on CC (captions).` / KO `📃 가사 보기 → CC(자막)을 켜 주세요.` / JA `📃 歌詞はCC（字幕）をオンに。` · 7언어 = `localize_batch.py` `CC_LYRICS` dict.
+- 구현 = en/ja/ko는 hand-sidecar 최상단 직접 삽입 · 7언어는 work에 **`"lyrics": True`** 플래그만 켜면 `build_description`이 최상단 주입. **신규 가사곡은 플래그 1줄로 자동 적용.**
+- 적용 전제 = 해당 영상에 실제 CC 자막 트랙이 올라가 있어야 함 (캡션 파이프라인 = `muse_captions`/`youtube_captions`). 첫 적용 = ⑩ 헨델 (vid `xHzbkP_Wcm0`).
+- 비가사 기악곡은 미적용 (플래그 끔).
+
 ## 정정 이력
 
 - v1 (s292) — 첫 작품 짐노페디 description 자료 흡수 + 3 블록 양식 박음. 4 가변 자리 + 2 anchor 블록 + 점검 의제 3건 default 결단.

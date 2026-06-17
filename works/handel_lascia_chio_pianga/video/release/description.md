@@ -26,6 +26,12 @@
 - zh-Hant = 《讓我哭泣吧》 (대만 통용 · zh위키 표제 · QA 게이트 수정) / zh-Hans = 《让我痛哭吧》 (대륙 통용 · 百度百科).
 - 작곡가 표기 = EN `George Frideric Handel`(영어권 귀화 철자) / de·es·pt `Georg Friedrich Händel` / fr `Haendel` / ru `Гендель` / zh-Hant 韓德爾 / zh-Hans 亨德尔.
 
+## CC(자막) 안내 (가사곡 전용 · 코튼 LOCK 2026-06-17)
+
+- **위치 = 설명란 최상단** (hook "울지 마 미쿠야" 위 · `—` 디바이더로 분리된 배너 블록). 코튼 "즉시 인지" 우선 결정.
+- **카피 (짧은 지시형)**: EN `📃 For lyrics, turn on CC (captions).` / KO `📃 가사 보기 → CC(자막)을 켜 주세요.` / JA `📃 歌詞はCC（字幕）をオンに。`
+- 구현 = en/ja/ko는 hand-sidecar 최상단 직접 삽입 · 7언어는 `localize_batch.py` `CC_LYRICS` dict + work `"lyrics": True` 플래그 → `build_description` 최상단 주입. **가사곡에 `"lyrics": True`만 켜면 자동 적용** (시리즈 가사곡 재사용 메커니즘).
+
 ## 9언어 sidecar 상태
 
 - **en/ja/ko** = hand-sidecar 정본 (description.{en,ja,ko}.txt · 코튼 컨펌 2026-06-11).

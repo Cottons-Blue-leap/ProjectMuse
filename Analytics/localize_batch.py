@@ -70,6 +70,16 @@ WELCOME = {  # Satie 전용 (구작 Welcome 블록)
     "zh-Hant": "歡迎來到 Atelier Miku A Cappella！\n\n這是一個同人企劃：將古典名曲改編給初音未來的歌聲，一次一首，細細打磨。\n願你在這裡遇見值得珍愛的一曲 ♪",
     "zh-Hans": "欢迎来到 Atelier Miku A Cappella！\n\n这是一个同人企划：将古典名曲改编给初音未来的歌声，一次一首，细细打磨。\n愿你在这里遇见值得珍爱的一曲 ♪",
 }
+CC_LYRICS = {  # 가사곡 전용 CC(자막) 안내 · 설명란 최상단 · 짧은 지시형 (코튼 LOCK 2026-06-17).
+    # en/ja/ko = release/ hand-sidecar 정본. 여기 7언어 = build_description 최상단 주입 (work "lyrics": True).
+    "es": "📃 Para la letra, activa los subtítulos (CC).",
+    "pt": "📃 Para a letra, ative as legendas (CC).",
+    "de": "📃 Für den Liedtext bitte CC (Untertitel) einschalten.",
+    "fr": "📃 Pour les paroles, activez les sous-titres (CC).",
+    "ru": "📃 Чтобы видеть текст, включите субтитры (CC).",
+    "zh-Hant": "📃 想看歌詞，請開啟字幕（CC）。",
+    "zh-Hans": "📃 想看歌词，请开启字幕（CC）。",
+}
 SUBSCRIBE = {  # Satie/Vivaldi/Joplin (구작 CTA 유지)
     "es": "¡Suscríbete para unirte al Atelier y descubrir un nuevo lado de la música clásica!",
     "pt": "Inscreva-se para entrar no Atelier e descobrir um novo lado da música clássica!",
@@ -352,7 +362,7 @@ WORKS = [
     },
     {
         "vid": "xHzbkP_Wcm0", "slug": "handel_lascia_chio_pianga", "count": 13, "year": "1711",
-        "style": "lead", "welcome": False, "subscribe": False, "era": "baroque",
+        "style": "lead", "welcome": False, "subscribe": False, "era": "baroque", "lyrics": True,
         # 작곡가 표기 = 로케일 정본: de/es/pt 'Händel' · fr 'Haendel' · EN 귀화 철자는 en sidecar 전용
         "surname": {"es": "Händel", "pt": "Händel", "de": "Händel", "fr": "Haendel",
                     "ru": "Гендель", "zh-Hant": "韓德爾", "zh-Hans": "亨德尔"},
@@ -381,7 +391,7 @@ WORKS = [
                       "ru": "#LasciaChIoPianga", "zh-Hant": "#讓我哭泣吧", "zh-Hans": "#让我痛哭吧"},
     },
     {
-        "vid": "BCCENPR1k6E", "slug": "haydn_trumpet_concerto_finale", "count": 22, "year": "1796",
+        "vid": "KVBcKnyMzoQ", "slug": "haydn_trumpet_concerto_finale", "count": 22, "year": "1796",
         "style": "lead", "welcome": False, "subscribe": False, "era": "classical",
         "surname": L("Haydn", "Гайдн", "海頓", "海顿"),
         "full": L("Joseph Haydn", "Йозеф Гайдн", "約瑟夫·海頓", "约瑟夫·海顿"),
@@ -473,6 +483,8 @@ def cover(w, lang):
 def build_description(w, lang):
     """주요 블록은 '—' 로 구분 · 해시태그는 크레딧 블록에 빈 줄로 부착 (live EN 정합)."""
     major = []
+    if w.get("lyrics"):  # 가사곡 = CC(자막) 안내를 최상단 배너 블록으로 (코튼 LOCK 2026-06-17)
+        major.append(CC_LYRICS[lang])
     if w.get("welcome"):
         major.append(WELCOME[lang])
         block = dedication(w, lang) + "\n\n" + cover(w, lang)
@@ -595,7 +607,12 @@ def cmd_review(_):
 
 def cmd_push(args):
     """라이브 푸시: 7 신규 로케일을 영상 localizations + 채널 localizations 에 read-modify-write.
-    기존 en/ja/ko + 기본 snippet 전부 보존. --dry-run 으로 미적용 미리보기."""
+    기존 en/ja/ko + 기본 snippet 전부 보존. --dry-run 으로 미적용 미리보기.
+
+    ⚠️ 순서 주의(2026-06-17 하이든 재업로드 적발): push 는 snippet 전체를 read-modify-write 하는데,
+    직전에 youtube_meta set-tags 를 돌렸으면 eventual-consistency 로 stale snippet(태그 없음)을 읽어
+    태그를 덮어써 날릴 수 있다. 재업로드 메타 적용 순서 = **title/desc → push → 마지막에 set-tags**.
+    (태그 read 는 localizations 보다 전파가 느려 적용 직후 0 으로 보일 수 있음 = 수 초 후 재확인.)"""
     import youtube_meta as ym
     svc = ym.yt()
     sel = _select(getattr(args, "only", None))
