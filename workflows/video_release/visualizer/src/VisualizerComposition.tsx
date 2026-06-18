@@ -52,6 +52,17 @@ const HEIGHT_SCALE_EXPONENT = 0.5;
 
 const TEXT_COLOR = "#e8e0c8";
 const TEXT_SHADOW = "0 2px 12px rgba(0, 0, 0, 0.75)";
+// Thin solid outline on all on-screen text (코튼 2026-06-17). paintOrder draws
+// the stroke behind the fill so glyph faces stay full while a crisp edge defines
+// them against any letterbox tone. Applied to every text block (inherited by
+// webkit-text-stroke). Forward-only: already-published works are not re-rendered.
+const TEXT_STROKE_WIDTH = "0.8px"; // 코튼 LOCK 2026-06-17
+const TEXT_STROKE_COLOR = "rgba(0, 0, 0, 0.5)";
+const TEXT_OUTLINE: React.CSSProperties = {
+  WebkitTextStrokeWidth: TEXT_STROKE_WIDTH,
+  WebkitTextStrokeColor: TEXT_STROKE_COLOR,
+  paintOrder: "stroke fill",
+};
 const WORDMARK_TEAL = "rgb(40, 180, 175)";
 const WORDMARK_RIGHT = 81;
 const WORDMARK_BOTTOM = 90;
@@ -129,6 +140,14 @@ const Bar: React.FC<BarProps> = ({
   );
 };
 
+// CC cue (s-current): "captions available" prompt for vocal/lyric songs only.
+// Gated by hasCaptions prop (default false) — instrumental→vocalise works never
+// set it, so existing 6 works are untouched (forward-only). Placed bottom-right,
+// right-aligned, directly above the "Atelier Miku Acappella" wordmark (코튼 2026-06-17).
+const CC_CUE_RIGHT = WORDMARK_RIGHT; // align right edge with the wordmark
+const CC_CUE_BOTTOM = WORDMARK_BOTTOM + 66; // sits just above the wordmark line
+const CC_CUE_FONT_SIZE = 26;
+
 export type VisualizerProps = {
   letterboxColors: [string, string, string];
   composerName: string;
@@ -138,6 +157,7 @@ export type VisualizerProps = {
   coverPath: string;
   variationStarts: number[];
   variationLabels: string[];
+  hasCaptions?: boolean;
 } & Record<string, unknown>;
 
 export const VisualizerComposition: React.FC<VisualizerProps> = ({
@@ -149,6 +169,7 @@ export const VisualizerComposition: React.FC<VisualizerProps> = ({
   coverPath,
   variationStarts,
   variationLabels,
+  hasCaptions = false,
 }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
@@ -233,6 +254,12 @@ export const VisualizerComposition: React.FC<VisualizerProps> = ({
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
+
+  // CC cue (only when hasCaptions): a steady, always-on badge so viewers at any
+  // point — including mid-roll/late arrivals — see captions exist. No blink/pulse
+  // (코튼 2026-06-17). It rides the global FADE_IN with the rest of the frame.
+  const CC_STEADY_OPACITY = 0.92; // near wordmark strength (코튼: Lyrics 시인성 ↑)
+  const ccCueOpacity = CC_STEADY_OPACITY;
 
   const letterboxGradient = `linear-gradient(180deg, ${letterboxColors[0]} 0%, ${letterboxColors[1]} 50%, ${letterboxColors[2]} 100%)`;
   const barColor = hexToRgba(letterboxColors[2], BAR_OPACITY);
@@ -339,6 +366,7 @@ export const VisualizerComposition: React.FC<VisualizerProps> = ({
             textShadow: TEXT_SHADOW,
             letterSpacing: "0.02em",
             opacity: chapterLabelOpacity,
+            ...TEXT_OUTLINE,
           }}
         >
           {currentChapterLabel}
@@ -357,6 +385,7 @@ export const VisualizerComposition: React.FC<VisualizerProps> = ({
             textShadow: TEXT_SHADOW,
             letterSpacing: "0.02em",
             maxWidth: LEFT_LETTERBOX_WIDTH - 100,
+            ...TEXT_OUTLINE,
           }}
         >
           <div style={{ fontSize: 32, opacity: 0.85 }}>{composerName}</div>
@@ -368,6 +397,52 @@ export const VisualizerComposition: React.FC<VisualizerProps> = ({
               {pieceSubtitle}
             </div>
           )}
+        </div>
+      )}
+
+      {fontLoaded && hasCaptions && (
+        <div
+          style={{
+            position: "absolute",
+            right: CC_CUE_RIGHT,
+            bottom: CC_CUE_BOTTOM,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "flex-end",
+            gap: 10,
+            opacity: ccCueOpacity,
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "GFSDidotLocal, serif",
+              fontSize: CC_CUE_FONT_SIZE - 4,
+              fontWeight: 400,
+              color: "#ECECEC",
+              background: "#141414",
+              borderRadius: 5,
+              padding: "1px 9px",
+              letterSpacing: "0.10em",
+              lineHeight: 1.35,
+            }}
+          >
+            CC
+          </div>
+          <div
+            style={{
+              color: TEXT_COLOR,
+              fontFamily: "GFSDidotLocal, serif",
+              fontSize: CC_CUE_FONT_SIZE + 2,
+              fontWeight: 400,
+              lineHeight: 1.3,
+              textShadow: TEXT_SHADOW,
+              letterSpacing: "0.02em",
+              whiteSpace: "nowrap",
+              ...TEXT_OUTLINE,
+            }}
+          >
+            <span style={{ color: WORDMARK_TEAL }}>▸</span> Lyrics
+          </div>
         </div>
       )}
 
@@ -385,6 +460,7 @@ export const VisualizerComposition: React.FC<VisualizerProps> = ({
             textShadow: TEXT_SHADOW,
             letterSpacing: "0.02em",
             whiteSpace: "nowrap",
+            ...TEXT_OUTLINE,
           }}
         >
           <span>Atelier </span>

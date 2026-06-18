@@ -2,6 +2,7 @@ import { Composition } from "remotion";
 import { VisualizerComposition, VisualizerProps } from "./VisualizerComposition";
 import { ShortsComposition, ShortsProps } from "./ShortsComposition";
 import { CanonStageComposition, CanonStageProps } from "./CanonStageComposition";
+import { MikuPileComposition, MikuPileProps } from "./MikuPileComposition";
 
 // ──────────────────────────────────────────────────────────────────────────
 // GENERIC shared visualizer root — work-agnostic (s412 통합 양식 B).
@@ -46,6 +47,24 @@ const FALLBACK_SHORTS_PROPS: ShortsProps = {
   endCredit: "Erik Satie — Gymnopédie No. 1",
   endCta: "Full version on the channel",
   durationSeconds: 30,
+};
+
+// MikuPile (9:16) — v3 어그로 범용 쇼츠 엔진 (s427). 디자인 전부 props.
+const FALLBACK_PILE_PROPS: MikuPileProps = {
+  audioPath: "audio.wav",
+  bpm: 56,
+  beatsPerBar: 3,
+  buildStartSec: 4,
+  voiceCount: 3,
+  spriteWait: "miku_wait.png",
+  spriteSing: "miku_sing.png",
+  gradient: ["#1f2c3d", "#4a5a6e", "#b8a673"],
+  episodeNo: 1,
+  pieceLabel: "짐노페디 1번",
+  hookCaption: "피아노인 줄 알았지?",
+  cornerDetail: "39",
+  endCta: "전체 버전은 채널에",
+  durationSeconds: 22,
 };
 
 // MikuDiscovery (9:16) — "창작자 발견 delight" 쇼츠 rig (s421). 디자인 전부 props.
@@ -97,6 +116,18 @@ export const RemotionRoot: React.FC = () => {
         defaultProps={FALLBACK_SHORTS_PROPS}
         calculateMetadata={async ({ props }) => ({
           durationInFrames: Math.round(FPS * Number(props.durationSeconds ?? 30)),
+        })}
+      />
+      <Composition
+        id="MikuPile"
+        component={MikuPileComposition}
+        fps={FPS}
+        width={1080}
+        height={1920}
+        durationInFrames={Math.round(FPS * 22)}
+        defaultProps={FALLBACK_PILE_PROPS}
+        calculateMetadata={async ({ props }) => ({
+          durationInFrames: Math.round(FPS * Number(props.durationSeconds ?? 22)),
         })}
       />
       <Composition

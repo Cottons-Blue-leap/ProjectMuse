@@ -97,6 +97,12 @@ REGISTRY = {
                        # 담쟁이 + PROSERPINA 명문 패널 동시 생존. B2(우측 줌·box 0.0,0.14,0.76,0.5675)는 석류가
                        # 곡명 줄에 가려 반려 — 석류가 얼굴 바로 아래라 '얼굴 우측+석류' 양립 불가 구도.
                        box=(0.0, 0.04, 1.0, 0.72), composer="George Frideric Handel", piece="Lascia ch'io pianga"),
+    "queen_of_night": dict(dir="mozart_queen_of_the_night",
+                       cover="video/cover/schinkel_hall_of_stars_1815.png",
+                       # box = 초승달 위 미쿠 밤의여왕 실루엣을 hero로 줌(트윈테일·왕관 읽힘). 인물이 silhouette →
+                       # 짐노페디 선례처럼 初音ミク 텍스트가 인식 보강. 코튼 2026-06-18 "미쿠 미세 우측 이동(글자 덜 겹치게)"
+                       # → box를 좌로 0.06 평행이동(중심 0.50→0.44) = 인물 우측 배치 + 좌하단 텍스트 클리어런스. piece="Queen of the Night"(통용명·인식 우선).
+                       box=(0.06, 0.565, 0.82, 0.99), composer="W.A. Mozart", piece="Queen of the Night"),
     "haydn_trumpet": dict(dir="haydn_trumpet_concerto_finale",
                        cover="video/cover/Miku_strozzi_personification_of_fame_wga.png",
                        # box = T1_wide (코튼 2026-06-15 · T2 face-tight 후보와 비교 후 확정): 얼굴 大 + 트럼펫이

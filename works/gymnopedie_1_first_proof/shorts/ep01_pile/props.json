@@ -1,0 +1,16 @@
+{
+  "audioPath": "audio.wav",
+  "bpm": 56,
+  "beatsPerBar": 3,
+  "buildStartSec": 4,
+  "voiceCount": 3,
+  "spriteWait": "miku_wait.png",
+  "spriteSing": "miku_sing.png",
+  "gradient": ["#1f2c3d", "#4a5a6e", "#b8a673"],
+  "episodeNo": 1,
+  "pieceLabel": "짐노페디 1번",
+  "hookCaption": "피아노인 줄 알았지?",
+  "cornerDetail": "39",
+  "endCta": "전체 버전은 채널에",
+  "durationSeconds": 22
+}

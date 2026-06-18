@@ -92,14 +92,15 @@
       "subdirs": ["docs", "scripts", "templates", "visualizer (공유 Remotion 프로젝트 · work별 props.json+public 주입 · 렌더 = muse.py render)"]
     },
     "shorts_first_proof": {
-      "stage": "5 · 본 영상 publish + 1달 → 쇼츠 1편",
+      "stage": "5 · 본편 publish 후 → 쇼츠 (단일 생산 루트)",
       "type": "manual",
-      "entry": "본 영상 master 30초 cut + V6 화면 녹화 + 9:16 letterbox (수동 8 step)",
-      "inputs": ["works/<piece>/music/masters/master.wav", "works/<piece>/video/ (publish 완료)"],
+      "entry": "MikuDiscovery rig(스프라이트 드롭인) + 본편 master 오디오 컷 → 1080×1920 어그로 템플릿 v3 렌더",
+      "inputs": ["works/<piece>/music/masters/master.wav", "works/<piece>/shorts/<rig>/ (props.json + public)"],
       "outputs": ["YouTube Shorts (Studio 예약 publish)"],
       "depends_on": ["video_release"],
       "owner": "Cotton+MOKA",
-      "subdirs": []
+      "subdirs": [],
+      "note": "트랙 단일화 2026-06-12 = B(어그로) 단일 · A(콜드오픈) 폐기·삭제 · 엔진=canon_round rig · 포맷=05_shorts_funnel §11~12"
     }
   },
   "support": {

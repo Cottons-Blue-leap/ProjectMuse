@@ -211,10 +211,13 @@ def cmd_vtt(work_id: str):
     for lang in lyr["locales"]:
         out_lines = ["WEBVTT", ""]
         for c in cues["cues"]:
-            line = by_idx[c["line"]]
-            orig = line["original"]
-            trans = line.get(lang, "")
-            body = orig if lang == original_lang else f"{orig}\n{trans}"
+            if c.get("symbol"):
+                body = c["symbol"]                       # wordless cue (e.g. ♪ coloratura) — same in every locale
+            else:
+                line = by_idx[c["line"]]
+                orig = line["original"]
+                trans = line.get(lang, "")
+                body = orig if lang == original_lang else f"{orig}\n{trans}"
             out_lines.append(f"{fmt_ts(c['start']+off)} --> {fmt_ts(c['end']+off)}")
             out_lines.append(body)
             out_lines.append("")
