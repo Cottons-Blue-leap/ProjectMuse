@@ -1,0 +1,18 @@
+{
+  "piece": "The Swan (Le Cygne) from The Carnival of the Animals, No. 13 (Camille Saint-Saëns)",
+  "composer": "Camille Saint-Saëns (1835-1921)",
+  "year": 1886,
+  "section": "《동물의 사육제》(Le Carnaval des animaux, R.125)의 13번째 곡 〈백조〉 통째 (~3분 · 6/4 · G장조 · Adagio). 원편성 = 첼로 독주 + 피아노 2대(물결치는 아르페지오 반주). 세계 최상위 인지도 = 잔잔·서정의 교과서급(영화·발레·광고 다용 · '빈사의 백조' 발레로도 유명). ★ 선정 의도 = 낭만 + **간단·휴식**(코튼 2026-06-18 · 하이든 트럼펫·밤의여왕 N=22 관현악 2연타 직후 톤/분량 대비 휴식곡). 텍스처 = 첼로 한 줄 레가토 칸틸레나 + 피아노 흐르는 아르페지오(물 일렁임). ★ **N 의도적 저밀도 목표**(~4~6 · literal 2-piano 채보로 부풀리지 않음 = '간단' 의도 정직 반영). 핵심 게이트 = 백조의 그 긴 레가토 노래선이 미쿠 지속 모음(Ah)에서 살아 흐르는가 + 아르페지오 물결이 군더더기 없이 일렁이는가.",
+  "vocal": "Hatsune Miku (모음/humming · Ah·Oo·Mm role · 기악 원곡 = 가사 없음 · 기악 family 정합[짐노페디·비발디·조플린·사랑의인사·작은별·쇼팽·캐논·사탕요정·보케리니·하이든]). role 분배 axis(잠정 · V6 입력 시 악보 분석 후 확정) = 첼로 주선율(긴 레가토 칸틸레나) → lead_miku Ah / 피아노 아르페지오 물결 → mid_oo (얇게 2~3성 · 물 일렁임) / 베이스 라인 → low_oo / air_mm = glue. ★ 편곡 철학 = **얇게 유지**(literal 2-piano 연속 아르페지오 = N 폭증 위험 → 화성 단순·반복적이라 oscillating 2~3성으로 축약 · 사탕요정 N=32 / 하이든 N=22의 정반대 휴식). 게이트 = 레가토 우아미 + 물결 셰머가 모음에서 동시에 사는지.",
+  "music": {
+    "source_score": "planning/candidates_opus/카미유 생상스_동물의 사육제.pdf (확보 2026-05-11 · CSV row 93 score_file 정합 · 13번 〈Le Cygne〉 발췌 · V6 진입 시 발췌 필요하면 music/source_scores/로 ASCII path copy)",
+    "imslp_path_axis": "https://imslp.org/wiki/Le_carnaval_des_animaux_(Saint-Saëns,_Camille) · PD 강 전세계 · Saint-Saëns d.1921 life+70=1992 통과 · 〈백조〉는 생전 출판 허락된 유일 악장(1887) · 전곡은 1922 사후 출판이나 현재 전부 PD",
+    "transcription": "코튼 V6 editor 직접 입력 (OMR 없음 · manual transcription default 정합)",
+    "master_audio": "music/masters/Miku_saint_saens_the_swan_master.wav (path 예약 · 미생성)"
+  },
+  "video": {
+    "brief": "video/video-brief.md (미작성)",
+    "final_video": "video/exports/saint_saens_the_swan_final.mp4 (path 예약)"
+  },
+  "rights_log": "rights/rights-log.md"
+}
