@@ -1,0 +1,18 @@
+BASE PAINTING SOURCE (cover base · FINAL LOCK 2026-06-18)
+
+Karl Friedrich Schinkel — "Die Sternenhalle der Königin der Nacht"
+= "The Hall of Stars in the Palace of the Queen of the Night" (c.1815)
+Stage design for Mozart's Die Zauberflöte (The Magic Flute), Act 1 Scene 6.
+Original gouache: Berlin Kupferstichkabinett. PD강 (Schinkel d.1841).
+
+★ 시리즈 통틀어 가장 literal — 바로 이 오페라·이 캐릭터의 무대 디자인.
+
+Local file: schinkel_hall_of_stars_1815_gap.jpg (8033×5955)
+Source URL: https://upload.wikimedia.org/wikipedia/commons/a/a8/Karl_Friedrich_Schinkel_-_Die_Sternenhalle_der_K%C3%B6nigin_der_Nacht_%28ca._1815%29.jpg
+Commons: https://commons.wikimedia.org/wiki/Category:Die_Sternenhalle_der_K%C3%B6nigin_der_Nacht_von_Karl_Friedrich_Schinkel
+
+--- 베이스 후보 history (전부 PD·viewing 검증) ---
+06-15 패널 선정: John Collier 〈Clytemnestra〉(1882) — 06-18 supersede.
+06-18 위엄 방향: Joshua Reynolds 〈Sarah Siddons as the Tragic Muse〉(1784) — v1 생성됨, 컨셉('밤' 아님)으로 코튼 반려.
+06-18 밤 탐색: Arbo 〈Nótt〉(1887) / Hughes 〈Night with her Train of Stars〉(1912) / Bouguereau 〈La Nuit〉 / Blake 〈Hecate〉 검토.
+06-18 FINAL: 코튼 제안 Schinkel 〈Sternenhalle〉 = 곡 직속 무대 디자인 → 확정.

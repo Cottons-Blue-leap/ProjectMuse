@@ -1,0 +1,16 @@
+{
+  "piece": "Der Hölle Rache kocht in meinem Herzen (Queen of the Night aria)",
+  "composer": "Wolfgang Amadeus Mozart",
+  "section": "Die Zauberflöte K.620, Act II, No. 14 (aria) · D minor · Allegro assai",
+  "vocal": "Hatsune Miku",
+  "music": {
+    "source_score_planning": "music/source_scores/queen_of_the_night_aria.pdf",
+    "dry_stems_dir": "music/renders/dry_stems",
+    "master_audio": "music/masters/master.wav"
+  },
+  "video": {
+    "brief": "video/video-brief.md",
+    "final_video": "video/exports/mozart_queen_of_the_night_final.mp4"
+  },
+  "rights_log": "rights/rights-log.md"
+}

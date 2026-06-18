@@ -1,0 +1,33 @@
+{
+  "work_id": "mozart_queen_of_the_night",
+  "vpr": "music/renders/Miku_mozart_queen_of_the_night.vpr",
+  "source": "MOKA .vpr Soprano note-onset extraction (144 BPM · 480 ticks/quarter), segmented to 코튼's exact sung transcription (2026-06-18 v4). DRAFT — pending 코튼 sync gate. sync_offset_sec for a global shift.",
+  "structure_note": "First two rising coloratura passages = ♪. Signature staccato F6 = two 'a-a-a-…' symbol cues (each staccato note its own 'a'). Times in seconds.",
+  "duration": 169.17,
+  "sync_offset_sec": 0.0,
+  "cue_count": 22,
+  "cues": [
+    {"idx": 1,  "line": 1,  "start": 3.5,   "end": 7.0,   "section": "A"},
+    {"idx": 2,  "line": 2,  "start": 7.5,   "end": 10.3,  "section": "A"},
+    {"idx": 3,  "line": 3,  "start": 10.83, "end": 16.5,  "section": "A"},
+    {"idx": 4,  "line": 4,  "start": 17.6,  "end": 23.9,  "section": "A"},
+    {"idx": 5,  "line": 5,  "start": 24.0,  "end": 26.9,  "section": "A", "note": "2nd 'Sarastro' restarts @23.96 (.vpr 'za')"},
+    {"idx": 6,  "line": 6,  "start": 27.9,  "end": 33.6,  "section": "A"},
+    {"idx": 7,  "line": 7,  "start": 33.75, "end": 37.0,  "section": "A", "note": "2nd 'So bist du' restarts @33.75 (.vpr 'zo') — was late"},
+    {"idx": 8,  "line": 8,  "start": 37.1,  "end": 40.0,  "section": "A"},
+    {"idx": 9,  "symbol": "♪", "start": 40.4,  "end": 52.9,  "note": "first coloratura passage (rising F6 melisma)"},
+    {"idx": 10, "line": 9,  "start": 53.3,  "end": 58.4,  "section": "A"},
+    {"idx": 11, "symbol": "♪", "start": 58.75, "end": 71.3,  "note": "second coloratura passage (rising F6 melisma)"},
+    {"idx": 12, "line": 18, "start": 71.7,  "end": 78.0,  "section": "A", "note": "1:11 반복 = KO '…아니야' (idx18 · 0:27 idx6 '…아니다'와 어미만 분리)"},
+    {"idx": 13, "line": 10, "start": 87.3,  "end": 93.5,  "section": "B", "note": "'verlassen sei auf ewig' runs to ~93.3"},
+    {"idx": 14, "line": 11, "start": 94.0,  "end": 101.3, "section": "B", "note": "'Zertrümmert' onset @94.0 (.vpr 'chair') — was 1.1s early"},
+    {"idx": 15, "line": 12, "start": 102.3, "end": 106.5, "section": "B"},
+    {"idx": 16, "line": 13, "start": 106.6, "end": 114.3, "section": "B", "note": "trails into the staccato"},
+    {"idx": 17, "symbol": "a-a-a-a-a-a-a-a-a-a-a-a-", "start": 114.3, "end": 124.6, "note": "signature staccato F6 — burst 1"},
+    {"idx": 18, "symbol": "a-a-a-a-a-a-a-a-a-a-a-a-", "start": 126.0, "end": 132.0, "note": "signature staccato F6 — burst 2"},
+    {"idx": 19, "line": 14, "start": 132.1, "end": 136.5, "section": "B"},
+    {"idx": 20, "line": 15, "start": 137.1, "end": 145.0, "section": "B"},
+    {"idx": 21, "line": 16, "start": 147.5, "end": 156.7, "section": "C"},
+    {"idx": 22, "line": 17, "start": 157.5, "end": 162.0, "section": "C"}
+  ]
+}

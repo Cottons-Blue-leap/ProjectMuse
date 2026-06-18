@@ -71,6 +71,8 @@ VIDEOS = {
     "B9ENEwjgAhc": "Pachelbel - Canon in D",
     "759VCWOtC2w": "Tchaikovsky - Sugar Plum Fairy",
     "10ZSa-TPOC4": "Boccherini - Minuet",
+    "xHzbkP_Wcm0": "Handel - Lascia ch'io pianga",
+    "Gv5-QVuPZQs": "Mozart - Queen of the Night",
 }
 
 # `report` 명령 산출물 자리 (스크립트와 같은 Analytics/ 폴더에 함께 둠).

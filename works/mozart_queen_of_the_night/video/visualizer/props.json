@@ -1,0 +1,12 @@
+{
+  "durationSeconds": 169.166667,
+  "letterboxColors": ["#162630", "#163a4d", "#2a585c"],
+  "composerName": "Wolfgang Amadeus Mozart",
+  "pieceTitle": "Der Hölle Rache",
+  "pieceSubtitle": "Queen of the Night · K. 620",
+  "audioPath": "audio.wav",
+  "coverPath": "cover.png",
+  "variationStarts": [0],
+  "variationLabels": [""],
+  "hasCaptions": true
+}

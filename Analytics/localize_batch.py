@@ -136,6 +136,7 @@ PAINTER = {
     "Renoir": {"ru": "Ренуара", "zh-Hant": "雷諾瓦", "zh-Hans": "雷诺阿"},
     "Rossetti": {"ru": "Россетти", "zh-Hant": "羅塞蒂", "zh-Hans": "罗塞蒂"},
     "Strozzi": {"ru": "Строцци", "zh-Hant": "斯特羅齊", "zh-Hans": "斯特罗齐"},
+    "Schinkel": {"ru": "Шинкеля", "zh-Hant": "申克爾", "zh-Hans": "申克尔"},
 }
 def painter_name(lang, en):
     return PAINTER.get(en, {}).get(lang, en)
@@ -413,6 +414,31 @@ WORKS = [
             "zh-Hans": "嘹亮回荡的号角齐鸣。\n如今由二十二位初音未来献唱——\n约瑟夫·海顿 - 降E大调小号协奏曲，终乐章（1796）",
         },
         "tag_piece": {"es": "#ConciertoParaTrompeta", "pt": "#ConcertoParaTrompete", "de": "#Trompetenkonzert", "fr": "#ConcertoPourTrompette", "ru": "#КонцертДляТрубы", "zh-Hant": "#小號協奏曲", "zh-Hans": "#小号协奏曲"},
+    },
+    {
+        "vid": "Gv5-QVuPZQs", "slug": "mozart_queen_of_the_night", "count": 22, "year": "1791",
+        "style": "lead", "welcome": False, "subscribe": False, "era": "classical", "lyrics": True,
+        "surname": L("Mozart", "Моцарт", "莫札特", "莫扎特"),
+        "full": L("Wolfgang Amadeus Mozart", "Вольфганг Амадей Моцарт", "沃夫岡·阿瑪迪斯·莫札特", "沃尔夫冈·阿马德乌斯·莫扎特"),
+        # title 곡명 = 코튼 ⓑ 'Queen of the Night aria' 로케일 통용명 (본문 hook은 원제 'Der Hölle Rache' 유지)
+        "piece": {"es": "Aria de la Reina de la Noche", "pt": "Ária da Rainha da Noite", "de": "Arie der Königin der Nacht",
+                  "fr": "Air de la Reine de la Nuit", "ru": "Ария Царицы ночи", "zh-Hant": "夜后詠嘆調", "zh-Hans": "夜后咏叹调"},
+        "painter": "Schinkel", "painting": "The Hall of Stars in the Palace of the Queen of the Night", "p_year": "c.1815",
+        "cover_url": "https://commons.wikimedia.org/wiki/File:Karl_Friedrich_Schinkel_-_Die_Sternenhalle_der_K%C3%B6nigin_der_Nacht_(ca._1815).jpg",
+        "curator": None,
+        # custom_hook (코튼 LOCK 2026-06-18 · 1행 epithet 'Mozart is a genius.' 현재형 + 미쿠 라인 + 곡 크레딧 · 헨델 family).
+        # EN/KO/JA = release/ hand-sidecar 정본. 7언어 = 외부 QA subagent 게이트 (l10n cross-verification).
+        # 본문 곡명 = 원제 'Der Hölle Rache'(EN/es/pt/de/fr/ru 세계표준 incipit) + 로케일 디스크립터 · zh = 통용명 夜后咏叹调+incipit.
+        "custom_hook": {
+            "es": "Mozart = Genio\n\nAhora cantan veintidós Mikus —\nWolfgang Amadeus Mozart - Der Hölle Rache, el aria de la Reina de la Noche, de la ópera La flauta mágica (1791).",
+            "pt": "Mozart = Gênio\n\nAgora cantam vinte e duas Mikus —\nWolfgang Amadeus Mozart - Der Hölle Rache, a ária da Rainha da Noite, da ópera A Flauta Mágica (1791).",
+            "de": "Mozart = Genie\n\nJetzt singen zweiundzwanzig Mikus —\nWolfgang Amadeus Mozart - Der Hölle Rache, die Arie der Königin der Nacht aus der Oper Die Zauberflöte (1791).",
+            "fr": "Mozart = Génie\n\nÀ présent, vingt-deux Mikus chantent —\nWolfgang Amadeus Mozart - Der Hölle Rache, l'air de la Reine de la Nuit, de l'opéra La Flûte enchantée (1791).",
+            "ru": "Моцарт = гений\n\nТеперь поют двадцать две Мику —\nВольфганг Амадей Моцарт - Der Hölle Rache, ария Царицы ночи из оперы «Волшебная флейта» (1791).",
+            "zh-Hant": "莫札特 = 天才\n\n如今由二十二位初音未來獻唱——\n沃夫岡·阿瑪迪斯·莫札特 - 夜后詠嘆調〈Der Hölle Rache〉，選自歌劇《魔笛》（1791）。",
+            "zh-Hans": "莫扎特 = 天才\n\n如今由二十二位初音未来献唱——\n沃尔夫冈·阿马德乌斯·莫扎特 - 夜后咏叹调〈Der Hölle Rache〉，选自歌剧《魔笛》（1791）。",
+        },
+        "tag_piece": {"es": "#ReinaDeLaNoche", "pt": "#RainhaDaNoite", "de": "#KöniginDerNacht", "fr": "#ReineDeLaNuit", "ru": "#ЦарицаНочи", "zh-Hant": "#夜后", "zh-Hans": "#夜后"},
     },
 ]
 
