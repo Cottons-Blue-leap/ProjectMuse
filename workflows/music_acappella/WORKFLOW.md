@@ -25,7 +25,7 @@
 
 ## Phase 1: Repertoire Selection
 
-본 자리는 `planning/`에 누적. 자료 = `planning/candidate_master.csv` (S/A/B/C/D tier · 13 컬럼). 곡 선정 시점 점검 axis는 `prompts/01_selection.md` 참조.
+본 자리는 `planning/`에 누적. 자료 = `planning/candidate_master.csv` (S/A/B/C/D tier · 14 컬럼). 곡 선정 시점 점검 axis는 `prompts/01_selection.md` 참조.
 
 PDF는 `planning/candidates_opus/`에 박힘. 본 워크플로우 안에서는 *결단된 곡 진입* path만 다룬다.
 
