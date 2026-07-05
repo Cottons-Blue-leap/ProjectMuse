@@ -1,0 +1,11 @@
+{
+  "durationSeconds": 140.27,
+  "letterboxColors": ["#1A1C0E", "#A86A30", "#ECC79A"],
+  "composerName": "Camille Saint-Saëns",
+  "pieceTitle": "The Swan",
+  "pieceSubtitle": "Le Cygne · from The Carnival of the Animals",
+  "audioPath": "audio.wav",
+  "coverPath": "cover.png",
+  "variationStarts": [0],
+  "variationLabels": [""]
+}

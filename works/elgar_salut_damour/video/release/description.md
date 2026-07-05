@@ -22,7 +22,7 @@ https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_The_Soul_of_th
 —
 
 Production tool: VOCALOID6 / Voicebank: Hatsune Miku V6
-Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+Hatsune Miku, © Crypton Future Media, Inc.
 
 #HatsuneMiku #Acappella #SalutDamour #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #RomanticEra #Elgar #AtelierMikuAcappella
 ```

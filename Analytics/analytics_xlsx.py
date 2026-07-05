@@ -118,6 +118,7 @@ def build(analytics_dir):
     traffic = _read(analytics_dir / "traffic.csv")
     geo = _read(analytics_dir / "geo.csv")
     search = _read(analytics_dir / "search.csv")
+    growth = _read(analytics_dir / "growth.csv")  # ① 주간 스톡 시계열 (별도)
     if not snaps:
         raise RuntimeError("snapshots.csv 없음/빈 파일 — 먼저 `youtube_analytics.py report` 실행")
 
@@ -282,12 +283,22 @@ def build(analytics_dir):
     ws3.add_chart(chart, f"A{last + 3}")
 
     # ---- 누적 성장 추이 (lifetime · 채널 성장의 절대 곡선) ----
-    grow_rows = [r for r in snaps
-                 if r.get("scope") == "CHANNEL" and r.get("total_subscribers")]
+    # 스톡(odometer)엔 창이 없다 → 두 소스를 측정일 기준 병합해 하나의 촘촘한 곡선으로.
+    #  · snapshots.csv CHANNEL 행 = 과거 月1회 report에 얹혀 잡힌 스톡
+    #  · growth.csv          = ① 주간 스톡 스냅샷 (`youtube_analytics.py growth`)
+    # 같은 날은 growth.csv를 우선(더 정밀한 전용 수집).
+    _grow_by_date = {}
+    for r in snaps:
+        if r.get("scope") == "CHANNEL" and r.get("total_subscribers"):
+            _grow_by_date[r["measured_on"]] = r
+    for r in growth:
+        if r.get("total_subscribers"):
+            _grow_by_date[r["measured_on"]] = r
+    grow_rows = [_grow_by_date[d] for d in sorted(_grow_by_date)]
     gtop = last + 20  # 조회수 차트 아래
     _set(ws3, gtop, 1, "누적 성장 추이 (lifetime · 측정 회차별)", font=TITLE_F, border=False)
     _set(ws3, gtop + 1, 1,
-         "총 구독자·총 조회수·영상수 = 채널 성장의 절대 곡선 (28일 윈도우 활동량과 별개).",
+         "총 구독자·총 조회수·영상수 = 채널 성장의 절대 곡선 (28일 윈도우 활동량과 별개 · 주간 스톡 병합).",
          font=SUB_F, border=False)
     ghtop = gtop + 3
     for j, c in enumerate(["측정일", "총 구독자", "총 조회수", "영상수"]):

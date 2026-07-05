@@ -1,0 +1,18 @@
+{
+  "piece": "Colonel Bogey March",
+  "composer": "Kenneth J. Alford",
+  "composer_legal_name": "Frederick Joseph Ricketts",
+  "section": "full march",
+  "vocal": "Hatsune Miku",
+  "series_number": null,
+  "music": {
+    "source_score_planning": "music/source_scores/colonel_bogey_march.pdf",
+    "dry_stems_dir": "music/renders/dry_stems",
+    "master_audio": "music/masters/Miku_colonel_bogey_march_master.wav"
+  },
+  "video": {
+    "brief": "video/video-brief.md",
+    "final_video": "video/exports/colonel_bogey_march_final.mp4"
+  },
+  "rights_log": "rights/rights-log.md"
+}

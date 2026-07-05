@@ -40,7 +40,7 @@ https://www.musee-orsay.fr/en/artworks/la-nuit-etoilee-87780
 —
 
 制作ツール：VOCALOID6 / ボイスバンク：初音ミクV6
-初音ミク © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+初音ミク © Crypton Future Media, Inc.
 
 #初音ミク #アカペラ #きらきら星変奏曲 #ボカロ #ボカロカバー #クラシック #古典派 #モーツァルト #AtelierMikuAcappella
 ```
@@ -82,7 +82,7 @@ https://www.musee-orsay.fr/en/artworks/la-nuit-etoilee-87780
 —
 
 제작툴: VOCALOID6 / 보이스뱅크: 하츠네 미쿠 V6
-하츠네 미쿠 © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+하츠네 미쿠 © Crypton Future Media, Inc.
 
 #하츠네미쿠 #아카펠라 #작은별변주곡 #初音ミク #보컬로이드 #클래식 #고전주의 #모차르트 #AtelierMikuAcappella
 ```

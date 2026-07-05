@@ -23,7 +23,7 @@ https://commons.wikimedia.org/wiki/File:Hammerstein%27s_Roof_Garden,_by_William_
 —
 
 制作ツール：VOCALOID6 / ボイスバンク：初音ミクV6
-初音ミク © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+初音ミク © Crypton Future Media, Inc.
 
 #初音ミク #アカペラ #ジエンターテイナー #ボカロ #ボカロカバー #クラシック #ラグタイム #ジョプリン #AtelierMikuAcappella
 ```
@@ -46,7 +46,7 @@ https://commons.wikimedia.org/wiki/File:Hammerstein%27s_Roof_Garden,_by_William_
 —
 
 제작툴: VOCALOID6 / 보이스뱅크: 하츠네 미쿠 V6
-하츠네 미쿠 © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+하츠네 미쿠 © Crypton Future Media, Inc.
 
 #하츠네미쿠 #아카펠라 #디엔터테이너 #初音ミク #보컬로이드 #클래식 #래그타임 #조플린 #AtelierMikuAcappella
 ```

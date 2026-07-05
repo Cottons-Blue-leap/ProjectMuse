@@ -22,6 +22,8 @@ usage:
   python youtube_analytics.py geo              # 시청자 지역
   python youtube_analytics.py retention        # 영상별 시청 지속률 (평균)
   python youtube_analytics.py retention-curve  # 영상 안 위치별 지속 곡선 (어디서 빠지나)
+  python youtube_analytics.py growth           # ① 주간 스톡 스냅샷 (누적 눈금만 · growth.csv · Studio 불필요)
+  python youtube_analytics.py growth-backfill  # API 일자별 소급으로 성장곡선 처음부터 재구성 (growth.csv 전면 재작성)
 옵션:
   --days N            최근 N일 (default 28)
   --start YYYY-MM-DD --end YYYY-MM-DD   명시 기간 (--days 대신)
@@ -72,7 +74,10 @@ VIDEOS = {
     "759VCWOtC2w": "Tchaikovsky - Sugar Plum Fairy",
     "10ZSa-TPOC4": "Boccherini - Minuet",
     "xHzbkP_Wcm0": "Handel - Lascia ch'io pianga",
+    "KVBcKnyMzoQ": "Haydn - Trumpet Concerto Finale",
     "Gv5-QVuPZQs": "Mozart - Queen of the Night",
+    "2nK8fOWxqxU": "Saint-Saëns - The Swan",
+    "mJhe2RyCzcA": "Gossec - Gavotte",
 }
 
 # `report` 명령 산출물 자리 (스크립트와 같은 Analytics/ 폴더에 함께 둠).
@@ -764,6 +769,142 @@ def render_markdown(data, measured_on, window, start, end, prev):
     return path
 
 
+GROWTH_FIELDS = ["measured_on", "total_subscribers", "total_views", "total_videos", "source"]
+
+
+def _load_prev_growth(measured_on):
+    """growth.csv에서 오늘 이전 가장 최근 눈금 (delta 표시용)."""
+    path = ANALYTICS_DIR / "growth.csv"
+    if not path.exists():
+        return None
+    prev = None
+    with path.open(encoding="utf-8", newline="") as f:
+        for row in csv.DictReader(f):
+            if row.get("measured_on") != measured_on:
+                if prev is None or row["measured_on"] > prev["measured_on"]:
+                    prev = row
+    return prev
+
+
+def _load_release_dates():
+    """series_history.csv release_date → 정렬된 발행일 리스트 (videoCount 계단함수용).
+
+    영상수(total_videos)는 Analytics API에 일자별로 없으므로, 실제 발행일로
+    '그날까지 몇 곡 나왔나'를 계단함수로 재구성한다. = 정확한 소급값."""
+    path = BASE / "series_history.csv"
+    dates = []
+    if path.exists():
+        with path.open(encoding="utf-8", newline="") as f:
+            for r in csv.DictReader(f):
+                rd = (r.get("release_date") or "").strip()
+                if rd:
+                    dates.append(rd)
+    return sorted(dates)
+
+
+def growth_backfill(creds, start="2026-03-01"):
+    """API 일자별 데이터로 성장 곡선을 처음부터 재구성 → growth.csv 전면 재작성.
+
+    channels.list는 '현재 눈금'만 주지만 Analytics API는 dimensions=day로 과거
+    일자별 구독증감·조회를 소급 제공 → 누적 합산으로 스톡 곡선을 복원한다.
+      · 누적 조회 = 일별 views 러닝합
+      · 누적 구독 = 일별 (subscribersGained − subscribersLost) 러닝합
+      · 영상수    = series_history.csv release_date 계단함수 (Analytics엔 없음)
+    끝단 2~3일은 API 지연 → 최신 절대값(channels.list)을 today 행으로 별도 append.
+    재구성 행은 source=reconstructed, 실측 눈금은 source=snapshot 으로 구분.
+    ※ growth.csv를 통째로 다시 쓴다(idempotent · 재실행 안전)."""
+    yta = build("youtubeAnalytics", "v2", credentials=creds)
+    end = (dt.date.today() - dt.timedelta(days=2)).isoformat()  # Analytics 2~3일 지연 여유
+    print(f"\n[growth-backfill] API 일자별 소급 재구성 … {start} ~ {end}")
+    h, rows = run_report(yta, start, end,
+                         metrics="views,subscribersGained,subscribersLost",
+                         dimensions="day", sort="day")
+    idx = {name: i for i, name in enumerate(h)}
+    releases = _load_release_dates()
+
+    def vids_asof(day):
+        return sum(1 for d in releases if d <= day)
+
+    out, cum_views, cum_subs, started = [], 0, 0, False
+    for r in rows:
+        day = r[idx["day"]]
+        cum_views += int(r[idx["views"]])
+        cum_subs += int(r[idx["subscribersGained"]]) - int(r[idx["subscribersLost"]])
+        vc = vids_asof(day)
+        if not started and vc == 0 and cum_views == 0:
+            continue  # 채널 활동 시작 전 0행 스킵 (곡선 앞 평평한 꼬리 제거)
+        started = True
+        out.append({"measured_on": day, "total_subscribers": cum_subs,
+                    "total_views": cum_views, "total_videos": vc,
+                    "source": "reconstructed"})
+
+    # 최신 실측 절대값 (지연 없는 today 눈금) = 곡선 끝점
+    cur = fetch_channel_totals(creds)
+    if cur:
+        out.append({"measured_on": dt.date.today().isoformat(),
+                    "total_subscribers": cur.get("total_subscribers", ""),
+                    "total_views": cur.get("total_views", ""),
+                    "total_videos": cur.get("total_videos", ""),
+                    "source": "snapshot"})
+
+    dedup = {row["measured_on"]: row for row in out}       # 같은 날은 뒤(스냅샷)가 이김
+    final = [dedup[d] for d in sorted(dedup)]
+    path = ANALYTICS_DIR / "growth.csv"
+    with path.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=GROWTH_FIELDS, extrasaction="ignore", restval="")
+        w.writeheader()
+        for row in final:
+            w.writerow(row)
+
+    print(f"  재구성 {len(final)}행 ({final[0]['measured_on']} ~ {final[-1]['measured_on']})")
+    print(f"  끝점(실측): 구독 {cur.get('total_subscribers')} · 조회 {fmt_int(cur.get('total_views'))} · 영상 {cur.get('total_videos')}")
+    print(f"  CSV: {path}")
+    try:
+        import analytics_xlsx
+        xlsx = analytics_xlsx.build(ANALYTICS_DIR)
+        print(f"  Excel: {xlsx}")
+    except Exception as e:  # noqa: BLE001
+        print(f"  (Excel 생성 건너뜀: {e})")
+    print()
+
+
+def growth_snapshot(creds):
+    """① 주간 스톡 스냅샷 — 누적 눈금(총 구독자·조회수·영상수)만 가볍게 한 줄 기록.
+
+    스톡(odometer)엔 '창(window)'이 없다 = 겹침·자기상관 문제가 원천적으로 없다.
+    그래서 28일 비율측정(③ `report`)과 **별개로** 주 1회 눈금만 찍어 성장곡선을
+    촘촘히 한다. window_days 개념이 없으므로 snapshots.csv(flow 델타 로직)와 안 섞이게
+    growth.csv 별도 시계열에 append. 비용 = channels.list(mine=True) 1콜 · Studio 불필요.
+    ※ 이는 '28일月1회=비율' doctrine의 폐기가 아니라 **확장**이다 (스톡만 주간)."""
+    measured_on = dt.date.today().isoformat()
+    print(f"\n[growth] 누적 눈금(스톡) 수집 중 …")
+    totals = fetch_channel_totals(creds) if creds else {}
+    if not totals:
+        print("  ⚠️ 채널 통계 fetch 실패 → growth.csv 미기록")
+        return
+    prev = _load_prev_growth(measured_on)
+    row = {"measured_on": measured_on, **totals, "source": "snapshot"}
+    _upsert_csv(ANALYTICS_DIR / "growth.csv", GROWTH_FIELDS, [row], measured_on)
+
+    print(f"\n[Growth 스냅샷] {measured_on} (누적 눈금 · 스톡)")
+    for label, key in (("총 구독자", "total_subscribers"),
+                       ("총 조회수", "total_views"),
+                       ("총 영상수", "total_videos")):
+        cur = row.get(key, "")
+        d = _delta(cur, prev.get(key)) if prev else ""
+        since = f"  (직전 {prev['measured_on']} 대비 {d})" if prev and d != "" else ""
+        print(f"  {label}: {fmt_int(cur)}{since}")
+    print(f"  CSV: {ANALYTICS_DIR / 'growth.csv'}")
+    # Excel '추이'에 스톡 곡선을 반영 (openpyxl 없거나 실패해도 growth 자체는 성공).
+    try:
+        import analytics_xlsx
+        xlsx = analytics_xlsx.build(ANALYTICS_DIR)
+        print(f"  Excel: {xlsx}")
+    except Exception as e:  # noqa: BLE001
+        print(f"  (Excel 생성 건너뜀: {e})")
+    print()
+
+
 def report(yta, start, end, window, top=25, creds=None):
     measured_on = dt.date.today().isoformat()
     print(f"\n[report] 스냅샷 수집 중 … 기간 {start} ~ {end}")
@@ -790,7 +931,7 @@ def main():
     ap = argparse.ArgumentParser(description="Project Muse YouTube Analytics 분석 도구")
     ap.add_argument("command",
                     choices=["all", "traffic", "search", "geo", "retention",
-                             "retention-curve", "report"])
+                             "retention-curve", "report", "growth", "growth-backfill"])
     ap.add_argument("--days", type=int, default=28)
     ap.add_argument("--start")
     ap.add_argument("--end")
@@ -802,9 +943,19 @@ def main():
     vfilter = f"video=={args.video}" if args.video else None
 
     creds = get_credentials()
-    yta = build("youtubeAnalytics", "v2", credentials=creds)
 
     cmd = args.command
+    if cmd == "growth":
+        # 스톡 스냅샷은 Data API(channels.list)만 쓴다 → Analytics 클라이언트 불필요.
+        growth_snapshot(creds)
+        return
+    if cmd == "growth-backfill":
+        # API 일자별 소급으로 성장곡선 전면 재구성 (--start 로 시작일 지정 가능).
+        growth_backfill(creds, start=args.start or "2026-03-01")
+        return
+
+    yta = build("youtubeAnalytics", "v2", credentials=creds)
+
     if cmd == "report":
         report(yta, start, end, args.days, args.top, creds=creds)
         return

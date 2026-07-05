@@ -1,0 +1,17 @@
+{
+  "piece": "Gavotte in D major (from the opera Rosine, ou L'épouse abandonnée, 1786) — RH 318",
+  "composer": "François-Joseph Gossec",
+  "section": "Gavotte (standalone dance · ~2 min)",
+  "vocal": "Hatsune Miku",
+  "series_number": 14,
+  "music": {
+    "source_score_planning": "music/source_scores/gossec_gavotte.pdf",
+    "dry_stems_dir": "music/renders/dry_stems",
+    "master_audio": "music/masters/Miku_gossec_gavotte_master.wav"
+  },
+  "video": {
+    "brief": "video/video-brief.md",
+    "final_video": "video/exports/gossec_gavotte_final.mp4"
+  },
+  "rights_log": "rights/rights-log.md"
+}

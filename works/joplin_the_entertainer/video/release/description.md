@@ -22,7 +22,7 @@ https://commons.wikimedia.org/wiki/File:Hammerstein%27s_Roof_Garden,_by_William_
 —
 
 Production tool: VOCALOID6 / Voicebank: Hatsune Miku V6
-Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+Hatsune Miku, © Crypton Future Media, Inc.
 
 #HatsuneMiku #Acappella #TheEntertainer #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #Ragtime #Joplin #AtelierMikuAcappella
 ```

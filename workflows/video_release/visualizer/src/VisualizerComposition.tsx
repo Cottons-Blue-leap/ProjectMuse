@@ -148,6 +148,56 @@ const CC_CUE_RIGHT = WORDMARK_RIGHT; // align right edge with the wordmark
 const CC_CUE_BOTTOM = WORDMARK_BOTTOM + 66; // sits just above the wordmark line
 const CC_CUE_FONT_SIZE = 26;
 
+// Temporal grain dither (2026-06-22 · 보기 대령 행진곡부터).
+// 프레임마다 노이즈 seed를 바꿔 시간적으로 평균(temporal dithering)되게 하여, 8bit
+// 그라디언트 배경의 밴딩(층)을 풀어준다. 배경 그라디언트 위·콘텐츠 아래에 깔려 배경에만
+// 작용하고, 영상 재생 시 grain 자체는 매 프레임 달라져 눈에는 거의 보이지 않는다.
+// 강도(GRAIN_OPACITY)·결(baseFrequency)은 gate 렌더로 튜닝.
+// 기본값 — props로 곡별 오버라이드 가능 (grainOpacity / grainBaseFrequency / grainOctaves / grainBlendMode).
+// 주력 밴딩 제거는 사전 디더링 배경(muse background · IGN 디더 PNG)이 담당하고, 이 temporal
+// grain은 인코딩(유튜브 재양자화) 손실분을 시간적으로 메우는 약한 보조 레이어다. 그래서 강도를
+// 낮게(0.05) 둔다. 배경 PNG가 없는 구 work는 CSS 그라디언트 폴백 — 이땐 grain이 유일 디더원.
+const GRAIN_OPACITY = 0.05;
+const GRAIN_BASE_FREQUENCY = 0.7; // 약간 낮춰 인코딩 생존↑ + 저주파 밴딩 경계에 더 효과
+const GRAIN_OCTAVES = 3;
+const GRAIN_BLEND: React.CSSProperties["mixBlendMode"] = "soft-light";
+const GrainOverlay: React.FC<{
+  opacity: number;
+  baseFrequency: number;
+  octaves: number;
+  blendMode: React.CSSProperties["mixBlendMode"];
+}> = ({ opacity, baseFrequency, octaves, blendMode }) => {
+  const frame = useCurrentFrame();
+  return (
+    <AbsoluteFill
+      style={{
+        pointerEvents: "none",
+        mixBlendMode: blendMode,
+        opacity,
+      }}
+    >
+      <svg
+        width="100%"
+        height="100%"
+        style={{ width: "100%", height: "100%" }}
+        preserveAspectRatio="none"
+      >
+        <filter id="muse-grain" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency={baseFrequency}
+            numOctaves={octaves}
+            seed={frame}
+            stitchTiles="stitch"
+          />
+          <feColorMatrix type="saturate" values="0" />
+        </filter>
+        <rect width="100%" height="100%" filter="url(#muse-grain)" />
+      </svg>
+    </AbsoluteFill>
+  );
+};
+
 export type VisualizerProps = {
   letterboxColors: [string, string, string];
   composerName: string;
@@ -158,6 +208,11 @@ export type VisualizerProps = {
   variationStarts: number[];
   variationLabels: string[];
   hasCaptions?: boolean;
+  grainOpacity?: number;
+  grainBaseFrequency?: number;
+  grainOctaves?: number;
+  grainBlendMode?: string;
+  backgroundPath?: string;
 } & Record<string, unknown>;
 
 export const VisualizerComposition: React.FC<VisualizerProps> = ({
@@ -170,6 +225,11 @@ export const VisualizerComposition: React.FC<VisualizerProps> = ({
   variationStarts,
   variationLabels,
   hasCaptions = false,
+  grainOpacity = GRAIN_OPACITY,
+  grainBaseFrequency = GRAIN_BASE_FREQUENCY,
+  grainOctaves = GRAIN_OCTAVES,
+  grainBlendMode = GRAIN_BLEND,
+  backgroundPath,
 }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
@@ -296,8 +356,26 @@ export const VisualizerComposition: React.FC<VisualizerProps> = ({
   const currentChapterLabel = variationLabels[currentVarIdx];
 
   return (
-    <AbsoluteFill style={{ background: letterboxGradient, opacity: fadeOpacity }}>
+    <AbsoluteFill
+      style={{
+        opacity: fadeOpacity,
+        // 사전 디더링 배경 PNG가 있으면 그것을, 없으면 CSS 그라디언트로 폴백.
+        background: backgroundPath ? undefined : letterboxGradient,
+      }}
+    >
+      {backgroundPath && (
+        <Img
+          src={staticFile(backgroundPath)}
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
+        />
+      )}
       <Audio src={audioSrc} />
+      <GrainOverlay
+        opacity={grainOpacity}
+        baseFrequency={grainBaseFrequency}
+        octaves={grainOctaves}
+        blendMode={grainBlendMode as React.CSSProperties["mixBlendMode"]}
+      />
 
       <div
         style={{

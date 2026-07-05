@@ -40,6 +40,7 @@ SCRIPTS = {
     "project":   ROOT / "workflows/project_setup/scripts/muse_project.py",
     "audio":     ROOT / "workflows/audio_production/scripts/muse_audio.py",
     "thumbnail": ROOT / "workflows/video_release/scripts/muse_thumbnail.py",
+    "background": ROOT / "workflows/video_release/scripts/muse_background.py",
     "render":    ROOT / "workflows/video_release/scripts/muse_render.py",
     "captions":  ROOT / "workflows/video_release/scripts/muse_captions.py",
     "short":     ROOT / "workflows/shorts_first_proof/scripts/muse_shorts.py",

@@ -24,7 +24,7 @@ https://commons.wikimedia.org/wiki/File:James_Abbott_McNeill_Whistler_-_Nocturne
 —
 
 Production tool: VOCALOID6 / Voicebank: Hatsune Miku V6
-Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+Hatsune Miku, © Crypton Future Media, Inc.
 
 #HatsuneMiku #Acappella #Nocturne #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #RomanticEra #Chopin #AtelierMikuAcappella
 ```

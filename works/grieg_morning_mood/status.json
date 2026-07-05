@@ -1,7 +1,7 @@
 {
-  "current_phase": "deferred (s369 · 2026-05-27 · 코튼 *생각보다 부담이 커서 다른 곡을 하고 싶어* 자가 발화 → 6차 곡 쇼팽 녹턴 Op.9-2 swap 결단 흡수 · 본 작품 keep 보류 path · 7~8번째 재진입 의제 keep · s337 그린슬리브즈 family 정합 · works/ 폴더 자체 keep · 6개월차 본격 재진입 의제)",
+  "current_phase": "▶ REACTIVATED (2026-06-29 코튼 결정) = ⑮ 곡으로 재진입. s369 deferral 해제 — 코튼이 보기 대령 vs 아침 기분 중 아침 기분 채택(채널 결 정합 + 세팅 선행 + 그리그 시리즈 base + 그때 무서웠던 관현악 부담은 하이든 협주곡 등 14곡 거친 지금 사정권). series_number = 15 (⑬ 백조 발행·⑭ 고섹 가보트 발행대기 다음). ★ 다음 시작점 = 코튼 V6 직접 입력 → export 준비되면 MOKA 측정 패스(LUFS/TP/스테레오/스펙트럼 · 하이든·생상스 패턴) → 청취 게이트(코튼) → 마스터 → 커버(마스터 후) → 영상. 자산 준비 완료 = 악보 PDF(music/source_scores/grieg_peer_gynt_suite_1.pdf) · 커버 LOCK(모네 인상,해돋이) · 네이밍 완료 · 재생목록 Romantic Era.",
   "rights": "composition Grieg d.1907 life+70 통과(1977) PD 강 전세계 · 1875 작곡 (Peer Gynt 극음악) · 1888 Op.46 Suite No.1 재편 · score = IMSLP self-host PD + candidates_opus PDF (edition_id 자가 점검 V6 진입 시점 keep) · cover art = Claude Monet *Impression, Sunrise* (1872 · 화가 d.1926 life+70 통과 1996 PD 강 전세계 · Musée Marmottan Monet 소장) · 사전 audit 통과",
-  "vocal_input_v6": "deferred (s369 · 코튼 부담 자가 발화 · 쇼팽 swap path)",
+  "vocal_input_v6": "not_started — 코튼 V6 직접 입력 대기 (재진입 2026-06-29). role 분배(예정) = 오보에 메인 선율(아침 hook)→lead_miku / 플루트 응답구→lead_double·halo_high / 현악 sustain 화성 + tutti swell→mid_oo·low_oo / 호른 색→air_mm. 핵심 게이트 = 긴 sustain legato + 중간 tutti swell 다이내믹(원곡 pp→ff 아치)을 N-Mikus 성부로 살리기. .vpr 활성 트랙 전수 = N-Mikus count (하이든·생상스 패턴).",
   "lyrics": "없음 (기악 원곡 · 첫 5곡 family 정합 = 모음/humming · 그린슬리브즈 첫 성악 텍스트 axis는 보류와 함께 deferred)",
   "dry_stems": "skipped (acappella-only path · doctrine 정합)",
   "master": "deferred",
@@ -18,5 +18,5 @@
   "source_pdf": "music/source_scores/grieg_peer_gynt_suite_1.pdf (candidates_opus 에드바르 그리그_페르 귄트 모음곡.pdf ASCII copy · s365 박힘 · 페르 귄트 모음곡 통째 = Morning Mood + 향후 산왕의 궁전(rank 5 · S)·솔베이그의 노래(rank 75 · B) 재사용 base · Atelier Miku Acappella 그리그 시리즈 axis keep)",
   "signature_wordmark_v3_apply": true,
   "naming_convention_applied": "s365 · piece_id = grieg_morning_mood (composer_first 양식 정상 · joplin_the_entertainer / elgar_salut_damour family 정합)",
-  "last_decision": "s369 (2026-05-27): 코튼 *생각보다 부담이 커서 다른 곡을 하고 싶어. 쇼팽의 녹턴 op9-2는 어떨까?* 자가 발화 → 6차 곡 쇼팽 녹턴 Op.9-2 swap 결단 흡수. 본 작품 = keep 보류 path (s337 그린슬리브즈 + s326 K.265 family 정합 · *premature_launch_kills_enthusiasm.md* doctrine 정합). works/ 폴더 자체 keep (s365 setup 자료 잔존) · 7~8번째 재진입 의제 keep (코튼 자가 예상 발화). 부담 specific axis 자가 점검 의제 keep = 추정 (a) ensemble orchestral 양식 자가 분배 부담 [oboe·flute·현악·호른] / (b) sustain 강 양식 V6 양식 부담 / (c) 36MB PDF read 부담 / (d) 시간 부담 자체. specific axis는 코튼 자가 발화 자리 keep. 재진입 조건 = 코튼 결단 자리. 다음 cycle = 쇼팽 녹턴 Op.9-2 setup phase 진입 (`works/chopin_nocturne_op9_2/`)."
+  "last_decision": "2026-06-29: ⑮ 곡으로 REACTIVATED. 코튼 디스코드 *'고섹 가보트 다음 곡 — 아침 기분 vs 보기 대령 중 가볍고 좋은 거?'* throw → MOKA 정직 평가(둘 다 부담으로 한 번씩 미뤄둔 곡임을 먼저 명시 · 아침 기분 추천 4축[채널 결 fit / 세팅 선행 / 그리그 시리즈 base / 하이든 등 14곡 후 관현악 부담 사정권] vs 보기 대령은 톤 outlier+새 버킷+River Kwai rights 곁다리 · 정직한 반대급부=순수 V6 입력량은 행진곡 AABB가 가벼울 수 있음) → 코튼 *'OK. 아침 기분 하자'* 결단. s369 deferral(코튼 부담 자가 발화 · 쇼팽 swap) 해제. series_number=15 부여. 다음 = 코튼 V6 직접 입력 → export 준비 시 MOKA 측정 패스. (이전 deferral 기록: s369 2026-05-27 코튼 *생각보다 부담이 커서* → 쇼팽 Op.9-2 swap · works/ 폴더 + s365 setup 자료 keep된 채 잔존했던 것을 본 cycle 재가동.)"
 }

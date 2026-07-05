@@ -25,7 +25,7 @@ https://commons.wikimedia.org/wiki/File:Jan_Vermeer_van_Delft_-_Jonge_vrouw_aan_
 —
 
 制作ツール：VOCALOID6 / ボイスバンク：初音ミクV6
-初音ミク © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+初音ミク © Crypton Future Media, Inc.
 
 #初音ミク #アカペラ #カノン #ボカロ #ボカロカバー #クラシック #バロック #パッヘルベル #AtelierMikuAcappella
 ```
@@ -50,7 +50,7 @@ https://commons.wikimedia.org/wiki/File:Jan_Vermeer_van_Delft_-_Jonge_vrouw_aan_
 —
 
 제작툴: VOCALOID6 / 보이스뱅크: 하츠네 미쿠 V6
-하츠네 미쿠 © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+하츠네 미쿠 © Crypton Future Media, Inc.
 
 #하츠네미쿠 #아카펠라 #카논 #初音ミク #보컬로이드 #클래식 #바로크 #파헬벨 #AtelierMikuAcappella
 ```

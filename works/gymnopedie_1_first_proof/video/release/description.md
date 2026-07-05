@@ -15,6 +15,6 @@ https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-batters
 —
 
 Production tool: VOCALOID6 / Voicebank: Hatsune Miku V6
-Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+Hatsune Miku, © Crypton Future Media, Inc.
 
 #HatsuneMiku #Acappella #Gymnopedie #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #RomanticEra #Satie #AtelierMikuAcappella

@@ -39,7 +39,7 @@ Chapters:
 —
 
 Production tool: VOCALOID6 / Voicebank: Hatsune Miku V6
-Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+Hatsune Miku, © Crypton Future Media, Inc.
 
 #HatsuneMiku #Acappella #TwinkleVariations #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #ClassicalEra #Mozart #AtelierMikuAcappella
 ```

@@ -31,7 +31,7 @@ https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-batters
 —
 
 制作ツール：VOCALOID6 / ボイスバンク：初音ミクV6
-初音ミク © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+初音ミク © Crypton Future Media, Inc.
 
 #初音ミク #アカペラ #ジムノペディ #ボカロ #ボカロカバー #クラシック #ロマン派 #サティ #AtelierMikuAcappella
 ```
@@ -62,7 +62,7 @@ https://www.tate.org.uk/art/artworks/whistler-nocturne-blue-and-gold-old-batters
 —
 
 제작툴: VOCALOID6 / 보이스뱅크: 하츠네 미쿠 V6
-하츠네 미쿠 © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+하츠네 미쿠 © Crypton Future Media, Inc.
 
 #하츠네미쿠 #아카펠라 #짐노페디 #初音ミク #보컬로이드 #클래식 #낭만주의 #사티 #AtelierMikuAcappella
 ```

@@ -2,7 +2,7 @@
 
 > Atelier Miku Acappella 시리즈 YouTube 영상 description 정본 템플릿.
 > 매 작품 description 박을 때 본 template 따라 가변 자리 4건만 채움.
-> 박힌 날짜: 2026-05-14 (s292) · v2 update (s295) · v3 update (s303 — Crypton 라이선스 정합 강화) · v4 update (s303 — Block 3 압축) · v5 update (s303 — Block 3·4 swap, 면책 footer 격리) · v6 update (s310 — 일본 청중 유입 해시태그 4건 추가) · v7·v8 update (s339 — No-AI 줄 제거 + 제작툴 라벨) · v9 update (s340 — 영상 제목 Acappella 키워드 양식) · v10 update (s348 — 제목 앞 브래킷 양식 `[Miku Acappella] 작곡가 - 곡명`) · v11 update (s351 — 해시태그 로케일-퓨어 재설계: 공유 이중언어 블록 폐기 → 로케일별 네이티브 라인 + 네이티브 미쿠 front + 다이어트) · v12 update (s355 — 영상 제목 `(feat. 初音ミク)` 후치 양식 · 브래킷/Acappella 폐기 · reveal 설계) · v13 update (s374 — Production tool 줄에 Voicebank 명시: 양식 (A) 두 필드 한 줄 `VOCALOID6 / Voicebank: Hatsune Miku V6` · 에디터·보이스뱅크 layer 분리) · **v14 update (s434 — §1 제목 양식 s402 badge `【初音ミク A Cappella】` 정합화 = §1이 v12 feat. 양식에 stale로 남아있던 drift 정정 + title_naming_guide 우선 가드노트)**
+> 박힌 날짜: 2026-05-14 (s292) · v2 update (s295) · v3 update (s303 — Crypton 라이선스 정합 강화) · v4 update (s303 — Block 3 압축) · v5 update (s303 — Block 3·4 swap, 면책 footer 격리) · v6 update (s310 — 일본 청중 유입 해시태그 4건 추가) · v7·v8 update (s339 — No-AI 줄 제거 + 제작툴 라벨) · v9 update (s340 — 영상 제목 Acappella 키워드 양식) · v10 update (s348 — 제목 앞 브래킷 양식 `[Miku Acappella] 작곡가 - 곡명`) · v11 update (s351 — 해시태그 로케일-퓨어 재설계: 공유 이중언어 블록 폐기 → 로케일별 네이티브 라인 + 네이티브 미쿠 front + 다이어트) · v12 update (s355 — 영상 제목 `(feat. 初音ミク)` 후치 양식 · 브래킷/Acappella 폐기 · reveal 설계) · v13 update (s374 — Production tool 줄에 Voicebank 명시: 양식 (A) 두 필드 한 줄 `VOCALOID6 / Voicebank: Hatsune Miku V6` · 에디터·보이스뱅크 layer 분리) · **v14 update (s434 — §1 제목 양식 s402 badge `【初音ミク A Cappella】` 정합화 = §1이 v12 feat. 양식에 stale로 남아있던 drift 정정 + title_naming_guide 우선 가드노트)** · **v15 update (2026-06-29 — Block 4 footer 라이선스 라벨 `— CC BY-NC 3.0 + URL` 제거: CC BY-NC=공식 일러스트용인데 우리 커버=AI 합성 → 부정확 라벨 정리 · 권리자 크레딧 `© Crypton Future Media, Inc.`만 유지 = PCL §3.1 충족 · 라이브 13곡 전 로케일 surgical strip 적용 · 코튼 B 결단)**
 > 첫 작품 자료: [`works/gymnopedie_1_first_proof/video/release/description.md`](../../../works/gymnopedie_1_first_proof/video/release/description.md)
 
 ## 4 블록 양식
@@ -35,7 +35,7 @@ Subscribe to join the Atelier and discover a new side of classical music!
 
 [Block 4 — anchor]
 Production tool: VOCALOID6 / Voicebank: Hatsune Miku V6
-Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+Hatsune Miku, © Crypton Future Media, Inc.
 
 [EN] #HatsuneMiku #Acappella #{곡명EN} #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #{시대EN} #{작곡가성EN} #AtelierMikuAcappella
 [JP] #初音ミク #アカペラ #{곡명JP} #ボカロ #ボカロカバー #クラシック #{시대JP} #{작곡가JP} #AtelierMikuAcappella
@@ -168,7 +168,7 @@ Cover art, after [화가 성], '[명화 제목]' ([연도]).
 —
 
 Production tool: VOCALOID6 / Voicebank: Hatsune Miku V6
-Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/
+Hatsune Miku, © Crypton Future Media, Inc.
 
 #HatsuneMiku #Acappella #[곡명] #初音ミク #Vocaloid #ClassicalMusic #ClassicalCover #[시대] #[작곡가성] #AtelierMikuAcappella
 ```
@@ -190,7 +190,7 @@ Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecom
 
 ### Block 4 — 제작 크레딧 + 의무 표기 + 해시태그 footer (v8)
 - *Production tool: VOCALOID6 / Voicebank: Hatsune Miku V6* — v8 (s339) 신축 + v13 (s374) Voicebank 필드 추가. 미니멀 제작 도구 크레딧 (손 조성 도구 명시 = AI 자동생성과 구분 신호) + 보이스뱅크 layer 분리. ja = `制作ツール：VOCALOID6 / ボイスバンク：初音ミクV6` / ko = `제작툴: VOCALOID6 / 보이스뱅크: 하츠네 미쿠 V6`. (v7에서 뺀 'No AI' 줄의 대체 자리. 문장형 craft 진술 후보 → 코튼 결단으로 미니멀 라벨 확정 · 깔끔함 우선. v13에서 vocaloid 커뮤 표준 양식 = 에디터(Yamaha VOCALOID6) ↔ 보이스뱅크(Crypton Hatsune Miku V6) 분리 박음.)
-- *Hatsune Miku, © Crypton Future Media, Inc. — CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/* — 자료 §3.2 의무 표기 (저작자 표시 + 라이선스 원문 URL)
+- *Hatsune Miku, © Crypton Future Media, Inc.* — PCL §3.1 권리자 크레딧 (저작자 표시). **v15 (2026-06-29) "— CC BY-NC 3.0 + URL" 제거** = CC BY-NC 3.0은 Crypton *공식 일러스트* 용 라이선스인데 우리 커버=AI 합성이라 부정확한 over-comply 라벨이었음 → 떼고 권리자 크레딧만 유지. PCL §3.1 크레딧 의무는 © Crypton 줄로 충족 ([[muse-license-doctrine]] s356 정합).
 - 해시태그 줄 — **v11(s351) 로케일-퓨어**: 로케일별 네이티브 라인 (EN 10 / JP·KO 9개). 앞 3개 = `[네이티브 미쿠][네이티브 포맷][작품]` 노출 + 꼬리 = 유니버설 #初音ミク · 플랫폼 · 장르 · 커버 · 시대/장르 · 작곡가 · 브랜드. (공유 이중언어 블록 폐기 · #VOCALOID/#Vocaloid6/#Cover 다이어트. 상세 = 가변 자리 #4.)
 
 v5 swap 본질 = 면책 wording을 가장 마지막 *footer 자리*로 격리 (시청자 진입 장벽 격하 + 시각적 가벼움). 면책 + 해시태그 한 footer 자리에 합본해서 *법적 wording 격리* axis 박음.

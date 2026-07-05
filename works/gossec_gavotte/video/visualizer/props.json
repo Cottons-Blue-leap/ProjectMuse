@@ -1,0 +1,11 @@
+{
+  "durationSeconds": 118.356,
+  "letterboxColors": ["#1F1E1B", "#563E39", "#B0A18C"],
+  "composerName": "François-Joseph Gossec",
+  "pieceTitle": "Gavotte",
+  "pieceSubtitle": "in D major · from the opera Rosine",
+  "audioPath": "audio.wav",
+  "coverPath": "cover.png",
+  "variationStarts": [0],
+  "variationLabels": [""]
+}

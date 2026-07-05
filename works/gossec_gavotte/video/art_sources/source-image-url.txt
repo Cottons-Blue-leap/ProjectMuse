@@ -1,0 +1,10 @@
+Base painting: Nicolas Lancret — "La Camargo Dancing" (c. 1730)
+Collection: National Gallery of Art, Washington D.C. (object id 96, open access)
+NGA page: https://www.nga.gov/artworks/96-la-camargo-dancing
+
+Saved file: lancret_la_camargo_dancing.jpg
+  - Source used: Web Gallery of Art (frameless reproduction), https://www.wga.hu/art/l/lancret/camargo1.jpg
+  - Resolution: 1431x1000 (adequate for cover/thumbnail; 1:1 cover letterboxed in video render)
+  - NGA was 403 on automated fetch (2026-06-28); a higher-res NGA open-access original can replace this file later if a larger master is wanted.
+
+Wikimedia Commons (low-res 381px, not used): https://commons.wikimedia.org/wiki/File:La_Camargo_Dancing.jpg

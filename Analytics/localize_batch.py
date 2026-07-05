@@ -25,7 +25,9 @@ CHANNEL_CODE = {"es": "es_ES", "pt": "pt_BR", "de": "de_DE", "fr": "fr_FR",
 SUFFIX = " (feat. 初音ミク)"          # legacy (pre-s402) — kept for reference
 BADGE = " 【初音ミク A Cappella】"       # s402 title badge (코튼 2026-06-06 LOCK · title_naming_guide)
 BADGE_ABBR = " 【A Cappella】"          # long-title fallback (per-work "badge_abbrev": True · e.g. Mozart K.265)
-CC = "CC BY-NC 3.0 https://creativecommons.org/licenses/by-nc/3.0/"
+# (2026-06-29 코튼 B 결단) 푸터 라이선스 라벨 제거 = "CC BY-NC 3.0 + URL" 떼고 권리자 크레딧(© Crypton)만 유지.
+# 사유: CC BY-NC 3.0 은 Crypton *공식 일러스트* 용 라이선스인데 우리 커버는 AI 합성 → over-comply 부정확 라벨.
+# PCL §3.1 권리자 크레딧 의무는 © Crypton 줄로 충족. 옛 상수 CC 는 제거(엔진 미사용).
 
 # ── shared localized tokens ────────────────────────────────────────────────
 MIKU = {"es": "Hatsune Miku", "pt": "Hatsune Miku", "de": "Hatsune Miku", "fr": "Hatsune Miku",
@@ -137,6 +139,8 @@ PAINTER = {
     "Rossetti": {"ru": "Россетти", "zh-Hant": "羅塞蒂", "zh-Hans": "罗塞蒂"},
     "Strozzi": {"ru": "Строцци", "zh-Hant": "斯特羅齊", "zh-Hans": "斯特罗齐"},
     "Schinkel": {"ru": "Шинкеля", "zh-Hant": "申克爾", "zh-Hans": "申克尔"},
+    "Friedrich": {"ru": "Фридриха", "zh-Hant": "弗里德里希", "zh-Hans": "弗里德里希"},
+    "Lancret": {"ru": "Ланкре", "zh-Hant": "朗克雷", "zh-Hans": "朗克雷"},
 }
 def painter_name(lang, en):
     return PAINTER.get(en, {}).get(lang, en)
@@ -440,6 +444,53 @@ WORKS = [
         },
         "tag_piece": {"es": "#ReinaDeLaNoche", "pt": "#RainhaDaNoite", "de": "#KöniginDerNacht", "fr": "#ReineDeLaNuit", "ru": "#ЦарицаНочи", "zh-Hant": "#夜后", "zh-Hans": "#夜后"},
     },
+    {
+        "vid": "2nK8fOWxqxU", "slug": "saint_saens_the_swan", "count": 15, "year": "1886",
+        "style": "lead", "welcome": False, "subscribe": False, "era": "romantic",
+        "surname": L("Saint-Saëns", "Сен-Санс", "聖桑", "圣桑"),
+        "full": L("Camille Saint-Saëns", "Камиль Сен-Санс", "卡米爾·聖桑", "卡米尔·圣桑"),
+        # 곡명 = 로케일 시장 canonical (fr = 원제 Le Cygne)
+        # s411 enrich: 부모작 병기 (《동물의 사육제》 · 발췌곡 검색량 압도 · 사탕요정[The Nutcracker] family). 괄호 zh 전각·라틴/키릴 반각.
+        "piece": {"es": "El cisne (El carnaval de los animales)", "pt": "O cisne (O carnaval dos animais)", "de": "Der Schwan (Der Karneval der Tiere)",
+                  "fr": "Le Cygne (Le Carnaval des animaux)", "ru": "Лебедь (Карнавал животных)", "zh-Hant": "天鵝（動物狂歡節）", "zh-Hans": "天鹅（动物狂欢节）"},
+        "painter": "Friedrich", "painting": "Swans in the Reeds", "p_year": "c.1820",
+        "cover_url": "https://commons.wikimedia.org/wiki/File:Friedrich_schwaene-im-schilf.jpg",
+        "curator": None,
+        # custom_hook (코튼 LOCK 2026-06-22 · 1행 epithet '미쿠가 백조가 되었습니다!' = 시리즈 시그니처[미쿠=청록 백조] 정합 · Handel/Mozart family).
+        # EN/KO/JA = release/ hand-sidecar 정본. 7언어 = 외부 QA subagent 게이트 (l10n cross-verification). N=15(.vpr 활성 트랙).
+        "custom_hook": {
+            "es": "¡Miku se ha convertido en cisne!\n\nAhora cantan quince Mikus —\nCamille Saint-Saëns - El cisne (1886)",
+            "pt": "A Miku virou um cisne!\n\nAgora cantam quinze Mikus —\nCamille Saint-Saëns - O cisne (1886)",
+            "de": "Miku ist ein Schwan geworden!\n\nJetzt singen fünfzehn Mikus —\nCamille Saint-Saëns - Der Schwan (1886)",
+            "fr": "Miku est devenue un cygne !\n\nÀ présent, quinze Mikus chantent —\nCamille Saint-Saëns - Le Cygne (1886)",
+            "ru": "Мику стала лебедем!\n\nТеперь поют пятнадцать Мику —\nКамиль Сен-Санс - Лебедь (1886)",
+            "zh-Hant": "初音未來變成天鵝了！\n\n如今由十五位初音未來獻唱——\n卡米爾·聖桑 - 天鵝 (1886)",
+            "zh-Hans": "初音未来变成天鹅了！\n\n如今由十五位初音未来献唱——\n卡米尔·圣桑 - 天鹅 (1886)",
+        },
+        "tag_piece": {"es": "#ElCisne", "pt": "#OCisne", "de": "#DerSchwan", "fr": "#LeCygne", "ru": "#Лебедь", "zh-Hant": "#天鵝", "zh-Hans": "#天鹅"},
+    },
+    {
+        "vid": "mJhe2RyCzcA", "slug": "gossec_gavotte", "count": 15, "year": "1786",
+        "style": "lead", "welcome": False, "subscribe": False, "era": "classical",
+        "surname": L("Gossec", "Госсек", "戈塞克", "戈塞克"),
+        "full": L("François-Joseph Gossec", "Франсуа-Жозеф Госсек", "弗朗索瓦-約瑟夫·戈塞克", "弗朗索瓦-约瑟夫·戈塞克"),
+        "piece": {"es": "Gavota", "pt": "Gavota", "de": "Gavotte", "fr": "Gavotte",
+                  "ru": "Гавот", "zh-Hant": "加沃特舞曲", "zh-Hans": "加沃特舞曲"},
+        "painter": "Lancret", "painting": "La Camargo Dancing", "p_year": "c.1730",
+        "cover_url": "https://commons.wikimedia.org/wiki/File:La_Camargo_Dancing.jpg",
+        "curator": None,
+        # custom_hook (코튼 LOCK 2026-06-29 · 토막상식형 "곡명 이제야 앎 + 가보트=프랑스 궁정 춤곡·바이올린 학습" · 쉼표 제거[AI feel] 코튼 지시 · 미뉴엣 family). EN/KO/JA = release/ hand-sidecar 정본. 7언어 = l10n cross-verification 게이트. N=15(.vpr 활성 트랙).
+        "custom_hook": {
+            "es": "¡Así que se llamaba así!\nLa gavota era una danza cortesana francesa muy parecida al minueto. Al parecer se usa mucho en el estudio del violín.\n\nAhora cantan quince Mikus —\nFrançois-Joseph Gossec - Gavota (1786)",
+            "pt": "Então era esse o nome!\nA gavota era uma dança da corte francesa muito parecida com o minueto. Pelo visto é muito usada no estudo do violino.\n\nAgora cantam quinze Mikus —\nFrançois-Joseph Gossec - Gavota (1786)",
+            "de": "Ach, so heißt das also!\nDie Gavotte war ein französischer Hoftanz ähnlich dem Menuett. Sie wird wohl oft im Violinunterricht verwendet.\n\nJetzt singen fünfzehn Mikus —\nFrançois-Joseph Gossec - Gavotte (1786)",
+            "fr": "Ah voilà comment ça s'appelle !\nLa gavotte était une danse de cour française assez proche du menuet. Il paraît qu'on l'utilise beaucoup dans l'apprentissage du violon.\n\nÀ présent, quinze Mikus chantent —\nFrançois-Joseph Gossec - Gavotte (1786)",
+            "ru": "Вот как это называется!\nГавот — французский придворный танец вроде менуэта. Говорят, его часто используют при обучении игре на скрипке.\n\nТеперь поют пятнадцать Мику —\nФрансуа-Жозеф Госсек - Гавот (1786)",
+            "zh-Hant": "原來這首曲子叫這個名字！\n加沃特舞曲和小步舞曲一樣，是流行於法國宮廷的舞曲，據說也常用於小提琴的學習。\n\n如今由十五位初音未來獻唱——\n弗朗索瓦-約瑟夫·戈塞克 - 加沃特舞曲（1786）",
+            "zh-Hans": "原来这首曲子叫这个名字！\n加沃特舞曲和小步舞曲一样，是流行于法国宫廷的舞曲，据说也常用于小提琴的学习。\n\n如今由十五位初音未来献唱——\n弗朗索瓦-约瑟夫·戈塞克 - 加沃特舞曲（1786）",
+        },
+        "tag_piece": {"es": "#Gavota", "pt": "#Gavota", "de": "#Gavotte", "fr": "#Gavotte", "ru": "#Гавот", "zh-Hant": "#加沃特舞曲", "zh-Hans": "#加沃特舞曲"},
+    },
 ]
 
 # ── hashtags ───────────────────────────────────────────────────────────────
@@ -465,6 +516,9 @@ TAG_COMPOSER = {  # composer hashtag (no space) per lang
     "Haydn": {"ru": "#Гайдн", "zh-Hant": "#海頓", "zh-Hans": "#海顿"},
     # es-key surname = latin 정본 키 (Handel = es/pt/de 'Händel' · fr 표기는 명시 오버라이드)
     "Händel": {"fr": "#Haendel", "ru": "#Гендель", "zh-Hant": "#韓德爾", "zh-Hans": "#亨德尔"},
+    # hyphen+diacritic → 기본값 "#Saint-Saëns"(하이픈서 해시태그 끊김) 회피 = 전 로케일 명시
+    "Saint-Saëns": {"es": "#SaintSaens", "pt": "#SaintSaens", "de": "#SaintSaens", "fr": "#SaintSaens", "ru": "#СенСанс", "zh-Hant": "#聖桑", "zh-Hans": "#圣桑"},
+    "Gossec": {"ru": "#Госсек", "zh-Hant": "#戈塞克", "zh-Hans": "#戈塞克"},
 }
 def composer_tag(lang, surname_en):
     return TAG_COMPOSER.get(surname_en, {}).get(lang, "#" + surname_en.replace(" ", ""))
@@ -500,7 +554,7 @@ def dedication(w, lang):
 def credit(w, lang):
     sep = label_colon(lang)
     return (f"{PROD[lang]}{sep}VOCALOID6 / {VOICE[lang]}{sep}{MIKU[lang]} V6\n"
-            f"{MIKU[lang]}, © Crypton Future Media, Inc. — {CC}")
+            f"{MIKU[lang]}, © Crypton Future Media, Inc.")
 
 def cover(w, lang):
     return (cover_line(lang, painter_name(lang, w["painter"]), w["painting"], date_for(lang, w["p_year"]))
